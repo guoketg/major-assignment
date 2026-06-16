@@ -1,0 +1,83 @@
+- generic [ref=e3]:
+  - generic [ref=e4]:
+    - generic [ref=e5]:
+      - heading "对话历史" [level=2] [ref=e6]
+      - button "+ 新对话" [ref=e7] [cursor=pointer]
+    - generic [ref=e8]:
+      - generic [ref=e9] [cursor=pointer]:
+        - generic [ref=e10]:
+          - generic [ref=e11]: 帮我调研CLIP模型的最新进展
+          - generic [ref=e12]: 2 条消息
+        - button "×" [ref=e13]
+      - generic [ref=e14] [cursor=pointer]:
+        - generic [ref=e15]:
+          - generic [ref=e16]: 你好
+          - generic [ref=e17]: 4 条消息
+        - button "×" [ref=e18]
+      - generic [ref=e19] [cursor=pointer]:
+        - generic [ref=e20]:
+          - generic [ref=e21]: 帮我调研CLIP噪声标签学习的最新进展
+          - generic [ref=e22]: 2 条消息
+        - button "×" [ref=e23]
+      - generic [ref=e24] [cursor=pointer]:
+        - generic [ref=e25]:
+          - generic [ref=e26]: 帮我调研一下CLIP噪声标签学习的最新进展
+          - generic [ref=e27]: 4 条消息
+        - button "×" [ref=e28]
+      - generic [ref=e29] [cursor=pointer]:
+        - generic [ref=e30]:
+          - generic [ref=e31]: 帮我调研一下CLIP噪声标签学习的最新进展
+          - generic [ref=e32]: 2 条消息
+        - button "×" [ref=e33]
+      - generic [ref=e34] [cursor=pointer]:
+        - generic [ref=e35]:
+          - generic [ref=e36]: 你好
+          - generic [ref=e37]: 2 条消息
+        - button "×" [ref=e38]
+  - generic [ref=e39]:
+    - generic [ref=e40]:
+      - generic [ref=e42]:
+        - button "💬 对话" [ref=e43] [cursor=pointer]
+        - button "📄 论文搜索" [ref=e44] [cursor=pointer]
+        - button "🧠 记忆" [ref=e45] [cursor=pointer]
+      - button "清空对话" [ref=e62] [cursor=pointer]
+    - generic [ref=e46]:
+      - generic [ref=e75]: 帮我调研CLIP模型的最新进展
+      - generic [ref=e76]:
+        - generic [ref=e77] [cursor=pointer]:
+          - generic [ref=e78]: 🤖 Agent 流水线
+          - generic [ref=e79]: 收起 ▲
+        - generic [ref=e80]:
+          - generic [ref=e83]:
+            - generic [ref=e84]: 🤖
+            - generic [ref=e85]: 🤖 智能路由
+            - generic [ref=e86]: ✅ 完成
+          - generic [ref=e89]:
+            - generic [ref=e90]:
+              - generic [ref=e91]: 🔍
+              - generic [ref=e92]: 🔍 文献调研
+              - generic [ref=e93]: ⏳ 进行中
+            - generic [ref=e94]:
+              - generic [ref=e95]: └─
+              - generic [ref=e96]: 🔧 🔧 调用 search_arxiv
+              - generic [ref=e97]: ⏳
+      - generic [ref=e100]:
+        - heading "CLIP模型最新进展调研报告" [level=1] [ref=e101]
+        - heading "一、领域简介" [level=2] [ref=e102]
+        - paragraph [ref=e103]: CLIP（Contrastive Language-Image Pre-training）由OpenAI于2021年提出，通过大规模图文对比学习实现了视觉与语言表征的对齐。自发布以来，CLIP已成为多模态学习的基石模型，催生了大量后续工作。本调研聚焦2023-2025年间CLIP模型的最新进展，包括训练范式优化、模型架构改进、数据效率提升以及下游应用拓展等方面。
+        - paragraph [ref=e104]: 让我先搜索最新的相关论文。
+        - text: "|"
+    - generic [ref=e50]:
+      - generic [ref=e51]:
+        - button "🤖 自动" [disabled] [ref=e52]
+        - button "💬 对话" [disabled] [ref=e53]
+        - button "🔍 调研" [disabled] [ref=e54]
+        - button "💡 创新" [disabled] [ref=e55]
+        - button "🧪 实验" [disabled] [ref=e56]
+      - generic [ref=e57]:
+        - textbox "输入消息... (支持 Markdown 和 LaTeX)" [disabled] [ref=e58]
+        - combobox "切换模型" [disabled] [ref=e59] [cursor=pointer]:
+          - option "DeepSeek V4 Flash" [selected]
+          - option "V4 Pro"
+          - option "思考模式"
+        - button "发送" [disabled] [ref=e60]

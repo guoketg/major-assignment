@@ -1,0 +1,120 @@
+- generic [ref=e3]:
+  - generic [ref=e4]:
+    - generic [ref=e5]:
+      - heading "对话历史" [level=2] [ref=e6]
+      - button "+ 新对话" [ref=e7] [cursor=pointer]
+    - generic [ref=e8]:
+      - generic [ref=e33] [cursor=pointer]:
+        - generic [ref=e34]:
+          - generic [ref=e35]: 什么是机器学习加XGBoost 介绍CNN的特性
+          - generic [ref=e36]: 2 条消息
+        - button "×" [ref=e37]
+      - generic [ref=e38] [cursor=pointer]:
+        - generic [ref=e39]:
+          - generic [ref=e40]: 介绍CNN的特性
+          - generic [ref=e41]: 2 条消息
+        - button "×" [ref=e42]
+      - generic [ref=e43] [cursor=pointer]:
+        - generic [ref=e44]:
+          - generic [ref=e45]: 你好
+          - generic [ref=e46]: 4 条消息
+        - button "×" [ref=e47]
+  - generic [ref=e10]:
+    - generic [ref=e11]:
+      - generic [ref=e13]:
+        - button "💬 对话" [ref=e14] [cursor=pointer]
+        - button "📄 论文搜索" [ref=e15] [cursor=pointer]
+        - button "🧠 记忆" [ref=e16] [cursor=pointer]
+        - button "🔧 工具" [ref=e17] [cursor=pointer]
+      - generic [ref=e48]:
+        - button "📄 导出 Word" [ref=e49] [cursor=pointer]
+        - button "清空对话" [ref=e50] [cursor=pointer]
+    - generic [ref=e18]:
+      - generic [ref=e53]: 什么是机器学习加XGBoost 介绍CNN的特性
+      - generic [ref=e54]:
+        - generic [ref=e55] [cursor=pointer]:
+          - generic [ref=e56]: 🤖 Agent 流水线
+          - generic [ref=e57]: 收起 ▲
+        - generic [ref=e58]:
+          - generic [ref=e61]:
+            - generic [ref=e62]: 🤖
+            - generic [ref=e63]: 🤖 智能路由
+            - generic [ref=e64]: ✅ 完成
+          - generic [ref=e68]:
+            - generic [ref=e69]: 💬
+            - generic [ref=e70]: 💬 对话助手
+            - generic [ref=e71]: ⏳ 进行中
+      - generic [ref=e74]:
+        - heading "机器学习与 XGBoost" [level=2] [ref=e75]
+        - heading "什么是机器学习？" [level=3] [ref=e76]
+        - paragraph [ref=e77]:
+          - strong [ref=e78]: 机器学习（Machine Learning）
+          - text: 是人工智能的一个分支，核心思想是让计算机
+          - strong [ref=e79]: 从数据中自动学习规律和模式
+          - text: ，而不需要显式编程。简单来说：
+        - list [ref=e80]:
+          - listitem [ref=e81]:
+            - strong [ref=e82]: 传统编程
+            - text: ：输入规则 + 数据 → 输出结果
+          - listitem [ref=e83]:
+            - strong [ref=e84]: 机器学习
+            - text: ：输入数据 + 结果 → 输出规则（模型）
+        - paragraph [ref=e85]: 机器学习主要分为三类：
+        - table [ref=e86]:
+          - rowgroup [ref=e87]:
+            - row "类型 说明 例子" [ref=e88]:
+              - columnheader "类型" [ref=e89]
+              - columnheader "说明" [ref=e90]
+              - columnheader "例子" [ref=e91]
+          - rowgroup [ref=e92]:
+            - row "监督学习 有标签数据训练 房价预测、图像分类" [ref=e93]:
+              - cell "监督学习" [ref=e94]:
+                - strong [ref=e95]: 监督学习
+              - cell "有标签数据训练" [ref=e96]
+              - cell "房价预测、图像分类" [ref=e97]
+            - row "无监督学习 无标签，发现数据内在结构 客户分群、异常检测" [ref=e98]:
+              - cell "无监督学习" [ref=e99]:
+                - strong [ref=e100]: 无监督学习
+              - cell "无标签，发现数据内在结构" [ref=e101]
+              - cell "客户分群、异常检测" [ref=e102]
+            - row "强化学习 通过与环境交互学习策略 AlphaGo、自动驾驶" [ref=e103]:
+              - cell "强化学习" [ref=e104]:
+                - strong [ref=e105]: 强化学习
+              - cell "通过与环境交互学习策略" [ref=e106]
+              - cell "AlphaGo、自动驾驶" [ref=e107]
+        - separator [ref=e108]
+        - heading "XGBoost 详解" [level=2] [ref=e109]
+        - heading "什么是 XGBoost？" [level=3] [ref=e110]
+        - paragraph [ref=e111]:
+          - strong [ref=e112]: XGBoost（eXtreme Gradient Boosting）
+          - text: 是一种基于
+          - strong [ref=e113]: 梯度提升决策树（GBDT）
+          - text: 的集成学习算法，由陈天奇于 2014 年提出。它在 Kaggle 竞赛和工业界中极其流行。
+        - heading "核心原理" [level=3] [ref=e114]
+        - paragraph [ref=e115]:
+          - text: XGBoost 的核心思想是
+          - strong [ref=e116]: Boosting（提升）
+          - text: ：
+        - blockquote [ref=e117]:
+          - paragraph [ref=e118]:
+            - text: 通过
+            - strong [ref=e119]: 串行训练
+            - text: 多个弱学习器（通常是决策树），每个新树都
+            - strong [ref=e120]: 纠正前面所有树的错误
+            - text: ，最终组合成一个强学习器。
+        - paragraph [ref=e121]: 数学上，XGBoost 的目标函数为：
+        - text: "\\text{Obj} = \\sum_{i=|"
+    - generic [ref=e22]:
+      - generic [ref=e23]:
+        - button "🤖 自动" [disabled] [ref=e24]
+        - button "💬 对话" [disabled] [ref=e25]
+        - button "🔍 调研" [disabled] [ref=e26]
+        - button "💡 创新" [disabled] [ref=e27]
+        - button "🧪 实验" [disabled] [ref=e28]
+      - generic [ref=e29]:
+        - textbox "输入消息... (支持 Markdown 和 LaTeX)" [disabled] [ref=e30]
+        - combobox "切换模型" [disabled] [ref=e31] [cursor=pointer]:
+          - option "DeepSeek V4 Flash" [selected]
+          - option "V4 Pro"
+          - option "思考模式"
+        - button "发送" [disabled] [ref=e32]

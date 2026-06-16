@@ -1,0 +1,102 @@
+- generic [ref=e3]:
+  - generic [ref=e4]:
+    - generic [ref=e5]:
+      - heading "对话历史" [level=2] [ref=e6]
+      - button "+ 新对话" [ref=e7] [cursor=pointer]
+    - generic [ref=e8]:
+      - generic [ref=e32] [cursor=pointer]:
+        - generic [ref=e33]:
+          - generic [ref=e34]: 帮我调研CLIP模型的最新进展
+          - generic [ref=e35]: 2 条消息
+        - button "×" [ref=e36]
+      - generic [ref=e37] [cursor=pointer]:
+        - generic [ref=e38]:
+          - generic [ref=e39]: 帮我调研CLIP模型的最新进展
+          - generic [ref=e40]: 2 条消息
+        - button "×" [ref=e41]
+      - generic [ref=e42] [cursor=pointer]:
+        - generic [ref=e43]:
+          - generic [ref=e44]: 你好
+          - generic [ref=e45]: 4 条消息
+        - button "×" [ref=e46]
+      - generic [ref=e47] [cursor=pointer]:
+        - generic [ref=e48]:
+          - generic [ref=e49]: 帮我调研CLIP噪声标签学习的最新进展
+          - generic [ref=e50]: 2 条消息
+        - button "×" [ref=e51]
+      - generic [ref=e52] [cursor=pointer]:
+        - generic [ref=e53]:
+          - generic [ref=e54]: 帮我调研一下CLIP噪声标签学习的最新进展
+          - generic [ref=e55]: 4 条消息
+        - button "×" [ref=e56]
+      - generic [ref=e57] [cursor=pointer]:
+        - generic [ref=e58]:
+          - generic [ref=e59]: 帮我调研一下CLIP噪声标签学习的最新进展
+          - generic [ref=e60]: 2 条消息
+        - button "×" [ref=e61]
+      - generic [ref=e62] [cursor=pointer]:
+        - generic [ref=e63]:
+          - generic [ref=e64]: 你好
+          - generic [ref=e65]: 2 条消息
+        - button "×" [ref=e66]
+  - generic [ref=e10]:
+    - generic [ref=e11]:
+      - generic [ref=e13]:
+        - button "💬 对话" [ref=e14] [cursor=pointer]
+        - button "📄 论文搜索" [ref=e15] [cursor=pointer]
+        - button "🧠 记忆" [ref=e16] [cursor=pointer]
+      - button "清空对话" [ref=e68] [cursor=pointer]
+    - generic [ref=e17]:
+      - generic [ref=e335]: 帮我调研一下CLIP模型的最新进展
+      - generic [ref=e336]:
+        - generic [ref=e337] [cursor=pointer]:
+          - generic [ref=e338]: 🤖 Agent 流水线
+          - generic [ref=e339]: 收起 ▲
+        - generic [ref=e340]:
+          - generic [ref=e343]:
+            - generic [ref=e344]: 🤖
+            - generic [ref=e345]: 🤖 智能路由
+            - generic [ref=e346]: ✅ 完成
+          - generic [ref=e349]:
+            - generic [ref=e350]:
+              - generic [ref=e351]: 🔍
+              - generic [ref=e352]: 🔍 文献调研
+              - generic [ref=e353]: ⏳ 进行中
+            - generic [ref=e354]:
+              - generic [ref=e355]: └─
+              - generic [ref=e356]: 🔧 🔧 调用 search_arxiv
+              - generic [ref=e357]: ✅
+            - generic [ref=e358]:
+              - generic [ref=e359]: └─
+              - generic [ref=e360]: 🔧 🔧 调用 search_arxiv
+              - generic [ref=e361]: ✅
+            - generic [ref=e367]:
+              - generic [ref=e368]: └─
+              - generic [ref=e369]: 🔧 🔧 调用 search_arxiv
+              - generic [ref=e370]: ✅
+            - generic [ref=e371]:
+              - generic [ref=e372]: └─
+              - generic [ref=e373]: 🔧 🔧 调用 search_arxiv
+              - generic [ref=e374]: ✅
+            - generic [ref=e375]:
+              - generic [ref=e376]: └─
+              - generic [ref=e377]: 🔧 🔧 调用 search_arxiv
+              - generic [ref=e378]: ⏳
+      - generic [ref=e364]:
+        - heading "CLIP模型最新进展调研报告" [level=1] [ref=e365]
+        - paragraph [ref=e366]: 我将从多个维度搜索CLIP模型的最新研究成果，包括改进方法、训练策略、应用拓展等。搜索结果不够理想，让我调整关键词重新搜索。
+        - text: "|"
+    - generic [ref=e21]:
+      - generic [ref=e22]:
+        - button "🤖 自动" [disabled] [ref=e23]
+        - button "💬 对话" [disabled] [ref=e24]
+        - button "🔍 调研" [disabled] [ref=e25]
+        - button "💡 创新" [disabled] [ref=e26]
+        - button "🧪 实验" [disabled] [ref=e27]
+      - generic [ref=e28]:
+        - textbox "输入消息... (支持 Markdown 和 LaTeX)" [disabled] [ref=e29]
+        - combobox "切换模型" [disabled] [ref=e30] [cursor=pointer]:
+          - option "DeepSeek V4 Flash" [selected]
+          - option "V4 Pro"
+          - option "思考模式"
+        - button "发送" [disabled] [ref=e31]

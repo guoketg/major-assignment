@@ -1,0 +1,95 @@
+- generic [ref=e3]:
+  - generic [ref=e4]:
+    - generic [ref=e5]:
+      - heading "对话历史" [level=2] [ref=e6]
+      - button "+ 新对话" [ref=e7] [cursor=pointer]
+    - generic [ref=e8]:
+      - generic [ref=e106] [cursor=pointer]:
+        - generic [ref=e107]:
+          - generic [ref=e108]: 什么是KNN算法
+          - generic [ref=e109]: 2 条消息
+        - button "×" [ref=e110]
+      - generic [ref=e33] [cursor=pointer]:
+        - generic [ref=e34]:
+          - generic [ref=e35]: 什么是机器学习
+          - generic [ref=e36]: 2 条消息
+        - button "×" [ref=e37]
+  - generic [ref=e10]:
+    - generic [ref=e11]:
+      - generic [ref=e13]:
+        - button "💬 对话" [ref=e14] [cursor=pointer]
+        - button "📄 论文搜索" [ref=e15] [cursor=pointer]
+        - button "🧠 记忆" [ref=e16] [cursor=pointer]
+        - button "🔧 工具" [ref=e17] [cursor=pointer]
+      - generic [ref=e38]:
+        - button "📄 导出 Word" [ref=e39] [cursor=pointer]
+        - button "清空对话" [ref=e40] [cursor=pointer]
+    - generic [ref=e18]:
+      - generic [ref=e116]: KNN算法
+      - generic [ref=e117]:
+        - generic [ref=e118] [cursor=pointer]:
+          - generic [ref=e119]: 🤖 Agent 流水线
+          - generic [ref=e120]: 收起 ▲
+        - generic [ref=e121]:
+          - generic [ref=e124]:
+            - generic [ref=e125]: 🤖
+            - generic [ref=e126]: 🤖 智能路由
+            - generic [ref=e127]: ✅ 完成
+          - generic [ref=e130]:
+            - generic [ref=e131]:
+              - generic [ref=e132]: 🔍
+              - generic [ref=e133]: 🔍 文献调研
+              - generic [ref=e134]: ⏳ 进行中
+            - generic [ref=e135]:
+              - generic [ref=e136]: └─
+              - generic [ref=e137]: 🔧 🔧 调用 search_arxiv
+              - generic [ref=e138]: ✅
+            - generic [ref=e139]:
+              - generic [ref=e140]: └─
+              - generic [ref=e141]: 🔧 🔧 调用 search_arxiv
+              - generic [ref=e142]: ✅
+            - generic [ref=e148]:
+              - generic [ref=e149]: └─
+              - generic [ref=e150]: 🔧 🔧 调用 search_arxiv
+              - generic [ref=e151]: ✅
+            - generic [ref=e152]:
+              - generic [ref=e153]: └─
+              - generic [ref=e154]: 🔧 🔧 调用 search_arxiv
+              - generic [ref=e155]: ✅
+            - generic [ref=e156]:
+              - generic [ref=e157]: └─
+              - generic [ref=e158]: 🔧 🔧 调用 search_arxiv
+              - generic [ref=e159]: ✅
+      - generic [ref=e145]:
+        - paragraph [ref=e146]: 好的，我来为你做一个关于 KNN（K-Nearest Neighbors）算法的全面文献调研。
+        - paragraph [ref=e147]: 首先，让我搜索相关的高水平学术论文。# KNN（K-近邻）算法深度学习文献调研报告
+        - heading "一、领域简介" [level=2] [ref=e160]
+        - paragraph [ref=e161]:
+          - text: K-近邻（K-Nearest Neighbors, KNN）算法是机器学习中最经典、最直观的非参数分类与回归方法之一。其核心思想极其简洁：
+          - strong [ref=e162]: 一个样本的类别由其特征空间中最近的 K 个邻居的多数投票决定
+          - text: 。这种“基于实例”或“懒惰学习”（Lazy Learning）的特性，使其无需显式的训练过程，模型构建几乎零成本，所有计算开销都集中在推理阶段。
+        - paragraph [ref=e163]:
+          - text: 尽管深度学习在图像、文本等非结构化数据上取得了巨大成功，但KNN因其
+          - strong [ref=e164]: 几何可解释性、无需训练、对数据分布无假设
+          - text: 等优势，在中小规模数据集、低维特征空间、以及需要快速原型验证的场景中，依然占据重要地位。近年来，KNN 的研究热点集中在：
+          - strong [ref=e165]: 解决K值敏感性、克服维度灾难、提升大规模数据下的检索效率、以及结合深度学习（如检索增强生成RAG）
+          - text: 等领域。
+        - heading "二、核心方法分类及代表性论文分析" [level=2] [ref=e166]
+        - paragraph [ref=e167]: 根据搜索到的文献，我将当前KNN的研究方向归纳为以下四大类：
+        - heading "1. 传统KNN的改进：解决K值敏感性与投票机制缺陷" [level=3] [ref=e168]
+        - paragraph [ref=e169]: 这是最经典的研究方向。传统KNN对所有邻居等权投票（或简单反距离加权），
+        - text: "|"
+    - generic [ref=e22]:
+      - generic [ref=e23]:
+        - button "🤖 自动" [disabled] [ref=e24]
+        - button "💬 对话" [disabled] [ref=e25]
+        - button "🔍 调研" [disabled] [ref=e26]
+        - button "💡 创新" [disabled] [ref=e27]
+        - button "🧪 实验" [disabled] [ref=e28]
+      - generic [ref=e29]:
+        - textbox "输入消息... (支持 Markdown 和 LaTeX)" [disabled] [ref=e30]
+        - combobox "切换模型" [disabled] [ref=e31] [cursor=pointer]:
+          - option "DeepSeek V4 Flash" [selected]
+          - option "V4 Pro"
+          - option "思考模式"
+        - button "发送" [disabled] [ref=e32]

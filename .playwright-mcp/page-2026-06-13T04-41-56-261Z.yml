@@ -1,0 +1,98 @@
+- generic [ref=e3]:
+  - generic [ref=e4]:
+    - generic [ref=e5]:
+      - heading "对话历史" [level=2] [ref=e6]
+      - button "+ 新对话" [ref=e7] [cursor=pointer]
+    - generic [ref=e8]:
+      - generic [ref=e371] [cursor=pointer]:
+        - generic [ref=e372]:
+          - generic [ref=e373]: hi
+          - generic [ref=e374]: 3 条消息
+        - button "×" [ref=e375]
+      - generic [ref=e197] [cursor=pointer]:
+        - generic [ref=e198]:
+          - generic [ref=e199]: KNN算法
+          - generic [ref=e200]: 2 条消息
+        - button "×" [ref=e201]
+      - generic [ref=e106] [cursor=pointer]:
+        - generic [ref=e107]:
+          - generic [ref=e108]: 什么是KNN算法
+          - generic [ref=e109]: 2 条消息
+        - button "×" [ref=e110]
+      - generic [ref=e33] [cursor=pointer]:
+        - generic [ref=e34]:
+          - generic [ref=e35]: 什么是机器学习
+          - generic [ref=e36]: 2 条消息
+        - button "×" [ref=e37]
+  - generic [ref=e10]:
+    - generic [ref=e11]:
+      - generic [ref=e13]:
+        - button "💬 对话" [ref=e14] [cursor=pointer]
+        - button "📄 论文搜索" [ref=e15] [cursor=pointer]
+        - button "🧠 记忆" [ref=e16] [cursor=pointer]
+        - button "🔧 工具" [ref=e17] [cursor=pointer]
+      - generic [ref=e38]:
+        - button "📄 导出 Word" [ref=e39] [cursor=pointer]
+        - button "清空对话" [ref=e40] [cursor=pointer]
+    - generic [ref=e18]:
+      - generic [ref=e378]: hi
+      - generic [ref=e385]: 继续
+      - generic [ref=e396] [cursor=pointer]:
+        - generic [ref=e397]: 🤖 Agent 流水线
+        - generic [ref=e398]: 展开 ▼
+      - generic [ref=e401]:
+        - paragraph [ref=e402]: 好的！😊 那我们继续聊聊吧～
+        - paragraph [ref=e403]: 你对深度学习哪个方向感兴趣呢？我来抛几个话题，看看有没有你感兴趣的：
+        - separator [ref=e404]
+        - heading "🔬 热门研究方向" [level=3] [ref=e405]:
+          - text: 🔬
+          - strong [ref=e406]: 热门研究方向
+        - list [ref=e407]:
+          - listitem [ref=e408]:
+            - strong [ref=e409]: 大语言模型（LLM）
+            - text: ：Transformer、GPT、LLaMA、微调技术（LoRA、RLHF）
+          - listitem [ref=e410]:
+            - strong [ref=e411]: 多模态学习
+            - text: ：CLIP、BLIP、LLaVA、图文理解与生成
+          - listitem [ref=e412]:
+            - strong [ref=e413]: 扩散模型
+            - text: ：Stable Diffusion、DDPM、流匹配（Flow Matching）
+          - listitem [ref=e414]:
+            - strong [ref=e415]: 强化学习
+            - text: ：PPO、DQN、GRPO（你之前提到的）
+          - listitem [ref=e416]:
+            - strong [ref=e417]: 计算机视觉
+            - text: ：ViT、目标检测（DETR、YOLO）、分割（SAM）
+          - listitem [ref=e418]:
+            - strong [ref=e419]: AI Agent
+            - text: ：工具调用、规划、记忆、多智能体协作
+        - heading "🛠️ 实用技术" [level=3] [ref=e420]:
+          - text: 🛠️
+          - strong [ref=e421]: 实用技术
+        - list [ref=e422]:
+          - listitem [ref=e423]: 模型训练技巧（学习率调度、Batch Size、梯度累积）
+          - listitem [ref=e424]: 分布式训练（FSDP、DeepSpeed）
+          - listitem [ref=e425]: 模型量化与部署（GGUF、ONNX、TensorRT）
+          - listitem [ref=e426]: 实验管理与复现（Weights & Biases、MLflow）
+        - heading "📄 论文解读" [level=3] [ref=e427]:
+          - text: 📄
+          - strong [ref=e428]: 论文解读
+        - list [ref=e429]:
+          - listitem [ref=e430]: 最近读了什么有趣的论文？我可以帮你梳理核心思想
+          - listitem [ref=e431]: 或者你想了解某篇经典论文（如 Attention Is All You Need、ResNet、GAN）的细节
+        - separator [ref=e432]
+        - paragraph [ref=e433]: 随便挑一个方向，或者直接告诉我你想聊什么，我陪你深入探讨！🚀
+    - generic [ref=e22]:
+      - generic [ref=e23]:
+        - button "🤖 自动" [ref=e24] [cursor=pointer]
+        - button "💬 对话" [ref=e25] [cursor=pointer]
+        - button "🔍 调研" [ref=e26] [cursor=pointer]
+        - button "💡 创新" [ref=e27] [cursor=pointer]
+        - button "🧪 实验" [ref=e28] [cursor=pointer]
+      - generic [ref=e29]:
+        - textbox "输入消息... (支持 Markdown 和 LaTeX)" [ref=e30]
+        - combobox "切换模型" [ref=e31] [cursor=pointer]:
+          - option "DeepSeek V4 Flash" [selected]
+          - option "V4 Pro"
+          - option "思考模式"
+        - button "发送" [ref=e32] [cursor=pointer]

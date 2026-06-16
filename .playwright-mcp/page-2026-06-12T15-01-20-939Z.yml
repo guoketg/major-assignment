@@ -1,0 +1,243 @@
+- generic [ref=e3]:
+  - generic [ref=e4]:
+    - generic [ref=e5]:
+      - heading "对话历史" [level=2] [ref=e6]
+      - button "+ 新对话" [ref=e7] [cursor=pointer]
+    - generic [ref=e8]:
+      - generic [ref=e342] [cursor=pointer]:
+        - generic [ref=e343]:
+          - generic [ref=e344]: 写一篇关于CLIP噪声标签的综述并导出为文档
+          - generic [ref=e345]: 1 条消息
+        - button "×" [ref=e346]
+      - generic [ref=e347] [cursor=pointer]:
+        - generic [ref=e348]:
+          - generic [ref=e349]: 写一篇关于CLIP噪声标签的综述并导出为文档
+          - generic [ref=e350]: 1 条消息
+        - button "×" [ref=e351]
+      - generic [ref=e262] [cursor=pointer]:
+        - generic [ref=e263]:
+          - generic [ref=e264]: 写一篇CLIP噪声标签的综述并导出为Word
+          - generic [ref=e265]: 1 条消息
+        - button "×" [ref=e266]
+      - generic [ref=e232] [cursor=pointer]:
+        - generic [ref=e233]:
+          - generic [ref=e234]: 写一篇关于CLIP噪声标签的综述并保存
+          - generic [ref=e235]: 3 条消息
+        - button "×" [ref=e236]
+      - generic [ref=e111] [cursor=pointer]:
+        - generic [ref=e112]:
+          - generic [ref=e113]: 请撰写一篇关于CLIP噪声标签学习的综述论文，导出为Word...
+          - generic [ref=e114]: 1 条消息
+        - button "×" [ref=e115]
+      - generic [ref=e33] [cursor=pointer]:
+        - generic [ref=e34]:
+          - generic [ref=e35]: 请撰写一篇关于CLIP噪声标签学习的综述论文（汉语），然后导...
+          - generic [ref=e36]: 2 条消息
+        - button "×" [ref=e37]
+      - generic [ref=e38] [cursor=pointer]:
+        - generic [ref=e39]:
+          - generic [ref=e40]: 请撰写一篇关于CLIP噪声标签学习的综述论文（汉语），系统调...
+          - generic [ref=e41]: 2 条消息
+        - button "×" [ref=e42]
+      - generic [ref=e43] [cursor=pointer]:
+        - generic [ref=e44]:
+          - generic [ref=e45]: 帮我调研一下CLIP模型的最新进展
+          - generic [ref=e46]: 2 条消息
+        - button "×" [ref=e47]
+      - generic [ref=e48] [cursor=pointer]:
+        - generic [ref=e49]:
+          - generic [ref=e50]: 帮我调研CLIP模型的最新进展
+          - generic [ref=e51]: 2 条消息
+        - button "×" [ref=e52]
+      - generic [ref=e53] [cursor=pointer]:
+        - generic [ref=e54]:
+          - generic [ref=e55]: 帮我调研CLIP模型的最新进展
+          - generic [ref=e56]: 2 条消息
+        - button "×" [ref=e57]
+      - generic [ref=e58] [cursor=pointer]:
+        - generic [ref=e59]:
+          - generic [ref=e60]: 你好
+          - generic [ref=e61]: 4 条消息
+        - button "×" [ref=e62]
+      - generic [ref=e63] [cursor=pointer]:
+        - generic [ref=e64]:
+          - generic [ref=e65]: 帮我调研CLIP噪声标签学习的最新进展
+          - generic [ref=e66]: 2 条消息
+        - button "×" [ref=e67]
+      - generic [ref=e68] [cursor=pointer]:
+        - generic [ref=e69]:
+          - generic [ref=e70]: 帮我调研一下CLIP噪声标签学习的最新进展
+          - generic [ref=e71]: 4 条消息
+        - button "×" [ref=e72]
+      - generic [ref=e73] [cursor=pointer]:
+        - generic [ref=e74]:
+          - generic [ref=e75]: 帮我调研一下CLIP噪声标签学习的最新进展
+          - generic [ref=e76]: 2 条消息
+        - button "×" [ref=e77]
+      - generic [ref=e78] [cursor=pointer]:
+        - generic [ref=e79]:
+          - generic [ref=e80]: 你好
+          - generic [ref=e81]: 2 条消息
+        - button "×" [ref=e82]
+  - generic [ref=e10]:
+    - generic [ref=e11]:
+      - generic [ref=e13]:
+        - button "💬 对话" [ref=e14] [cursor=pointer]
+        - button "📄 论文搜索" [ref=e15] [cursor=pointer]
+        - button "🧠 记忆" [ref=e16] [cursor=pointer]
+        - button "🔧 工具" [ref=e17] [cursor=pointer]
+      - button "清空对话" [ref=e84] [cursor=pointer]
+    - generic [ref=e18]:
+      - generic [ref=e357]: 写一篇关于CLIP噪声标签的综述并导出为文档
+      - generic [ref=e418]: 写一篇关于CLIP噪声标签的综述并导出为文档
+      - generic [ref=e495]: 写一篇关于CLIP噪声标签的综述
+      - generic [ref=e573]: 写一篇关于CLIP噪声标签的综述并导出为文档
+      - generic [ref=e746]: 写一篇关于CLIP噪声标签的综述并导出为文档
+      - generic [ref=e888]:
+        - generic [ref=e889] [cursor=pointer]:
+          - generic [ref=e890]: 🤖 Agent 流水线
+          - generic [ref=e891]: 收起 ▲
+        - generic [ref=e892]:
+          - generic [ref=e895]:
+            - generic [ref=e896]: 🤖
+            - generic [ref=e897]: 🤖 智能路由
+            - generic [ref=e898]: ✅ 完成
+          - generic [ref=e902]:
+            - generic [ref=e903]: 📋
+            - generic [ref=e904]: 📋 任务规划
+            - generic [ref=e905]: ✅ 完成
+          - generic [ref=e934]:
+            - generic [ref=e935]:
+              - generic [ref=e936]: 🔍
+              - generic [ref=e937]: 🔍 文献调研
+              - generic [ref=e938]: ⏳ 进行中
+            - generic [ref=e939]:
+              - generic [ref=e940]: └─
+              - generic [ref=e941]: 🔧 🔧 调用 search_arxiv
+              - generic [ref=e942]: ✅
+            - generic [ref=e943]:
+              - generic [ref=e944]: └─
+              - generic [ref=e945]: 🔧 🔧 调用 search_arxiv
+              - generic [ref=e946]: ✅
+            - generic [ref=e947]:
+              - generic [ref=e948]: └─
+              - generic [ref=e949]: 🔧 🔧 调用 search_arxiv
+              - generic [ref=e950]: ✅
+            - generic [ref=e951]:
+              - generic [ref=e952]: └─
+              - generic [ref=e953]: 🔧 🔧 调用 search_arxiv
+              - generic [ref=e954]: ✅
+            - generic [ref=e955]:
+              - generic [ref=e956]: └─
+              - generic [ref=e957]: 🔧 🔧 调用 search_arxiv
+              - generic [ref=e958]: ✅
+            - generic [ref=e959]:
+              - generic [ref=e960]: └─
+              - generic [ref=e961]: 🔧 🔧 调用 search_arxiv
+              - generic [ref=e962]: ✅
+          - generic [ref=e963]:
+            - generic [ref=e964]: 📋 任务进度 (0/7)
+            - generic [ref=e965]:
+              - generic [ref=e966]: ⏳
+              - generic [ref=e967]: 1. [research] 调研CLIP模型在面对噪声标签时的鲁棒性问题，包括噪声来源（如网络数据爬取、弱监督）和影响
+            - generic [ref=e968]:
+              - generic [ref=e969]: ⏺️
+              - generic [ref=e970]: 2. [research] 调研用于减轻CLIP噪声标签影响的方法，特别是数据过滤策略（如基于相似度、文本匹配、模型置信度）
+            - generic [ref=e971]:
+              - generic [ref=e972]: ⏺️
+              - generic [ref=e973]: 3. [research] 调研针对CLIP的损失函数改进或训练策略以抵抗噪声标签，如对比损失变体、自训练、重加权等
+            - generic [ref=e974]:
+              - generic [ref=e975]: ⏺️
+              - generic [ref=e976]: 4. [research] 调研CLIP噪声标签研究的常用评估基准、数据集（如CC12M, YFCC100M）和评测指标
+            - generic [ref=e977]:
+              - generic [ref=e978]: ⏺️
+              - generic [ref=e979]: 5. [research] 调研当前CLIP噪声标签领域存在的开放挑战和未来研究方向
+            - generic [ref=e980]:
+              - generic [ref=e981]: ⏺️
+              - generic [ref=e982]: 6. [synthesize] 将前5个子任务的调研结果整合为结构化的综述文章，包括摘要、引言、问题定义、方法分类、实验对比、挑战与展望、结论
+            - generic [ref=e983]:
+              - generic [ref=e984]: ⏺️
+              - generic [ref=e985]: 7. [experiment] 将综述文档从Markdown转换为可导出的文档格式（如.docx或.pdf）
+      - generic [ref=e908]: 写一篇关于CLIP噪声标签的综述并导出为文档
+      - generic [ref=e909]:
+        - generic [ref=e910] [cursor=pointer]:
+          - generic [ref=e911]: 🤖 Agent 流水线
+          - generic [ref=e912]: 收起 ▲
+        - generic [ref=e913]:
+          - generic [ref=e916]:
+            - generic [ref=e917]: 🤖
+            - generic [ref=e918]: 🤖 智能路由
+            - generic [ref=e919]: ✅ 完成
+          - generic [ref=e923]:
+            - generic [ref=e924]: 📋
+            - generic [ref=e925]: 📋 任务规划
+            - generic [ref=e926]: ✅ 完成
+          - generic [ref=e988]:
+            - generic [ref=e989]:
+              - generic [ref=e990]: 🔍
+              - generic [ref=e991]: 🔍 文献调研
+              - generic [ref=e992]: ⏳ 进行中
+            - generic [ref=e993]:
+              - generic [ref=e994]: └─
+              - generic [ref=e995]: 🔧 🔧 调用 search_arxiv
+              - generic [ref=e996]: ✅
+            - generic [ref=e997]:
+              - generic [ref=e998]: └─
+              - generic [ref=e999]: 🔧 🔧 调用 search_arxiv
+              - generic [ref=e1000]: ✅
+            - generic [ref=e1001]:
+              - generic [ref=e1002]: └─
+              - generic [ref=e1003]: 🔧 🔧 调用 search_arxiv
+              - generic [ref=e1004]: ✅
+            - generic [ref=e1005]:
+              - generic [ref=e1006]: └─
+              - generic [ref=e1007]: 🔧 🔧 调用 search_arxiv
+              - generic [ref=e1008]: ✅
+            - generic [ref=e1009]:
+              - generic [ref=e1010]: └─
+              - generic [ref=e1011]: 🔧 🔧 调用 search_arxiv
+              - generic [ref=e1012]: ✅
+            - generic [ref=e1013]:
+              - generic [ref=e1014]: └─
+              - generic [ref=e1015]: 🔧 🔧 调用 search_arxiv
+              - generic [ref=e1016]: ✅
+          - generic [ref=e1017]:
+            - generic [ref=e1018]: 📋 任务进度 (0/7)
+            - generic [ref=e1019]:
+              - generic [ref=e1020]: ⏳
+              - generic [ref=e1021]: 1. [research] 调研CLIP模型在面对噪声标签时的鲁棒性问题，包括噪声来源（如网络数据爬取、弱监督）和影响
+            - generic [ref=e1022]:
+              - generic [ref=e1023]: ⏺️
+              - generic [ref=e1024]: 2. [research] 调研用于减轻CLIP噪声标签影响的方法，特别是数据过滤策略（如基于相似度、文本匹配、模型置信度）
+            - generic [ref=e1025]:
+              - generic [ref=e1026]: ⏺️
+              - generic [ref=e1027]: 3. [research] 调研针对CLIP的损失函数改进或训练策略以抵抗噪声标签，如对比损失变体、自训练、重加权等
+            - generic [ref=e1028]:
+              - generic [ref=e1029]: ⏺️
+              - generic [ref=e1030]: 4. [research] 调研CLIP噪声标签研究的常用评估基准、数据集（如CC12M, YFCC100M）和评测指标
+            - generic [ref=e1031]:
+              - generic [ref=e1032]: ⏺️
+              - generic [ref=e1033]: 5. [research] 调研当前CLIP噪声标签领域存在的开放挑战和未来研究方向
+            - generic [ref=e1034]:
+              - generic [ref=e1035]: ⏺️
+              - generic [ref=e1036]: 6. [synthesize] 将前5个子任务的调研结果整合为结构化的综述文章，包括摘要、引言、问题定义、方法分类、实验对比、挑战与展望、结论
+            - generic [ref=e1037]:
+              - generic [ref=e1038]: ⏺️
+              - generic [ref=e1039]: 7. [experiment] 将综述文档从Markdown转换为可导出的文档格式（如.docx或.pdf）
+      - generic [ref=e929]:
+        - code [ref=e931]: "{ \"is_complex\": true, \"overall_goal\": \"撰写一篇关于CLIP模型噪声标签的综述文章，涵盖问题背景、现有方法、挑战和未来方向，并最终导出为文档。\", \"sub_tasks\": [ { \"id\": 1, \"agent\": \"research\", \"query\": \"CLIP model noisy labels robustness\", \"focus\": \"调研CLIP模型在面对噪声标签时的鲁棒性问题，包括噪声来源（如网络数据爬取、弱监督）和影响\", \"expected_output\": \"CLIP噪声标签问题的背景、噪声类型、对模型性能影响的总结\" }, { \"id\": 2, \"agent\": \"research\", \"query\": \"CLIP noisy label mitigation methods data filtering\", \"focus\": \"调研用于减轻CLIP噪声标签影响的方法，特别是数据过滤策略（如基于相似度、文本匹配、模型置信度）\", \"expected_output\": \"数据过滤方法的分类、代表性工作（如LAION-5B过滤、CLIP-filter）及其效果\" }, { \"id\": 3, \"agent\": \"research\", \"query\": \"CLIP loss function noise robust learning\", \"focus\": \"调研针对CLIP的损失函数改进或训练策略以抵抗噪声标签，如对比损失变体、自训练、重加权等\", \"expected_output\": \"损失函数和训练策略层面的噪声鲁棒方法总结\" }, { \"id\": 4, \"agent\": \"research\", \"query\": \"CLIP noisy labels evaluation benchmarks metrics\", \"focus\": \"调研CLIP噪声标签研究的常用评估基准、数据集（如CC12M, YFCC100M）和评测指标\", \"expected_output\": \"常用基准数据集、评估指标和实验设置的总结\" }, { \"id\": 5, \"agent\": \"research\", \"query\": \"CLIP noise label open challenges future directions\", \"focus\": \"调研当前CLIP噪声标签领域存在的开放挑战和未来研究方向\", \"expected_output\": \"挑战（如长尾分布、概念漂移、细粒度噪声）和未来方向的总结\" }, { \"id\": 6, \"agent\": \"synthesize\", \"query\": \"综合所有调研结果，撰写CLIP噪声标签综述\", \"focus\": \"将前5个子任务的调研结果整合为结构化的综述文章，包括摘要、引言、问题定义、方法分类、实验对比、挑战与展望、结论\", \"expected_output\": \"完整的综述文档（Markdown格式）\" }, { \"id\": 7, \"agent\": \"experiment\", \"query\": \"导出综述文档为Word或PDF格式\", \"focus\": \"将综述文档从Markdown转换为可导出的文档格式（如.docx或.pdf）\", \"expected_output\": \"导出的文档文件\" } ], \"plan_summary\": \"先分别调研CLIP噪声标签的问题背景、数据过滤方法、训练策略、评估基准和未来挑战，然后综合这些信息撰写一篇结构完整的综述，最后导出为文档。\" } ```📋 **任务规划完成**：共 7 个子任务 **目标**：撰写一篇关于CLIP模型噪声标签的综述文章，涵盖问题背景、现有方法、挑战和未来方向，并最终导出为文档。 **规划**：先分别调研CLIP噪声标签的问题背景、数据过滤方法、训练策略、评估基准和未来挑战，然后综合这些信息撰写一篇结构完整的综述，最后导出为文档。 **开始执行子任务 1/7**：调研CLIP模型在面对噪声标签时的鲁棒性问题，包括噪声来源（如网络数据爬取、弱监督）和影响我来为你撰写一篇关于CLIP噪声标签的全面综述。首先，让我搜索相关文献。# CLIP模型噪声标签鲁棒性研究综述 ## 一、领域简介 CLIP（Contrastive Language-Image Pre-training）作为多模态预训练模型的代表，通过海量图文对数据进行对比学习，展现出强大的零样本泛化能力。然而，CLIP的训练数据通常来自网络爬取，不可避免地包含大量噪声标签（Noisy Labels）和噪声对应关系（Noisy Correspondence）。这些噪声主要表现为两种形式：（1）**类别标签噪声**——"
+        - text: "|"
+    - generic [ref=e22]:
+      - generic [ref=e23]:
+        - button "🤖 自动" [disabled] [ref=e24]
+        - button "💬 对话" [disabled] [ref=e25]
+        - button "🔍 调研" [disabled] [ref=e26]
+        - button "💡 创新" [disabled] [ref=e27]
+        - button "🧪 实验" [disabled] [ref=e28]
+      - generic [ref=e29]:
+        - textbox "输入消息... (支持 Markdown 和 LaTeX)" [disabled] [ref=e30]
+        - combobox "切换模型" [disabled] [ref=e31] [cursor=pointer]:
+          - option "DeepSeek V4 Flash" [selected]
+          - option "V4 Pro"
+          - option "思考模式"
+        - button "发送" [disabled] [ref=e32]

@@ -1,0 +1,68 @@
+- generic [ref=e3]:
+  - generic [ref=e4]:
+    - generic [ref=e5]:
+      - heading "对话历史" [level=2] [ref=e6]
+      - button "+ 新对话" [ref=e7] [cursor=pointer]
+    - generic [ref=e8]:
+      - generic [ref=e106] [cursor=pointer]:
+        - generic [ref=e107]:
+          - generic [ref=e108]: 什么是KNN算法
+          - generic [ref=e109]: 2 条消息
+        - button "×" [ref=e110]
+      - generic [ref=e33] [cursor=pointer]:
+        - generic [ref=e34]:
+          - generic [ref=e35]: 什么是机器学习
+          - generic [ref=e36]: 2 条消息
+        - button "×" [ref=e37]
+  - generic [ref=e10]:
+    - generic [ref=e11]:
+      - generic [ref=e13]:
+        - button "💬 对话" [ref=e14] [cursor=pointer]
+        - button "📄 论文搜索" [ref=e15] [cursor=pointer]
+        - button "🧠 记忆" [ref=e16] [cursor=pointer]
+        - button "🔧 工具" [ref=e17] [cursor=pointer]
+      - generic [ref=e38]:
+        - button "📄 导出 Word" [ref=e39] [cursor=pointer]
+        - button "清空对话" [ref=e40] [cursor=pointer]
+    - generic [ref=e18]:
+      - generic [ref=e116]: KNN算法
+      - generic [ref=e117]:
+        - generic [ref=e118] [cursor=pointer]:
+          - generic [ref=e119]: 🤖 Agent 流水线
+          - generic [ref=e120]: 收起 ▲
+        - generic [ref=e121]:
+          - generic [ref=e124]:
+            - generic [ref=e125]: 🤖
+            - generic [ref=e126]: 🤖 智能路由
+            - generic [ref=e127]: ✅ 完成
+          - generic [ref=e130]:
+            - generic [ref=e131]:
+              - generic [ref=e132]: 🔍
+              - generic [ref=e133]: 🔍 文献调研
+              - generic [ref=e134]: ⏳ 进行中
+            - generic [ref=e135]:
+              - generic [ref=e136]: └─
+              - generic [ref=e137]: 🔧 🔧 调用 search_arxiv
+              - generic [ref=e138]: ✅
+            - generic [ref=e139]:
+              - generic [ref=e140]: └─
+              - generic [ref=e141]: 🔧 🔧 调用 search_arxiv
+              - generic [ref=e142]: ⏳
+      - generic [ref=e145]:
+        - paragraph [ref=e146]: 好的，我来为你做一个关于 KNN（K-Nearest Neighbors）算法的全面文献调研。
+        - paragraph [ref=e147]: 首先，让我搜索相关的高水平学术论文。
+        - text: "|"
+    - generic [ref=e22]:
+      - generic [ref=e23]:
+        - button "🤖 自动" [disabled] [ref=e24]
+        - button "💬 对话" [disabled] [ref=e25]
+        - button "🔍 调研" [disabled] [ref=e26]
+        - button "💡 创新" [disabled] [ref=e27]
+        - button "🧪 实验" [disabled] [ref=e28]
+      - generic [ref=e29]:
+        - textbox "输入消息... (支持 Markdown 和 LaTeX)" [disabled] [ref=e30]
+        - combobox "切换模型" [disabled] [ref=e31] [cursor=pointer]:
+          - option "DeepSeek V4 Flash" [selected]
+          - option "V4 Pro"
+          - option "思考模式"
+        - button "发送" [disabled] [ref=e32]

@@ -1,0 +1,224 @@
+- generic [ref=e3]:
+  - generic [ref=e4]:
+    - generic [ref=e5]:
+      - heading "对话历史" [level=2] [ref=e6]
+      - button "+ 新对话" [ref=e7] [cursor=pointer]
+    - generic [ref=e8]:
+      - generic [ref=e343] [cursor=pointer]:
+        - generic [ref=e344]:
+          - generic [ref=e345]: 500字介绍机器学习，要详细
+          - generic [ref=e346]: 2 条消息
+        - button "×" [ref=e347]
+      - generic [ref=e9] [cursor=pointer]:
+        - generic [ref=e10]:
+          - generic [ref=e11]: 100字介绍机器学习
+          - generic [ref=e12]: 4 条消息
+        - button "×" [ref=e13]
+      - generic [ref=e14] [cursor=pointer]:
+        - generic [ref=e15]:
+          - generic [ref=e16]: 你好，请介绍一下Python
+          - generic [ref=e17]: 2 条消息
+        - button "×" [ref=e18]
+      - generic [ref=e19] [cursor=pointer]:
+        - generic [ref=e20]:
+          - generic [ref=e21]: 请用300字介绍XGBoost算法
+          - generic [ref=e22]: 2 条消息
+        - button "×" [ref=e23]
+      - generic [ref=e24] [cursor=pointer]:
+        - generic [ref=e25]:
+          - generic [ref=e26]: 请用500字介绍Transformer架构，尽可能详细
+          - generic [ref=e27]: 2 条消息
+        - button "×" [ref=e28]
+      - generic [ref=e29] [cursor=pointer]:
+        - generic [ref=e30]:
+          - generic [ref=e31]: 什么是机器学习加XGBoost，请详细介绍一下
+          - generic [ref=e32]: 2 条消息
+        - button "×" [ref=e33]
+      - generic [ref=e34] [cursor=pointer]:
+        - generic [ref=e35]:
+          - generic [ref=e36]: c语言程序中 unsigned int和int 他们存储的是...
+          - generic [ref=e37]: 2 条消息
+        - button "×" [ref=e38]
+      - generic [ref=e39] [cursor=pointer]:
+        - generic [ref=e40]:
+          - generic [ref=e41]: 500字介绍深度学习的最新进展 要包括Transformer...
+          - generic [ref=e42]: 2 条消息
+        - button "×" [ref=e43]
+      - generic [ref=e44] [cursor=pointer]:
+        - generic [ref=e45]:
+          - generic [ref=e46]: c语言程序中 unsigned int和int 他们存储的是...
+          - generic [ref=e47]: 2 条消息
+        - button "×" [ref=e48]
+      - generic [ref=e49] [cursor=pointer]:
+        - generic [ref=e50]:
+          - generic [ref=e51]: 500字介绍深度学习的最新进展 要包括Transformer...
+          - generic [ref=e52]: 2 条消息
+        - button "×" [ref=e53]
+      - generic [ref=e54] [cursor=pointer]:
+        - generic [ref=e55]:
+          - generic [ref=e56]: 500字介绍深度学习的最新进展 要包括Transformer...
+          - generic [ref=e57]: 2 条消息
+        - button "×" [ref=e58]
+      - generic [ref=e59] [cursor=pointer]:
+        - generic [ref=e60]:
+          - generic [ref=e61]: 500字介绍深度学习的最新进展 要包括Transformer...
+          - generic [ref=e62]: 2 条消息
+        - button "×" [ref=e63]
+      - generic [ref=e64] [cursor=pointer]:
+        - generic [ref=e65]:
+          - generic [ref=e66]: 500字介绍深度学习的最新进展 要包括Transformer...
+          - generic [ref=e67]: 2 条消息
+        - button "×" [ref=e68]
+      - generic [ref=e69] [cursor=pointer]:
+        - generic [ref=e70]:
+          - generic [ref=e71]: 500字介绍深度学习的最新进展 要包括Transformer...
+          - generic [ref=e72]: 2 条消息
+        - button "×" [ref=e73]
+      - generic [ref=e74] [cursor=pointer]:
+        - generic [ref=e75]:
+          - generic [ref=e76]: 500字介绍Transformer
+          - generic [ref=e77]: 2 条消息
+        - button "×" [ref=e78]
+      - generic [ref=e79] [cursor=pointer]:
+        - generic [ref=e80]:
+          - generic [ref=e81]: 500字介绍Transformer
+          - generic [ref=e82]: 2 条消息
+        - button "×" [ref=e83]
+      - generic [ref=e84] [cursor=pointer]:
+        - generic [ref=e85]:
+          - generic [ref=e86]: 500字介绍深度学习 要包括CNN RNN Transfor...
+          - generic [ref=e87]: 2 条消息
+        - button "×" [ref=e88]
+      - generic [ref=e89] [cursor=pointer]:
+        - generic [ref=e90]:
+          - generic [ref=e91]: 500字介绍Transformer
+          - generic [ref=e92]: 2 条消息
+        - button "×" [ref=e93]
+      - generic [ref=e94] [cursor=pointer]:
+        - generic [ref=e95]:
+          - generic [ref=e96]: 500字介绍深度学习的最新进展 要包括Transformer...
+          - generic [ref=e97]: 4 条消息
+        - button "×" [ref=e98]
+      - generic [ref=e99] [cursor=pointer]:
+        - generic [ref=e100]:
+          - generic [ref=e101]: 00字介绍Transformer
+          - generic [ref=e102]: 4 条消息
+        - button "×" [ref=e103]
+      - generic [ref=e104] [cursor=pointer]:
+        - generic [ref=e105]:
+          - generic [ref=e106]: 200字介绍Transformer
+          - generic [ref=e107]: 4 条消息
+        - button "×" [ref=e108]
+  - generic [ref=e109]:
+    - generic [ref=e110]:
+      - generic [ref=e112]:
+        - button "💬 对话" [ref=e113] [cursor=pointer]
+        - button "📄 论文搜索" [ref=e114] [cursor=pointer]
+        - button "🧠 记忆" [ref=e115] [cursor=pointer]
+        - button "🔧 工具" [ref=e116] [cursor=pointer]
+      - generic [ref=e132]:
+        - button "📄 导出 Word" [ref=e133] [cursor=pointer]
+        - button "清空对话" [ref=e134] [cursor=pointer]
+    - generic [ref=e117]:
+      - generic [ref=e265]: 500字介绍机器学习，要详细
+      - generic [ref=e266]:
+        - generic [ref=e267] [cursor=pointer]:
+          - generic [ref=e268]: 🤖 Agent 流水线
+          - generic [ref=e269]: 收起 ▲
+        - generic [ref=e270]:
+          - generic [ref=e273]:
+            - generic [ref=e274]: 🤖
+            - generic [ref=e275]: 🤖 智能路由
+            - generic [ref=e276]: ✅ 完成
+          - generic [ref=e280]:
+            - generic [ref=e281]: 💬
+            - generic [ref=e282]: 💬 对话助手
+            - generic [ref=e283]: ✅ 完成
+          - generic [ref=e351]:
+            - generic [ref=e352]: 📋
+            - generic [ref=e353]: 📋 综合输出
+            - generic [ref=e354]: ✅ 完成
+      - generic [ref=e357]:
+        - heading "机器学习简介" [level=1] [ref=e358]
+        - paragraph [ref=e359]:
+          - strong [ref=e360]: 机器学习
+          - text: （Machine Learning, ML）是人工智能（AI）的核心分支之一，它使计算机能够
+          - strong [ref=e361]: 从数据中自动学习规律和模式
+          - text: ，而无需显式编程。其核心思想是：通过算法从大量数据中提取特征、发现规律，并利用这些规律对新数据进行预测或决策。
+        - heading "核心概念" [level=2] [ref=e362]
+        - paragraph [ref=e363]: 机器学习系统通常包含三个要素：
+        - list [ref=e364]:
+          - listitem [ref=e365]:
+            - strong [ref=e366]: 数据
+            - text: ：训练模型的基础，包括特征（输入）和标签（输出，适用于监督学习）
+          - listitem [ref=e367]:
+            - strong [ref=e368]: 模型
+            - text: ：一个数学函数或统计结构，用于映射输入到输出
+          - listitem [ref=e369]:
+            - strong [ref=e370]: 学习算法
+            - text: ：通过优化目标函数（如损失函数最小化）来调整模型参数的机制
+        - heading "主要类型" [level=2] [ref=e371]
+        - table [ref=e372]:
+          - rowgroup [ref=e373]:
+            - row "类型 特点 典型算法" [ref=e374]:
+              - columnheader "类型" [ref=e375]
+              - columnheader "特点" [ref=e376]
+              - columnheader "典型算法" [ref=e377]
+          - rowgroup [ref=e378]:
+            - row "监督学习 使用带标签数据训练，预测输出 线性回归、SVM、随机森林、神经网络" [ref=e379]:
+              - cell "监督学习" [ref=e380]:
+                - strong [ref=e381]: 监督学习
+              - cell "使用带标签数据训练，预测输出" [ref=e382]
+              - cell "线性回归、SVM、随机森林、神经网络" [ref=e383]
+            - row "无监督学习 使用无标签数据，发现隐藏结构 K-Means聚类、PCA、自编码器" [ref=e384]:
+              - cell "无监督学习" [ref=e385]:
+                - strong [ref=e386]: 无监督学习
+              - cell "使用无标签数据，发现隐藏结构" [ref=e387]
+              - cell "K-Means聚类、PCA、自编码器" [ref=e388]
+            - row "半监督学习 少量标签+大量无标签数据 自训练、图神经网络" [ref=e389]:
+              - cell "半监督学习" [ref=e390]:
+                - strong [ref=e391]: 半监督学习
+              - cell "少量标签+大量无标签数据" [ref=e392]
+              - cell "自训练、图神经网络" [ref=e393]
+            - row "强化学习 通过与环境交互获得奖励信号来学习 Q-Learning、DQN、PPO" [ref=e394]:
+              - cell "强化学习" [ref=e395]:
+                - strong [ref=e396]: 强化学习
+              - cell "通过与环境交互获得奖励信号来学习" [ref=e397]
+              - cell "Q-Learning、DQN、PPO" [ref=e398]
+        - heading "关键流程" [level=2] [ref=e399]
+        - list [ref=e400]:
+          - listitem [ref=e401]:
+            - strong [ref=e402]: 数据收集与预处理
+            - text: （清洗、归一化、增强）
+          - listitem [ref=e403]:
+            - strong [ref=e404]: 特征工程
+            - text: （提取、选择、降维）
+          - listitem [ref=e405]:
+            - strong [ref=e406]: 模型选择与训练
+            - text: （划分训练/验证/测试集）
+          - listitem [ref=e407]:
+            - strong [ref=e408]: 评估与调优
+            - text: （交叉验证、超参数搜索、正则化防止过拟合）
+          - listitem [ref=e409]:
+            - strong [ref=e410]: 部署与监控
+            - text: （模型上线、持续学习）
+        - heading "现代发展" [level=2] [ref=e411]
+        - paragraph [ref=e412]:
+          - text: 近年来，
+          - strong [ref=e413]: 深度学习
+          - text: （多层神经网络）在计算机视觉、自然语言处理、语音识别等领域取得突破性进展。大语言模型（如GPT系列）和扩散模型（如Stable Diffusion）更将机器学习推向通用人工智能的前沿。
+        - paragraph [ref=e414]: 机器学习已广泛应用于推荐系统、自动驾驶、医疗诊断、金融风控等场景，深刻改变着现代社会的运作方式。
+    - generic [ref=e121]:
+      - generic [ref=e122]:
+        - button "🤖 自动" [ref=e123] [cursor=pointer]
+        - button "💬 对话" [ref=e124] [cursor=pointer]
+        - button "🔍 调研" [ref=e125] [cursor=pointer]
+        - button "💡 创新" [ref=e126] [cursor=pointer]
+        - button "🧪 实验" [ref=e127] [cursor=pointer]
+      - generic [ref=e128]:
+        - textbox "输入消息... (支持 Markdown 和 LaTeX)" [ref=e129]
+        - combobox "切换模型" [ref=e130] [cursor=pointer]:
+          - option "DeepSeek V4 Flash" [selected]
+          - option "V4 Pro"
+          - option "思考模式"
+        - button "发送" [ref=e131] [cursor=pointer]

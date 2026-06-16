@@ -1,0 +1,353 @@
+- generic [ref=e3]:
+  - generic [ref=e4]:
+    - generic [ref=e5]:
+      - heading "对话历史" [level=2] [ref=e6]
+      - button "+ 新对话" [ref=e7] [cursor=pointer]
+    - generic [ref=e8]:
+      - generic [ref=e392] [cursor=pointer]:
+        - generic [ref=e393]:
+          - generic [ref=e394]: 请用500字介绍Transformer架构，尽可能详细
+          - generic [ref=e395]: 2 条消息
+        - button "×" [ref=e396]
+      - generic [ref=e33] [cursor=pointer]:
+        - generic [ref=e34]:
+          - generic [ref=e35]: 什么是机器学习加XGBoost，请详细介绍一下
+          - generic [ref=e36]: 2 条消息
+        - button "×" [ref=e37]
+      - generic [ref=e38] [cursor=pointer]:
+        - generic [ref=e39]:
+          - generic [ref=e40]: c语言程序中 unsigned int和int 他们存储的是...
+          - generic [ref=e41]: 2 条消息
+        - button "×" [ref=e42]
+      - generic [ref=e43] [cursor=pointer]:
+        - generic [ref=e44]:
+          - generic [ref=e45]: 500字介绍深度学习的最新进展 要包括Transformer...
+          - generic [ref=e46]: 2 条消息
+        - button "×" [ref=e47]
+      - generic [ref=e48] [cursor=pointer]:
+        - generic [ref=e49]:
+          - generic [ref=e50]: c语言程序中 unsigned int和int 他们存储的是...
+          - generic [ref=e51]: 2 条消息
+        - button "×" [ref=e52]
+      - generic [ref=e53] [cursor=pointer]:
+        - generic [ref=e54]:
+          - generic [ref=e55]: 500字介绍深度学习的最新进展 要包括Transformer...
+          - generic [ref=e56]: 2 条消息
+        - button "×" [ref=e57]
+      - generic [ref=e58] [cursor=pointer]:
+        - generic [ref=e59]:
+          - generic [ref=e60]: 500字介绍深度学习的最新进展 要包括Transformer...
+          - generic [ref=e61]: 2 条消息
+        - button "×" [ref=e62]
+      - generic [ref=e63] [cursor=pointer]:
+        - generic [ref=e64]:
+          - generic [ref=e65]: 500字介绍深度学习的最新进展 要包括Transformer...
+          - generic [ref=e66]: 2 条消息
+        - button "×" [ref=e67]
+      - generic [ref=e68] [cursor=pointer]:
+        - generic [ref=e69]:
+          - generic [ref=e70]: 500字介绍深度学习的最新进展 要包括Transformer...
+          - generic [ref=e71]: 2 条消息
+        - button "×" [ref=e72]
+      - generic [ref=e73] [cursor=pointer]:
+        - generic [ref=e74]:
+          - generic [ref=e75]: 500字介绍深度学习的最新进展 要包括Transformer...
+          - generic [ref=e76]: 2 条消息
+        - button "×" [ref=e77]
+      - generic [ref=e78] [cursor=pointer]:
+        - generic [ref=e79]:
+          - generic [ref=e80]: 500字介绍Transformer
+          - generic [ref=e81]: 2 条消息
+        - button "×" [ref=e82]
+      - generic [ref=e83] [cursor=pointer]:
+        - generic [ref=e84]:
+          - generic [ref=e85]: 500字介绍Transformer
+          - generic [ref=e86]: 2 条消息
+        - button "×" [ref=e87]
+      - generic [ref=e88] [cursor=pointer]:
+        - generic [ref=e89]:
+          - generic [ref=e90]: 500字介绍深度学习 要包括CNN RNN Transfor...
+          - generic [ref=e91]: 2 条消息
+        - button "×" [ref=e92]
+      - generic [ref=e93] [cursor=pointer]:
+        - generic [ref=e94]:
+          - generic [ref=e95]: 500字介绍Transformer
+          - generic [ref=e96]: 2 条消息
+        - button "×" [ref=e97]
+      - generic [ref=e98] [cursor=pointer]:
+        - generic [ref=e99]:
+          - generic [ref=e100]: 500字介绍深度学习的最新进展 要包括Transformer...
+          - generic [ref=e101]: 4 条消息
+        - button "×" [ref=e102]
+      - generic [ref=e103] [cursor=pointer]:
+        - generic [ref=e104]:
+          - generic [ref=e105]: 00字介绍Transformer
+          - generic [ref=e106]: 4 条消息
+        - button "×" [ref=e107]
+      - generic [ref=e108] [cursor=pointer]:
+        - generic [ref=e109]:
+          - generic [ref=e110]: 200字介绍Transformer
+          - generic [ref=e111]: 4 条消息
+        - button "×" [ref=e112]
+  - generic [ref=e10]:
+    - generic [ref=e11]:
+      - generic [ref=e13]:
+        - button "💬 对话" [ref=e14] [cursor=pointer]
+        - button "📄 论文搜索" [ref=e15] [cursor=pointer]
+        - button "🧠 记忆" [ref=e16] [cursor=pointer]
+        - button "🔧 工具" [ref=e17] [cursor=pointer]
+      - generic [ref=e113]:
+        - button "📄 导出 Word" [ref=e114] [cursor=pointer]
+        - button "清空对话" [ref=e115] [cursor=pointer]
+    - generic [ref=e116]:
+      - generic [ref=e117] [cursor=pointer]:
+        - generic [ref=e118]: 🤖 Agent 流水线
+        - generic [ref=e119]: 收起 ▲
+      - generic [ref=e120]:
+        - generic [ref=e123]:
+          - generic [ref=e124]: 🤖
+          - generic [ref=e125]: 🤖 智能路由
+          - generic [ref=e126]: ✅ 完成
+        - generic [ref=e130]:
+          - generic [ref=e131]: 💬
+          - generic [ref=e132]: 💬 对话助手
+          - generic [ref=e133]: ✅ 完成
+        - generic [ref=e400]:
+          - generic [ref=e401]: 📋
+          - generic [ref=e402]: 📋 综合输出
+          - generic [ref=e403]: ✅ 完成
+    - generic [ref=e18]:
+      - generic [ref=e136]: 请用500字介绍Transformer架构，尽可能详细
+      - generic [ref=e406]:
+        - heading "Transformer 架构详解" [level=1] [ref=e407]
+        - heading "概述" [level=2] [ref=e408]
+        - paragraph [ref=e409]:
+          - text: Transformer 是由 Vaswani 等人在 2017 年发表的论文
+          - strong [ref=e410]: 《Attention Is All You Need》
+          - text: 中提出的深度学习架构。它彻底摒弃了传统的循环神经网络（RNN）和卷积神经网络（CNN），
+          - strong [ref=e411]: 完全基于注意力机制
+          - text: 来建模序列数据，成为后续 BERT、GPT、T5、ViT 等模型的基石。
+        - separator [ref=e412]
+        - heading "核心组件" [level=2] [ref=e413]
+        - heading "1. 自注意力机制（Self-Attention）" [level=3] [ref=e414]
+        - paragraph [ref=e415]:
+          - text: 自注意力是 Transformer 的核心。对于输入序列中的每个 token，它通过计算该 token 与其他所有 token 的
+          - strong [ref=e416]: 注意力权重
+          - text: 来捕获全局依赖关系。
+        - paragraph [ref=e417]: 具体流程为：
+        - list [ref=e418]:
+          - listitem [ref=e419]:
+            - text: 输入
+            - generic [ref=e420]:
+              - math [ref=e422]:
+                - generic [ref=e425]: X
+              - generic [ref=e427]: X
+            - text: 通过三个不同的线性变换得到
+            - strong [ref=e428]: Query (Q)
+            - text: 、
+            - strong [ref=e429]: Key (K)
+            - text: 、
+            - strong [ref=e430]: Value (V)
+            - text: 。
+          - listitem [ref=e431]:
+            - text: 计算注意力分数：
+            - generic [ref=e432]:
+              - math [ref=e434]:
+                - generic [ref=e436]:
+                  - generic [ref=e437]: Attention
+                  - generic [ref=e438]: (
+                  - generic [ref=e439]: Q
+                  - generic [ref=e440]: ","
+                  - generic [ref=e441]: K
+                  - generic [ref=e442]: ","
+                  - generic [ref=e443]: V
+                  - generic [ref=e444]: )
+                  - generic [ref=e445]: =
+                  - generic [ref=e446]: softmax
+                  - generic [ref=e447]:
+                    - generic [ref=e448]: (
+                    - generic [ref=e449]:
+                      - generic [ref=e450]:
+                        - generic [ref=e451]: Q
+                        - generic [ref=e452]:
+                          - generic [ref=e453]: K
+                          - generic [ref=e454]: T
+                      - generic [ref=e456]:
+                        - generic [ref=e457]: d
+                        - generic [ref=e458]: k
+                    - generic [ref=e459]: )
+                  - generic [ref=e460]: V
+              - generic [ref=e461]:
+                - generic [ref=e462]:
+                  - generic [ref=e463]: Attention
+                  - text: (Q, K, V) =
+                - generic [ref=e464]:
+                  - generic [ref=e465]: softmax
+                  - generic [ref=e466]:
+                    - generic [ref=e467]: (
+                    - generic [ref=e472]:
+                      - generic [ref=e478]:
+                        - generic [ref=e480]:
+                          - text: d
+                          - generic [ref=e485]: k
+                        - img [ref=e490]
+                      - generic [ref=e497]:
+                        - text: Q
+                        - generic [ref=e498]:
+                          - text: K
+                          - generic [ref=e503]: T
+                    - generic [ref=e507]: )
+                  - text: V
+          - listitem [ref=e508]:
+            - text: 除以
+            - generic [ref=e509]:
+              - math [ref=e511]:
+                - generic [ref=e515]:
+                  - generic [ref=e516]: d
+                  - generic [ref=e517]: k
+              - generic [ref=e523]:
+                - generic [ref=e525]:
+                  - text: d
+                  - generic [ref=e530]: k
+                - img [ref=e535]
+            - text: （缩放因子）防止梯度消失。
+        - heading "2. 多头注意力（Multi-Head Attention）" [level=3] [ref=e540]
+        - paragraph [ref=e541]:
+          - text: 将 Q、K、V 拆分为
+          - generic [ref=e542]:
+            - math [ref=e544]:
+              - generic [ref=e547]: h
+            - generic [ref=e549]: h
+          - text: 个不同的子空间（头），每个头独立计算自注意力，然后将结果拼接并线性投影。这使得模型能够从
+          - strong [ref=e550]: 不同表示子空间
+          - text: 中关注信息。
+        - heading "3. 位置编码（Positional Encoding）" [level=3] [ref=e551]
+        - paragraph [ref=e552]:
+          - text: 由于 Transformer 没有循环结构，无法感知 token 的顺序。因此通过添加
+          - strong [ref=e553]: 正弦/余弦函数生成的位置编码
+          - text: （或可学习的嵌入）来注入位置信息。
+        - heading "4. 前馈神经网络（FFN）" [level=3] [ref=e554]
+        - paragraph [ref=e555]:
+          - text: 每个 Transformer 块包含两层全连接网络（通常中间维度较大，如
+          - generic [ref=e556]:
+            - math [ref=e558]:
+              - generic [ref=e560]:
+                - generic [ref=e561]: "4"
+                - generic [ref=e562]:
+                  - generic [ref=e563]: d
+                  - generic [ref=e564]:
+                    - generic [ref=e565]: m
+                    - generic [ref=e566]: o
+                    - generic [ref=e567]: d
+                    - generic [ref=e568]: e
+                    - generic [ref=e569]: l
+            - generic [ref=e571]:
+              - text: "4"
+              - generic [ref=e572]:
+                - text: d
+                - generic [ref=e578]: model
+          - text: ），中间使用 ReLU 或 GELU 激活函数，为模型增加非线性表达能力。
+        - heading "5. 残差连接与层归一化" [level=3] [ref=e582]
+        - paragraph [ref=e583]:
+          - text: 每个子层（注意力、FFN）后都使用
+          - strong [ref=e584]: 残差连接
+          - text: （
+          - generic [ref=e585]:
+            - math [ref=e587]:
+              - generic [ref=e589]:
+                - generic [ref=e590]: x
+                - generic [ref=e591]: +
+                - generic [ref=e592]: Sublayer
+                - generic [ref=e593]: (
+                - generic [ref=e594]: x
+                - generic [ref=e595]: )
+            - generic [ref=e596]:
+              - generic [ref=e597]: x +
+              - generic [ref=e598]:
+                - generic [ref=e599]: Sublayer
+                - text: (x)
+          - text: ）和
+          - strong [ref=e600]: 层归一化
+          - text: （LayerNorm），帮助稳定训练、缓解梯度消失。
+        - separator [ref=e601]
+        - heading "整体架构" [level=2] [ref=e602]
+        - paragraph [ref=e603]:
+          - text: Transformer 采用
+          - strong [ref=e604]: Encoder-Decoder
+          - text: 结构：
+        - list [ref=e605]:
+          - listitem [ref=e606]:
+            - strong [ref=e607]: 编码器（Encoder）
+            - text: ：由
+            - generic [ref=e608]:
+              - math [ref=e610]:
+                - generic [ref=e613]: "N"
+              - generic [ref=e615]: "N"
+            - text: 个相同的层堆叠而成，每层包含多头自注意力 + FFN。
+          - listitem [ref=e616]:
+            - strong [ref=e617]: 解码器（Decoder）
+            - text: ：同样由
+            - generic [ref=e618]:
+              - math [ref=e620]:
+                - generic [ref=e623]: "N"
+              - generic [ref=e625]: "N"
+            - text: 层堆叠，但每层包含
+            - strong [ref=e626]: 掩码多头自注意力
+            - text: （防止看到未来 token）+
+            - strong [ref=e627]: 交叉注意力
+            - text: （关注编码器输出）+ FFN。
+        - separator [ref=e628]
+        - heading "优势与影响" [level=2] [ref=e629]
+        - list [ref=e630]:
+          - listitem [ref=e631]:
+            - text: ✅
+            - strong [ref=e632]: 并行计算
+            - text: ：不像 RNN 需逐步计算，可同时处理整个序列，训练效率极高。
+          - listitem [ref=e633]:
+            - text: ✅
+            - strong [ref=e634]: 长程依赖建模
+            - text: ：自注意力直接连接任意两个位置，解决了 RNN 的长距离遗忘问题。
+          - listitem [ref=e635]:
+            - text: ✅
+            - strong [ref=e636]: 可扩展性
+            - text: ：模型规模可轻松扩展到数十亿甚至数千亿参数（如 GPT-4、PaLM）。
+          - listitem [ref=e637]:
+            - text: ⚠️
+            - strong [ref=e638]: 缺点
+            - text: ：计算复杂度为
+            - generic [ref=e639]:
+              - math [ref=e641]:
+                - generic [ref=e643]:
+                  - generic [ref=e644]: O
+                  - generic [ref=e645]: (
+                  - generic [ref=e646]:
+                    - generic [ref=e647]: "n"
+                    - generic [ref=e648]: "2"
+                  - generic [ref=e649]: )
+              - generic [ref=e651]:
+                - text: O(
+                - generic [ref=e652]:
+                  - text: "n"
+                  - generic [ref=e657]: "2"
+                - text: )
+            - text: （序列长度平方），长序列下计算开销大；后续涌现了
+            - strong [ref=e658]: Linformer、FlashAttention
+            - text: 等改进方案。
+        - paragraph [ref=e659]:
+          - text: Transformer 的提出是深度学习史上的里程碑，开启了
+          - strong [ref=e660]: 预训练 + 微调
+          - text: 的范式，深刻改变了 NLP、CV、多模态等领域的格局。
+    - generic [ref=e22]:
+      - generic [ref=e23]:
+        - button "🤖 自动" [ref=e24] [cursor=pointer]
+        - button "💬 对话" [ref=e25] [cursor=pointer]
+        - button "🔍 调研" [ref=e26] [cursor=pointer]
+        - button "💡 创新" [ref=e27] [cursor=pointer]
+        - button "🧪 实验" [ref=e28] [cursor=pointer]
+      - generic [ref=e29]:
+        - textbox "输入消息... (支持 Markdown 和 LaTeX)" [ref=e30]
+        - combobox "切换模型" [ref=e31] [cursor=pointer]:
+          - option "DeepSeek V4 Flash" [selected]
+          - option "V4 Pro"
+          - option "思考模式"
+        - button "发送" [ref=e32] [cursor=pointer]

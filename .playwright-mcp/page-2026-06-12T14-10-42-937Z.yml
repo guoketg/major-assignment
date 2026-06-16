@@ -1,0 +1,151 @@
+- generic [ref=e3]:
+  - generic [ref=e4]:
+    - generic [ref=e5]:
+      - heading "对话历史" [level=2] [ref=e6]
+      - button "+ 新对话" [ref=e7] [cursor=pointer]
+    - generic [ref=e8]:
+      - generic [ref=e33] [cursor=pointer]:
+        - generic [ref=e34]:
+          - generic [ref=e35]: 帮我调研一下CLIP模型的最新进展
+          - generic [ref=e36]: 2 条消息
+        - button "×" [ref=e37]
+      - generic [ref=e38] [cursor=pointer]:
+        - generic [ref=e39]:
+          - generic [ref=e40]: 帮我调研CLIP模型的最新进展
+          - generic [ref=e41]: 2 条消息
+        - button "×" [ref=e42]
+      - generic [ref=e43] [cursor=pointer]:
+        - generic [ref=e44]:
+          - generic [ref=e45]: 帮我调研CLIP模型的最新进展
+          - generic [ref=e46]: 2 条消息
+        - button "×" [ref=e47]
+      - generic [ref=e48] [cursor=pointer]:
+        - generic [ref=e49]:
+          - generic [ref=e50]: 你好
+          - generic [ref=e51]: 4 条消息
+        - button "×" [ref=e52]
+      - generic [ref=e53] [cursor=pointer]:
+        - generic [ref=e54]:
+          - generic [ref=e55]: 帮我调研CLIP噪声标签学习的最新进展
+          - generic [ref=e56]: 2 条消息
+        - button "×" [ref=e57]
+      - generic [ref=e58] [cursor=pointer]:
+        - generic [ref=e59]:
+          - generic [ref=e60]: 帮我调研一下CLIP噪声标签学习的最新进展
+          - generic [ref=e61]: 4 条消息
+        - button "×" [ref=e62]
+      - generic [ref=e63] [cursor=pointer]:
+        - generic [ref=e64]:
+          - generic [ref=e65]: 帮我调研一下CLIP噪声标签学习的最新进展
+          - generic [ref=e66]: 2 条消息
+        - button "×" [ref=e67]
+      - generic [ref=e68] [cursor=pointer]:
+        - generic [ref=e69]:
+          - generic [ref=e70]: 你好
+          - generic [ref=e71]: 2 条消息
+        - button "×" [ref=e72]
+  - generic [ref=e10]:
+    - generic [ref=e13]:
+      - button "💬 对话" [ref=e14] [cursor=pointer]
+      - button "📄 论文搜索" [ref=e15] [cursor=pointer]
+      - button "🧠 记忆" [ref=e16] [cursor=pointer]
+      - button "🔧 工具" [active] [ref=e17] [cursor=pointer]
+    - generic [ref=e73]:
+      - generic [ref=e74]:
+        - heading "🔧 系统工具一览" [level=3] [ref=e75]
+        - generic [ref=e76]: 共 5 个工具 · 绑定到 4 个 Agent
+      - generic [ref=e77]:
+        - heading "🤖 Agent 工具绑定" [level=4] [ref=e78]
+        - generic [ref=e79]:
+          - generic [ref=e80]:
+            - generic [ref=e81]: 💬 对话助手
+            - generic [ref=e82]: →
+            - generic [ref=e84]: web_search
+          - generic [ref=e85]:
+            - generic [ref=e86]: 🔍 文献调研
+            - generic [ref=e87]: →
+            - generic [ref=e88]:
+              - generic [ref=e89]: search_arxiv
+              - generic [ref=e90]: web_search
+          - generic [ref=e91]:
+            - generic [ref=e92]: 💡 创新构思
+            - generic [ref=e93]: →
+            - generic [ref=e94]:
+              - generic [ref=e95]: web_search
+              - generic [ref=e96]: create_docx
+              - generic [ref=e97]: add_section
+              - generic [ref=e98]: add_table
+          - generic [ref=e99]:
+            - generic [ref=e100]: 🧪 实验分析
+            - generic [ref=e101]: →
+            - generic [ref=e102]:
+              - generic [ref=e103]: web_search
+              - generic [ref=e104]: create_docx
+              - generic [ref=e105]: add_section
+              - generic [ref=e106]: add_table
+          - generic [ref=e107]:
+            - generic [ref=e108]: 📋 综合输出
+            - generic [ref=e109]: →
+            - generic [ref=e110]:
+              - generic [ref=e111]: create_docx
+              - generic [ref=e112]: add_section
+              - generic [ref=e113]: add_table
+      - generic [ref=e114]:
+        - generic [ref=e115]:
+          - generic [ref=e116]: 📚
+          - generic [ref=e117]: search_arxiv
+        - paragraph [ref=e118]: 搜索 arXiv 学术论文。适合查找正式发表的学术文献、SOTA 方法。
+        - generic [ref=e119]: "参数: query (必填), max_results (默认10), sort_by (默认relevance)"
+        - generic [ref=e120]:
+          - generic [ref=e121]: "绑定:"
+          - generic [ref=e122]: 🔍 文献调研
+      - generic [ref=e123]:
+        - generic [ref=e124]:
+          - generic [ref=e125]: 🌐
+          - generic [ref=e126]: web_search
+        - paragraph [ref=e127]: 阿里云百炼 MCP 实时联网搜索。适合查找最新新闻、实时信息、博客和百科。需要 DASHSCOPE_API_KEY。
+        - generic [ref=e128]: "参数: query (必填), count (默认5)"
+        - generic [ref=e129]:
+          - generic [ref=e130]: "绑定:"
+          - generic [ref=e131]: 💬 对话助手
+          - generic [ref=e132]: 🔍 文献调研
+          - generic [ref=e133]: 💡 创新构思
+          - generic [ref=e134]: 🧪 实验分析
+      - generic [ref=e135]:
+        - generic [ref=e136]:
+          - generic [ref=e137]: 📄
+          - generic [ref=e138]: create_docx
+        - paragraph [ref=e139]: 创建一个新的 Word 文档 (.docx)，用于保存调研报告、实验记录等。
+        - generic [ref=e140]: "参数: title (必填)"
+        - generic [ref=e141]:
+          - generic [ref=e142]: "绑定:"
+          - generic [ref=e143]: 💡 创新构思
+          - generic [ref=e144]: 🧪 实验分析
+          - generic [ref=e145]: 📋 综合输出
+      - generic [ref=e146]:
+        - generic [ref=e147]:
+          - generic [ref=e148]: 📝
+          - generic [ref=e149]: add_section
+        - paragraph [ref=e150]: 在已存在的 Word 文档中添加一个新章节（含标题和正文）。
+        - generic [ref=e151]: "参数: filepath (必填), heading (必填), content (必填)"
+        - generic [ref=e152]:
+          - generic [ref=e153]: "绑定:"
+          - generic [ref=e154]: 💡 创新构思
+          - generic [ref=e155]: 🧪 实验分析
+          - generic [ref=e156]: 📋 综合输出
+      - generic [ref=e157]:
+        - generic [ref=e158]:
+          - generic [ref=e159]: 📊
+          - generic [ref=e160]: add_table
+        - paragraph [ref=e161]: 在 Word 文档中添加一个对比表格，用于展示方法对比、实验结果等。
+        - generic [ref=e162]: "参数: filepath (必填), headers (必填), rows (必填)"
+        - generic [ref=e163]:
+          - generic [ref=e164]: "绑定:"
+          - generic [ref=e165]: 💡 创新构思
+          - generic [ref=e166]: 🧪 实验分析
+          - generic [ref=e167]: 📋 综合输出
+      - generic [ref=e168]:
+        - strong [ref=e169]: "💡 提示:"
+        - text: 工具的 API Key 在
+        - code [ref=e170]: .env
+        - text: 文件中配置（DEEPSEEK_API_KEY, DASHSCOPE_API_KEY）。 每个工具调用会消耗 API 额度。Agent 在 ReAct 循环中会自动选择合适的工具。

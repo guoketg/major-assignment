@@ -1,0 +1,111 @@
+- generic [ref=e3]:
+  - generic [ref=e4]:
+    - generic [ref=e5]:
+      - heading "对话历史" [level=2] [ref=e6]
+      - button "+ 新对话" [ref=e7] [cursor=pointer]
+    - paragraph [ref=e9]: 暂无会话记录
+  - generic [ref=e10]:
+    - generic [ref=e13]:
+      - button "💬 对话" [ref=e14] [cursor=pointer]
+      - button "📄 论文搜索" [ref=e15] [cursor=pointer]
+      - button "🧠 记忆" [ref=e16] [cursor=pointer]
+      - button "🔧 工具" [active] [ref=e17] [cursor=pointer]
+    - generic [ref=e33]:
+      - generic [ref=e34]:
+        - heading "🔧 系统工具一览" [level=3] [ref=e35]
+        - generic [ref=e36]: 共 5 个工具 · 绑定到 4 个 Agent
+      - generic [ref=e37]:
+        - heading "🤖 Agent 工具绑定" [level=4] [ref=e38]
+        - generic [ref=e39]:
+          - generic [ref=e40]:
+            - generic [ref=e41]: 💬 对话助手
+            - generic [ref=e42]: →
+            - generic [ref=e44]: web_search
+          - generic [ref=e45]:
+            - generic [ref=e46]: 🔍 文献调研
+            - generic [ref=e47]: →
+            - generic [ref=e48]:
+              - generic [ref=e49]: search_arxiv
+              - generic [ref=e50]: web_search
+          - generic [ref=e51]:
+            - generic [ref=e52]: 💡 创新构思
+            - generic [ref=e53]: →
+            - generic [ref=e54]:
+              - generic [ref=e55]: web_search
+              - generic [ref=e56]: create_docx
+              - generic [ref=e57]: add_section
+              - generic [ref=e58]: add_table
+          - generic [ref=e59]:
+            - generic [ref=e60]: 🧪 实验分析
+            - generic [ref=e61]: →
+            - generic [ref=e62]:
+              - generic [ref=e63]: web_search
+              - generic [ref=e64]: create_docx
+              - generic [ref=e65]: add_section
+              - generic [ref=e66]: add_table
+          - generic [ref=e67]:
+            - generic [ref=e68]: 📋 综合输出
+            - generic [ref=e69]: →
+            - generic [ref=e70]:
+              - generic [ref=e71]: create_docx
+              - generic [ref=e72]: add_section
+              - generic [ref=e73]: add_table
+      - generic [ref=e74]:
+        - generic [ref=e75]:
+          - generic [ref=e76]: 📚
+          - generic [ref=e77]: search_arxiv
+        - paragraph [ref=e78]: 搜索 arXiv 学术论文。适合查找正式发表的学术文献、SOTA 方法。
+        - generic [ref=e79]: "参数: query (必填), max_results (默认10), sort_by (默认relevance)"
+        - generic [ref=e80]:
+          - generic [ref=e81]: "绑定:"
+          - generic [ref=e82]: 🔍 文献调研
+      - generic [ref=e83]:
+        - generic [ref=e84]:
+          - generic [ref=e85]: 🌐
+          - generic [ref=e86]: web_search
+        - paragraph [ref=e87]: 阿里云百炼 MCP 实时联网搜索。适合查找最新新闻、实时信息、博客和百科。需要 DASHSCOPE_API_KEY。
+        - generic [ref=e88]: "参数: query (必填), count (默认5)"
+        - generic [ref=e89]:
+          - generic [ref=e90]: "绑定:"
+          - generic [ref=e91]: 💬 对话助手
+          - generic [ref=e92]: 🔍 文献调研
+          - generic [ref=e93]: 💡 创新构思
+          - generic [ref=e94]: 🧪 实验分析
+      - generic [ref=e95]:
+        - generic [ref=e96]:
+          - generic [ref=e97]: 📄
+          - generic [ref=e98]: create_docx
+        - paragraph [ref=e99]: 创建一个新的 Word 文档 (.docx)，用于保存调研报告、实验记录等。
+        - generic [ref=e100]: "参数: title (必填)"
+        - generic [ref=e101]:
+          - generic [ref=e102]: "绑定:"
+          - generic [ref=e103]: 💡 创新构思
+          - generic [ref=e104]: 🧪 实验分析
+          - generic [ref=e105]: 📋 综合输出
+      - generic [ref=e106]:
+        - generic [ref=e107]:
+          - generic [ref=e108]: 📝
+          - generic [ref=e109]: add_section
+        - paragraph [ref=e110]: 在已存在的 Word 文档中添加一个新章节（含标题和正文）。
+        - generic [ref=e111]: "参数: filepath (必填), heading (必填), content (必填)"
+        - generic [ref=e112]:
+          - generic [ref=e113]: "绑定:"
+          - generic [ref=e114]: 💡 创新构思
+          - generic [ref=e115]: 🧪 实验分析
+          - generic [ref=e116]: 📋 综合输出
+      - generic [ref=e117]:
+        - generic [ref=e118]:
+          - generic [ref=e119]: 📊
+          - generic [ref=e120]: add_table
+        - paragraph [ref=e121]: 在 Word 文档中添加一个对比表格，用于展示方法对比、实验结果等。
+        - generic [ref=e122]: "参数: filepath (必填), headers (必填), rows (必填)"
+        - generic [ref=e123]:
+          - generic [ref=e124]: "绑定:"
+          - generic [ref=e125]: 💡 创新构思
+          - generic [ref=e126]: 🧪 实验分析
+          - generic [ref=e127]: 📋 综合输出
+      - generic [ref=e128]:
+        - strong [ref=e129]: "💡 提示:"
+        - text: 工具的 API Key 在
+        - code [ref=e130]: .env
+        - text: 文件中配置（DEEPSEEK_API_KEY, DASHSCOPE_API_KEY）。 每个工具调用会消耗 API 额度。Agent 在 ReAct 循环中会自动选择合适的工具。

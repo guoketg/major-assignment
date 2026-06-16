@@ -1,0 +1,111 @@
+- generic [ref=e3]:
+  - generic [ref=e4]:
+    - generic [ref=e5]:
+      - heading "对话历史" [level=2] [ref=e6]
+      - button "+ 新对话" [ref=e7] [cursor=pointer]
+    - generic [ref=e8]:
+      - generic [ref=e56] [cursor=pointer]:
+        - generic [ref=e57]:
+          - generic [ref=e58]: hi
+          - generic [ref=e59]: 3 条消息
+        - button "×" [ref=e60]
+      - generic [ref=e33] [cursor=pointer]:
+        - generic [ref=e34]:
+          - generic [ref=e35]: hi
+          - generic [ref=e36]: 3 条消息
+        - button "×" [ref=e37]
+      - generic [ref=e38] [cursor=pointer]:
+        - generic [ref=e39]:
+          - generic [ref=e40]: KNN算法
+          - generic [ref=e41]: 2 条消息
+        - button "×" [ref=e42]
+      - generic [ref=e43] [cursor=pointer]:
+        - generic [ref=e44]:
+          - generic [ref=e45]: 什么是KNN算法
+          - generic [ref=e46]: 2 条消息
+        - button "×" [ref=e47]
+      - generic [ref=e48] [cursor=pointer]:
+        - generic [ref=e49]:
+          - generic [ref=e50]: 什么是机器学习
+          - generic [ref=e51]: 2 条消息
+        - button "×" [ref=e52]
+  - generic [ref=e10]:
+    - generic [ref=e11]:
+      - generic [ref=e13]:
+        - button "💬 对话" [ref=e14] [cursor=pointer]
+        - button "📄 论文搜索" [ref=e15] [cursor=pointer]
+        - button "🧠 记忆" [ref=e16] [cursor=pointer]
+        - button "🔧 工具" [ref=e17] [cursor=pointer]
+      - generic [ref=e53]:
+        - button "📄 导出 Word" [ref=e54] [cursor=pointer]
+        - button "清空对话" [ref=e55] [cursor=pointer]
+    - generic [ref=e18]:
+      - generic [ref=e63]: hi
+      - generic [ref=e84] [cursor=pointer]:
+        - generic [ref=e85]: 🤖 Agent 流水线
+        - generic [ref=e86]: 展开 ▼
+      - generic [ref=e70]: 继续
+      - generic [ref=e163] [cursor=pointer]:
+        - generic [ref=e164]: 🤖 Agent 流水线
+        - generic [ref=e165]: 展开 ▼
+      - generic [ref=e103]:
+        - paragraph [ref=e166]: 好的！让我们继续深入聊聊深度学习相关的话题吧～😊
+        - paragraph [ref=e167]: 有什么具体的方向你想讨论吗？比如：
+        - heading "可以聊的话题示例" [level=2] [ref=e168]
+        - heading "🔬 经典模型与架构" [level=3] [ref=e169]
+        - list [ref=e170]:
+          - listitem [ref=e171]:
+            - strong [ref=e172]: Transformer
+            - text: 的原理与变体（BERT、GPT、ViT 等）
+          - listitem [ref=e173]:
+            - strong [ref=e174]: CNN
+            - text: 与
+            - strong [ref=e175]: RNN
+            - text: 的演进
+          - listitem [ref=e176]:
+            - strong [ref=e177]: 扩散模型
+            - text: （Diffusion Models）如何工作
+        - heading "📝 论文解读" [level=3] [ref=e178]
+        - list [ref=e179]:
+          - listitem [ref=e180]: 最近你读到什么有趣的论文了吗？
+          - listitem [ref=e181]: 需要我帮你理解某个论文中的公式或概念吗？
+        - heading "⚙️ 工程实践" [level=3] [ref=e182]
+        - list [ref=e183]:
+          - listitem [ref=e184]: 训练技巧（学习率调度、正则化、数据增强）
+          - listitem [ref=e185]: 模型部署与优化（量化、蒸馏、剪枝）
+          - listitem [ref=e186]: 框架使用（PyTorch、TensorFlow、JAX）
+        - heading "🧪 前沿方向" [level=3] [ref=e187]
+        - list [ref=e188]:
+          - listitem [ref=e189]:
+            - strong [ref=e190]: 多模态学习
+            - text: （CLIP、LLaVA）
+          - listitem [ref=e191]:
+            - strong [ref=e192]: 强化学习
+            - text: 与 RLHF
+          - listitem [ref=e193]:
+            - strong [ref=e194]: AI for Science
+            - text: （AlphaFold、蛋白质预测）
+        - separator [ref=e195]
+        - paragraph [ref=e196]: 你也可以直接抛出问题，比如：
+        - list [ref=e197]:
+          - listitem [ref=e198]:
+            - emphasis [ref=e199]: "\"解释一下注意力机制中的 Q、K、V 是什么？\""
+          - listitem [ref=e200]:
+            - emphasis [ref=e201]: "\"LoRA 微调的原理是什么？\""
+          - listitem [ref=e202]:
+            - emphasis [ref=e203]: "\"最近有什么值得关注的新模型？\""
+        - paragraph [ref=e204]: 告诉我你想聊什么吧！🎯
+    - generic [ref=e22]:
+      - generic [ref=e23]:
+        - button "🤖 自动" [ref=e24] [cursor=pointer]
+        - button "💬 对话" [ref=e25] [cursor=pointer]
+        - button "🔍 调研" [ref=e26] [cursor=pointer]
+        - button "💡 创新" [ref=e27] [cursor=pointer]
+        - button "🧪 实验" [ref=e28] [cursor=pointer]
+      - generic [ref=e29]:
+        - textbox "输入消息... (支持 Markdown 和 LaTeX)" [ref=e30]
+        - combobox "切换模型" [ref=e31] [cursor=pointer]:
+          - option "DeepSeek V4 Flash" [selected]
+          - option "V4 Pro"
+          - option "思考模式"
+        - button "发送" [ref=e32] [cursor=pointer]

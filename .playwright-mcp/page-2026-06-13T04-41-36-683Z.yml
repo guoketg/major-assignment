@@ -1,0 +1,65 @@
+- generic [ref=e3]:
+  - generic [ref=e4]:
+    - generic [ref=e5]:
+      - heading "对话历史" [level=2] [ref=e6]
+      - button "+ 新对话" [ref=e7] [cursor=pointer]
+    - generic [ref=e8]:
+      - generic [ref=e371] [cursor=pointer]:
+        - generic [ref=e372]:
+          - generic [ref=e373]: hi
+          - generic [ref=e374]: 2 条消息
+        - button "×" [ref=e375]
+      - generic [ref=e197] [cursor=pointer]:
+        - generic [ref=e198]:
+          - generic [ref=e199]: KNN算法
+          - generic [ref=e200]: 2 条消息
+        - button "×" [ref=e201]
+      - generic [ref=e106] [cursor=pointer]:
+        - generic [ref=e107]:
+          - generic [ref=e108]: 什么是KNN算法
+          - generic [ref=e109]: 2 条消息
+        - button "×" [ref=e110]
+      - generic [ref=e33] [cursor=pointer]:
+        - generic [ref=e34]:
+          - generic [ref=e35]: 什么是机器学习
+          - generic [ref=e36]: 2 条消息
+        - button "×" [ref=e37]
+  - generic [ref=e10]:
+    - generic [ref=e11]:
+      - generic [ref=e13]:
+        - button "💬 对话" [ref=e14] [cursor=pointer]
+        - button "📄 论文搜索" [ref=e15] [cursor=pointer]
+        - button "🧠 记忆" [ref=e16] [cursor=pointer]
+        - button "🔧 工具" [ref=e17] [cursor=pointer]
+      - generic [ref=e38]:
+        - button "📄 导出 Word" [ref=e39] [cursor=pointer]
+        - button "清空对话" [ref=e40] [cursor=pointer]
+    - generic [ref=e18]:
+      - generic [ref=e378]: hi
+      - generic [ref=e380] [cursor=pointer]:
+        - generic [ref=e381]: 🤖 Agent 流水线
+        - generic [ref=e382]: 展开 ▼
+      - generic [ref=e385]:
+        - paragraph [ref=e386]: 你好！👋 很高兴见到你！
+        - paragraph [ref=e387]: 我是你的深度学习研究助手，可以帮你解答机器学习、深度学习相关的各种问题，讨论论文中的概念，或者聊聊技术实现细节。
+        - paragraph [ref=e388]: 有什么我可以帮你的吗？比如：
+        - list [ref=e389]:
+          - listitem [ref=e390]: 想了解某个模型或算法的原理？
+          - listitem [ref=e391]: 需要帮助理解某篇论文的核心思想？
+          - listitem [ref=e392]: 讨论超参数调优、训练技巧等实践问题？
+          - listitem [ref=e393]: 或者只是想打个招呼聊聊天？😊
+        - paragraph [ref=e394]: 随时告诉我你的需求！
+    - generic [ref=e22]:
+      - generic [ref=e23]:
+        - button "🤖 自动" [ref=e24] [cursor=pointer]
+        - button "💬 对话" [ref=e25] [cursor=pointer]
+        - button "🔍 调研" [ref=e26] [cursor=pointer]
+        - button "💡 创新" [ref=e27] [cursor=pointer]
+        - button "🧪 实验" [ref=e28] [cursor=pointer]
+      - generic [ref=e29]:
+        - textbox "输入消息... (支持 Markdown 和 LaTeX)" [ref=e30]
+        - combobox "切换模型" [ref=e31] [cursor=pointer]:
+          - option "DeepSeek V4 Flash" [selected]
+          - option "V4 Pro"
+          - option "思考模式"
+        - button "发送" [ref=e32] [cursor=pointer]

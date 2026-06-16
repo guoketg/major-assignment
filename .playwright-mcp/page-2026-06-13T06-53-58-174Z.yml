@@ -1,0 +1,238 @@
+- generic [ref=e3]:
+  - generic [ref=e4]:
+    - generic [ref=e5]:
+      - heading "对话历史" [level=2] [ref=e6]
+      - button "+ 新对话" [ref=e7] [cursor=pointer]
+    - generic [ref=e8]:
+      - generic [ref=e151] [cursor=pointer]:
+        - generic [ref=e152]:
+          - generic [ref=e153]: 简单介绍一下Python
+          - generic [ref=e154]: 2 条消息
+        - button "×" [ref=e155]
+      - generic [ref=e33] [cursor=pointer]:
+        - generic [ref=e34]:
+          - generic [ref=e35]: 介绍什么是GDBT
+          - generic [ref=e36]: 4 条消息
+        - button "×" [ref=e37]
+      - generic [ref=e38] [cursor=pointer]:
+        - generic [ref=e39]:
+          - generic [ref=e40]: 500字介绍深度学习
+          - generic [ref=e41]: 2 条消息
+        - button "×" [ref=e42]
+      - generic [ref=e43] [cursor=pointer]:
+        - generic [ref=e44]:
+          - generic [ref=e45]: 500字介绍机器学习，要详细
+          - generic [ref=e46]: 2 条消息
+        - button "×" [ref=e47]
+      - generic [ref=e48] [cursor=pointer]:
+        - generic [ref=e49]:
+          - generic [ref=e50]: 100字介绍机器学习
+          - generic [ref=e51]: 4 条消息
+        - button "×" [ref=e52]
+      - generic [ref=e53] [cursor=pointer]:
+        - generic [ref=e54]:
+          - generic [ref=e55]: 你好，请介绍一下Python
+          - generic [ref=e56]: 2 条消息
+        - button "×" [ref=e57]
+      - generic [ref=e58] [cursor=pointer]:
+        - generic [ref=e59]:
+          - generic [ref=e60]: 请用300字介绍XGBoost算法
+          - generic [ref=e61]: 2 条消息
+        - button "×" [ref=e62]
+      - generic [ref=e63] [cursor=pointer]:
+        - generic [ref=e64]:
+          - generic [ref=e65]: 请用500字介绍Transformer架构，尽可能详细
+          - generic [ref=e66]: 2 条消息
+        - button "×" [ref=e67]
+      - generic [ref=e68] [cursor=pointer]:
+        - generic [ref=e69]:
+          - generic [ref=e70]: 什么是机器学习加XGBoost，请详细介绍一下
+          - generic [ref=e71]: 2 条消息
+        - button "×" [ref=e72]
+      - generic [ref=e73] [cursor=pointer]:
+        - generic [ref=e74]:
+          - generic [ref=e75]: c语言程序中 unsigned int和int 他们存储的是...
+          - generic [ref=e76]: 2 条消息
+        - button "×" [ref=e77]
+      - generic [ref=e78] [cursor=pointer]:
+        - generic [ref=e79]:
+          - generic [ref=e80]: 500字介绍深度学习的最新进展 要包括Transformer...
+          - generic [ref=e81]: 2 条消息
+        - button "×" [ref=e82]
+      - generic [ref=e83] [cursor=pointer]:
+        - generic [ref=e84]:
+          - generic [ref=e85]: c语言程序中 unsigned int和int 他们存储的是...
+          - generic [ref=e86]: 2 条消息
+        - button "×" [ref=e87]
+      - generic [ref=e88] [cursor=pointer]:
+        - generic [ref=e89]:
+          - generic [ref=e90]: 500字介绍深度学习的最新进展 要包括Transformer...
+          - generic [ref=e91]: 2 条消息
+        - button "×" [ref=e92]
+      - generic [ref=e93] [cursor=pointer]:
+        - generic [ref=e94]:
+          - generic [ref=e95]: 500字介绍深度学习的最新进展 要包括Transformer...
+          - generic [ref=e96]: 2 条消息
+        - button "×" [ref=e97]
+      - generic [ref=e98] [cursor=pointer]:
+        - generic [ref=e99]:
+          - generic [ref=e100]: 500字介绍深度学习的最新进展 要包括Transformer...
+          - generic [ref=e101]: 2 条消息
+        - button "×" [ref=e102]
+      - generic [ref=e103] [cursor=pointer]:
+        - generic [ref=e104]:
+          - generic [ref=e105]: 500字介绍深度学习的最新进展 要包括Transformer...
+          - generic [ref=e106]: 2 条消息
+        - button "×" [ref=e107]
+      - generic [ref=e108] [cursor=pointer]:
+        - generic [ref=e109]:
+          - generic [ref=e110]: 500字介绍深度学习的最新进展 要包括Transformer...
+          - generic [ref=e111]: 2 条消息
+        - button "×" [ref=e112]
+      - generic [ref=e113] [cursor=pointer]:
+        - generic [ref=e114]:
+          - generic [ref=e115]: 500字介绍Transformer
+          - generic [ref=e116]: 2 条消息
+        - button "×" [ref=e117]
+      - generic [ref=e118] [cursor=pointer]:
+        - generic [ref=e119]:
+          - generic [ref=e120]: 500字介绍Transformer
+          - generic [ref=e121]: 2 条消息
+        - button "×" [ref=e122]
+      - generic [ref=e123] [cursor=pointer]:
+        - generic [ref=e124]:
+          - generic [ref=e125]: 500字介绍深度学习 要包括CNN RNN Transfor...
+          - generic [ref=e126]: 2 条消息
+        - button "×" [ref=e127]
+      - generic [ref=e128] [cursor=pointer]:
+        - generic [ref=e129]:
+          - generic [ref=e130]: 500字介绍Transformer
+          - generic [ref=e131]: 2 条消息
+        - button "×" [ref=e132]
+      - generic [ref=e133] [cursor=pointer]:
+        - generic [ref=e134]:
+          - generic [ref=e135]: 500字介绍深度学习的最新进展 要包括Transformer...
+          - generic [ref=e136]: 4 条消息
+        - button "×" [ref=e137]
+      - generic [ref=e138] [cursor=pointer]:
+        - generic [ref=e139]:
+          - generic [ref=e140]: 00字介绍Transformer
+          - generic [ref=e141]: 4 条消息
+        - button "×" [ref=e142]
+      - generic [ref=e143] [cursor=pointer]:
+        - generic [ref=e144]:
+          - generic [ref=e145]: 200字介绍Transformer
+          - generic [ref=e146]: 4 条消息
+        - button "×" [ref=e147]
+  - generic [ref=e10]:
+    - generic [ref=e11]:
+      - generic [ref=e13]:
+        - button "💬 对话" [ref=e14] [cursor=pointer]
+        - button "📄 论文搜索" [ref=e15] [cursor=pointer]
+        - button "🧠 记忆" [ref=e16] [cursor=pointer]
+        - button "🔧 工具" [ref=e17] [cursor=pointer]
+      - generic [ref=e148]:
+        - button "📄 导出 Word" [ref=e149] [cursor=pointer]
+        - button "清空对话" [ref=e150] [cursor=pointer]
+    - generic [ref=e156]:
+      - generic [ref=e157] [cursor=pointer]:
+        - generic [ref=e158]: 🤖 Agent 流水线
+        - generic [ref=e159]: 收起 ▲
+      - generic [ref=e160]:
+        - generic [ref=e163]:
+          - generic [ref=e164]: 🤖
+          - generic [ref=e165]: 🤖 智能路由
+          - generic [ref=e166]: ✅ 完成
+        - generic [ref=e170]:
+          - generic [ref=e171]: 💬
+          - generic [ref=e172]: 💬 对话助手
+          - generic [ref=e173]: ✅ 完成
+        - generic [ref=e177]:
+          - generic [ref=e178]: 📋
+          - generic [ref=e179]: 📋 综合输出
+          - generic [ref=e180]: ✅ 完成
+    - generic [ref=e18]:
+      - generic [ref=e183]: 简单介绍一下Python
+      - generic [ref=e186]:
+        - paragraph [ref=e187]:
+          - text: 当然！Python 是一种
+          - strong [ref=e188]: 高级、通用、解释型
+          - text: 的编程语言，由
+          - strong [ref=e189]: Guido van Rossum
+          - text: 于 1991 年首次发布。它的设计哲学强调
+          - strong [ref=e190]: 代码可读性
+          - text: 和
+          - strong [ref=e191]: 简洁性
+          - text: ，常被称为"可执行的伪代码"。
+        - heading "核心特点" [level=2] [ref=e192]
+        - table [ref=e193]:
+          - rowgroup [ref=e194]:
+            - row "特点 说明" [ref=e195]:
+              - columnheader "特点" [ref=e196]
+              - columnheader "说明" [ref=e197]
+          - rowgroup [ref=e198]:
+            - row "🐍 语法简洁 用缩进表示代码块，代码量通常只有 C/Java 的 1/3~1/5" [ref=e199]:
+              - cell "🐍 语法简洁" [ref=e200]:
+                - text: 🐍
+                - strong [ref=e201]: 语法简洁
+              - cell "用缩进表示代码块，代码量通常只有 C/Java 的 1/3~1/5" [ref=e202]
+            - row "🎯 动态类型 变量无需声明类型，运行时自动推断" [ref=e203]:
+              - cell "🎯 动态类型" [ref=e204]:
+                - text: 🎯
+                - strong [ref=e205]: 动态类型
+              - cell "变量无需声明类型，运行时自动推断" [ref=e206]
+            - row "🧩 面向对象 支持类、继承、多态等 OOP 特性" [ref=e207]:
+              - cell "🧩 面向对象" [ref=e208]:
+                - text: 🧩
+                - strong [ref=e209]: 面向对象
+              - cell "支持类、继承、多态等 OOP 特性" [ref=e210]
+            - row "📚 丰富的标准库 \"内置电池\"哲学，开箱即用" [ref=e211]:
+              - cell "📚 丰富的标准库" [ref=e212]:
+                - text: 📚
+                - strong [ref=e213]: 丰富的标准库
+              - cell "\"内置电池\"哲学，开箱即用" [ref=e214]
+            - row "🔌 强大的第三方生态 PyPI 上有超过 50 万个包" [ref=e215]:
+              - cell "🔌 强大的第三方生态" [ref=e216]:
+                - text: 🔌
+                - strong [ref=e217]: 强大的第三方生态
+              - cell "PyPI 上有超过 50 万个包" [ref=e218]
+        - heading "主要应用领域" [level=2] [ref=e219]
+        - list [ref=e220]:
+          - listitem [ref=e221]:
+            - strong [ref=e222]: 🤖 人工智能 / 深度学习
+            - text: — PyTorch、TensorFlow、JAX
+          - listitem [ref=e223]:
+            - strong [ref=e224]: 📊 数据分析
+            - text: — NumPy、Pandas、Matplotlib
+          - listitem [ref=e225]:
+            - strong [ref=e226]: 🌐 Web 开发
+            - text: — Django、Flask、FastAPI
+          - listitem [ref=e227]:
+            - strong [ref=e228]: ⚙️ 自动化脚本 / DevOps
+          - listitem [ref=e229]:
+            - strong [ref=e230]: 🔬 科学计算与学术研究
+        - heading "简单示例" [level=2] [ref=e231]
+        - code [ref=e233]: "# 计算斐波那契数列 def fibonacci(n): a, b = 0, 1 for _ in range(n): yield a a, b = b, a + b print(list(fibonacci(10))) # [0, 1, 1, 2, 3, 5, 8, 13, 21, 34]"
+        - heading "当前版本" [level=2] [ref=e234]
+        - paragraph [ref=e235]:
+          - text: 截至 2025 年，Python 的最新稳定版本是
+          - strong [ref=e236]: Python 3.13
+          - text: ，推荐初学者直接学习
+          - strong [ref=e237]: Python 3.x
+          - text: 系列（Python 2 已于 2020 年停止维护）。
+        - separator [ref=e238]
+        - paragraph [ref=e239]: 有什么具体想了解的吗？比如 Python 的安装、基础语法、或者深度学习中常用的 Python 库？😊
+    - generic [ref=e22]:
+      - generic [ref=e23]:
+        - button "🤖 自动" [ref=e24] [cursor=pointer]
+        - button "💬 对话" [ref=e25] [cursor=pointer]
+        - button "🔍 调研" [ref=e26] [cursor=pointer]
+        - button "💡 创新" [ref=e27] [cursor=pointer]
+        - button "🧪 实验" [ref=e28] [cursor=pointer]
+      - generic [ref=e29]:
+        - textbox "输入消息... (支持 Markdown 和 LaTeX)" [ref=e30]
+        - combobox "切换模型" [ref=e31] [cursor=pointer]:
+          - option "DeepSeek V4 Flash" [selected]
+          - option "V4 Pro"
+          - option "思考模式"
+        - button "发送" [ref=e32] [cursor=pointer]

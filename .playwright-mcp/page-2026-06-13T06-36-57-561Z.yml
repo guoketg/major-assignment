@@ -1,0 +1,301 @@
+- generic [ref=e3]:
+  - generic [ref=e4]:
+    - generic [ref=e5]:
+      - heading "对话历史" [level=2] [ref=e6]
+      - button "+ 新对话" [ref=e7] [cursor=pointer]
+    - generic [ref=e8]:
+      - generic [ref=e33] [cursor=pointer]:
+        - generic [ref=e34]:
+          - generic [ref=e35]: 请用500字介绍Transformer架构，尽可能详细
+          - generic [ref=e36]: 2 条消息
+        - button "×" [ref=e37]
+      - generic [ref=e38] [cursor=pointer]:
+        - generic [ref=e39]:
+          - generic [ref=e40]: 什么是机器学习加XGBoost，请详细介绍一下
+          - generic [ref=e41]: 2 条消息
+        - button "×" [ref=e42]
+      - generic [ref=e43] [cursor=pointer]:
+        - generic [ref=e44]:
+          - generic [ref=e45]: c语言程序中 unsigned int和int 他们存储的是...
+          - generic [ref=e46]: 2 条消息
+        - button "×" [ref=e47]
+      - generic [ref=e48] [cursor=pointer]:
+        - generic [ref=e49]:
+          - generic [ref=e50]: 500字介绍深度学习的最新进展 要包括Transformer...
+          - generic [ref=e51]: 2 条消息
+        - button "×" [ref=e52]
+      - generic [ref=e53] [cursor=pointer]:
+        - generic [ref=e54]:
+          - generic [ref=e55]: c语言程序中 unsigned int和int 他们存储的是...
+          - generic [ref=e56]: 2 条消息
+        - button "×" [ref=e57]
+      - generic [ref=e58] [cursor=pointer]:
+        - generic [ref=e59]:
+          - generic [ref=e60]: 500字介绍深度学习的最新进展 要包括Transformer...
+          - generic [ref=e61]: 2 条消息
+        - button "×" [ref=e62]
+      - generic [ref=e63] [cursor=pointer]:
+        - generic [ref=e64]:
+          - generic [ref=e65]: 500字介绍深度学习的最新进展 要包括Transformer...
+          - generic [ref=e66]: 2 条消息
+        - button "×" [ref=e67]
+      - generic [ref=e68] [cursor=pointer]:
+        - generic [ref=e69]:
+          - generic [ref=e70]: 500字介绍深度学习的最新进展 要包括Transformer...
+          - generic [ref=e71]: 2 条消息
+        - button "×" [ref=e72]
+      - generic [ref=e73] [cursor=pointer]:
+        - generic [ref=e74]:
+          - generic [ref=e75]: 500字介绍深度学习的最新进展 要包括Transformer...
+          - generic [ref=e76]: 2 条消息
+        - button "×" [ref=e77]
+      - generic [ref=e78] [cursor=pointer]:
+        - generic [ref=e79]:
+          - generic [ref=e80]: 500字介绍深度学习的最新进展 要包括Transformer...
+          - generic [ref=e81]: 2 条消息
+        - button "×" [ref=e82]
+      - generic [ref=e83] [cursor=pointer]:
+        - generic [ref=e84]:
+          - generic [ref=e85]: 500字介绍Transformer
+          - generic [ref=e86]: 2 条消息
+        - button "×" [ref=e87]
+      - generic [ref=e88] [cursor=pointer]:
+        - generic [ref=e89]:
+          - generic [ref=e90]: 500字介绍Transformer
+          - generic [ref=e91]: 2 条消息
+        - button "×" [ref=e92]
+      - generic [ref=e93] [cursor=pointer]:
+        - generic [ref=e94]:
+          - generic [ref=e95]: 500字介绍深度学习 要包括CNN RNN Transfor...
+          - generic [ref=e96]: 2 条消息
+        - button "×" [ref=e97]
+      - generic [ref=e98] [cursor=pointer]:
+        - generic [ref=e99]:
+          - generic [ref=e100]: 500字介绍Transformer
+          - generic [ref=e101]: 2 条消息
+        - button "×" [ref=e102]
+      - generic [ref=e103] [cursor=pointer]:
+        - generic [ref=e104]:
+          - generic [ref=e105]: 500字介绍深度学习的最新进展 要包括Transformer...
+          - generic [ref=e106]: 4 条消息
+        - button "×" [ref=e107]
+      - generic [ref=e108] [cursor=pointer]:
+        - generic [ref=e109]:
+          - generic [ref=e110]: 00字介绍Transformer
+          - generic [ref=e111]: 4 条消息
+        - button "×" [ref=e112]
+      - generic [ref=e113] [cursor=pointer]:
+        - generic [ref=e114]:
+          - generic [ref=e115]: 200字介绍Transformer
+          - generic [ref=e116]: 4 条消息
+        - button "×" [ref=e117]
+  - generic [ref=e10]:
+    - generic [ref=e11]:
+      - generic [ref=e13]:
+        - button "💬 对话" [ref=e14] [cursor=pointer]
+        - button "📄 论文搜索" [ref=e15] [cursor=pointer]
+        - button "🧠 记忆" [ref=e16] [cursor=pointer]
+        - button "🔧 工具" [ref=e17] [cursor=pointer]
+      - generic [ref=e118]:
+        - button "📄 导出 Word" [ref=e119] [cursor=pointer]
+        - button "清空对话" [ref=e120] [cursor=pointer]
+    - generic [ref=e18]:
+      - generic [ref=e123]: 请用300字介绍XGBoost算法
+      - generic [ref=e124]:
+        - generic [ref=e125] [cursor=pointer]:
+          - generic [ref=e126]: 🤖 Agent 流水线
+          - generic [ref=e127]: 收起 ▲
+        - generic [ref=e128]:
+          - generic [ref=e131]:
+            - generic [ref=e132]: 🤖
+            - generic [ref=e133]: 🤖 智能路由
+            - generic [ref=e134]: ✅ 完成
+          - generic [ref=e138]:
+            - generic [ref=e139]: 💬
+            - generic [ref=e140]: 💬 对话助手
+            - generic [ref=e141]: ⏳ 进行中
+      - generic [ref=e144]:
+        - heading "XGBoost 算法简介" [level=1] [ref=e145]
+        - paragraph [ref=e146]: XGBoost（eXtreme Gradient Boosting）是一种基于**梯度提升决策树（GBDT）**的集成学习算法，由陈天奇于2016年提出，在Kaggle等数据竞赛中表现极为出色。
+        - heading "核心思想" [level=2] [ref=e147]
+        - paragraph [ref=e148]:
+          - text: XGBoost通过
+          - strong [ref=e149]: 逐步添加决策树
+          - text: 来优化模型。每一棵新树都在
+          - strong [ref=e150]: 拟合前一轮的残差（梯度方向）
+          - text: ，最终将所有树的预测结果相加。相比传统GBDT，XGBoost引入了
+          - strong [ref=e151]: 二阶泰勒展开
+          - text: 近似损失函数，收敛更快、精度更高。
+        - heading "关键创新" [level=2] [ref=e152]
+        - list [ref=e153]:
+          - listitem [ref=e154]:
+            - strong [ref=e155]: 正则化项
+            - text: ：在目标函数中加入树的复杂度惩罚（叶子节点数 + L2正则），有效防止过拟合。
+          - listitem [ref=e156]:
+            - strong [ref=e157]: 列抽样与行抽样
+            - text: ：借鉴随机森林思想，减少过拟合并加速训练。
+          - listitem [ref=e158]:
+            - strong [ref=e159]: 加权分位数略图
+            - text: ：高效处理稀疏数据，自动学习缺失值的最佳分裂方向。
+          - listitem [ref=e160]:
+            - strong [ref=e161]: 并行化与缓存优化
+            - text: ：在特征粒度上实现并行计算，大幅提升训练速度。
+        - heading "数学形式" [level=2] [ref=e162]
+        - paragraph [ref=e163]:
+          - text: 目标函数为：
+          - generic [ref=e164]:
+            - math [ref=e166]:
+              - generic [ref=e168]:
+                - generic [ref=e169]: O
+                - generic [ref=e170]: b
+                - generic [ref=e171]: j
+                - generic [ref=e172]: =
+                - generic [ref=e173]:
+                  - generic [ref=e174]: ∑
+                  - generic [ref=e175]:
+                    - generic [ref=e176]: i
+                    - generic [ref=e177]: =
+                    - generic [ref=e178]: "1"
+                  - generic [ref=e179]: "n"
+                - generic [ref=e180]: l
+                - generic [ref=e181]: (
+                - generic [ref=e182]:
+                  - generic [ref=e183]: "y"
+                  - generic [ref=e184]: i
+                - generic [ref=e185]: ","
+                - generic [ref=e186]:
+                  - generic [ref=e187]:
+                    - generic [ref=e188]: "y"
+                    - generic [ref=e189]: ^
+                  - generic [ref=e190]: i
+                - generic [ref=e191]: )
+                - generic [ref=e192]: +
+                - generic [ref=e193]:
+                  - generic [ref=e194]: ∑
+                  - generic [ref=e195]:
+                    - generic [ref=e196]: k
+                    - generic [ref=e197]: =
+                    - generic [ref=e198]: "1"
+                  - generic [ref=e199]: K
+                - generic [ref=e200]: Ω
+                - generic [ref=e201]: (
+                - generic [ref=e202]:
+                  - generic [ref=e203]: f
+                  - generic [ref=e204]: k
+                - generic [ref=e205]: )
+            - generic [ref=e206]:
+              - generic [ref=e207]: Obj =
+              - generic [ref=e208]:
+                - generic [ref=e209]:
+                  - text: ∑
+                  - generic [ref=e213]:
+                    - generic [ref=e215]: i=1
+                    - generic [ref=e216]: "n"
+                - text: l(
+                - generic [ref=e220]:
+                  - text: "y"
+                  - generic [ref=e225]: i
+                - text: ","
+                - generic [ref=e229]:
+                  - generic [ref=e233]:
+                    - generic [ref=e234]: "y"
+                    - text: ^
+                  - generic [ref=e242]: i
+                - text: ) +
+              - generic [ref=e246]:
+                - generic [ref=e247]:
+                  - text: ∑
+                  - generic [ref=e251]:
+                    - generic [ref=e253]: k=1
+                    - generic [ref=e254]: K
+                - text: Ω(
+                - generic [ref=e258]:
+                  - text: f
+                  - generic [ref=e263]: k
+                - text: )
+        - paragraph [ref=e267]:
+          - text: 其中
+          - generic [ref=e268]:
+            - math [ref=e270]:
+              - generic [ref=e272]:
+                - generic [ref=e273]: Ω
+                - generic [ref=e274]: (
+                - generic [ref=e275]: f
+                - generic [ref=e276]: )
+                - generic [ref=e277]: =
+                - generic [ref=e278]: γ
+                - generic [ref=e279]: T
+                - generic [ref=e280]: +
+                - generic [ref=e281]:
+                  - generic [ref=e282]: "1"
+                  - generic [ref=e283]: "2"
+                - generic [ref=e284]: λ
+                - generic [ref=e285]:
+                  - generic [ref=e286]: ∑
+                  - generic [ref=e287]:
+                    - generic [ref=e288]: j
+                    - generic [ref=e289]: =
+                    - generic [ref=e290]: "1"
+                  - generic [ref=e291]: T
+                - generic [ref=e292]:
+                  - generic [ref=e293]: w
+                  - generic [ref=e294]: j
+                  - generic [ref=e295]: "2"
+            - generic [ref=e296]:
+              - generic [ref=e297]: Ω(f) =
+              - generic [ref=e298]: γT +
+              - generic [ref=e299]:
+                - generic [ref=e304]:
+                  - generic [ref=e306]: "2"
+                  - generic [ref=e309]: "1"
+                - text: λ
+                - generic [ref=e313]:
+                  - text: ∑
+                  - generic [ref=e317]:
+                    - generic [ref=e319]: j=1
+                    - generic [ref=e320]: T
+                - generic [ref=e324]:
+                  - text: w
+                  - generic [ref=e328]:
+                    - generic [ref=e329]: j
+                    - generic [ref=e330]: "2"
+          - text: ，
+          - generic [ref=e334]:
+            - math [ref=e336]:
+              - generic [ref=e339]: T
+            - generic [ref=e341]: T
+          - text: 为叶子数，
+          - generic [ref=e342]:
+            - math [ref=e344]:
+              - generic [ref=e347]:
+                - generic [ref=e348]: w
+                - generic [ref=e349]: j
+            - generic [ref=e352]:
+              - text: w
+              - generic [ref=e357]: j
+          - text: 为叶子权重。
+        - heading "优缺点" [level=2] [ref=e361]
+        - table [ref=e362]:
+          - rowgroup [ref=e363]:
+            - row "优点 缺点" [ref=e364]:
+              - columnheader "优点" [ref=e365]
+              - columnheader "缺点" [ref=e366]
+          - rowgroup [ref=e367]:
+            - row "精度高、速度快 超参数较多，" [ref=e368]:
+              - cell "精度高、速度快" [ref=e369]
+              - cell "超参数较多，" [ref=e370]
+        - text: "|"
+    - generic [ref=e22]:
+      - generic [ref=e23]:
+        - button "🤖 自动" [disabled] [ref=e24]
+        - button "💬 对话" [disabled] [ref=e25]
+        - button "🔍 调研" [disabled] [ref=e26]
+        - button "💡 创新" [disabled] [ref=e27]
+        - button "🧪 实验" [disabled] [ref=e28]
+      - generic [ref=e29]:
+        - textbox "输入消息... (支持 Markdown 和 LaTeX)" [disabled] [ref=e30]
+        - combobox "切换模型" [disabled] [ref=e31] [cursor=pointer]:
+          - option "DeepSeek V4 Flash" [selected]
+          - option "V4 Pro"
+          - option "思考模式"
+        - button "发送" [disabled] [ref=e32]

@@ -1,0 +1,259 @@
+- generic [ref=e3]:
+  - generic [ref=e4]:
+    - generic [ref=e5]:
+      - heading "对话历史" [level=2] [ref=e6]
+      - button "+ 新对话" [ref=e7] [cursor=pointer]
+    - generic [ref=e8]:
+      - generic [ref=e66] [cursor=pointer]:
+        - generic [ref=e67]:
+          - generic [ref=e68]: 用字母逐个输出：hello streaming world
+          - generic [ref=e69]: 4 条消息
+        - button "×" [ref=e70]
+      - generic [ref=e19] [cursor=pointer]:
+        - generic [ref=e20]:
+          - generic [ref=e21]: 介绍deepseek
+          - generic [ref=e22]: 4 条消息
+        - button "×" [ref=e23]
+      - generic [ref=e24] [cursor=pointer]:
+        - generic [ref=e25]:
+          - generic [ref=e26]: 什么是微积分
+          - generic [ref=e27]: 2 条消息
+        - button "×" [ref=e28]
+      - generic [ref=e29] [cursor=pointer]:
+        - generic [ref=e30]:
+          - generic [ref=e31]: 测试
+          - generic [ref=e32]: 2 条消息
+        - button "×" [ref=e33]
+      - generic [ref=e34] [cursor=pointer]:
+        - generic [ref=e35]:
+          - generic [ref=e36]: 你好，请回复短一点
+          - generic [ref=e37]: 2 条消息
+        - button "×" [ref=e38]
+      - generic [ref=e39] [cursor=pointer]:
+        - generic [ref=e40]:
+          - generic [ref=e41]: 什么是CLIP的噪声标签学习
+          - generic [ref=e42]: 2 条消息
+        - button "×" [ref=e43]
+      - generic [ref=e44] [cursor=pointer]:
+        - generic [ref=e45]:
+          - generic [ref=e46]: 请用markdown格式回答，列出3个特点
+          - generic [ref=e47]: 2 条消息
+        - button "×" [ref=e48]
+      - generic [ref=e49] [cursor=pointer]:
+        - generic [ref=e50]:
+          - generic [ref=e51]: 请介绍一下你自己
+          - generic [ref=e52]: 2 条消息
+        - button "×" [ref=e53]
+  - generic [ref=e10]:
+    - generic [ref=e11]:
+      - generic [ref=e55]: "会话: session_f68be762"
+      - button "清空对话" [ref=e57] [cursor=pointer]
+    - generic [ref=e12]:
+      - generic [ref=e60]: 用字母逐个输出：hello streaming world
+      - generic [ref=e73]:
+        - paragraph [ref=e74]: 好的，我将按照你的要求，逐个字母输出“hello streaming world”。输出结果如下：
+        - paragraph [ref=e75]:
+          - text: h
+          - text: e
+          - text: l
+          - text: l
+          - text: o
+          - text: (空格)
+          - text: s
+          - text: t
+          - text: r
+          - text: e
+          - text: a
+          - text: m
+          - text: i
+          - text: "n"
+          - text: g
+          - text: (空格)
+          - text: w
+          - text: o
+          - text: r
+          - text: l
+          - text: d
+      - generic [ref=e78]: 请写一首关于春天的诗，要长一些，逐字输出
+      - generic [ref=e86]:
+        - paragraph [ref=e87]: 好的，我将按照你的要求，为你创作一首关于春天的诗，并按“逐字输出”的方式呈现。
+        - paragraph [ref=e88]:
+          - text: 春
+          - text: 风
+          - text: 轻
+          - text: 轻
+          - text: 拂
+          - text: 过
+          - text: 脸
+          - text: 庞
+          - text: ，
+          - text: 带
+          - text: 来
+          - text: 泥
+          - text: 土
+          - text: 与
+          - text: 花
+          - text: 香
+          - text: 。
+          - text: 柳
+          - text: 条
+          - text: 抽
+          - text: 出
+          - text: 嫩
+          - text: 绿
+          - text: 的
+          - text: 芽
+          - text: ，
+          - text: 燕
+          - text: 子
+          - text: 飞
+          - text: 回
+          - text: 旧
+          - text: 时
+          - text: 的
+          - text: 梁
+          - text: 。
+        - paragraph [ref=e89]:
+          - text: 小
+          - text: 溪
+          - text: 融
+          - text: 化
+          - text: 了
+          - text: 冬
+          - text: 日
+          - text: 的
+          - text: 冰
+          - text: ，
+          - text: 叮
+          - text: 咚
+          - text: 唱
+          - text: 着
+          - text: 轻
+          - text: 快
+          - text: 的
+          - text: 歌
+          - text: 。
+          - text: 桃
+          - text: 花
+          - text: 绽
+          - text: 放
+          - text: 粉
+          - text: 色
+          - text: 的
+          - text: 笑
+          - text: ，
+          - text: 梨
+          - text: 花
+          - text: 落
+          - text: 下
+          - text: 白
+          - text: 色
+          - text: 的
+          - text: 梦
+          - text: 。
+        - paragraph [ref=e90]:
+          - text: 田
+          - text: 野
+          - text: 里
+          - text: ，
+          - text: 麦
+          - text: 苗
+          - text: 悄
+          - text: 悄
+          - text: 拔
+          - text: 节
+          - text: ，
+          - text: 空
+          - text: 气
+          - text: 中
+          - text: ，
+          - text: 雨
+          - text: 丝
+          - text: 绵
+          - text: 绵
+          - text: 缠
+          - text: 缠
+          - text: 。
+          - text: 孩
+          - text: 子
+          - text: 们
+          - text: 放
+          - text: 起
+          - text: 风
+          - text: 筝
+          - text: ，
+          - text: 笑
+          - text: 声
+          - text: 飘
+          - text: 向
+          - text: 蓝
+          - text: 蓝
+          - text: 的
+          - text: 天
+          - text: 边
+          - text: 。
+        - paragraph [ref=e91]:
+          - text: 春
+          - text: 是
+          - text: 温
+          - text: 柔
+          - text: 的
+          - text: 母
+          - text: 亲
+          - text: ，
+          - text: 把
+          - text: 生
+          - text: 命
+          - text: 的
+          - text: 种
+          - text: 子
+          - text: 轻
+          - text: 轻
+          - text: 安
+          - text: 放
+          - text: 。
+          - text: 春
+          - text: 是
+          - text: 少
+          - text: 年
+          - text: 心
+          - text: 头
+          - text: 的
+          - text: 诗
+          - text: ，
+          - text: 有
+          - text: 太
+          - text: 多
+          - text: 希
+          - text: 望
+          - text: ，
+          - text: 太
+          - text: 多
+          - text: 向
+          - text: 往
+          - text: 。
+        - paragraph [ref=e92]:
+          - text: （
+          - text: 全
+          - text: 诗
+          - text: 共
+          - text: "1"
+          - text: "2"
+          - text: 行
+          - text: ，
+          - text: 以
+          - text: 上
+          - text: 是
+          - text: 逐
+          - text: 字
+          - text: 输
+          - text: 出
+          - text: 的
+          - text: 完
+          - text: 整
+          - text: 版
+          - text: 本
+          - text: ）
+    - generic [ref=e16]:
+      - textbox "输入消息... (支持 Markdown 和 LaTeX)" [ref=e17]
+      - button "发送" [ref=e18] [cursor=pointer]

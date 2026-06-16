@@ -1,0 +1,13 @@
+- generic [ref=e3]:
+  - generic [ref=e4]:
+    - generic [ref=e5]:
+      - heading "对话历史" [level=2] [ref=e6]
+      - button "+ 新对话" [ref=e7] [cursor=pointer]
+    - paragraph [ref=e9]: 暂无会话记录
+  - generic [ref=e10]:
+    - generic [ref=e13]:
+      - generic [ref=e14]: 💬
+      - paragraph [ref=e15]: 选择或创建一个新对话开始
+    - generic [ref=e16]:
+      - textbox "输入消息... (支持 Markdown 和 LaTeX)" [ref=e17]
+      - button "发送" [ref=e18] [cursor=pointer]

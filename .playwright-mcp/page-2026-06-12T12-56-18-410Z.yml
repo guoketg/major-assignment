@@ -1,0 +1,108 @@
+- generic [ref=e3]:
+  - generic [ref=e4]:
+    - generic [ref=e5]:
+      - heading "对话历史" [level=2] [ref=e6]
+      - button "+ 新对话" [ref=e7] [cursor=pointer]
+    - generic [ref=e8]:
+      - generic [ref=e32] [cursor=pointer]:
+        - generic [ref=e33]:
+          - generic [ref=e34]: 帮我调研一下CLIP模型的最新进展
+          - generic [ref=e35]: 2 条消息
+        - button "×" [ref=e36]
+      - generic [ref=e37] [cursor=pointer]:
+        - generic [ref=e38]:
+          - generic [ref=e39]: 帮我调研一下CLIP模型的最新进展
+          - generic [ref=e40]: 2 条消息
+        - button "×" [ref=e41]
+      - generic [ref=e42] [cursor=pointer]:
+        - generic [ref=e43]:
+          - generic [ref=e44]: 你好
+          - generic [ref=e45]: 2 条消息
+        - button "×" [ref=e46]
+      - generic [ref=e137] [cursor=pointer]:
+        - generic [ref=e138]:
+          - generic [ref=e139]: 帮我调研CLIP模型的最新进展
+          - generic [ref=e140]: 2 条消息
+        - button "×" [ref=e141]
+      - generic [ref=e47] [cursor=pointer]:
+        - generic [ref=e48]:
+          - generic [ref=e49]: 帮我调研CLIP模型的最新进展
+          - generic [ref=e50]: 2 条消息
+        - button "×" [ref=e51]
+      - generic [ref=e52] [cursor=pointer]:
+        - generic [ref=e53]:
+          - generic [ref=e54]: 帮我调研CLIP模型的最新进展
+          - generic [ref=e55]: 2 条消息
+        - button "×" [ref=e56]
+      - generic [ref=e57] [cursor=pointer]:
+        - generic [ref=e58]:
+          - generic [ref=e59]: 帮我调研CLIP模型的最新进展
+          - generic [ref=e60]: 2 条消息
+        - button "×" [ref=e61]
+      - generic [ref=e62] [cursor=pointer]:
+        - generic [ref=e63]:
+          - generic [ref=e64]: 用一句话说什么是机器学习
+          - generic [ref=e65]: 4 条消息
+        - button "×" [ref=e66]
+      - generic [ref=e67] [cursor=pointer]:
+        - generic [ref=e68]:
+          - generic [ref=e69]: 帮我调研一下CLIP模型的最新进展
+          - generic [ref=e70]: 2 条消息
+        - button "×" [ref=e71]
+      - generic [ref=e72] [cursor=pointer]:
+        - generic [ref=e73]:
+          - generic [ref=e74]: 帮我调研一下CLIP噪声标签学习的最新进展
+          - generic [ref=e75]: 1 条消息
+        - button "×" [ref=e76]
+      - generic [ref=e77] [cursor=pointer]:
+        - generic [ref=e78]:
+          - generic [ref=e79]: 帮我调研一下CLIP噪声标签学习的最新进展
+          - generic [ref=e80]: 2 条消息
+        - button "×" [ref=e81]
+      - generic [ref=e82] [cursor=pointer]:
+        - generic [ref=e83]:
+          - generic [ref=e84]: 用一句话说什么是机器学习
+          - generic [ref=e85]: 2 条消息
+        - button "×" [ref=e86]
+      - generic [ref=e87] [cursor=pointer]:
+        - generic [ref=e88]:
+          - generic [ref=e89]: 用一句话说什么是机器学习
+          - generic [ref=e90]: 2 条消息
+        - button "×" [ref=e91]
+      - generic [ref=e92] [cursor=pointer]:
+        - generic [ref=e93]:
+          - generic [ref=e94]: 用一句话说什么是机器学习
+          - generic [ref=e95]: 4 条消息
+        - button "×" [ref=e96]
+      - generic [ref=e97] [cursor=pointer]:
+        - generic [ref=e98]:
+          - generic [ref=e99]: 用一句话说什么是机器学习
+          - generic [ref=e100]: 2 条消息
+        - button "×" [ref=e101]
+  - generic [ref=e10]:
+    - generic [ref=e11]:
+      - generic [ref=e13]:
+        - button "💬 对话" [ref=e14] [cursor=pointer]
+        - button "📄 论文搜索" [ref=e15] [cursor=pointer]
+        - button "🧠 记忆" [ref=e16] [cursor=pointer]
+      - button "清空对话" [ref=e103] [cursor=pointer]
+    - generic [ref=e17]:
+      - generic [ref=e106]: 帮我调研CLIP模型的最新进展
+      - paragraph [ref=e145]: 我来为你系统调研CLIP模型的最新进展。首先从几个关键方向进行搜索。
+      - generic [ref=e108] [cursor=pointer]:
+        - generic [ref=e109]: 🤖 Agent 流水线
+        - generic [ref=e110]: 展开 ▼
+    - generic [ref=e21]:
+      - generic [ref=e22]:
+        - button "🤖 自动" [ref=e23] [cursor=pointer]
+        - button "💬 对话" [ref=e24] [cursor=pointer]
+        - button "🔍 调研" [ref=e25] [cursor=pointer]
+        - button "💡 创新" [ref=e26] [cursor=pointer]
+        - button "🧪 实验" [ref=e27] [cursor=pointer]
+      - generic [ref=e28]:
+        - textbox "输入消息... (支持 Markdown 和 LaTeX)" [ref=e29]
+        - combobox "切换模型" [ref=e30] [cursor=pointer]:
+          - option "DeepSeek V4 Flash" [selected]
+          - option "V4 Pro"
+          - option "思考模式"
+        - button "发送" [ref=e31] [cursor=pointer]

@@ -1,0 +1,43 @@
+- generic [ref=e3]:
+  - generic [ref=e4]:
+    - generic [ref=e5]:
+      - heading "对话历史" [level=2] [ref=e6]
+      - button "+ 新对话" [active] [ref=e7] [cursor=pointer]
+    - generic [ref=e8]:
+      - generic [ref=e358] [cursor=pointer]:
+        - generic [ref=e359]:
+          - generic [ref=e360]: 00字介绍Transformer
+          - generic [ref=e361]: 4 条消息
+        - button "×" [ref=e362]
+      - generic [ref=e70] [cursor=pointer]:
+        - generic [ref=e71]:
+          - generic [ref=e72]: 200字介绍Transformer
+          - generic [ref=e73]: 4 条消息
+        - button "×" [ref=e74]
+  - generic [ref=e10]:
+    - generic [ref=e11]:
+      - generic [ref=e13]:
+        - button "💬 对话" [ref=e14] [cursor=pointer]
+        - button "📄 论文搜索" [ref=e15] [cursor=pointer]
+        - button "🧠 记忆" [ref=e16] [cursor=pointer]
+        - button "🔧 工具" [ref=e17] [cursor=pointer]
+      - generic [ref=e33]:
+        - button "📄 导出 Word" [disabled] [ref=e34]
+        - button "清空对话" [ref=e35] [cursor=pointer]
+    - generic [ref=e363]:
+      - generic [ref=e364]: 💬
+      - paragraph [ref=e365]: 开始和 AI 对话吧
+    - generic [ref=e22]:
+      - generic [ref=e23]:
+        - button "🤖 自动" [ref=e24] [cursor=pointer]
+        - button "💬 对话" [ref=e25] [cursor=pointer]
+        - button "🔍 调研" [ref=e26] [cursor=pointer]
+        - button "💡 创新" [ref=e27] [cursor=pointer]
+        - button "🧪 实验" [ref=e28] [cursor=pointer]
+      - generic [ref=e29]:
+        - textbox "输入消息... (支持 Markdown 和 LaTeX)" [ref=e30]
+        - combobox "切换模型" [ref=e31] [cursor=pointer]:
+          - option "DeepSeek V4 Flash" [selected]
+          - option "V4 Pro"
+          - option "思考模式"
+        - button "发送" [ref=e32] [cursor=pointer]

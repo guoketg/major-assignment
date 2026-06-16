@@ -1,0 +1,296 @@
+- generic [ref=e3]:
+  - generic [ref=e4]:
+    - generic [ref=e5]:
+      - heading "对话历史" [level=2] [ref=e6]
+      - button "+ 新对话" [ref=e7] [cursor=pointer]
+    - generic [ref=e8]:
+      - generic [ref=e461] [cursor=pointer]:
+        - generic [ref=e462]:
+          - generic [ref=e463]: 500字介绍深度学习的最新进展 要包括Transformer...
+          - generic [ref=e464]: 2 条消息
+        - button "×" [ref=e465]
+      - generic [ref=e358] [cursor=pointer]:
+        - generic [ref=e359]:
+          - generic [ref=e360]: 00字介绍Transformer
+          - generic [ref=e361]: 4 条消息
+        - button "×" [ref=e362]
+      - generic [ref=e70] [cursor=pointer]:
+        - generic [ref=e71]:
+          - generic [ref=e72]: 200字介绍Transformer
+          - generic [ref=e73]: 4 条消息
+        - button "×" [ref=e74]
+  - generic [ref=e10]:
+    - generic [ref=e11]:
+      - generic [ref=e13]:
+        - button "💬 对话" [ref=e14] [cursor=pointer]
+        - button "📄 论文搜索" [ref=e15] [cursor=pointer]
+        - button "🧠 记忆" [ref=e16] [cursor=pointer]
+        - button "🔧 工具" [ref=e17] [cursor=pointer]
+      - generic [ref=e33]:
+        - button "📄 导出 Word" [ref=e34] [cursor=pointer]
+        - button "清空对话" [ref=e35] [cursor=pointer]
+    - generic [ref=e18]:
+      - generic [ref=e368]: 500字介绍深度学习的最新进展 要包括Transformer Mamba 扩散模型
+      - generic [ref=e623]:
+        - generic [ref=e624] [cursor=pointer]:
+          - generic [ref=e625]: 🤖 Agent 流水线
+          - generic [ref=e626]: 收起 ▲
+        - generic [ref=e627]:
+          - generic [ref=e630]:
+            - generic [ref=e631]: 🤖
+            - generic [ref=e632]: 🤖 智能路由
+            - generic [ref=e633]: ✅ 完成
+          - generic [ref=e637]:
+            - generic [ref=e638]: 💬
+            - generic [ref=e639]: 💬 对话助手
+            - generic [ref=e640]: ⏳ 进行中
+      - generic [ref=e475]:
+        - heading "深度学习三大前沿范式的最新进展调研报告" [level=1] [ref=e476]
+        - heading "一、领域简介" [level=2] [ref=e477]
+        - paragraph [ref=e478]:
+          - text: 2024-2025年，深度学习领域正经历一场深刻的架构变革。以
+          - strong [ref=e479]: Transformer
+          - text: 、
+          - strong [ref=e480]:
+            - text: Mamba（状态空间模型）
+            - strong [ref=e481]: 和
+            - text: 扩散模型
+          - text: 为代表的三大技术路线，分别在各自的优势领域取得突破性进展，并开始出现交叉融合的趋势。Transformer凭借自注意力机制继续统治大模型和序列建模，Mamba以线性复杂度挑战Transformer的效率瓶颈，扩散模型则在生成式AI领域持续拓展边界。
+        - separator [ref=e482]
+        - heading "二、核心方法分类与最新进展" [level=2] [ref=e483]
+        - heading "1. Transformer —— 持续进化中的通用架构" [level=3] [ref=e484]
+        - paragraph [ref=e485]:
+          - strong [ref=e486]: 最新进展：
+        - list [ref=e487]:
+          - listitem [ref=e488]:
+            - strong [ref=e489]: 视觉Transformer的工程化突破
+            - text: ：Point Transformer V3在2024年Waymo开放数据集语义分割挑战赛中夺得第一名，通过引入即插即用的训练和推理技术，显著提升了3D点云分割性能（
+            - emphasis [ref=e490]: Point Transformer V3 Extreme, 2407.15282
+            - text: ）。
+          - listitem [ref=e491]:
+            - strong [ref=e492]: 自监督与迁移学习
+            - text: ：DINOv2等自监督Vision Transformer在PlantCLEF 2024多标签植物分类竞赛中表现出色，证明无需标注数据即可学习通用视觉特征（
+            - emphasis [ref=e493]: Multi-Label Plant Species Classification with Self-Supervised Vision Transformers, 2407.06298
+            - text: ）。
+          - listitem [ref=e494]:
+            - strong [ref=e495]: 流式自回归Transformer（HOFAR）
+            - text: ：将Flow Matching与Transformer结合，在高阶图像生成中实现更优的生成质量和效率（
+            - emphasis [ref=e496]: HOFAR, 2503.08032
+            - text: ）。
+          - listitem [ref=e497]:
+            - strong [ref=e498]: 因果推理能力
+            - text: ：最新研究系统评估了LLM中的因果推理能力，揭示了Transformer架构在理解因果关系方面的潜力与局限（
+            - emphasis [ref=e499]: Unveiling Causal Reasoning in LLMs, 2506.21215
+            - text: ）。
+        - table [ref=e500]:
+          - rowgroup [ref=e501]:
+            - row "优点 缺点" [ref=e502]:
+              - columnheader "优点" [ref=e503]
+              - columnheader "缺点" [ref=e504]
+          - rowgroup [ref=e505]:
+            - row "全局上下文建模能力强 自注意力计算复杂度为O(n²)，长序列时计算和内存开销大" [ref=e506]:
+              - cell "全局上下文建模能力强" [ref=e507]
+              - cell "自注意力计算复杂度为O(n²)，长序列时计算和内存开销大" [ref=e508]
+            - row "并行计算友好，训练效率高 Key-Value缓存随序列长度线性增长" [ref=e509]:
+              - cell "并行计算友好，训练效率高" [ref=e510]
+              - cell "Key-Value缓存随序列长度线性增长" [ref=e511]
+            - row "迁移学习与预训练范式成熟 对硬件资源要求高，部署成本大" [ref=e512]:
+              - cell "迁移学习与预训练范式成熟" [ref=e513]
+              - cell "对硬件资源要求高，部署成本大" [ref=e514]
+        - separator [ref=e515]
+        - heading "2. Mamba（状态空间模型）—— 线性复杂度的新范式" [level=3] [ref=e516]
+        - paragraph [ref=e517]:
+          - strong [ref=e518]: 最新进展：
+        - list [ref=e519]:
+          - listitem [ref=e520]:
+            - strong [ref=e521]: Vision Mamba的提出
+            - text: ：首次将Mamba架构引入视觉表示学习，通过双向状态空间模型高效处理图像序列，在ImageNet分类等任务上达到与Transformer相当的性能，但计算量显著降低（
+            - emphasis [ref=e522]: Vision Mamba, 2401.09417
+            - text: ）。
+          - listitem [ref=e523]:
+            - strong [ref=e524]: 多模态Mamba（mmMamba）
+            - text: ：提出Decoder-only的多模态状态空间模型，通过二次到线性的知识蒸馏，将计算复杂度从O(n²)降至O(n)，同时消除对独立视觉编码器的依赖（
+            - emphasis [ref=e525]: Multimodal Mamba, 2502.13145
+            - text: ）。
+          - listitem [ref=e526]:
+            - strong [ref=e527]: 音频Mamba
+            - text: ：双向状态空间模型用于音频表示学习，在音频分类任务上超越传统Audio Spectrogram Transformer，且避免了二次自注意力开销（
+            - emphasis [ref=e528]: Audio Mamba, 2406.03344
+            - text: ）。
+          - listitem [ref=e529]:
+            - strong [ref=e530]: 小目标检测
+            - text: ：MiM-ISTD提出"Mamba-in-Mamba"结构，结合CNN与Mamba的优势，在红外小目标检测中取得进展（
+            - emphasis [ref=e531]: MiM-ISTD, 2403.02148
+            - text: ）。
+          - listitem [ref=e532]:
+            - strong [ref=e533]: 综述性总结
+            - text: ：多篇综述论文系统梳理了SSM作为Transformer替代方案的潜力，指出Mamba在长序列建模、推理效率方面的核心优势（
+            - emphasis [ref=e534]: State Space Model Survey, 2404.09516
+            - text: ;
+            - emphasis [ref=e535]: Vision Mamba Survey, 2405.04404
+            - text: ）。
+        - table [ref=e536]:
+          - rowgroup [ref=e537]:
+            - row "优点 缺点" [ref=e538]:
+              - columnheader "优点" [ref=e539]
+              - columnheader "缺点" [ref=e540]
+          - rowgroup [ref=e541]:
+            - row "计算复杂度线性O(n)，适合超长序列 在短序列任务上优势不明显" [ref=e542]:
+              - cell "计算复杂度线性O(n)，适合超长序列" [ref=e543]
+              - cell "在短序列任务上优势不明显" [ref=e544]
+            - row "硬件感知设计，推理速度快 双向建模能力仍在发展中" [ref=e545]:
+              - cell "硬件感知设计，推理速度快" [ref=e546]
+              - cell "双向建模能力仍在发展中" [ref=e547]
+            - row "内存占用小，适合边缘设备部署 生态和预训练模型不如Transformer丰富" [ref=e548]:
+              - cell "内存占用小，适合边缘设备部署" [ref=e549]
+              - cell "生态和预训练模型不如Transformer丰富" [ref=e550]
+        - separator [ref=e551]
+        - heading "3. 扩散模型 —— 生成式AI的核心引擎" [level=3] [ref=e552]
+        - paragraph [ref=e553]:
+          - strong [ref=e554]: 最新进展：
+        - list [ref=e555]:
+          - listitem [ref=e556]:
+            - strong [ref=e557]: 可复现性与泛化性研究
+            - text: ：研究发现扩散模型存在"一致模型可复现性"现象——给定相同噪声输入和确定性采样器，不同扩散模型往往产生惊人相似的输出，这为理解模型行为提供了新视角（
+            - emphasis [ref=e558]: The Emergence of Reproducibility in Diffusion Models, 2310.05264
+            - text: ）。
+          - listitem [ref=e559]:
+            - strong [ref=e560]: 数据集蒸馏
+            - text: ：基于扩散模型的生成式数据集蒸馏方法在ECCV 2024数据集蒸馏挑战赛中取得优异成绩，证明扩散模型可以高效合成训练数据（
+            - emphasis [ref=e561]: Generative Dataset Distillation, 2408.08610
+            - text: ）。
+          - listitem [ref=e562]:
+            - strong [ref=e563]: 医学图像合成
+            - text: ：条件小波扩散模型（cWDM）在BraTS 2024脑MR图像合成挑战中实现跨模态3D医学图像生成，推动了医学影像增强领域的发展（
+            - emphasis [ref=e564]: cWDM, 2411.17203
+            - text: ）。
+          - listitem [ref=e565]:
+            - strong [ref=e566]: 低光照图像增强
+            - text: ：可微空间熵与扩散模型的结合，在低光照图像恢复任务中取得突破，解决了传统方法的病态问题（
+            - emphasis [ref=e567]: Equipping Diffusion Models with Differentiable Spatial Entropy, 2404.09735
+            - text: ）。
+          - listitem [ref=e568]:
+            - strong [ref=e569]: 数学理论深化
+            - text: ：最新研究揭示了扩散模型得分场与Burgers方程之间的深层数学联系，为模型设计提供了理论指导（
+            - emphasis [ref=e570]: Score Shocks, 2604.07404
+            - text: ）。
+        - table [ref=e571]:
+          - rowgroup [ref=e572]:
+            - row "优点 缺点" [ref=e573]:
+              - columnheader "优点" [ref=e574]
+              - columnheader "缺点" [ref=e575]
+          - rowgroup [ref=e576]:
+            - row "生成质量极高，多样性好 采样速度慢，需要多步迭代" [ref=e577]:
+              - cell "生成质量极高，多样性好" [ref=e578]
+              - cell "采样速度慢，需要多步迭代" [ref=e579]
+            - row "训练稳定性好，不易模式崩溃 计算资源消耗大" [ref=e580]:
+              - cell "训练稳定性好，不易模式崩溃" [ref=e581]
+              - cell "计算资源消耗大" [ref=e582]
+            - row "理论基础扎实，可控性强 推理效率不如GAN等单步生成模型" [ref=e583]:
+              - cell "理论基础扎实，可控性强" [ref=e584]
+              - cell "推理效率不如GAN等单步生成模型" [ref=e585]
+        - separator [ref=e586]
+        - heading "三、三大范式的交叉融合趋势" [level=2] [ref=e587]
+        - list [ref=e588]:
+          - listitem [ref=e589]:
+            - strong [ref=e590]: Transformer + Mamba
+            - text: ：mmMamba通过蒸馏将Transformer的知识迁移到Mamba架构，实现了"保性能、降复杂度"的目标。
+          - listitem [ref=e591]:
+            - strong [ref=e592]: Transformer + 扩散模型
+            - text: ：HOFAR将Flow Matching与Transformer结合，在图像生成中兼顾全局建模和生成质量。
+          - listitem [ref=e593]:
+            - strong [ref=e594]: Mamba + 扩散模型
+            - text: ：DeepMine-Mamba探索将Mamba用于文档图像二值化，展示了SSM在图像预处理中的潜力。
+        - separator [ref=e595]
+        - heading "四、未来方向" [level=2] [ref=e596]
+        - list [ref=e597]:
+          - listitem [ref=e598]:
+            - strong [ref=e599]: 高效长序列建模
+            - text: ：Mamba类架构有望在视频理解、基因组学、时间序列预测等超长序列任务中取代Transformer。
+          - listitem [ref=e600]:
+            - strong [ref=e601]: 统一多模态架构
+            - text: ：mmMamba等研究预示着一个"一次训练、多模态通用"的线性复杂度基础模型时代。
+          - listitem [ref=e602]:
+            - strong [ref=e603]: 扩散模型的实时化
+            - text: ：加速采样算法和蒸馏技术将推动扩散模型在实时生成场景（如视频生成、交互式设计）中的应用。
+          - listitem [ref=e604]:
+            - strong [ref=e605]: 理论深化与可解释性
+            - text: ：扩散模型的数学理论（如Burgers方程类比）和Transformer的因果推理能力研究将继续深化。
+          - listitem [ref=e606]:
+            - strong [ref=e607]: 绿色AI与边缘部署
+            - text: ：Mamba的低资源需求使其成为移动设备、物联网等场景的理想选择。
+        - separator [ref=e608]
+        - heading "✅ 已证实结论" [level=2] [ref=e609]
+        - list [ref=e610]:
+          - listitem [ref=e611]: Transformer仍是通用性最强的架构，但面临长序列效率瓶颈
+          - listitem [ref=e612]: Mamba在长序列任务上实现了线性复杂度，性能接近甚至超越Transformer
+          - listitem [ref=e613]: 扩散模型在图像/视频/3D生成领域占据主导地位，质量最优
+          - listitem [ref=e614]: 三大架构的融合是当前最活跃的研究方向
+        - heading "⚠️ 争议点" [level=2] [ref=e615]
+        - list [ref=e616]:
+          - listitem [ref=e617]: Mamba能否在超大模型（千亿参数级别）上全面替代Transformer尚存争议
+          - listitem [ref=e618]: 扩散模型的"一致可复现性"现象是优势还是局限，学界看法不一
+        - heading "❓ 资料不足" [level=2] [ref=e619]
+        - list [ref=e620]:
+          - listitem [ref=e621]: Mamba在自然语言处理中的长期推理能力（如复杂数学推理）尚未得到充分验证
+          - listitem [ref=e622]: 扩散模型在纯文本生成任务中与自回归模型的对比研究仍然较少
+      - generic [ref=e643]: 详细介绍一下人工智能的发展历史 包括重要里程碑
+      - generic [ref=e644]:
+        - generic [ref=e645] [cursor=pointer]:
+          - generic [ref=e646]: 🤖 Agent 流水线
+          - generic [ref=e647]: 收起 ▲
+        - generic [ref=e648]:
+          - generic [ref=e651]:
+            - generic [ref=e652]: 🤖
+            - generic [ref=e653]: 🤖 智能路由
+            - generic [ref=e654]: ✅ 完成
+          - generic [ref=e658]:
+            - generic [ref=e659]: 💬
+            - generic [ref=e660]: 💬 对话助手
+            - generic [ref=e661]: ⏳ 进行中
+      - generic [ref=e664]:
+        - heading "人工智能发展历史：从图灵到ChatGPT的七十年征程" [level=1] [ref=e665]
+        - paragraph [ref=e666]:
+          - text: 人工智能（AI）的发展史是一部充满
+          - strong [ref=e667]: 高潮与低谷
+          - text: 、
+          - strong [ref=e668]: 雄心与质疑
+          - text: 交织的壮阔史诗。以下按
+          - strong [ref=e669]: 五大阶段
+          - text: 梳理其关键里程碑。
+        - separator [ref=e670]
+        - heading "一、萌芽与诞生期（1940s–1956）" [level=2] [ref=e671]
+        - heading "核心思想奠基" [level=3] [ref=e672]
+        - list [ref=e673]:
+          - listitem [ref=e674]:
+            - strong [ref=e675]: 1943年
+            - text: ：神经科学家McCulloch和数学家Pitts发表《神经活动中内在思想的逻辑演算》，提出
+            - strong [ref=e676]: 人工神经元
+            - text: 的数学模型（M-P模型），首次用逻辑运算描述大脑神经元的工作方式。
+          - listitem [ref=e677]:
+            - strong [ref=e678]: 1950年
+            - text: ：
+            - strong [ref=e679]: 艾伦·图灵
+            - text: 发表划时代论文《计算机器与智能》，提出著名的
+            - strong [ref=e680]: 图灵测试
+            - text: ——如果一台机器能在对话中让人类无法分辨其身份，即可认为具有智能。这篇文章奠定了AI的哲学基础。
+          - listitem [ref=e681]:
+            - strong [ref=e682]: 1951年
+            - text: ：Marvin Minsky和Dean Edmonds建造了
+            - strong [ref=e683]: SNARC
+            - text: （随机神经模拟强化计算器），这是世界上第一台神经网络模拟器，能模拟40个神经元之间的连接。
+        - text: "|"
+    - generic [ref=e22]:
+      - generic [ref=e23]:
+        - button "🤖 自动" [disabled] [ref=e24]
+        - button "💬 对话" [disabled] [ref=e25]
+        - button "🔍 调研" [disabled] [ref=e26]
+        - button "💡 创新" [disabled] [ref=e27]
+        - button "🧪 实验" [disabled] [ref=e28]
+      - generic [ref=e29]:
+        - textbox "输入消息... (支持 Markdown 和 LaTeX)" [disabled] [ref=e30]
+        - combobox "切换模型" [disabled] [ref=e31] [cursor=pointer]:
+          - option "DeepSeek V4 Flash" [selected]
+          - option "V4 Pro"
+          - option "思考模式"
+        - button "发送" [disabled] [ref=e32]

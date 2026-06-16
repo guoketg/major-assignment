@@ -1,0 +1,433 @@
+- generic [ref=e3]:
+  - generic [ref=e4]:
+    - generic [ref=e5]:
+      - heading "对话历史" [level=2] [ref=e6]
+      - button "+ 新对话" [ref=e7] [cursor=pointer]
+    - generic [ref=e8]:
+      - generic [ref=e32] [cursor=pointer]:
+        - generic [ref=e33]:
+          - generic [ref=e34]: 帮我调研CLIP模型的最新进展
+          - generic [ref=e35]: 2 条消息
+        - button "×" [ref=e36]
+      - generic [ref=e37] [cursor=pointer]:
+        - generic [ref=e38]:
+          - generic [ref=e39]: 帮我调研CLIP模型的最新进展
+          - generic [ref=e40]: 2 条消息
+        - button "×" [ref=e41]
+      - generic [ref=e42] [cursor=pointer]:
+        - generic [ref=e43]:
+          - generic [ref=e44]: 你好
+          - generic [ref=e45]: 4 条消息
+        - button "×" [ref=e46]
+      - generic [ref=e47] [cursor=pointer]:
+        - generic [ref=e48]:
+          - generic [ref=e49]: 帮我调研CLIP噪声标签学习的最新进展
+          - generic [ref=e50]: 2 条消息
+        - button "×" [ref=e51]
+      - generic [ref=e52] [cursor=pointer]:
+        - generic [ref=e53]:
+          - generic [ref=e54]: 帮我调研一下CLIP噪声标签学习的最新进展
+          - generic [ref=e55]: 4 条消息
+        - button "×" [ref=e56]
+      - generic [ref=e57] [cursor=pointer]:
+        - generic [ref=e58]:
+          - generic [ref=e59]: 帮我调研一下CLIP噪声标签学习的最新进展
+          - generic [ref=e60]: 2 条消息
+        - button "×" [ref=e61]
+      - generic [ref=e62] [cursor=pointer]:
+        - generic [ref=e63]:
+          - generic [ref=e64]: 你好
+          - generic [ref=e65]: 2 条消息
+        - button "×" [ref=e66]
+  - generic [ref=e10]:
+    - generic [ref=e11]:
+      - generic [ref=e13]:
+        - button "💬 对话" [ref=e14] [cursor=pointer]
+        - button "📄 论文搜索" [ref=e15] [cursor=pointer]
+        - button "🧠 记忆" [ref=e16] [cursor=pointer]
+      - button "清空对话" [ref=e68] [cursor=pointer]
+    - generic [ref=e17]:
+      - generic [ref=e71]: 帮我调研CLIP模型的最新进展
+      - generic [ref=e74]:
+        - heading "CLIP模型最新进展调研报告" [level=1] [ref=e75]
+        - heading "一、领域简介" [level=2] [ref=e76]
+        - paragraph [ref=e77]: CLIP（Contrastive Language-Image Pre-training）由OpenAI于2021年提出，通过对比学习（Contrastive Learning）在大规模图文对数据上预训练，实现了视觉与语言表征的对齐。CLIP的零样本迁移能力使其成为多模态学习的里程碑式模型，广泛应用于图像分类、检索、分割、生成等任务。
+        - paragraph [ref=e78]:
+          - text: 然而，原始CLIP存在若干核心瓶颈：
+          - strong [ref=e79]: 训练成本极高
+          - text: （需要数百GPU天、数十亿图文对）、
+          - strong [ref=e80]: 文本编码器长度限制
+          - text: （仅支持77个token）、
+          - strong [ref=e81]: 对低资源语言支持薄弱
+          - text: 、
+          - strong [ref=e82]: 分布外泛化能力有限
+          - text: 等。2023-2025年间，学术界围绕这些瓶颈展开了大量优化工作，形成了四大研究方向：
+          - strong [ref=e83]: 训练效率优化
+          - text: 、
+          - strong [ref=e84]: 模型架构改进
+          - text: 、
+          - strong [ref=e85]: 数据质量提升
+          - text: 、
+          - strong [ref=e86]: 下游适配与泛化增强
+          - text: 。
+        - heading "二、核心方法分类与详细分析" [level=2] [ref=e87]
+        - heading "✅ 方向一：训练效率优化" [level=3] [ref=e88]
+        - heading "1. FastCLIP：资源受限下的加速训练" [level=4] [ref=e89]
+        - paragraph [ref=e90]:
+          - strong [ref=e91]: 论文
+          - text: ：
+          - emphasis [ref=e92]: "FastCLIP: A Suite of Optimization Techniques to Accelerate CLIP Training with Limited Resources"
+          - text: (Wei et al., 2024)
+        - paragraph [ref=e93]: 核心方法：
+        - list [ref=e94]:
+          - listitem [ref=e95]:
+            - text: 提出一套优化技术组合，包括
+            - strong [ref=e96]: 梯度压缩
+            - text: 、
+            - strong [ref=e97]: 通信优化
+            - text: 、
+            - strong [ref=e98]: 动态批大小调整
+            - text: 等
+          - listitem [ref=e99]: 针对大batch size需求（CLIP训练通常需要32K+ batch size）进行重新设计
+          - listitem [ref=e100]: 在少量GPU（如8-16块）上实现接近大规模集群的训练效果
+        - paragraph [ref=e101]:
+          - strong [ref=e102]: 优点
+          - text: ：大幅降低了CLIP训练的硬件门槛，使中小团队也能参与研究
+          - strong [ref=e103]: 缺点
+          - text: ：仍需要至少8块高端GPU；在极小batch size下性能下降明显；优化方案对特定硬件架构依赖较强
+        - heading "2. CLIP-CID：基于聚类的知识蒸馏" [level=4] [ref=e104]
+        - paragraph [ref=e105]:
+          - strong [ref=e106]: 论文
+          - text: ：
+          - emphasis [ref=e107]: "CLIP-CID: Efficient CLIP Distillation via Cluster-Instance Discrimination"
+          - text: (Yang et al., 2024)
+        - paragraph [ref=e108]: 核心方法：
+        - list [ref=e109]:
+          - listitem [ref=e110]:
+            - text: 将知识蒸馏与对比学习结合，提出
+            - strong [ref=e111]: 聚类-实例判别
+            - text: 双重目标
+          - listitem [ref=e112]: 学生模型不仅学习教师模型的实例级对比关系，还学习聚类级语义结构
+          - listitem [ref=e113]: 在保持性能的同时显著减少参数量和训练数据需求
+        - paragraph [ref=e114]:
+          - strong [ref=e115]: 优点
+          - text: ：小模型可在1/10数据量下达到大模型80%以上性能；聚类约束增强了语义一致性
+          - strong [ref=e116]: 缺点
+          - text: ：蒸馏过程需要预训练好的教师模型；聚类质量影响最终效果；对长尾类别不够友好
+        - heading "3. SigLIP：Sigmoid损失函数替代Softmax" [level=4] [ref=e117]
+        - paragraph [ref=e118]:
+          - strong [ref=e119]: 论文
+          - text: ：
+          - emphasis [ref=e120]: Global Minimizers of Sigmoid Contrastive Loss
+          - text: (Bangachev et al., 2025)；
+          - emphasis [ref=e121]: Analysis of Using Sigmoid Loss for Contrastive Learning
+          - text: (Lee et al., 2024)
+        - paragraph [ref=e122]: 核心方法：
+        - list [ref=e123]:
+          - listitem [ref=e124]:
+            - text: 用
+            - strong [ref=e125]: Sigmoid损失
+            - text: 替代传统的InfoNCE/Softmax对比损失
+          - listitem [ref=e126]: Sigmoid损失不需要跨batch的负样本对比，每个图文对独立计算损失
+          - listitem [ref=e127]: 支持更小的batch size（从32K降至4K），显著降低显存需求
+          - listitem [ref=e128]: 引入可学习的温度参数和偏置项，增强训练稳定性
+        - paragraph [ref=e129]:
+          - strong [ref=e130]: 优点
+          - text: ：batch size需求降低8倍；训练速度提升2-3倍；收敛更稳定
+          - strong [ref=e131]: 缺点
+          - text: ：在极小batch size（<1K）时性能仍下降；温度参数调优敏感；理论分析尚不完善
+        - separator [ref=e132]
+        - heading "✅ 方向二：模型架构改进" [level=3] [ref=e133]
+        - heading "1. Long-CLIP：突破文本长度限制" [level=4] [ref=e134]
+        - paragraph [ref=e135]:
+          - strong [ref=e136]: 论文
+          - text: ：
+          - emphasis [ref=e137]: "Long-CLIP: Unlocking the Long-Text Capability of CLIP"
+          - text: (Zhang et al., 2024)
+        - paragraph [ref=e138]: 核心方法：
+        - list [ref=e139]:
+          - listitem [ref=e140]:
+            - text: 提出
+            - strong [ref=e141]: 位置编码扩展
+            - text: 和
+            - strong [ref=e142]: 文本特征重对齐
+            - text: 技术
+          - listitem [ref=e143]: 将CLIP的文本编码器从77 token扩展至248+ token
+          - listitem [ref=e144]: 通过两阶段训练：先扩展位置编码，再在大规模长文本数据上微调
+        - paragraph [ref=e145]:
+          - strong [ref=e146]: 优点
+          - text: ：支持长描述文本，显著提升细粒度检索和图文生成质量；与现有CLIP架构兼容
+          - strong [ref=e147]: 缺点
+          - text: ：长文本训练数据构建成本高；推理速度略有下降；极端长文本（>500 token）性能退化
+        - heading "2. EVA-CLIP系列：视觉编码器增强" [level=4] [ref=e148]
+        - paragraph [ref=e149]:
+          - strong [ref=e150]: 论文
+          - text: ：
+          - emphasis [ref=e151]: "EVA-02: A Visual Representation for Neon Genesis"
+          - text: (Fang et al., 2023)；
+          - emphasis [ref=e152]: "EVA: Exploring the Limits of Masked Visual Representation Learning at Scale"
+          - text: (Fang et al., 2022)
+        - paragraph [ref=e153]: 核心方法：
+        - list [ref=e154]:
+          - listitem [ref=e155]:
+            - text: 将
+            - strong [ref=e156]: 掩码图像建模（MIM）
+            - text: 与CLIP对比学习结合
+          - listitem [ref=e157]: EVA：预训练ViT重建被掩码的图像块，目标特征来自CLIP视觉编码器
+          - listitem [ref=e158]:
+            - text: EVA-02：进一步优化Transformer架构，引入
+            - strong [ref=e159]: 旋转位置编码（RoPE）
+            - text: 、
+            - strong [ref=e160]: GLU激活函数
+            - text: 等改进
+        - paragraph [ref=e161]:
+          - strong [ref=e162]: 优点
+          - text: ：视觉表征质量显著提升，在ImageNet等基准上刷新SOTA；EVA-02在相同参数量下超越原始CLIP 2-3%
+          - strong [ref=e163]: 缺点
+          - text: ：MIM预训练计算开销大；需要高质量的CLIP教师模型；架构改动较多，部署成本增加
+        - separator [ref=e164]
+        - heading "✅ 方向三：数据质量与效率提升" [level=3] [ref=e165]
+        - heading "1. 数据高效CLIP：质量优先于数量" [level=4] [ref=e166]
+        - paragraph [ref=e167]:
+          - strong [ref=e168]: 论文
+          - text: ：
+          - emphasis [ref=e169]: "Data-Efficient Contrastive Language-Image Pretraining: Prioritizing Data Quality over Quantity"
+          - text: (Joshi et al., 2024)
+        - paragraph [ref=e170]: 核心方法：
+        - list [ref=e171]:
+          - listitem [ref=e172]:
+            - text: 提出
+            - strong [ref=e173]: 数据质量评分
+            - text: 机制，自动筛选高质量图文对
+          - listitem [ref=e174]: 基于CLIP分数、文本复杂度、图像清晰度等多维度指标
+          - listitem [ref=e175]: 仅使用30%的数据即可达到全量数据训练的性能
+        - paragraph [ref=e176]:
+          - strong [ref=e177]: 优点
+          - text: ：数据效率提升3倍以上；减少噪声数据干扰；可解释性强
+          - strong [ref=e178]: 缺点
+          - text: ：质量评分标准难以统一；过滤可能丢失长尾知识；需要预训练模型辅助筛选
+        - heading "2. CAPIVARA：低资源语言增强" [level=4] [ref=e179]
+        - paragraph [ref=e180]:
+          - strong [ref=e181]: 论文
+          - text: ：
+          - emphasis [ref=e182]: "CAPIVARA: Cost-Efficient Approach for Improving Multilingual CLIP Performance on Low-Resource Languages"
+          - text: (Santos et al., 2023)
+        - paragraph [ref=e183]: 核心方法：
+        - list [ref=e184]:
+          - listitem [ref=e185]:
+            - text: 提出
+            - strong [ref=e186]: 成本高效的多语言CLIP改进框架
+          - listitem [ref=e187]:
+            - text: 利用
+            - strong [ref=e188]: 机器翻译
+            - text: 和
+            - strong [ref=e189]: 跨语言知识迁移
+            - text: ，将高资源语言（如英语）的CLIP知识迁移到低资源语言
+          - listitem [ref=e190]: 设计轻量级适配层，无需重新训练整个模型
+        - paragraph [ref=e191]:
+          - strong [ref=e192]: 优点
+          - text: ：大幅提升低资源语言零样本性能（如印地语、泰语等）；训练成本低
+          - strong [ref=e193]: 缺点
+          - text: ：依赖机器翻译质量；对形态复杂语言（如阿拉伯语）效果有限；翻译偏差可能导致语义偏移
+        - separator [ref=e194]
+        - heading "⚠️ 方向四：下游适配与泛化（争议点）" [level=3] [ref=e195]
+        - heading "1. CLIPood：分布外泛化" [level=4] [ref=e196]
+        - paragraph [ref=e197]:
+          - strong [ref=e198]: 论文
+          - text: ：
+          - emphasis [ref=e199]: "CLIPood: Generalizing CLIP to Out-of-Distributions"
+          - text: (Shu et al., 2023)
+        - paragraph [ref=e200]: 核心方法：
+        - list [ref=e201]:
+          - listitem [ref=e202]:
+            - text: 提出
+            - strong [ref=e203]: 边际加权对比学习
+            - text: ，在微调过程中保持CLIP的分布外泛化能力
+          - listitem [ref=e204]:
+            - text: 通过
+            - strong [ref=e205]: 特征对齐正则化
+            - text: 防止过拟合到下游分布
+        - paragraph [ref=e206]:
+          - strong [ref=e207]: 优点
+          - text: ：在多个OOD基准上提升5-10%；保持零样本能力
+          - strong [ref=e208]: 缺点
+          - text: ：
+          - strong [ref=e209]: 争议点
+          - text: ：部分后续研究（如
+          - emphasis [ref=e210]: Efficient and Versatile Robust Fine-Tuning
+          - text: ", Kim et al., 2024）指出，OOD泛化提升可能以牺牲ID（分布内）性能为代价；泛化与专化之间存在根本性权衡"
+        - heading "2. 测试时自适应（TTA）的批判性分析" [level=4] [ref=e211]
+        - paragraph [ref=e212]:
+          - strong [ref=e213]: 论文
+          - text: ：
+          - emphasis [ref=e214]: The Illusion of Progress? A Critical Look at Test-Time Adaptation for Vision-Language Models
+          - text: (Sheng et al., 2025)
+        - paragraph [ref=e215]: 核心发现：
+        - list [ref=e216]:
+          - listitem [ref=e217]: 系统评估了20+种CLIP测试时自适应方法
+          - listitem [ref=e218]:
+            - strong [ref=e219]: 揭示严重问题
+            - text: ：多数TTA方法存在
+            - strong [ref=e220]: 实验重复、评价标准不一致、结果夸大
+            - text: 等问题
+          - listitem [ref=e221]:
+            - text: 部分方法实际提升来自
+            - strong [ref=e222]: 数据泄露
+            - text: 或
+            - strong [ref=e223]: 不公平比较
+        - paragraph [ref=e224]:
+          - strong [ref=e225]: 结论
+          - text: ：⚠️ 该领域存在大量"虚假进步"，需要更严格的基准和评估协议
+        - heading "3. 对比感知校准" [level=4] [ref=e226]
+        - paragraph [ref=e227]:
+          - strong [ref=e228]: 论文
+          - text: ：
+          - emphasis [ref=e229]: Contrast-Aware Calibration for Fine-Tuned CLIP
+          - text: (Lv et al., 2025)
+        - paragraph [ref=e230]: 核心方法：
+        - list [ref=e231]:
+          - listitem [ref=e232]:
+            - text: 提出
+            - strong [ref=e233]: 对比感知校准
+            - text: 方法，在微调过程中保持图文对齐的一致性
+          - listitem [ref=e234]:
+            - text: 通过
+            - strong [ref=e235]: 知识蒸馏
+            - text: 和
+            - strong [ref=e236]: 特征正则化
+            - text: 平衡ID和OOD性能
+        - paragraph [ref=e237]:
+          - strong [ref=e238]: 优点
+          - text: ：在多个数据集上实现更好的ID-OOD权衡
+          - strong [ref=e239]: 缺点
+          - text: ：
+          - strong [ref=e240]: 争议点
+          - text: ：与CLIPood的结论存在部分矛盾——该校准方法认为ID和OOD可以同时优化，而CLIPood认为存在根本性冲突
+        - separator [ref=e241]
+        - heading "❓ 方向五：新兴应用与未充分研究领域" [level=3] [ref=e242]
+        - heading "kNN-CLIP：免训练持续分割" [level=4] [ref=e243]
+        - paragraph [ref=e244]:
+          - strong [ref=e245]: 论文
+          - text: ：
+          - emphasis [ref=e246]: "kNN-CLIP: Retrieval Enables Training-Free Segmentation on Continually Expanding Large Vocabularies"
+          - text: (Gui et al., 2024)
+        - paragraph [ref=e247]: 核心方法：
+        - list [ref=e248]:
+          - listitem [ref=e249]:
+            - text: 利用
+            - strong [ref=e250]: k近邻检索
+            - text: 和
+            - strong [ref=e251]: CLIP特征库
+            - text: 实现免训练的开词汇分割
+          - listitem [ref=e252]: 支持持续扩展词汇表，无需重新训练
+        - paragraph [ref=e253]:
+          - strong [ref=e254]: 现状
+          - text: ：❓ 该方向尚处于早期，仅在受限场景验证；大规模词汇表下的检索效率问题未解决
+        - heading "主动学习CLIP适配" [level=4] [ref=e255]
+        - paragraph [ref=e256]:
+          - strong [ref=e257]: 论文
+          - text: ：
+          - emphasis [ref=e258]: Explicit Uncertainty Modeling for Active CLIP Adaptation with Dual Prompt Tuning
+          - text: (Wang et al., 2026)
+        - paragraph [ref=e259]: 核心方法：
+        - list [ref=e260]:
+          - listitem [ref=e261]:
+            - text: 将
+            - strong [ref=e262]: 主动学习
+            - text: 与CLIP提示微调结合
+          - listitem [ref=e263]:
+            - text: 引入
+            - strong [ref=e264]: 不确定性建模
+            - text: 选择最有信息量的样本标注
+        - paragraph [ref=e265]:
+          - strong [ref=e266]: 现状
+          - text: ：❓ 论文较新（2026），实证结果有限；主动学习策略与CLIP的交互机制尚未深入理解
+        - separator [ref=e267]
+        - heading "三、各方法优缺点总结" [level=2] [ref=e268]
+        - table [ref=e269]:
+          - rowgroup [ref=e270]:
+            - row "方法类别 代表工作 核心优势 核心局限" [ref=e271]:
+              - columnheader "方法类别" [ref=e272]
+              - columnheader "代表工作" [ref=e273]
+              - columnheader "核心优势" [ref=e274]
+              - columnheader "核心局限" [ref=e275]
+          - rowgroup [ref=e276]:
+            - row "训练优化 FastCLIP, SigLIP, CLIP-CID 降低资源需求，加速训练 小batch下性能退化，硬件依赖" [ref=e277]:
+              - cell "训练优化" [ref=e278]
+              - cell "FastCLIP, SigLIP, CLIP-CID" [ref=e279]
+              - cell "降低资源需求，加速训练" [ref=e280]
+              - cell "小batch下性能退化，硬件依赖" [ref=e281]
+            - row "架构改进 Long-CLIP, EVA-CLIP 突破原有限制，提升表征质量 计算开销增加，部署复杂" [ref=e282]:
+              - cell "架构改进" [ref=e283]
+              - cell "Long-CLIP, EVA-CLIP" [ref=e284]
+              - cell "突破原有限制，提升表征质量" [ref=e285]
+              - cell "计算开销增加，部署复杂" [ref=e286]
+            - row "数据效率 Data-Efficient CLIP, CAPIVARA 数据量减少3倍，低资源语言增强 筛选标准主观，翻译质量依赖" [ref=e287]:
+              - cell "数据效率" [ref=e288]
+              - cell "Data-Efficient CLIP, CAPIVARA" [ref=e289]
+              - cell "数据量减少3倍，低资源语言增强" [ref=e290]
+              - cell "筛选标准主观，翻译质量依赖" [ref=e291]
+            - row "泛化增强 CLIPood, Contrast-Aware Calibration 提升OOD泛化 ID-OOD权衡存在争议" [ref=e292]:
+              - cell "泛化增强" [ref=e293]
+              - cell "CLIPood, Contrast-Aware Calibration" [ref=e294]
+              - cell "提升OOD泛化" [ref=e295]
+              - cell "ID-OOD权衡存在争议" [ref=e296]
+            - row "持续学习 kNN-CLIP 免训练扩展词汇 仅限检索场景，效率问题" [ref=e297]:
+              - cell "持续学习" [ref=e298]
+              - cell "kNN-CLIP" [ref=e299]
+              - cell "免训练扩展词汇" [ref=e300]
+              - cell "仅限检索场景，效率问题" [ref=e301]
+        - heading "四、未来方向与展望" [level=2] [ref=e302]
+        - list [ref=e303]:
+          - listitem [ref=e304]:
+            - paragraph [ref=e305]:
+              - strong [ref=e306]: 统一理论框架
+              - text: ：当前SigLIP、CLIP-CID等方法各有侧重，缺乏统一的对比学习理论来解释不同损失函数、数据策略和架构设计的本质差异。
+          - listitem [ref=e307]:
+            - paragraph [ref=e308]:
+              - strong [ref=e309]: 高效持续学习
+              - text: ：结合kNN-CLIP的检索范式和主动学习策略，构建能持续扩展知识且无需重训练的CLIP系统。
+          - listitem [ref=e310]:
+            - paragraph [ref=e311]:
+              - strong [ref=e312]: 多模态对齐深化
+              - text: ：Long-CLIP打开了长文本支持，未来可探索视频、3D、音频等多模态与CLIP的深度对齐。
+          - listitem [ref=e313]:
+            - paragraph [ref=e314]:
+              - strong [ref=e315]: 可解释性增强
+              - text: ：当前CLIP的"黑箱"性质限制了其在医疗、法律等高风险领域的应用，需要更好的可解释性方法。
+          - listitem [ref=e316]:
+            - paragraph [ref=e317]:
+              - strong [ref=e318]: 公平性研究
+              - text: ：CAPIVARA仅初步探索了低资源语言，CLIP在种族、性别、文化等方面的偏见问题亟待解决。
+          - listitem [ref=e319]:
+            - paragraph [ref=e320]:
+              - strong [ref=e321]: 严格基准建设
+              - text: ：Sheng等(2025)的批判性分析表明，该领域需要更严格的实验评估标准，避免"虚假进步"。
+        - separator [ref=e322]
+        - paragraph [ref=e323]:
+          - strong [ref=e324]: 总结
+          - text: ：CLIP模型在2023-2025年间取得了显著进展，
+          - strong [ref=e325]: 训练效率提升
+          - text: （SigLIP、FastCLIP）和
+          - strong [ref=e326]: 数据质量优化
+          - text: （Data-Efficient CLIP）是最成熟的方向，已得到多篇论文一致验证。
+          - strong [ref=e327]: 架构改进
+          - text: （Long-CLIP、EVA-CLIP）展现了巨大潜力但计算成本较高。
+          - strong [ref=e328]: 泛化增强
+          - text: 领域存在方法论争议，需要更多系统性研究。
+          - strong [ref=e329]: 持续学习和主动学习
+          - text: 等新兴方向尚处于探索阶段，是未来值得关注的研究热点。
+    - generic [ref=e21]:
+      - generic [ref=e22]:
+        - button "🤖 自动" [ref=e23] [cursor=pointer]
+        - button "💬 对话" [ref=e24] [cursor=pointer]
+        - button "🔍 调研" [ref=e25] [cursor=pointer]
+        - button "💡 创新" [ref=e26] [cursor=pointer]
+        - button "🧪 实验" [ref=e27] [cursor=pointer]
+      - generic [ref=e28]:
+        - textbox "输入消息... (支持 Markdown 和 LaTeX)" [ref=e29]
+        - combobox "切换模型" [ref=e30] [cursor=pointer]:
+          - option "DeepSeek V4 Flash" [selected]
+          - option "V4 Pro"
+          - option "思考模式"
+        - button "发送" [ref=e31] [cursor=pointer]

@@ -1,0 +1,45 @@
+- generic [ref=e3]:
+  - generic [ref=e4]:
+    - generic [ref=e5]:
+      - heading "对话历史" [level=2] [ref=e6]
+      - button "+ 新对话" [active] [ref=e7] [cursor=pointer]
+    - generic [ref=e8]:
+      - generic [ref=e140] [cursor=pointer]:
+        - generic [ref=e141]:
+          - generic [ref=e142]: 帮我调研一下CLIP噪声标签学习的最新进展
+          - generic [ref=e143]: 4 条消息
+        - button "×" [ref=e144]
+      - generic [ref=e145] [cursor=pointer]:
+        - generic [ref=e146]:
+          - generic [ref=e147]: 帮我调研一下CLIP噪声标签学习的最新进展
+          - generic [ref=e148]: 2 条消息
+        - button "×" [ref=e149]
+      - generic [ref=e113] [cursor=pointer]:
+        - generic [ref=e114]:
+          - generic [ref=e115]: 你好
+          - generic [ref=e116]: 2 条消息
+        - button "×" [ref=e117]
+  - generic [ref=e10]:
+    - generic [ref=e11]:
+      - generic [ref=e13]:
+        - button "💬 对话" [ref=e14] [cursor=pointer]
+        - button "📄 论文搜索" [ref=e15] [cursor=pointer]
+        - button "🧠 记忆" [ref=e16] [cursor=pointer]
+      - button "清空对话" [ref=e98] [cursor=pointer]
+    - generic [ref=e150]:
+      - generic [ref=e151]: 💬
+      - paragraph [ref=e152]: 开始和 AI 对话吧
+    - generic [ref=e21]:
+      - generic [ref=e22]:
+        - button "🤖 自动" [ref=e23] [cursor=pointer]
+        - button "💬 对话" [ref=e24] [cursor=pointer]
+        - button "🔍 调研" [ref=e25] [cursor=pointer]
+        - button "💡 创新" [ref=e26] [cursor=pointer]
+        - button "🧪 实验" [ref=e27] [cursor=pointer]
+      - generic [ref=e28]:
+        - textbox "输入消息... (支持 Markdown 和 LaTeX)" [ref=e29]
+        - combobox "切换模型" [ref=e30] [cursor=pointer]:
+          - option "DeepSeek V4 Flash" [selected]
+          - option "V4 Pro"
+          - option "思考模式"
+        - button "发送" [ref=e31] [cursor=pointer]

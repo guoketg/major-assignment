@@ -1,0 +1,137 @@
+- generic [ref=e3]:
+  - generic [ref=e4]:
+    - generic [ref=e5]:
+      - heading "对话历史" [level=2] [ref=e6]
+      - button "+ 新对话" [ref=e7] [cursor=pointer]
+    - generic [ref=e8]:
+      - generic [ref=e33] [cursor=pointer]:
+        - generic [ref=e34]:
+          - generic [ref=e35]: 500字介绍深度学习 要包括CNN RNN Transfor...
+          - generic [ref=e36]: 1 条消息
+        - button "×" [ref=e37]
+      - generic [ref=e38] [cursor=pointer]:
+        - generic [ref=e39]:
+          - generic [ref=e40]: 500字介绍Transformer
+          - generic [ref=e41]: 2 条消息
+        - button "×" [ref=e42]
+      - generic [ref=e43] [cursor=pointer]:
+        - generic [ref=e44]:
+          - generic [ref=e45]: 500字介绍深度学习的最新进展 要包括Transformer...
+          - generic [ref=e46]: 4 条消息
+        - button "×" [ref=e47]
+      - generic [ref=e48] [cursor=pointer]:
+        - generic [ref=e49]:
+          - generic [ref=e50]: 00字介绍Transformer
+          - generic [ref=e51]: 4 条消息
+        - button "×" [ref=e52]
+      - generic [ref=e53] [cursor=pointer]:
+        - generic [ref=e54]:
+          - generic [ref=e55]: 200字介绍Transformer
+          - generic [ref=e56]: 4 条消息
+        - button "×" [ref=e57]
+  - generic [ref=e10]:
+    - generic [ref=e11]:
+      - generic [ref=e13]:
+        - button "💬 对话" [ref=e14] [cursor=pointer]
+        - button "📄 论文搜索" [ref=e15] [cursor=pointer]
+        - button "🧠 记忆" [ref=e16] [cursor=pointer]
+        - button "🔧 工具" [ref=e17] [cursor=pointer]
+      - generic [ref=e58]:
+        - button "📄 导出 Word" [ref=e59] [cursor=pointer]
+        - button "清空对话" [ref=e60] [cursor=pointer]
+    - generic [ref=e18]:
+      - generic [ref=e63]: 500字介绍深度学习 要包括CNN RNN Transformer的特点
+      - generic [ref=e64]:
+        - generic [ref=e65] [cursor=pointer]:
+          - generic [ref=e66]: 🤖 Agent 流水线
+          - generic [ref=e67]: 收起 ▲
+        - generic [ref=e68]:
+          - generic [ref=e71]:
+            - generic [ref=e72]: 🤖
+            - generic [ref=e73]: 🤖 智能路由
+            - generic [ref=e74]: ✅ 完成
+          - generic [ref=e78]:
+            - generic [ref=e79]: 💬
+            - generic [ref=e80]: 💬 对话助手
+            - generic [ref=e81]: ⏳ 进行中
+      - generic [ref=e84]:
+        - heading "深度学习简介" [level=1] [ref=e85]
+        - paragraph [ref=e86]: 深度学习是机器学习的一个重要分支，它通过构建多层人工神经网络来自动学习数据的层次化特征表示。其核心思想是模拟人脑神经元的工作方式，利用深层网络结构从原始数据中逐层提取越来越抽象的特征。
+        - heading "三大核心模型的特点" [level=2] [ref=e87]
+        - heading "CNN（卷积神经网络）" [level=3] [ref=e88]
+        - paragraph [ref=e89]:
+          - text: CNN专为处理
+          - strong [ref=e90]: 网格状拓扑数据
+          - text: （如图像）而设计，其核心特点是：
+        - list [ref=e91]:
+          - listitem [ref=e92]:
+            - strong [ref=e93]: 局部连接
+            - text: ：每个神经元只与输入数据的局部区域相连，大幅减少参数量
+          - listitem [ref=e94]:
+            - strong [ref=e95]: 权值共享
+            - text: ：同一卷积核在图像不同位置使用相同参数，实现平移不变性
+          - listitem [ref=e96]:
+            - strong [ref=e97]: 池化操作
+            - text: ：通过下采样降低特征维度，增强模型对微小变形的鲁棒性
+        - paragraph [ref=e98]:
+          - text: CNN在
+          - strong [ref=e99]: 图像分类、目标检测、图像分割
+          - text: 等领域表现卓越，代表模型有AlexNet、ResNet等。
+        - heading "RNN（循环神经网络）" [level=3] [ref=e100]
+        - paragraph [ref=e101]:
+          - text: RNN擅长处理
+          - strong [ref=e102]: 序列数据
+          - text: （如文本、语音），其核心特点是：
+        - list [ref=e103]:
+          - listitem [ref=e104]:
+            - strong [ref=e105]: 循环结构
+            - text: ：通过隐藏状态传递信息，使网络具有记忆能力
+          - listitem [ref=e106]:
+            - strong [ref=e107]: 时序建模
+            - text: ：能捕捉序列中前后元素之间的依赖关系
+          - listitem [ref=e108]:
+            - strong [ref=e109]: 变长输入
+            - text: ：可处理任意长度的序列数据
+        - paragraph [ref=e110]:
+          - text: 但传统RNN存在
+          - strong [ref=e111]: 梯度消失/爆炸
+          - text: 问题，难以捕捉长距离依赖。后续的
+          - strong [ref=e112]: LSTM
+          - text: 和
+          - strong [ref=e113]: GRU
+          - text: 通过门控机制有效缓解了这一问题。
+        - heading "Transformer" [level=3] [ref=e114]
+        - paragraph [ref=e115]: Transformer是近年来最具革命性的模型架构，其核心特点是：
+        - list [ref=e116]:
+          - listitem [ref=e117]:
+            - strong [ref=e118]: 自注意力机制
+            - text: ：允许模型同时关注输入序列中所有位置，直接建模长距离依赖
+          - listitem [ref=e119]:
+            - strong [ref=e120]: 并行计算
+            - text: ：摆脱了RNN的串行限制，可高效并行处理整个序列
+          - listitem [ref=e121]:
+            - strong [ref=e122]: 位置编码
+            - text: ：通过位置编码引入序列顺序信息，弥补自注意力对位置不敏感的缺陷
+        - paragraph [ref=e123]:
+          - text: Transformer已成为
+          - strong [ref=e124]: 自然语言处理
+          - text: （如BERT、GPT系列）和
+          - strong [ref=e125]: 计算机视觉
+          - text: （如ViT）的主流架构，推动了预训练大模型的发展。
+        - heading "小结" [level=2] [ref=e126]
+        - paragraph [ref=e127]: 三者各有侧重：CNN擅长局部特征提取，RNN擅长时序
+        - text: "|"
+    - generic [ref=e22]:
+      - generic [ref=e23]:
+        - button "🤖 自动" [disabled] [ref=e24]
+        - button "💬 对话" [disabled] [ref=e25]
+        - button "🔍 调研" [disabled] [ref=e26]
+        - button "💡 创新" [disabled] [ref=e27]
+        - button "🧪 实验" [disabled] [ref=e28]
+      - generic [ref=e29]:
+        - textbox "输入消息... (支持 Markdown 和 LaTeX)" [disabled] [ref=e30]
+        - combobox "切换模型" [disabled] [ref=e31] [cursor=pointer]:
+          - option "DeepSeek V4 Flash" [selected]
+          - option "V4 Pro"
+          - option "思考模式"
+        - button "发送" [disabled] [ref=e32]

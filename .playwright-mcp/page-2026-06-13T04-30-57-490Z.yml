@@ -1,0 +1,115 @@
+- generic [ref=e3]:
+  - generic [ref=e4]:
+    - generic [ref=e5]:
+      - heading "对话历史" [level=2] [ref=e6]
+      - button "+ 新对话" [ref=e7] [cursor=pointer]
+    - paragraph [ref=e9]: 暂无会话记录
+  - generic [ref=e10]:
+    - generic [ref=e11]:
+      - generic [ref=e13]:
+        - button "💬 对话" [ref=e14] [cursor=pointer]
+        - button "📄 论文搜索" [ref=e15] [cursor=pointer]
+        - button "🧠 记忆" [ref=e16] [cursor=pointer]
+        - button "🔧 工具" [ref=e17] [cursor=pointer]
+      - generic [ref=e33]:
+        - button "📄 导出 Word" [ref=e34] [cursor=pointer]
+        - button "清空对话" [ref=e35] [cursor=pointer]
+    - generic [ref=e18]:
+      - generic [ref=e38]: 什么是机器学习
+      - generic [ref=e39]:
+        - generic [ref=e40] [cursor=pointer]:
+          - generic [ref=e41]: 🤖 Agent 流水线
+          - generic [ref=e42]: 收起 ▲
+        - generic [ref=e43]:
+          - generic [ref=e46]:
+            - generic [ref=e47]: 🤖
+            - generic [ref=e48]: 🤖 智能路由
+            - generic [ref=e49]: ✅ 完成
+          - generic [ref=e53]:
+            - generic [ref=e54]: 💬
+            - generic [ref=e55]: 💬 对话助手
+            - generic [ref=e56]: ⏳ 进行中
+      - generic [ref=e59]:
+        - heading "什么是机器学习？" [level=1] [ref=e60]
+        - paragraph [ref=e61]:
+          - strong [ref=e62]: 机器学习（Machine Learning，简称 ML）
+          - text: 是人工智能的一个核心分支，它让计算机
+          - strong [ref=e63]: 从数据中自动学习规律和模式
+          - text: ，而不需要人为地编写明确的规则。
+        - heading "核心思想" [level=2] [ref=e64]
+        - paragraph [ref=e65]:
+          - text: 传统编程是：
+          - strong [ref=e66]: 规则 + 数据 → 答案
+          - text: 机器学习是：
+          - strong [ref=e67]: 数据 + 答案 → 规则（模型）
+        - paragraph [ref=e68]: 简单来说，机器学习就像教孩子认识猫——你不需要告诉它"猫有尖耳朵、胡须、会喵喵叫"这些具体规则，而是给它看很多猫的图片，它自己就能学会识别什么是猫。
+        - heading "三大主要类型" [level=2] [ref=e69]
+        - table [ref=e70]:
+          - rowgroup [ref=e71]:
+            - row "类型 说明 例子" [ref=e72]:
+              - columnheader "类型" [ref=e73]
+              - columnheader "说明" [ref=e74]
+              - columnheader "例子" [ref=e75]
+          - rowgroup [ref=e76]:
+            - row "监督学习 使用带标签的数据训练 图像分类、房价预测" [ref=e77]:
+              - cell "监督学习" [ref=e78]:
+                - strong [ref=e79]: 监督学习
+              - cell "使用带标签的数据训练" [ref=e80]
+              - cell "图像分类、房价预测" [ref=e81]
+            - row "无监督学习 数据没有标签，让模型自己发现结构 客户分群、异常检测" [ref=e82]:
+              - cell "无监督学习" [ref=e83]:
+                - strong [ref=e84]: 无监督学习
+              - cell "数据没有标签，让模型自己发现结构" [ref=e85]
+              - cell "客户分群、异常检测" [ref=e86]
+            - row "强化学习 通过与环境交互获得奖励来学习 围棋AlphaGo、自动驾驶" [ref=e87]:
+              - cell "强化学习" [ref=e88]:
+                - strong [ref=e89]: 强化学习
+              - cell "通过与环境交互获得奖励来学习" [ref=e90]
+              - cell "围棋AlphaGo、自动驾驶" [ref=e91]
+        - heading "典型工作流程" [level=2] [ref=e92]
+        - list [ref=e93]:
+          - listitem [ref=e94]:
+            - strong [ref=e95]: 收集数据
+            - text: 📊
+          - listitem [ref=e96]:
+            - strong [ref=e97]: 数据预处理
+            - text: （清洗、归一化等）
+          - listitem [ref=e98]:
+            - strong [ref=e99]: 选择模型
+            - text: （如决策树、神经网络等）
+          - listitem [ref=e100]:
+            - strong [ref=e101]: 训练模型
+            - text: （让模型从数据中学习）
+          - listitem [ref=e102]:
+            - strong [ref=e103]: 评估模型
+            - text: （测试模型效果）
+          - listitem [ref=e104]:
+            - strong [ref=e105]: 调参优化
+            - text: （提升性能）
+          - listitem [ref=e106]:
+            - strong [ref=e107]: 部署应用
+            - text: 🚀
+        - heading "生活中的例子" [level=2] [ref=e108]
+        - list [ref=e109]:
+          - listitem [ref=e110]: 📧 邮件垃圾过滤器
+          - listitem [ref=e111]: 🎵 音乐/视频推荐（抖音、网易云）
+          - listitem [ref=e112]: 🗣️ 语音助手（Siri、小爱同学）
+          - listitem [ref=e113]: 🚗 自动驾驶中的障碍物识别
+          - listitem [ref=e114]: 🏦 银行信用卡欺诈检测
+        - separator [ref=e115]
+        - paragraph [ref=e116]: 你是刚开始接触机器学习，还是
+        - text: "|"
+    - generic [ref=e22]:
+      - generic [ref=e23]:
+        - button "🤖 自动" [disabled] [ref=e24]
+        - button "💬 对话" [disabled] [ref=e25]
+        - button "🔍 调研" [disabled] [ref=e26]
+        - button "💡 创新" [disabled] [ref=e27]
+        - button "🧪 实验" [disabled] [ref=e28]
+      - generic [ref=e29]:
+        - textbox "输入消息... (支持 Markdown 和 LaTeX)" [disabled] [ref=e30]
+        - combobox "切换模型" [disabled] [ref=e31] [cursor=pointer]:
+          - option "DeepSeek V4 Flash" [selected]
+          - option "V4 Pro"
+          - option "思考模式"
+        - button "发送" [disabled] [ref=e32]

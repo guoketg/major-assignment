@@ -1,0 +1,507 @@
+- generic [ref=e3]:
+  - generic [ref=e4]:
+    - generic [ref=e5]:
+      - heading "对话历史" [level=2] [ref=e6]
+      - button "+ 新对话" [ref=e7] [cursor=pointer]
+    - generic [ref=e8]:
+      - generic [ref=e255] [cursor=pointer]:
+        - generic [ref=e256]:
+          - generic [ref=e257]: 你好
+          - generic [ref=e258]: 2 条消息
+        - button "×" [ref=e259]
+      - generic [ref=e33] [cursor=pointer]:
+        - generic [ref=e34]:
+          - generic [ref=e35]: 写一篇CLIP发展的短综述
+          - generic [ref=e36]: 2 条消息
+        - button "×" [ref=e37]
+      - generic [ref=e38] [cursor=pointer]:
+        - generic [ref=e39]:
+          - generic [ref=e40]: 写一篇多模态大模型抗幻觉的短综述
+          - generic [ref=e41]: 1 条消息
+        - button "×" [ref=e42]
+      - generic [ref=e43] [cursor=pointer]:
+        - generic [ref=e44]:
+          - generic [ref=e45]: 你好
+          - generic [ref=e46]: 2 条消息
+        - button "×" [ref=e47]
+      - generic [ref=e48] [cursor=pointer]:
+        - generic [ref=e49]:
+          - generic [ref=e50]: 写一篇CLIP噪声标签学习短综述
+          - generic [ref=e51]: 2 条消息
+        - button "×" [ref=e52]
+      - generic [ref=e53] [cursor=pointer]:
+        - generic [ref=e54]:
+          - generic [ref=e55]: 写一篇CLIP噪声标签学习短综述
+          - generic [ref=e56]: 2 条消息
+        - button "×" [ref=e57]
+      - generic [ref=e58] [cursor=pointer]:
+        - generic [ref=e59]:
+          - generic [ref=e60]: 写一篇CLIP噪声标签综述
+          - generic [ref=e61]: 2 条消息
+        - button "×" [ref=e62]
+      - generic [ref=e63] [cursor=pointer]:
+        - generic [ref=e64]:
+          - generic [ref=e65]: 写一篇CLIP噪声标签综述
+          - generic [ref=e66]: 2 条消息
+        - button "×" [ref=e67]
+      - generic [ref=e68] [cursor=pointer]:
+        - generic [ref=e69]:
+          - generic [ref=e70]: 综述"CLIP噪声标签"
+          - generic [ref=e71]: 2 条消息
+        - button "×" [ref=e72]
+      - generic [ref=e73] [cursor=pointer]:
+        - generic [ref=e74]:
+          - generic [ref=e75]: 帮我调研CLIP模型的最新进展
+          - generic [ref=e76]: 2 条消息
+        - button "×" [ref=e77]
+      - generic [ref=e78] [cursor=pointer]:
+        - generic [ref=e79]:
+          - generic [ref=e80]: 写一篇CLIP噪声标签综述
+          - generic [ref=e81]: 2 条消息
+        - button "×" [ref=e82]
+      - generic [ref=e83] [cursor=pointer]:
+        - generic [ref=e84]:
+          - generic [ref=e85]: 你好
+          - generic [ref=e86]: 2 条消息
+        - button "×" [ref=e87]
+      - generic [ref=e88] [cursor=pointer]:
+        - generic [ref=e89]:
+          - generic [ref=e90]: 写一篇CLIP噪声标签综述
+          - generic [ref=e91]: 1 条消息
+        - button "×" [ref=e92]
+      - generic [ref=e93] [cursor=pointer]:
+        - generic [ref=e94]:
+          - generic [ref=e95]: 你好
+          - generic [ref=e96]: 2 条消息
+        - button "×" [ref=e97]
+      - generic [ref=e98] [cursor=pointer]:
+        - generic [ref=e99]:
+          - generic [ref=e100]: 写一篇CLIP噪声标签综述
+          - generic [ref=e101]: 1 条消息
+        - button "×" [ref=e102]
+      - generic [ref=e103] [cursor=pointer]:
+        - generic [ref=e104]:
+          - generic [ref=e105]: 写一篇CLIP噪声标签综述
+          - generic [ref=e106]: 1 条消息
+        - button "×" [ref=e107]
+      - generic [ref=e108] [cursor=pointer]:
+        - generic [ref=e109]:
+          - generic [ref=e110]: hello
+          - generic [ref=e111]: 2 条消息
+        - button "×" [ref=e112]
+      - generic [ref=e113] [cursor=pointer]:
+        - generic [ref=e114]:
+          - generic [ref=e115]: 写一篇CLIP噪声标签综述
+          - generic [ref=e116]: 1 条消息
+        - button "×" [ref=e117]
+      - generic [ref=e118] [cursor=pointer]:
+        - generic [ref=e119]:
+          - generic [ref=e120]: 写一篇CLIP噪声标签综述
+          - generic [ref=e121]: 5 条消息
+        - button "×" [ref=e122]
+      - generic [ref=e123] [cursor=pointer]:
+        - generic [ref=e124]:
+          - generic [ref=e125]: 写一篇CLIP噪声标签综述
+          - generic [ref=e126]: 1 条消息
+        - button "×" [ref=e127]
+      - generic [ref=e128] [cursor=pointer]:
+        - generic [ref=e129]:
+          - generic [ref=e130]: 写一篇CLIP噪声标签综述
+          - generic [ref=e131]: 1 条消息
+        - button "×" [ref=e132]
+      - generic [ref=e133] [cursor=pointer]:
+        - generic [ref=e134]:
+          - generic [ref=e135]: 写一篇关于CLIP噪声标签的综述并导出为文档
+          - generic [ref=e136]: 5 条消息
+        - button "×" [ref=e137]
+      - generic [ref=e138] [cursor=pointer]:
+        - generic [ref=e139]:
+          - generic [ref=e140]: 写一篇CLIP噪声标签综述
+          - generic [ref=e141]: 5 条消息
+        - button "×" [ref=e142]
+      - generic [ref=e143] [cursor=pointer]:
+        - generic [ref=e144]:
+          - generic [ref=e145]: 写一篇CLIP噪声标签综述
+          - generic [ref=e146]: 1 条消息
+        - button "×" [ref=e147]
+      - generic [ref=e148] [cursor=pointer]:
+        - generic [ref=e149]:
+          - generic [ref=e150]: 写一篇CLIP噪声标签综述
+          - generic [ref=e151]: 1 条消息
+        - button "×" [ref=e152]
+      - generic [ref=e153] [cursor=pointer]:
+        - generic [ref=e154]:
+          - generic [ref=e155]: 写一篇CLIP噪声标签综述
+          - generic [ref=e156]: 2 条消息
+        - button "×" [ref=e157]
+      - generic [ref=e158] [cursor=pointer]:
+        - generic [ref=e159]:
+          - generic [ref=e160]: 写一篇关于CLIP噪声标签的综述
+          - generic [ref=e161]: 1 条消息
+        - button "×" [ref=e162]
+      - generic [ref=e163] [cursor=pointer]:
+        - generic [ref=e164]:
+          - generic [ref=e165]: 写一篇关于CLIP噪声标签学习的综述并导出为文档
+          - generic [ref=e166]: 1 条消息
+        - button "×" [ref=e167]
+      - generic [ref=e168] [cursor=pointer]:
+        - generic [ref=e169]:
+          - generic [ref=e170]: 综述CLIP噪声标签并导出文档
+          - generic [ref=e171]: 3 条消息
+        - button "×" [ref=e172]
+      - generic [ref=e173] [cursor=pointer]:
+        - generic [ref=e174]:
+          - generic [ref=e175]: 写一篇关于CLIP噪声标签的综述并导出为文档
+          - generic [ref=e176]: 14 条消息
+        - button "×" [ref=e177]
+      - generic [ref=e178] [cursor=pointer]:
+        - generic [ref=e179]:
+          - generic [ref=e180]: 写一篇关于CLIP噪声标签的综述并导出为文档
+          - generic [ref=e181]: 1 条消息
+        - button "×" [ref=e182]
+      - generic [ref=e183] [cursor=pointer]:
+        - generic [ref=e184]:
+          - generic [ref=e185]: 写一篇关于CLIP噪声标签的综述并导出为文档
+          - generic [ref=e186]: 1 条消息
+        - button "×" [ref=e187]
+      - generic [ref=e188] [cursor=pointer]:
+        - generic [ref=e189]:
+          - generic [ref=e190]: 写一篇CLIP噪声标签的综述并导出为Word
+          - generic [ref=e191]: 1 条消息
+        - button "×" [ref=e192]
+      - generic [ref=e193] [cursor=pointer]:
+        - generic [ref=e194]:
+          - generic [ref=e195]: 写一篇关于CLIP噪声标签的综述并保存
+          - generic [ref=e196]: 3 条消息
+        - button "×" [ref=e197]
+      - generic [ref=e198] [cursor=pointer]:
+        - generic [ref=e199]:
+          - generic [ref=e200]: 请撰写一篇关于CLIP噪声标签学习的综述论文，导出为Word...
+          - generic [ref=e201]: 1 条消息
+        - button "×" [ref=e202]
+      - generic [ref=e203] [cursor=pointer]:
+        - generic [ref=e204]:
+          - generic [ref=e205]: 请撰写一篇关于CLIP噪声标签学习的综述论文（汉语），然后导...
+          - generic [ref=e206]: 2 条消息
+        - button "×" [ref=e207]
+      - generic [ref=e208] [cursor=pointer]:
+        - generic [ref=e209]:
+          - generic [ref=e210]: 请撰写一篇关于CLIP噪声标签学习的综述论文（汉语），系统调...
+          - generic [ref=e211]: 2 条消息
+        - button "×" [ref=e212]
+      - generic [ref=e213] [cursor=pointer]:
+        - generic [ref=e214]:
+          - generic [ref=e215]: 帮我调研一下CLIP模型的最新进展
+          - generic [ref=e216]: 2 条消息
+        - button "×" [ref=e217]
+      - generic [ref=e218] [cursor=pointer]:
+        - generic [ref=e219]:
+          - generic [ref=e220]: 帮我调研CLIP模型的最新进展
+          - generic [ref=e221]: 2 条消息
+        - button "×" [ref=e222]
+      - generic [ref=e223] [cursor=pointer]:
+        - generic [ref=e224]:
+          - generic [ref=e225]: 帮我调研CLIP模型的最新进展
+          - generic [ref=e226]: 2 条消息
+        - button "×" [ref=e227]
+      - generic [ref=e228] [cursor=pointer]:
+        - generic [ref=e229]:
+          - generic [ref=e230]: 你好
+          - generic [ref=e231]: 4 条消息
+        - button "×" [ref=e232]
+      - generic [ref=e233] [cursor=pointer]:
+        - generic [ref=e234]:
+          - generic [ref=e235]: 帮我调研CLIP噪声标签学习的最新进展
+          - generic [ref=e236]: 2 条消息
+        - button "×" [ref=e237]
+      - generic [ref=e238] [cursor=pointer]:
+        - generic [ref=e239]:
+          - generic [ref=e240]: 帮我调研一下CLIP噪声标签学习的最新进展
+          - generic [ref=e241]: 4 条消息
+        - button "×" [ref=e242]
+      - generic [ref=e243] [cursor=pointer]:
+        - generic [ref=e244]:
+          - generic [ref=e245]: 帮我调研一下CLIP噪声标签学习的最新进展
+          - generic [ref=e246]: 2 条消息
+        - button "×" [ref=e247]
+      - generic [ref=e248] [cursor=pointer]:
+        - generic [ref=e249]:
+          - generic [ref=e250]: 你好
+          - generic [ref=e251]: 2 条消息
+        - button "×" [ref=e252]
+  - generic [ref=e10]:
+    - generic [ref=e11]:
+      - generic [ref=e13]:
+        - button "💬 对话" [ref=e14] [cursor=pointer]
+        - button "📄 论文搜索" [ref=e15] [cursor=pointer]
+        - button "🧠 记忆" [ref=e16] [cursor=pointer]
+        - button "🔧 工具" [ref=e17] [cursor=pointer]
+      - button "清空对话" [ref=e254] [cursor=pointer]
+    - generic [ref=e18]:
+      - generic [ref=e262]: 写一篇CLIP发展的短综述
+      - generic [ref=e269]:
+        - paragraph [ref=e270]: 好的，作为一名科研综述写作专家，我将综合以上三位专家的分析结果，为您呈现一份关于CLIP（Contrastive Language-Image Pre-training）发展的综合综述报告。
+        - separator [ref=e279]
+        - heading "CLIP 发展综述：从对比学习到多模态基础模型" [level=2] [ref=e280]
+        - heading "引言" [level=3] [ref=e281]
+        - paragraph [ref=e271]:
+          - text: 视觉-语言多模态预训练是人工智能领域的核心前沿之一，其目标是让模型同时理解图像和文本，并建立两者之间的语义关联。2021年，OpenAI 提出的
+          - strong [ref=e282]: CLIP（Contrastive Language-Image Pre-training）
+          - text: 模型成为了该领域的里程碑式工作。CLIP 的核心思想是通过对比学习，在 4 亿个图文对数据上训练一个图像编码器（如 ViT 或 ResNet）和一个文本编码器（Transformer），将图像和文本映射到共享的语义空间。其最大的突破在于实现了强大的零样本迁移能力：无需任何微调，即可直接迁移到 ImageNet 等下游视觉分类任务，准确率达到 76.2%，并支持通过自然语言 prompt 定义任意任务。
+        - paragraph [ref=e277]: 自 CLIP 提出以来，围绕其训练效率、下游适配、鲁棒性、细粒度理解等方向涌现了大量研究工作。本综述旨在系统梳理 CLIP 的核心方法分类、发展脉络，分析各方法的优缺点，并展望未来研究方向。
+        - heading "核心方法分类与发展脉络" [level=3] [ref=e283]
+        - paragraph [ref=e278]: CLIP 的发展可概括为从原始对比学习范式出发，向更高效、更鲁棒、更细粒度以及更广泛领域应用的演进过程。
+        - heading "1. 原始 CLIP 架构与训练范式" [level=4] [ref=e284]
+        - paragraph [ref=e285]:
+          - strong [ref=e286]: 核心方法
+          - text: ：原始 CLIP 模型（Radford et al., 2021）采用双塔架构，通过对比损失（InfoNCE loss）进行训练。其目标是最大化 batch 内匹配图文对的相似度，同时最小化不匹配图文对的相似度。这一范式奠定了后续所有工作基础。
+        - paragraph [ref=e287]:
+          - strong [ref=e288]: 关键贡献
+          - text: ：
+        - list [ref=e272]:
+          - listitem [ref=e273]:
+            - strong [ref=e289]: 零样本分类
+            - text: ：在 ImageNet 上达到 76.2% 的零样本准确率。
+          - listitem [ref=e274]:
+            - strong [ref=e290]: 自然语言引导
+            - text: ：用户可通过文本 prompt 定义任务，无需重新训练。
+          - listitem [ref=e275]:
+            - strong [ref=e291]: 跨模态检索
+            - text: ：实现文本到图像、图像到文本的高效检索。
+        - heading "2. 训练效率与数据增强改进" [level=4] [ref=e292]
+        - paragraph [ref=e293]: 原始 CLIP 的训练依赖于 4 亿个图文对，成本高昂。后续工作致力于在不增加数据量的情况下提升模型质量。
+        - list [ref=e294]:
+          - listitem [ref=e295]:
+            - paragraph [ref=e296]:
+              - strong [ref=e297]: LaCLIP (Language Rewrites CLIP)
+              - text: （Fan et al., 2023）：核心创新在于利用大语言模型（LLM）对训练文本进行多样化改写，生成同一图像对应的不同语言描述。这在不增加数据量的前提下，有效提升了图像-文本的对齐质量。其局限性在于依赖外部 LLM，增加了训练成本。
+          - listitem [ref=e298]:
+            - paragraph [ref=e299]:
+              - strong [ref=e300]: Long-CLIP
+              - text: （Zhang et al., 2024）：核心创新是扩展 CLIP 文本编码器对长文本（如详细段落）的处理能力。这增强了模型对物体属性、空间关系等细粒度语义的理解，并提升了文本-图像检索的精度。然而，长文本训练需要额外数据，且模型推理速度会略有下降。
+        - heading "3. 下游任务适配与微调方法" [level=4] [ref=e301]
+        - paragraph [ref=e302]: 为了将强大的 CLIP 模型适配到特定下游任务，研究者提出了多种参数高效的微调方法，以避免灾难性遗忘并保持零样本能力。
+        - list [ref=e303]:
+          - listitem [ref=e304]:
+            - paragraph [ref=e305]:
+              - strong [ref=e306]: Prompt Learning 方法
+              - text: ：
+            - list [ref=e307]:
+              - listitem [ref=e308]:
+                - strong [ref=e309]: CoOp (Context Optimization)
+                - text: （Zhou et al., 2022）：将手工设计的 prompt（如“a photo of a [class]”）替换为可学习的连续向量。该方法无需人工设计 prompt，能自动优化到下游任务，但在域外数据上泛化性不足。
+              - listitem [ref=e310]:
+                - strong [ref=e311]: CoCoOp (Conditional CoOp)
+                - text: （Zhou et al., 2022）：针对 CoOp 的不足，CoCoOp 根据输入图像动态生成 prompt。这显著提升了模型在域外数据上的泛化能力，但计算开销更大。
+          - listitem [ref=e312]:
+            - paragraph [ref=e313]:
+              - strong [ref=e314]: Adapter 方法
+              - text: ：
+            - list [ref=e315]:
+              - listitem [ref=e316]:
+                - strong [ref=e317]: CLIP-Adapter
+                - text: （Gao et al., 2021）：在 CLIP 冻结的特征空间中插入轻量级适配器层，仅需训练 0.1% 的参数即可完成下游适配。该方法参数高效，能有效避免灾难性遗忘，但适配能力有限，在复杂任务上效果不足。
+          - listitem [ref=e318]:
+            - paragraph [ref=e319]:
+              - strong [ref=e320]: 全微调与鲁棒性平衡
+              - text: ：
+            - list [ref=e321]:
+              - listitem [ref=e322]:
+                - strong [ref=e323]: CLIPood
+                - text: （Shu et al., 2023）：结合对比学习和分布校准技术，专门针对分布偏移场景提升模型鲁棒性。该方法在域外数据上保持高准确率，但训练过程复杂度增加。
+              - listitem [ref=e324]:
+                - strong [ref=e325]: Efficient Robust Fine-Tuning
+                - text: （Kim et al., 2024）：提出一种新的微调策略，旨在平衡域内准确率和域外泛化能力，在保持 CLIP 零样本能力的同时有效适应下游任务。然而，在极端分布偏移下性能仍会下降。
+        - heading "4. 持续学习与自监督优化" [level=4] [ref=e326]
+        - list [ref=e327]:
+          - listitem [ref=e328]:
+            - strong [ref=e329]: Self-supervised Fine-tuning
+            - text: （Mehta et al., 2025）：提出一个自监督微调框架，无需任何标注数据即可提升 CLIP 性能。该方法降低了对标注数据的依赖，适用于开放权重模型，但性能提升幅度有限，且需要大量计算资源。
+        - heading "5. 半监督与领域特定应用" [level=4] [ref=e330]
+        - list [ref=e331]:
+          - listitem [ref=e332]:
+            - strong [ref=e333]: MaskedCLIP
+            - text: （Zhu et al., 2025）：针对医学领域标注数据稀缺的问题，将掩码自编码与 CLIP 结合，实现半监督医学图像预训练。该方法在医学图像分析任务上表现优异，但迁移到自然图像任务时效果下降。
+        - heading "各方法优缺点分析" [level=3] [ref=e334]
+        - table [ref=e335]:
+          - rowgroup [ref=e336]:
+            - row "方法类别 代表工作 核心优点 核心缺点" [ref=e337]:
+              - columnheader "方法类别" [ref=e338]
+              - columnheader "代表工作" [ref=e339]
+              - columnheader "核心优点" [ref=e340]
+              - columnheader "核心缺点" [ref=e341]
+          - rowgroup [ref=e342]:
+            - row "原始 CLIP Radford et al., 2021 零样本能力强，通用性好 训练成本高，长文本支持差" [ref=e343]:
+              - cell "原始 CLIP" [ref=e344]:
+                - strong [ref=e345]: 原始 CLIP
+              - cell "Radford et al., 2021" [ref=e346]
+              - cell "零样本能力强，通用性好" [ref=e347]
+              - cell "训练成本高，长文本支持差" [ref=e348]
+            - row "数据增强 LaCLIP (Fan et al., 2023) 提升对齐质量，无需增加数据量 依赖外部 LLM，增加训练成本" [ref=e349]:
+              - cell "数据增强" [ref=e350]:
+                - strong [ref=e351]: 数据增强
+              - cell "LaCLIP (Fan et al., 2023)" [ref=e352]
+              - cell "提升对齐质量，无需增加数据量" [ref=e353]
+              - cell "依赖外部 LLM，增加训练成本" [ref=e354]
+            - row "长文本扩展 Long-CLIP (Zhang et al., 2024) 增强细粒度理解，提升检索精度 推理速度下降，需要额外数据" [ref=e355]:
+              - cell "长文本扩展" [ref=e356]:
+                - strong [ref=e357]: 长文本扩展
+              - cell "Long-CLIP (Zhang et al., 2024)" [ref=e358]
+              - cell "增强细粒度理解，提升检索精度" [ref=e359]
+              - cell "推理速度下降，需要额外数据" [ref=e360]
+            - row "Prompt Learning CoOp, CoCoOp (Zhou et al., 2022) 参数高效，灵活适配下游任务 域外泛化能力有限（CoOp），计算开销大（CoCoOp）" [ref=e361]:
+              - cell "Prompt Learning" [ref=e362]:
+                - strong [ref=e363]: Prompt Learning
+              - cell "CoOp, CoCoOp (Zhou et al., 2022)" [ref=e364]
+              - cell "参数高效，灵活适配下游任务" [ref=e365]
+              - cell "域外泛化能力有限（CoOp），计算开销大（CoCoOp）" [ref=e366]
+            - row "Adapter 微调 CLIP-Adapter (Gao et al., 2021) 避免灾难性遗忘，参数极高效 适配能力有限，复杂任务效果不足" [ref=e367]:
+              - cell "Adapter 微调" [ref=e368]:
+                - strong [ref=e369]: Adapter 微调
+              - cell "CLIP-Adapter (Gao et al., 2021)" [ref=e370]
+              - cell "避免灾难性遗忘，参数极高效" [ref=e371]
+              - cell "适配能力有限，复杂任务效果不足" [ref=e372]
+            - row "鲁棒微调 CLIPood (Shu et al., 2023) 在分布偏移场景下鲁棒性强 训练过程复杂" [ref=e373]:
+              - cell "鲁棒微调" [ref=e374]:
+                - strong [ref=e375]: 鲁棒微调
+              - cell "CLIPood (Shu et al., 2023)" [ref=e376]
+              - cell "在分布偏移场景下鲁棒性强" [ref=e377]
+              - cell "训练过程复杂" [ref=e378]
+            - row "鲁棒微调 Efficient Robust FT (Kim et al., 2024) 平衡域内和域外性能 极端偏移下仍有性能下降" [ref=e379]:
+              - cell "鲁棒微调" [ref=e380]:
+                - strong [ref=e381]: 鲁棒微调
+              - cell "Efficient Robust FT (Kim et al., 2024)" [ref=e382]
+              - cell "平衡域内和域外性能" [ref=e383]
+              - cell "极端偏移下仍有性能下降" [ref=e384]
+            - row "自监督优化 Self-supervised FT (Mehta et al., 2025) 无需标注数据 性能提升幅度有限，计算资源需求高" [ref=e385]:
+              - cell "自监督优化" [ref=e386]:
+                - strong [ref=e387]: 自监督优化
+              - cell "Self-supervised FT (Mehta et al., 2025)" [ref=e388]
+              - cell "无需标注数据" [ref=e389]
+              - cell "性能提升幅度有限，计算资源需求高" [ref=e390]
+            - row "半监督医学 MaskedCLIP (Zhu et al., 2025) 适合标注稀缺的医学领域 通用性不足，迁移到自然图像效果差" [ref=e391]:
+              - cell "半监督医学" [ref=e392]:
+                - strong [ref=e393]: 半监督医学
+              - cell "MaskedCLIP (Zhu et al., 2025)" [ref=e394]
+              - cell "适合标注稀缺的医学领域" [ref=e395]
+              - cell "通用性不足，迁移到自然图像效果差" [ref=e396]
+        - heading "未来研究方向" [level=3] [ref=e397]
+        - paragraph [ref=e398]: 综合当前研究趋势，CLIP 的未来发展将聚焦于以下几个关键方向：
+        - list [ref=e399]:
+          - listitem [ref=e400]:
+            - paragraph [ref=e401]:
+              - strong [ref=e402]: 统一的多模态架构
+              - text: ：将 CLIP 的对比学习能力与扩散模型（如 Stable Diffusion）的生成能力、大语言模型（如 GPT-4V）的推理能力深度融合，构建能同时理解、生成和推理的统一多模态基础模型。
+          - listitem [ref=e403]:
+            - paragraph [ref=e404]:
+              - strong [ref=e405]: 高效训练范式
+              - text: ：探索如何在更小的训练集、更少的计算资源下，训练出性能媲美甚至超越原始 CLIP 的模型。这包括更优的对比学习策略、数据合成技术以及模型结构创新。
+          - listitem [ref=e406]:
+            - paragraph [ref=e407]:
+              - strong [ref=e408]: 细粒度理解与推理
+              - text: ：当前 CLIP 在物体识别等粗粒度任务上表现优异，但对物体属性、空间关系、动作等细粒度语义的理解仍不足。未来研究将致力于提升 CLIP 的细粒度感知能力，并将其从简单的匹配任务提升到复杂的多模态推理任务。
+          - listitem [ref=e409]:
+            - paragraph [ref=e410]:
+              - strong [ref=e411]: 鲁棒性与安全性
+              - text: ：增强 CLIP 对对抗样本、自然分布偏移的稳定性，并研究如何防止模型学习或放大数据中的社会偏见和有害内容，确保其在真实世界应用中的公平与安全。
+          - listitem [ref=e412]:
+            - paragraph [ref=e413]:
+              - strong [ref=e414]: 持续学习能力
+              - text: ：开发高效的持续学习方法，使 CLIP 能够在不遗忘旧知识的前提下，不断吸收新领域的知识，适应动态变化的数据分布。
+          - listitem [ref=e415]:
+            - paragraph [ref=e416]:
+              - strong [ref=e417]: 跨语言与跨文化研究
+              - text: ：当前 CLIP 主要基于英文数据，未来需要系统研究其在其他语言和文化背景下的表现，并探索如何构建更公平、更具包容性的多模态模型。
+        - heading "结论" [level=3] [ref=e418]
+        - paragraph [ref=e419]: CLIP 自 2021 年提出以来，已从一个单一的对比学习模型，发展为一个庞大的研究生态。其核心发展脉络清晰可见：从原始范式出发，衍生出数据增强、长文本扩展、Prompt Learning、Adapter 微调、鲁棒性优化、自监督/半监督学习等多个研究方向。每个方向都涌现了具有代表性的高质量工作，如 LaCLIP、Long-CLIP、CoOp、CLIP-Adapter、CLIPood 等。当前研究趋势明确指向更高效、更鲁棒、更细粒度的多模态理解，同时 CLIP 正从独立的模型，演变为更大规模多模态大模型的关键基础组件。未来，CLIP 将在更广泛的实际应用中发挥不可替代的桥梁作用。
+      - generic [ref=e422]: 写一篇多模态大模型抗幻觉的短综述
+      - generic [ref=e423]:
+        - generic [ref=e424] [cursor=pointer]:
+          - generic [ref=e425]: 🤖 Agent 流水线
+          - generic [ref=e426]: 收起 ▲
+        - generic [ref=e427]:
+          - generic [ref=e430]:
+            - generic [ref=e431]: 🤖
+            - generic [ref=e432]: 🤖 智能路由
+            - generic [ref=e433]: ✅ 完成
+          - generic [ref=e437]:
+            - generic [ref=e438]: 📋
+            - generic [ref=e439]: 📋 任务规划
+            - generic [ref=e440]: ✅ 完成
+          - generic [ref=e446]:
+            - generic [ref=e447]:
+              - generic [ref=e448]: 🔍
+              - generic [ref=e449]: 🔍 文献调研
+              - generic [ref=e450]: ⏳ 进行中
+            - generic [ref=e451]:
+              - generic [ref=e452]: └─
+              - generic [ref=e453]: 🔧 🔧 调用 search_arxiv
+              - generic [ref=e454]: ✅
+            - generic [ref=e455]:
+              - generic [ref=e456]: └─
+              - generic [ref=e457]: 🔧 🔧 调用 search_arxiv
+              - generic [ref=e458]: ✅
+            - generic [ref=e459]:
+              - generic [ref=e460]: └─
+              - generic [ref=e461]: 🔧 🔧 调用 web_search
+              - generic [ref=e462]: ✅
+            - generic [ref=e463]:
+              - generic [ref=e464]: └─
+              - generic [ref=e465]: 🔧 🔧 调用 search_arxiv
+              - generic [ref=e466]: ✅
+            - generic [ref=e467]:
+              - generic [ref=e468]: └─
+              - generic [ref=e469]: 🔧 🔧 调用 search_arxiv
+              - generic [ref=e470]: ✅
+            - generic [ref=e471]:
+              - generic [ref=e472]: └─
+              - generic [ref=e473]: 🔧 🔧 调用 search_arxiv
+              - generic [ref=e474]: ✅
+            - generic [ref=e492]:
+              - generic [ref=e493]: └─
+              - generic [ref=e494]: 🔧 🔧 调用 search_arxiv
+              - generic [ref=e495]: ✅
+            - generic [ref=e496]:
+              - generic [ref=e497]: └─
+              - generic [ref=e498]: 🔧 🔧 调用 search_arxiv
+              - generic [ref=e499]: ✅
+            - generic [ref=e500]:
+              - generic [ref=e501]: └─
+              - generic [ref=e502]: 🔧 🔧 调用 search_arxiv
+              - generic [ref=e503]: ✅
+            - generic [ref=e504]:
+              - generic [ref=e505]: └─
+              - generic [ref=e506]: 🔧 🔧 调用 search_arxiv
+              - generic [ref=e507]: ✅
+          - generic [ref=e475]:
+            - generic [ref=e476]: 📋 任务进度 (2/5)
+            - generic [ref=e477]:
+              - generic [ref=e478]: ✅
+              - generic [ref=e479]: 1. [research] 调研多模态大模型幻觉现象的定义、类型和已有综述
+            - generic [ref=e480]:
+              - generic [ref=e481]: ✅
+              - generic [ref=e482]: 2. [research] 搜集多模态大模型抗幻觉的主要方法，包括数据增强、模型结构改进、解码策略、后处理等
+            - generic [ref=e483]:
+              - generic [ref=e484]: ⏳
+              - generic [ref=e485]: 3. [research] 查找抗幻觉方法的评测基准和主流指标（如CHAIR, POPE等）
+            - generic [ref=e486]:
+              - generic [ref=e487]: ⏺️
+              - generic [ref=e488]: 4. [innovate] 基于当前研究趋势，构思未来可能的研究方向和开放问题
+            - generic [ref=e489]:
+              - generic [ref=e490]: ⏺️
+              - generic [ref=e491]: 5. [synthesize] 整合所有子任务结果，撰写结构完整的短综述
+      - generic [ref=e443]: AI 正在思考...
+    - generic [ref=e22]:
+      - generic [ref=e23]:
+        - button "🤖 自动" [disabled] [ref=e24]
+        - button "💬 对话" [disabled] [ref=e25]
+        - button "🔍 调研" [disabled] [ref=e26]
+        - button "💡 创新" [disabled] [ref=e27]
+        - button "🧪 实验" [disabled] [ref=e28]
+      - generic [ref=e29]:
+        - textbox "输入消息... (支持 Markdown 和 LaTeX)" [disabled] [ref=e30]
+        - combobox "切换模型" [disabled] [ref=e31] [cursor=pointer]:
+          - option "DeepSeek V4 Flash" [selected]
+          - option "V4 Pro"
+          - option "思考模式"
+        - button "发送" [disabled] [ref=e32]

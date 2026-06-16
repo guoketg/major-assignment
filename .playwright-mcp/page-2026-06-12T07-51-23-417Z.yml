@@ -1,0 +1,26 @@
+- generic [ref=e3]:
+  - generic [ref=e4]:
+    - generic [ref=e5]:
+      - heading "对话历史" [level=2] [ref=e6]
+      - button "+ 新对话" [ref=e7] [cursor=pointer]
+    - generic [ref=e29] [cursor=pointer]:
+      - generic [ref=e30]:
+        - generic [ref=e31]: 给我讲一个简短的笑话
+        - generic [ref=e32]: 2 条消息
+      - button "×" [ref=e33]
+  - generic [ref=e10]:
+    - generic [ref=e11]:
+      - generic [ref=e20]: "会话: session_84ec8601"
+      - button "清空对话" [ref=e22] [cursor=pointer]
+    - generic [ref=e12]:
+      - generic [ref=e25]: 给我讲一个简短的笑话
+      - generic [ref=e36]:
+        - group [ref=e37]:
+          - generic "🧠 思考过程" [active] [ref=e38] [cursor=pointer]
+          - generic [ref=e40]: 用户想要一个简短的笑话，需求很明确。需要找一个简单、易懂、有笑点的笑话。想到一个关于熊猫的冷笑话，它有两个笑点：一个是“黑眼圈”的外表特征，另一个是“熬夜”后出现的黑眼圈。这个笑话结构简短，结尾有反转，应该符合用户要求。
+        - paragraph [ref=e39]:
+          - text: 熊猫问妈妈：“我的黑眼圈真的是天生的吗？”
+          - text: 妈妈叹了口气：“孩子，这是你爸熬夜给你讲故事留下的，不过他已经不想承认了。”
+    - generic [ref=e16]:
+      - textbox "输入消息... (支持 Markdown 和 LaTeX)" [ref=e17]
+      - button "发送" [ref=e18] [cursor=pointer]

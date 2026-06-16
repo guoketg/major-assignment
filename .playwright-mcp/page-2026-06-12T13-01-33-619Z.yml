@@ -1,0 +1,72 @@
+- generic [ref=e3]:
+  - generic [ref=e4]:
+    - generic [ref=e5]:
+      - heading "对话历史" [level=2] [ref=e6]
+      - button "+ 新对话" [ref=e7] [cursor=pointer]
+    - generic [ref=e8]:
+      - generic [ref=e32] [cursor=pointer]:
+        - generic [ref=e33]:
+          - generic [ref=e34]: 你好
+          - generic [ref=e35]: 2 条消息
+        - button "×" [ref=e36]
+      - generic [ref=e113] [cursor=pointer]:
+        - generic [ref=e114]:
+          - generic [ref=e115]: 你好
+          - generic [ref=e116]: 2 条消息
+        - button "×" [ref=e117]
+      - generic [ref=e37] [cursor=pointer]:
+        - generic [ref=e38]:
+          - generic [ref=e39]: 帮我调研一下CLIP噪声标签学习的最新进展
+          - generic [ref=e40]: 3 条消息
+        - button "×" [ref=e41]
+      - generic [ref=e42] [cursor=pointer]:
+        - generic [ref=e43]:
+          - generic [ref=e44]: 帮我调研CLIP模型的最新进展
+          - generic [ref=e45]: 2 条消息
+        - button "×" [ref=e46]
+      - generic [ref=e72] [cursor=pointer]:
+        - generic [ref=e73]:
+          - generic [ref=e74]: 帮我调研一下CLIP噪声标签学习的最新进展
+          - generic [ref=e75]: 2 条消息
+        - button "×" [ref=e76]
+      - generic [ref=e77] [cursor=pointer]:
+        - generic [ref=e78]:
+          - generic [ref=e79]: 用一句话说什么是机器学习
+          - generic [ref=e80]: 2 条消息
+        - button "×" [ref=e81]
+  - generic [ref=e10]:
+    - generic [ref=e11]:
+      - generic [ref=e13]:
+        - button "💬 对话" [ref=e14] [cursor=pointer]
+        - button "📄 论文搜索" [ref=e15] [cursor=pointer]
+        - button "🧠 记忆" [ref=e16] [cursor=pointer]
+      - button "清空对话" [ref=e98] [cursor=pointer]
+    - generic [ref=e17]:
+      - generic [ref=e120]: 你好
+      - generic [ref=e123]:
+        - paragraph [ref=e124]: 你好！很高兴见到你！😊
+        - paragraph [ref=e125]: 我是你的深度学习研究助手，随时准备帮助你解答关于深度学习、机器学习、神经网络的任何问题。无论是论文中的概念、技术细节、模型实现，还是日常的学术交流讨论，我都乐意陪伴你一起探索。
+        - paragraph [ref=e126]: 今天有什么我可以帮你的吗？比如：
+        - list [ref=e127]:
+          - listitem [ref=e128]: 解释某个论文中的核心思想？
+          - listitem [ref=e129]: 讨论 Transformer、CNN、RNN 等架构？
+          - listitem [ref=e130]: 了解损失函数、优化器或训练技巧？
+          - listitem [ref=e131]: 或者只是想聊聊 AI 最近的热点？
+        - paragraph [ref=e132]: 请随意问我吧！🚀
+      - generic [ref=e134] [cursor=pointer]:
+        - generic [ref=e135]: 🤖 Agent 流水线
+        - generic [ref=e136]: 展开 ▼
+    - generic [ref=e21]:
+      - generic [ref=e22]:
+        - button "🤖 自动" [ref=e23] [cursor=pointer]
+        - button "💬 对话" [ref=e24] [cursor=pointer]
+        - button "🔍 调研" [ref=e25] [cursor=pointer]
+        - button "💡 创新" [ref=e26] [cursor=pointer]
+        - button "🧪 实验" [ref=e27] [cursor=pointer]
+      - generic [ref=e28]:
+        - textbox "输入消息... (支持 Markdown 和 LaTeX)" [ref=e29]
+        - combobox "切换模型" [ref=e30] [cursor=pointer]:
+          - option "DeepSeek V4 Flash" [selected]
+          - option "V4 Pro"
+          - option "思考模式"
+        - button "发送" [ref=e31] [cursor=pointer]

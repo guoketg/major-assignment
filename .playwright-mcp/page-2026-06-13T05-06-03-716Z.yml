@@ -1,0 +1,365 @@
+- generic [ref=e3]:
+  - generic [ref=e4]:
+    - generic [ref=e5]:
+      - heading "对话历史" [level=2] [ref=e6]
+      - button "+ 新对话" [ref=e7] [cursor=pointer]
+    - generic [ref=e8]:
+      - generic [ref=e71] [cursor=pointer]:
+        - generic [ref=e72]:
+          - generic [ref=e73]: 你好
+          - generic [ref=e74]: 4 条消息
+        - button "×" [ref=e75]
+      - generic [ref=e33] [cursor=pointer]:
+        - generic [ref=e34]:
+          - generic [ref=e35]: 什么是机器学习
+          - generic [ref=e36]: 3 条消息
+        - button "×" [ref=e37]
+      - generic [ref=e38] [cursor=pointer]:
+        - generic [ref=e39]:
+          - generic [ref=e40]: 你好 简单回复一下
+          - generic [ref=e41]: 3 条消息
+        - button "×" [ref=e42]
+      - generic [ref=e43] [cursor=pointer]:
+        - generic [ref=e44]:
+          - generic [ref=e45]: hi
+          - generic [ref=e46]: 3 条消息
+        - button "×" [ref=e47]
+      - generic [ref=e48] [cursor=pointer]:
+        - generic [ref=e49]:
+          - generic [ref=e50]: hi
+          - generic [ref=e51]: 3 条消息
+        - button "×" [ref=e52]
+      - generic [ref=e53] [cursor=pointer]:
+        - generic [ref=e54]:
+          - generic [ref=e55]: KNN算法
+          - generic [ref=e56]: 2 条消息
+        - button "×" [ref=e57]
+      - generic [ref=e58] [cursor=pointer]:
+        - generic [ref=e59]:
+          - generic [ref=e60]: 什么是KNN算法
+          - generic [ref=e61]: 2 条消息
+        - button "×" [ref=e62]
+      - generic [ref=e63] [cursor=pointer]:
+        - generic [ref=e64]:
+          - generic [ref=e65]: 什么是机器学习
+          - generic [ref=e66]: 2 条消息
+        - button "×" [ref=e67]
+  - generic [ref=e10]:
+    - generic [ref=e11]:
+      - generic [ref=e13]:
+        - button "💬 对话" [ref=e14] [cursor=pointer]
+        - button "📄 论文搜索" [ref=e15] [cursor=pointer]
+        - button "🧠 记忆" [ref=e16] [cursor=pointer]
+        - button "🔧 工具" [ref=e17] [cursor=pointer]
+      - generic [ref=e68]:
+        - button "📄 导出 Word" [ref=e69] [cursor=pointer]
+        - button "清空对话" [ref=e70] [cursor=pointer]
+    - generic [ref=e18]:
+      - generic [ref=e78]: 你好
+      - generic [ref=e96] [cursor=pointer]:
+        - generic [ref=e97]: 🤖 Agent 流水线
+        - generic [ref=e98]: 展开 ▼
+      - generic [ref=e85]:
+        - paragraph [ref=e86]: 你好！👋 很高兴见到你！
+        - paragraph [ref=e87]: 我是你的深度学习研究助手，可以帮你解答关于深度学习、机器学习等方面的知识问题，讨论论文中的概念，或者聊聊技术实现的细节。
+        - paragraph [ref=e88]: 有什么我可以帮你的吗？比如：
+        - list [ref=e89]:
+          - listitem [ref=e90]: 想了解某个深度学习模型或算法？
+          - listitem [ref=e91]: 需要理解某篇论文的核心思想？
+          - listitem [ref=e92]: 讨论技术实现上的问题？
+          - listitem [ref=e93]: 或者只是想随便聊聊？
+        - paragraph [ref=e94]: 请随时告诉我你的需求！😊
+      - generic [ref=e115]: 什么是机器学习加XGBoost
+      - generic [ref=e117] [cursor=pointer]:
+        - generic [ref=e118]: 🤖 Agent 流水线
+        - generic [ref=e119]: 展开 ▼
+      - generic [ref=e182]:
+        - paragraph [ref=e183]: 这是一个很好的问题！让我来为你详细解释。
+        - separator [ref=e184]
+        - heading "什么是机器学习？" [level=2] [ref=e185]
+        - paragraph [ref=e186]:
+          - strong [ref=e187]: 机器学习（Machine Learning）
+          - text: 是人工智能的一个分支，核心思想是：
+          - strong [ref=e188]: 让计算机从数据中自动学习规律和模式，而不需要人为显式编程
+          - text: 。
+        - paragraph [ref=e189]:
+          - text: 简单来说，传统的编程是：输入
+          - strong [ref=e190]: 数据 + 规则
+          - text: → 输出
+          - strong [ref=e191]: 答案
+          - text: 而机器学习是：输入
+          - strong [ref=e192]: 数据 + 答案
+          - text: → 输出
+          - strong [ref=e193]: 规则（模型）
+        - paragraph [ref=e194]: 机器学习主要分为三类：
+        - list [ref=e195]:
+          - listitem [ref=e196]:
+            - strong [ref=e197]: 监督学习
+            - text: ：有标签数据（如分类、回归）
+          - listitem [ref=e198]:
+            - strong [ref=e199]: 无监督学习
+            - text: ：无标签数据（如聚类、降维）
+          - listitem [ref=e200]:
+            - strong [ref=e201]: 强化学习
+            - text: ：通过奖惩机制学习（如游戏AI）
+        - separator [ref=e202]
+        - heading "什么是 XGBoost？" [level=2] [ref=e203]
+        - paragraph [ref=e204]:
+          - strong [ref=e205]: XGBoost
+          - text: （eXtreme Gradient Boosting，极端梯度提升）是一种
+          - strong [ref=e206]: 基于决策树的集成学习算法
+          - text: ，属于监督学习中的
+          - strong [ref=e207]: Boosting
+          - text: 方法。
+        - heading "核心思想" [level=3] [ref=e208]
+        - paragraph [ref=e209]:
+          - text: XGBoost 通过
+          - strong [ref=e210]: 逐步训练多个弱学习器（通常是决策树）
+          - text: ，每个新树都
+          - strong [ref=e211]: 修正前面树的错误
+          - text: ，最终组合成一个强学习器。
+        - paragraph [ref=e212]: 用个比喻来说：
+        - blockquote [ref=e213]:
+          - paragraph [ref=e214]: 就像你一个人做数学题总是出错，但找来一群朋友一起做，每个人重点攻克自己擅长的题型，最后综合大家的答案，准确率就高多了。
+        - heading "XGBoost 的主要特点" [level=3] [ref=e215]
+        - table [ref=e216]:
+          - rowgroup [ref=e217]:
+            - row "特性 说明" [ref=e218]:
+              - columnheader "特性" [ref=e219]
+              - columnheader "说明" [ref=e220]
+          - rowgroup [ref=e221]:
+            - row "梯度提升 每次迭代拟合前一轮的残差（梯度方向）" [ref=e222]:
+              - cell "梯度提升" [ref=e223]:
+                - strong [ref=e224]: 梯度提升
+              - cell "每次迭代拟合前一轮的残差（梯度方向）" [ref=e225]:
+                - text: 每次迭代拟合前一轮的
+                - strong [ref=e226]: 残差（梯度方向）
+            - row "正则化 加入 L1/L2 正则化，防止过拟合" [ref=e227]:
+              - cell "正则化" [ref=e228]:
+                - strong [ref=e229]: 正则化
+              - cell "加入 L1/L2 正则化，防止过拟合" [ref=e230]
+            - row "并行计算 虽然树是串行训练，但特征分裂时可并行" [ref=e231]:
+              - cell "并行计算" [ref=e232]:
+                - strong [ref=e233]: 并行计算
+              - cell "虽然树是串行训练，但特征分裂时可并行" [ref=e234]
+            - row "列抽样 类似随机森林，每次只考虑部分特征" [ref=e235]:
+              - cell "列抽样" [ref=e236]:
+                - strong [ref=e237]: 列抽样
+              - cell "类似随机森林，每次只考虑部分特征" [ref=e238]
+            - row "缺失值处理 自动学习缺失值的分裂方向" [ref=e239]:
+              - cell "缺失值处理" [ref=e240]:
+                - strong [ref=e241]: 缺失值处理
+              - cell "自动学习缺失值的分裂方向" [ref=e242]
+            - row "剪枝 使用深度优先的剪枝策略" [ref=e243]:
+              - cell "剪枝" [ref=e244]:
+                - strong [ref=e245]: 剪枝
+              - cell "使用深度优先的剪枝策略" [ref=e246]:
+                - text: 使用
+                - strong [ref=e247]: 深度优先
+                - text: 的剪枝策略
+        - heading "XGBoost 的数学原理（简化版）" [level=3] [ref=e248]
+        - paragraph [ref=e249]: 目标函数：
+        - generic [ref=e251]:
+          - math [ref=e253]:
+            - generic [ref=e255]:
+              - generic [ref=e256]: Obj
+              - generic [ref=e257]: =
+              - generic [ref=e258]:
+                - generic [ref=e259]: ∑
+                - generic [ref=e260]:
+                  - generic [ref=e261]: i
+                  - generic [ref=e262]: =
+                  - generic [ref=e263]: "1"
+                - generic [ref=e264]: "n"
+              - generic [ref=e265]: L
+              - generic [ref=e266]: (
+              - generic [ref=e267]:
+                - generic [ref=e268]: "y"
+                - generic [ref=e269]: i
+              - generic [ref=e270]: ","
+              - generic [ref=e271]:
+                - generic [ref=e272]:
+                  - generic [ref=e273]: "y"
+                  - generic [ref=e274]: ^
+                - generic [ref=e275]: i
+              - generic [ref=e276]: )
+              - generic [ref=e277]: +
+              - generic [ref=e278]:
+                - generic [ref=e279]: ∑
+                - generic [ref=e280]:
+                  - generic [ref=e281]: k
+                  - generic [ref=e282]: =
+                  - generic [ref=e283]: "1"
+                - generic [ref=e284]: K
+              - generic [ref=e285]: Ω
+              - generic [ref=e286]: (
+              - generic [ref=e287]:
+                - generic [ref=e288]: f
+                - generic [ref=e289]: k
+              - generic [ref=e290]: )
+          - generic [ref=e291]:
+            - generic [ref=e292]:
+              - generic [ref=e293]: Obj
+              - text: =
+            - generic [ref=e294]:
+              - generic [ref=e298]:
+                - generic [ref=e300]: i=1
+                - generic [ref=e301]: ∑
+                - generic [ref=e302]: "n"
+              - text: L(
+              - generic [ref=e306]:
+                - text: "y"
+                - generic [ref=e311]: i
+              - text: ","
+              - generic [ref=e315]:
+                - generic [ref=e319]:
+                  - generic [ref=e320]: "y"
+                  - text: ^
+                - generic [ref=e328]: i
+              - text: ) +
+            - generic [ref=e332]:
+              - generic [ref=e336]:
+                - generic [ref=e338]: k=1
+                - generic [ref=e339]: ∑
+                - generic [ref=e340]: K
+              - text: Ω(
+              - generic [ref=e344]:
+                - text: f
+                - generic [ref=e349]: k
+              - text: )
+        - paragraph [ref=e353]: 其中：
+        - list [ref=e354]:
+          - listitem [ref=e355]:
+            - generic [ref=e356]:
+              - math [ref=e358]:
+                - generic [ref=e361]: L
+              - generic [ref=e363]: L
+            - text: 是损失函数（如 MSE、LogLoss）
+          - listitem [ref=e364]:
+            - generic [ref=e365]:
+              - math [ref=e367]:
+                - generic [ref=e369]:
+                  - generic [ref=e370]: Ω
+                  - generic [ref=e371]: (
+                  - generic [ref=e372]:
+                    - generic [ref=e373]: f
+                    - generic [ref=e374]: k
+                  - generic [ref=e375]: )
+              - generic [ref=e377]:
+                - text: Ω(
+                - generic [ref=e378]:
+                  - text: f
+                  - generic [ref=e383]: k
+                - text: )
+            - text: 是正则项，控制树的复杂度：
+            - generic [ref=e387]:
+              - math [ref=e389]:
+                - generic [ref=e391]:
+                  - generic [ref=e392]: Ω
+                  - generic [ref=e393]: (
+                  - generic [ref=e394]: f
+                  - generic [ref=e395]: )
+                  - generic [ref=e396]: =
+                  - generic [ref=e397]: γ
+                  - generic [ref=e398]: T
+                  - generic [ref=e399]: +
+                  - generic [ref=e400]:
+                    - generic [ref=e401]: "1"
+                    - generic [ref=e402]: "2"
+                  - generic [ref=e403]: λ
+                  - generic [ref=e404]:
+                    - generic [ref=e405]: ∑
+                    - generic [ref=e406]:
+                      - generic [ref=e407]: j
+                      - generic [ref=e408]: =
+                      - generic [ref=e409]: "1"
+                    - generic [ref=e410]: T
+                  - generic [ref=e411]:
+                    - generic [ref=e412]: w
+                    - generic [ref=e413]: j
+                    - generic [ref=e414]: "2"
+              - generic [ref=e415]:
+                - generic [ref=e416]: Ω(f) =
+                - generic [ref=e417]: γT +
+                - generic [ref=e418]:
+                  - generic [ref=e423]:
+                    - generic [ref=e425]: "2"
+                    - generic [ref=e428]: "1"
+                  - text: λ
+                  - generic [ref=e432]:
+                    - text: ∑
+                    - generic [ref=e436]:
+                      - generic [ref=e438]: j=1
+                      - generic [ref=e439]: T
+                  - generic [ref=e443]:
+                    - text: w
+                    - generic [ref=e447]:
+                      - generic [ref=e448]: j
+                      - generic [ref=e449]: "2"
+          - listitem [ref=e453]:
+            - generic [ref=e454]:
+              - math [ref=e456]:
+                - generic [ref=e459]: T
+              - generic [ref=e461]: T
+            - text: 是叶子节点数，
+            - generic [ref=e462]:
+              - math [ref=e464]:
+                - generic [ref=e467]:
+                  - generic [ref=e468]: w
+                  - generic [ref=e469]: j
+              - generic [ref=e472]:
+                - text: w
+                - generic [ref=e477]: j
+            - text: 是叶子权重
+        - heading "为什么 XGBoost 这么流行？" [level=3] [ref=e481]
+        - list [ref=e482]:
+          - listitem [ref=e483]:
+            - strong [ref=e484]: 效果好
+            - text: ：在 Kaggle 竞赛中长期霸榜，是表格数据任务的王牌算法
+          - listitem [ref=e485]:
+            - strong [ref=e486]: 速度快
+            - text: ：相比传统的 GBDT，速度提升数倍到数十倍
+          - listitem [ref=e487]:
+            - strong [ref=e488]: 鲁棒性强
+            - text: ：对缺失值、异常值、特征缩放不敏感
+          - listitem [ref=e489]:
+            - strong [ref=e490]: 可解释性
+            - text: ：可以输出特征重要性
+        - heading "简单代码示例" [level=3] [ref=e491]
+        - code [ref=e493]: "import xgboost as xgb from sklearn.datasets import load_boston from sklearn.model_selection import train_test_split # 加载数据 data = load_boston() X_train, X_test, y_train, y_test = train_test_split( data.data, data.target, test_size=0.2, random_state=42 ) # 训练 XGBoost 模型 model = xgb.XGBRegressor( n_estimators=100, # 树的数量 max_depth=6, # 树的最大深度 learning_rate=0.1, # 学习率 subsample=0.8, # 行采样比例 colsample_bytree=0.8 # 列采样比例 ) model.fit(X_train, y_train) # 预测 predictions = model.predict(X_test)"
+        - separator [ref=e494]
+        - heading "总结" [level=2] [ref=e495]
+        - table [ref=e496]:
+          - rowgroup [ref=e497]:
+            - row "概念 一句话" [ref=e498]:
+              - columnheader "概念" [ref=e499]
+              - columnheader "一句话" [ref=e500]
+          - rowgroup [ref=e501]:
+            - row "机器学习 让计算机从数据中自动学习规律" [ref=e502]:
+              - cell "机器学习" [ref=e503]:
+                - strong [ref=e504]: 机器学习
+              - cell "让计算机从数据中自动学习规律" [ref=e505]
+            - row "XGBoost 一种高效、强大的梯度提升树算法，是机器学习中的\"王牌武器\"" [ref=e506]:
+              - cell "XGBoost" [ref=e507]:
+                - strong [ref=e508]: XGBoost
+              - cell "一种高效、强大的梯度提升树算法，是机器学习中的\"王牌武器\"" [ref=e509]
+        - paragraph [ref=e510]:
+          - strong [ref=e511]: 简单的关系
+          - text: ：XGBoost 是
+          - strong [ref=e512]: 机器学习
+          - text: 这个领域下的一种具体算法，专门用于解决分类、回归、排序等监督学习问题。
+        - paragraph [ref=e513]: 如果你对 XGBoost 的某个方面（比如调参技巧、与 LightGBM 的区别、实际应用案例）感兴趣，欢迎继续提问！😊
+    - generic [ref=e22]:
+      - generic [ref=e23]:
+        - button "🤖 自动" [ref=e24] [cursor=pointer]
+        - button "💬 对话" [ref=e25] [cursor=pointer]
+        - button "🔍 调研" [ref=e26] [cursor=pointer]
+        - button "💡 创新" [ref=e27] [cursor=pointer]
+        - button "🧪 实验" [ref=e28] [cursor=pointer]
+      - generic [ref=e29]:
+        - textbox "输入消息... (支持 Markdown 和 LaTeX)" [ref=e30]
+        - combobox "切换模型" [ref=e31] [cursor=pointer]:
+          - option "DeepSeek V4 Flash" [selected]
+          - option "V4 Pro"
+          - option "思考模式"
+        - button "发送" [ref=e32] [cursor=pointer]

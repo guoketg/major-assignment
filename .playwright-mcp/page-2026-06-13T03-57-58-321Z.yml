@@ -1,0 +1,349 @@
+- generic [ref=e3]:
+  - generic [ref=e4]:
+    - generic [ref=e5]:
+      - heading "对话历史" [level=2] [ref=e6]
+      - button "+ 新对话" [ref=e7] [cursor=pointer]
+    - generic [ref=e8]:
+      - generic [ref=e359] [cursor=pointer]:
+        - generic [ref=e360]:
+          - generic [ref=e361]: 讲个故事
+          - generic [ref=e362]: 2 条消息
+        - button "×" [ref=e363]
+      - generic [ref=e33] [cursor=pointer]:
+        - generic [ref=e34]:
+          - generic [ref=e35]: 说个笑话
+          - generic [ref=e36]: 2 条消息
+        - button "×" [ref=e37]
+      - generic [ref=e38] [cursor=pointer]:
+        - generic [ref=e39]:
+          - generic [ref=e40]: 你好
+          - generic [ref=e41]: 2 条消息
+        - button "×" [ref=e42]
+      - generic [ref=e43] [cursor=pointer]:
+        - generic [ref=e44]:
+          - generic [ref=e45]: 什么是深度学习
+          - generic [ref=e46]: 2 条消息
+        - button "×" [ref=e47]
+      - generic [ref=e48] [cursor=pointer]:
+        - generic [ref=e49]:
+          - generic [ref=e50]: 你好
+          - generic [ref=e51]: 3 条消息
+        - button "×" [ref=e52]
+      - generic [ref=e53] [cursor=pointer]:
+        - generic [ref=e54]:
+          - generic [ref=e55]: 写一篇CLIP发展的短综述
+          - generic [ref=e56]: 2 条消息
+        - button "×" [ref=e57]
+      - generic [ref=e58] [cursor=pointer]:
+        - generic [ref=e59]:
+          - generic [ref=e60]: 写一篇CLIP发展的短综述
+          - generic [ref=e61]: 3 条消息
+        - button "×" [ref=e62]
+      - generic [ref=e63] [cursor=pointer]:
+        - generic [ref=e64]:
+          - generic [ref=e65]: 你好
+          - generic [ref=e66]: 2 条消息
+        - button "×" [ref=e67]
+      - generic [ref=e68] [cursor=pointer]:
+        - generic [ref=e69]:
+          - generic [ref=e70]: 写一篇多模态大模型抗幻觉的短综述
+          - generic [ref=e71]: 1 条消息
+        - button "×" [ref=e72]
+      - generic [ref=e73] [cursor=pointer]:
+        - generic [ref=e74]:
+          - generic [ref=e75]: 你好
+          - generic [ref=e76]: 2 条消息
+        - button "×" [ref=e77]
+      - generic [ref=e78] [cursor=pointer]:
+        - generic [ref=e79]:
+          - generic [ref=e80]: 写一篇CLIP噪声标签学习短综述
+          - generic [ref=e81]: 2 条消息
+        - button "×" [ref=e82]
+      - generic [ref=e83] [cursor=pointer]:
+        - generic [ref=e84]:
+          - generic [ref=e85]: 写一篇CLIP噪声标签学习短综述
+          - generic [ref=e86]: 2 条消息
+        - button "×" [ref=e87]
+      - generic [ref=e88] [cursor=pointer]:
+        - generic [ref=e89]:
+          - generic [ref=e90]: 写一篇CLIP噪声标签综述
+          - generic [ref=e91]: 2 条消息
+        - button "×" [ref=e92]
+      - generic [ref=e93] [cursor=pointer]:
+        - generic [ref=e94]:
+          - generic [ref=e95]: 写一篇CLIP噪声标签综述
+          - generic [ref=e96]: 2 条消息
+        - button "×" [ref=e97]
+      - generic [ref=e98] [cursor=pointer]:
+        - generic [ref=e99]:
+          - generic [ref=e100]: 综述"CLIP噪声标签"
+          - generic [ref=e101]: 2 条消息
+        - button "×" [ref=e102]
+      - generic [ref=e103] [cursor=pointer]:
+        - generic [ref=e104]:
+          - generic [ref=e105]: 帮我调研CLIP模型的最新进展
+          - generic [ref=e106]: 2 条消息
+        - button "×" [ref=e107]
+      - generic [ref=e108] [cursor=pointer]:
+        - generic [ref=e109]:
+          - generic [ref=e110]: 写一篇CLIP噪声标签综述
+          - generic [ref=e111]: 2 条消息
+        - button "×" [ref=e112]
+      - generic [ref=e113] [cursor=pointer]:
+        - generic [ref=e114]:
+          - generic [ref=e115]: 你好
+          - generic [ref=e116]: 2 条消息
+        - button "×" [ref=e117]
+      - generic [ref=e118] [cursor=pointer]:
+        - generic [ref=e119]:
+          - generic [ref=e120]: 写一篇CLIP噪声标签综述
+          - generic [ref=e121]: 1 条消息
+        - button "×" [ref=e122]
+      - generic [ref=e123] [cursor=pointer]:
+        - generic [ref=e124]:
+          - generic [ref=e125]: 你好
+          - generic [ref=e126]: 2 条消息
+        - button "×" [ref=e127]
+      - generic [ref=e128] [cursor=pointer]:
+        - generic [ref=e129]:
+          - generic [ref=e130]: 写一篇CLIP噪声标签综述
+          - generic [ref=e131]: 1 条消息
+        - button "×" [ref=e132]
+      - generic [ref=e133] [cursor=pointer]:
+        - generic [ref=e134]:
+          - generic [ref=e135]: 写一篇CLIP噪声标签综述
+          - generic [ref=e136]: 1 条消息
+        - button "×" [ref=e137]
+      - generic [ref=e138] [cursor=pointer]:
+        - generic [ref=e139]:
+          - generic [ref=e140]: hello
+          - generic [ref=e141]: 2 条消息
+        - button "×" [ref=e142]
+      - generic [ref=e143] [cursor=pointer]:
+        - generic [ref=e144]:
+          - generic [ref=e145]: 写一篇CLIP噪声标签综述
+          - generic [ref=e146]: 1 条消息
+        - button "×" [ref=e147]
+      - generic [ref=e148] [cursor=pointer]:
+        - generic [ref=e149]:
+          - generic [ref=e150]: 写一篇CLIP噪声标签综述
+          - generic [ref=e151]: 5 条消息
+        - button "×" [ref=e152]
+      - generic [ref=e153] [cursor=pointer]:
+        - generic [ref=e154]:
+          - generic [ref=e155]: 写一篇CLIP噪声标签综述
+          - generic [ref=e156]: 1 条消息
+        - button "×" [ref=e157]
+      - generic [ref=e158] [cursor=pointer]:
+        - generic [ref=e159]:
+          - generic [ref=e160]: 写一篇CLIP噪声标签综述
+          - generic [ref=e161]: 1 条消息
+        - button "×" [ref=e162]
+      - generic [ref=e163] [cursor=pointer]:
+        - generic [ref=e164]:
+          - generic [ref=e165]: 写一篇关于CLIP噪声标签的综述并导出为文档
+          - generic [ref=e166]: 5 条消息
+        - button "×" [ref=e167]
+      - generic [ref=e168] [cursor=pointer]:
+        - generic [ref=e169]:
+          - generic [ref=e170]: 写一篇CLIP噪声标签综述
+          - generic [ref=e171]: 5 条消息
+        - button "×" [ref=e172]
+      - generic [ref=e173] [cursor=pointer]:
+        - generic [ref=e174]:
+          - generic [ref=e175]: 写一篇CLIP噪声标签综述
+          - generic [ref=e176]: 1 条消息
+        - button "×" [ref=e177]
+      - generic [ref=e178] [cursor=pointer]:
+        - generic [ref=e179]:
+          - generic [ref=e180]: 写一篇CLIP噪声标签综述
+          - generic [ref=e181]: 1 条消息
+        - button "×" [ref=e182]
+      - generic [ref=e183] [cursor=pointer]:
+        - generic [ref=e184]:
+          - generic [ref=e185]: 写一篇CLIP噪声标签综述
+          - generic [ref=e186]: 2 条消息
+        - button "×" [ref=e187]
+      - generic [ref=e188] [cursor=pointer]:
+        - generic [ref=e189]:
+          - generic [ref=e190]: 写一篇关于CLIP噪声标签的综述
+          - generic [ref=e191]: 1 条消息
+        - button "×" [ref=e192]
+      - generic [ref=e193] [cursor=pointer]:
+        - generic [ref=e194]:
+          - generic [ref=e195]: 写一篇关于CLIP噪声标签学习的综述并导出为文档
+          - generic [ref=e196]: 1 条消息
+        - button "×" [ref=e197]
+      - generic [ref=e198] [cursor=pointer]:
+        - generic [ref=e199]:
+          - generic [ref=e200]: 综述CLIP噪声标签并导出文档
+          - generic [ref=e201]: 3 条消息
+        - button "×" [ref=e202]
+      - generic [ref=e203] [cursor=pointer]:
+        - generic [ref=e204]:
+          - generic [ref=e205]: 写一篇关于CLIP噪声标签的综述并导出为文档
+          - generic [ref=e206]: 14 条消息
+        - button "×" [ref=e207]
+      - generic [ref=e208] [cursor=pointer]:
+        - generic [ref=e209]:
+          - generic [ref=e210]: 写一篇关于CLIP噪声标签的综述并导出为文档
+          - generic [ref=e211]: 1 条消息
+        - button "×" [ref=e212]
+      - generic [ref=e213] [cursor=pointer]:
+        - generic [ref=e214]:
+          - generic [ref=e215]: 写一篇关于CLIP噪声标签的综述并导出为文档
+          - generic [ref=e216]: 1 条消息
+        - button "×" [ref=e217]
+      - generic [ref=e218] [cursor=pointer]:
+        - generic [ref=e219]:
+          - generic [ref=e220]: 写一篇CLIP噪声标签的综述并导出为Word
+          - generic [ref=e221]: 1 条消息
+        - button "×" [ref=e222]
+      - generic [ref=e223] [cursor=pointer]:
+        - generic [ref=e224]:
+          - generic [ref=e225]: 写一篇关于CLIP噪声标签的综述并保存
+          - generic [ref=e226]: 3 条消息
+        - button "×" [ref=e227]
+      - generic [ref=e228] [cursor=pointer]:
+        - generic [ref=e229]:
+          - generic [ref=e230]: 请撰写一篇关于CLIP噪声标签学习的综述论文，导出为Word...
+          - generic [ref=e231]: 1 条消息
+        - button "×" [ref=e232]
+      - generic [ref=e233] [cursor=pointer]:
+        - generic [ref=e234]:
+          - generic [ref=e235]: 请撰写一篇关于CLIP噪声标签学习的综述论文（汉语），然后导...
+          - generic [ref=e236]: 2 条消息
+        - button "×" [ref=e237]
+      - generic [ref=e238] [cursor=pointer]:
+        - generic [ref=e239]:
+          - generic [ref=e240]: 请撰写一篇关于CLIP噪声标签学习的综述论文（汉语），系统调...
+          - generic [ref=e241]: 2 条消息
+        - button "×" [ref=e242]
+      - generic [ref=e243] [cursor=pointer]:
+        - generic [ref=e244]:
+          - generic [ref=e245]: 帮我调研一下CLIP模型的最新进展
+          - generic [ref=e246]: 2 条消息
+        - button "×" [ref=e247]
+      - generic [ref=e248] [cursor=pointer]:
+        - generic [ref=e249]:
+          - generic [ref=e250]: 帮我调研CLIP模型的最新进展
+          - generic [ref=e251]: 2 条消息
+        - button "×" [ref=e252]
+      - generic [ref=e253] [cursor=pointer]:
+        - generic [ref=e254]:
+          - generic [ref=e255]: 帮我调研CLIP模型的最新进展
+          - generic [ref=e256]: 2 条消息
+        - button "×" [ref=e257]
+      - generic [ref=e258] [cursor=pointer]:
+        - generic [ref=e259]:
+          - generic [ref=e260]: 你好
+          - generic [ref=e261]: 4 条消息
+        - button "×" [ref=e262]
+      - generic [ref=e263] [cursor=pointer]:
+        - generic [ref=e264]:
+          - generic [ref=e265]: 帮我调研CLIP噪声标签学习的最新进展
+          - generic [ref=e266]: 2 条消息
+        - button "×" [ref=e267]
+      - generic [ref=e268] [cursor=pointer]:
+        - generic [ref=e269]:
+          - generic [ref=e270]: 帮我调研一下CLIP噪声标签学习的最新进展
+          - generic [ref=e271]: 4 条消息
+        - button "×" [ref=e272]
+      - generic [ref=e273] [cursor=pointer]:
+        - generic [ref=e274]:
+          - generic [ref=e275]: 帮我调研一下CLIP噪声标签学习的最新进展
+          - generic [ref=e276]: 2 条消息
+        - button "×" [ref=e277]
+      - generic [ref=e278] [cursor=pointer]:
+        - generic [ref=e279]:
+          - generic [ref=e280]: 你好
+          - generic [ref=e281]: 2 条消息
+        - button "×" [ref=e282]
+  - generic [ref=e10]:
+    - generic [ref=e11]:
+      - generic [ref=e13]:
+        - button "💬 对话" [ref=e14] [cursor=pointer]
+        - button "📄 论文搜索" [ref=e15] [cursor=pointer]
+        - button "🧠 记忆" [ref=e16] [cursor=pointer]
+        - button "🔧 工具" [ref=e17] [cursor=pointer]
+      - generic [ref=e283]:
+        - button "📄 导出 Word" [ref=e284] [cursor=pointer]
+        - button "清空对话" [ref=e285] [cursor=pointer]
+    - generic [ref=e18]:
+      - generic [ref=e305]: 讲个故事
+      - generic [ref=e307] [cursor=pointer]:
+        - generic [ref=e308]: 🤖 Agent 流水线
+        - generic [ref=e309]: 展开 ▼
+      - generic [ref=e366]:
+        - paragraph [ref=e367]: 好的，让我给你讲一个小故事吧。
+        - separator [ref=e368]
+        - heading "🐱 一只想学深度学习的猫" [level=2] [ref=e369]
+        - paragraph [ref=e370]:
+          - text: 从前，有一只叫
+          - strong [ref=e371]: 小橘
+          - text: 的橘猫。
+        - paragraph [ref=e372]: 小橘每天的生活就是：吃饭、睡觉、打盹、发呆。直到有一天，它看到主人对着屏幕上的代码兴奋地喊：“准确率又提升了！”
+        - paragraph [ref=e373]: 小橘很好奇：“准确率是什么？能吃吗？”
+        - paragraph [ref=e374]:
+          - text: 于是，小橘决定——
+          - strong [ref=e375]: 学习深度学习
+          - text: 。
+        - paragraph [ref=e376]: 它偷偷翻开了主人的书，第一页写着：
+        - blockquote [ref=e377]:
+          - paragraph [ref=e378]:
+            - strong [ref=e379]: 神经网络 = 一堆数学公式
+        - paragraph [ref=e380]: 小橘当场睡着。
+        - separator [ref=e381]
+        - paragraph [ref=e382]: 第二天，小橘换了个思路。它观察主人训练模型的过程：
+        - list [ref=e383]:
+          - listitem [ref=e384]:
+            - strong [ref=e385]: 喂数据
+            - text: （就像喂猫粮）
+          - listitem [ref=e386]:
+            - strong [ref=e387]: 模型猜答案
+            - text: （就像猜罐头在哪）
+          - listitem [ref=e388]:
+            - strong [ref=e389]: 算误差
+            - text: （猜错了就减分）
+          - listitem [ref=e390]:
+            - strong [ref=e391]: 反向传播
+            - text: （调整参数，下次猜得更准）
+          - listitem [ref=e392]:
+            - strong [ref=e393]: 重复
+            - text: （再喂、再猜、再改）
+        - paragraph [ref=e394]:
+          - text: 小橘恍然大悟：“这不就是
+          - strong [ref=e395]: 我学习开罐头
+          - text: 的过程吗？”
+        - list [ref=e396]:
+          - listitem [ref=e397]: 第一次，它用爪子拍罐头——没开 ✅ 误差很大
+          - listitem [ref=e398]: 第二次，它用牙齿咬——还是没开 ✅ 继续调整
+          - listitem [ref=e399]:
+            - text: 第三次，它发现用爪子按住罐头、用牙齿撬边缘——
+            - strong [ref=e400]: 啪！
+            - text: 开了！🎉
+        - paragraph [ref=e401]: 小橘开心地总结：
+        - blockquote [ref=e402]:
+          - paragraph [ref=e403]:
+            - strong [ref=e404]: 深度学习 = 试错 + 调整 + 再来一次
+        - paragraph [ref=e405]: 从此，小橘成了村里最懂 AI 的猫。每当其他猫问它：“你怎么什么都会？”
+        - paragraph [ref=e406]: 小橘就会优雅地舔舔爪子，说：
+        - blockquote [ref=e407]:
+          - paragraph [ref=e408]:
+            - strong [ref=e409]: “没什么，就是反向传播练多了。”
+        - separator [ref=e410]
+        - paragraph [ref=e411]: 😸 故事讲完啦！你想听关于什么的故事？我可以再编一个～
+    - generic [ref=e22]:
+      - generic [ref=e23]:
+        - button "🤖 自动" [ref=e24] [cursor=pointer]
+        - button "💬 对话" [ref=e25] [cursor=pointer]
+        - button "🔍 调研" [ref=e26] [cursor=pointer]
+        - button "💡 创新" [ref=e27] [cursor=pointer]
+        - button "🧪 实验" [ref=e28] [cursor=pointer]
+      - generic [ref=e29]:
+        - textbox "输入消息... (支持 Markdown 和 LaTeX)" [ref=e30]
+        - combobox "切换模型" [ref=e31] [cursor=pointer]:
+          - option "DeepSeek V4 Flash" [selected]
+          - option "V4 Pro"
+          - option "思考模式"
+        - button "发送" [ref=e32] [cursor=pointer]

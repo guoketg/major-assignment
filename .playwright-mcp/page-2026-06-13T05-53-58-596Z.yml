@@ -1,0 +1,231 @@
+- generic [ref=e3]:
+  - generic [ref=e4]:
+    - generic [ref=e5]:
+      - heading "对话历史" [level=2] [ref=e6]
+      - button "+ 新对话" [ref=e7] [cursor=pointer]
+    - generic [ref=e8]:
+      - generic [ref=e33] [cursor=pointer]:
+        - generic [ref=e34]:
+          - generic [ref=e35]: 500字介绍深度学习的最新进展 要包括Transformer...
+          - generic [ref=e36]: 2 条消息
+        - button "×" [ref=e37]
+      - generic [ref=e38] [cursor=pointer]:
+        - generic [ref=e39]:
+          - generic [ref=e40]: 500字介绍Transformer
+          - generic [ref=e41]: 2 条消息
+        - button "×" [ref=e42]
+      - generic [ref=e43] [cursor=pointer]:
+        - generic [ref=e44]:
+          - generic [ref=e45]: 500字介绍Transformer
+          - generic [ref=e46]: 2 条消息
+        - button "×" [ref=e47]
+      - generic [ref=e48] [cursor=pointer]:
+        - generic [ref=e49]:
+          - generic [ref=e50]: 500字介绍深度学习 要包括CNN RNN Transfor...
+          - generic [ref=e51]: 2 条消息
+        - button "×" [ref=e52]
+      - generic [ref=e53] [cursor=pointer]:
+        - generic [ref=e54]:
+          - generic [ref=e55]: 500字介绍Transformer
+          - generic [ref=e56]: 2 条消息
+        - button "×" [ref=e57]
+      - generic [ref=e58] [cursor=pointer]:
+        - generic [ref=e59]:
+          - generic [ref=e60]: 500字介绍深度学习的最新进展 要包括Transformer...
+          - generic [ref=e61]: 4 条消息
+        - button "×" [ref=e62]
+      - generic [ref=e63] [cursor=pointer]:
+        - generic [ref=e64]:
+          - generic [ref=e65]: 00字介绍Transformer
+          - generic [ref=e66]: 4 条消息
+        - button "×" [ref=e67]
+      - generic [ref=e68] [cursor=pointer]:
+        - generic [ref=e69]:
+          - generic [ref=e70]: 200字介绍Transformer
+          - generic [ref=e71]: 4 条消息
+        - button "×" [ref=e72]
+  - generic [ref=e10]:
+    - generic [ref=e11]:
+      - generic [ref=e13]:
+        - button "💬 对话" [ref=e14] [cursor=pointer]
+        - button "📄 论文搜索" [ref=e15] [cursor=pointer]
+        - button "🧠 记忆" [ref=e16] [cursor=pointer]
+        - button "🔧 工具" [ref=e17] [cursor=pointer]
+      - generic [ref=e73]:
+        - button "📄 导出 Word" [ref=e74] [cursor=pointer]
+        - button "清空对话" [ref=e75] [cursor=pointer]
+    - generic [ref=e18]:
+      - generic [ref=e78]: 500字介绍深度学习的最新进展 要包括Transformer Mamba 扩散模型
+      - generic [ref=e79]:
+        - generic [ref=e80] [cursor=pointer]:
+          - generic [ref=e81]: 🤖 Agent 流水线
+          - generic [ref=e82]: 收起 ▲
+        - generic [ref=e83]:
+          - generic [ref=e86]:
+            - generic [ref=e87]: 🤖
+            - generic [ref=e88]: 🤖 智能路由
+            - generic [ref=e89]: ✅ 完成
+          - generic [ref=e92]:
+            - generic [ref=e93]:
+              - generic [ref=e94]: 🔍
+              - generic [ref=e95]: 🔍 文献调研
+              - generic [ref=e96]: ⏳ 进行中
+            - generic [ref=e97]:
+              - generic [ref=e98]: └─
+              - generic [ref=e99]: 🔧 🔧 调用 search_arxiv
+              - generic [ref=e100]: ✅
+            - generic [ref=e101]:
+              - generic [ref=e102]: └─
+              - generic [ref=e103]: 🔧 🔧 调用 search_arxiv
+              - generic [ref=e104]: ✅
+            - generic [ref=e109]:
+              - generic [ref=e110]: └─
+              - generic [ref=e111]: 🔧 🔧 调用 search_arxiv
+              - generic [ref=e112]: ✅
+            - generic [ref=e113]:
+              - generic [ref=e114]: └─
+              - generic [ref=e115]: 🔧 🔧 调用 search_arxiv
+              - generic [ref=e116]: ✅
+            - generic [ref=e117]:
+              - generic [ref=e118]: └─
+              - generic [ref=e119]: 🔧 🔧 调用 search_arxiv
+              - generic [ref=e120]: ✅
+            - generic [ref=e121]:
+              - generic [ref=e122]: └─
+              - generic [ref=e123]: 🔧 🔧 调用 search_arxiv
+              - generic [ref=e124]: ✅
+      - generic [ref=e107]:
+        - paragraph [ref=e108]: 我来为您搜索深度学习在Transformer、Mamba和扩散模型方面的最新进展。# 深度学习最新进展调研报告：Transformer、Mamba 与扩散模型
+        - heading "一、领域简介" [level=2] [ref=e125]
+        - paragraph [ref=e126]:
+          - text: 2024-2025年是深度学习架构发生深刻变革的时期。以Transformer为基础的模型长期主导自然语言处理和多模态领域，但其二次方复杂度的自注意力机制在处理长序列时面临计算瓶颈。与此同时，
+          - strong [ref=e127]: 状态空间模型（SSM）
+          - text: 的代表性架构Mamba凭借线性复杂度迅速崛起，在长序列建模中展现出与Transformer比肩甚至超越的性能。此外，
+          - strong [ref=e128]: 扩散模型
+          - text: 从图像生成领域扩展到视频、音频、3D和多模态生成，成为生成式AI的核心引擎。这三条技术路线正在走向融合与互补。
+        - separator [ref=e129]
+        - heading "二、核心方法分类与最新进展" [level=2] [ref=e130]
+        - heading "1. Transformer：从独占到融合" [level=3] [ref=e131]
+        - paragraph [ref=e132]: Transformer仍是当前AI系统的基础架构，但其局限性日益显现：
+        - list [ref=e133]:
+          - listitem [ref=e134]:
+            - strong [ref=e135]: 计算效率瓶颈
+            - text: ：自注意力机制的二次复杂度（O(n²)）在处理超长序列时成本高昂
+          - listitem [ref=e136]:
+            - strong [ref=e137]: 最新趋势——混合架构
+            - text: ：Falcon-H1（2025年7月）提出了
+            - strong [ref=e138]: 混合头（Hybrid-Head）语言模型
+            - text: ，将Transformer与Mamba架构结合，在保持高性能的同时大幅提升推理效率。这标志着业界从"纯Transformer"转向"按需组合"的设计哲学
+        - paragraph [ref=e139]:
+          - strong [ref=e140]: 关键论文
+          - text: ：Falcon-H1（arXiv:2507.22448）——"Unlike earlier Falcon models built solely on Transformer or Mamba architectures, Falcon-H1 adopts a hybrid architecture"
+        - heading "2. Mamba：状态空间模型的崛起" [level=3] [ref=e141]
+        - paragraph [ref=e142]: Mamba（选择性结构化状态空间模型）是2024年最具影响力的架构创新之一：
+        - list [ref=e143]:
+          - listitem [ref=e144]:
+            - strong [ref=e145]: 核心优势
+            - text: ：线性复杂度（O(n)）的长序列建模能力，理论上可处理无限长上下文
+          - listitem [ref=e146]:
+            - strong [ref=e147]: 多模态扩展
+            - text: ：
+            - list [ref=e148]:
+              - listitem [ref=e149]:
+                - strong [ref=e150]: Mixture-of-Mamba
+                - text: （arXiv:2501.16295）——引入模态感知稀疏机制，将Mamba扩展到多模态预训练，解决了SSM无法利用模态特定特征的局限
+              - listitem [ref=e151]:
+                - strong [ref=e152]: Visual Mamba综述
+                - text: （arXiv:2404.18861）——系统总结了Mamba在计算机视觉中的应用，包括图像分类、目标检测、视频理解等
+              - listitem [ref=e153]:
+                - strong [ref=e154]: SELD-Mamba
+                - text: （arXiv:2408.05057）——将Mamba应用于声音事件定位与检测，在音频领域击败Transformer
+          - listitem [ref=e155]:
+            - strong [ref=e156]: 微调技术
+            - text: ：PEFT for SSM（arXiv:2410.09016）——探索了参数高效微调方法在Mamba上的应用，填补了该领域空白
+        - paragraph [ref=e157]:
+          - strong [ref=e158]: 关键论文
+          - text: ：
+        - list [ref=e159]:
+          - listitem [ref=e160]: Mixture-of-Mamba（arXiv:2501.16295）："proposes a novel SSM architecture that introduces modality-aware sparsity"
+          - listitem [ref=e161]: Visual Mamba（arXiv:2404.18861）："excels in long sequence modeling, which is vital in the large model era"
+        - heading "3. 扩散模型：从图像到多模态生成" [level=3] [ref=e162]
+        - paragraph [ref=e163]: 扩散模型已从Stable Diffusion的图像生成，扩展到更广泛的领域：
+        - list [ref=e164]:
+          - listitem [ref=e165]:
+            - strong [ref=e166]: 视频生成
+            - text: ：基于扩散模型的文生视频技术（如Sora的开源复现）成为2024年最大热点之一
+          - listitem [ref=e167]:
+            - strong [ref=e168]: 模型坍缩问题
+            - text: ：最新研究（arXiv:2511.05535）指出，扩散模型（如Stable Diffusion）生成的高质量图像和视频数据如果被反复用于训练，会导致
+            - strong [ref=e169]: 模型坍缩
+            - text: ——生成数据分布逐渐偏离真实分布，这是一个亟待解决的关键挑战
+          - listitem [ref=e170]:
+            - strong [ref=e171]: 多模态对齐
+            - text: ：V-SONAR（arXiv:2603.01096）提出
+            - strong [ref=e172]: 概念空间对齐
+            - text: 方法，将视觉嵌入空间与文本嵌入空间对齐，支持1500种文本语言和177种语音语言，展示了扩散模型与多模态系统的深度融合
+        - paragraph [ref=e173]:
+          - strong [ref=e174]: 关键论文
+          - text: ：
+        - list [ref=e175]:
+          - listitem [ref=e176]: Model Collapse（arXiv:2511.05535）："Diffusion models like Stable Diffusion generate high-quality images and videos from text"
+          - listitem [ref=e177]: V-SONAR（arXiv:2603.01096）："a vision-language embedding space extended from the text-only embedding space"
+        - separator [ref=e178]
+        - heading "三、各方法优缺点对比" [level=2] [ref=e179]
+        - table [ref=e180]:
+          - rowgroup [ref=e181]:
+            - row "方法 优点 缺点" [ref=e182]:
+              - columnheader "方法" [ref=e183]
+              - columnheader "优点" [ref=e184]
+              - columnheader "缺点" [ref=e185]
+          - rowgroup [ref=e186]:
+            - row "Transformer 并行计算能力强；注意力机制可解释性好；生态成熟、工具链完善 二次复杂度限制长序列处理；推理时KV缓存占用大内存；长程依赖捕获能力有限" [ref=e187]:
+              - cell "Transformer" [ref=e188]:
+                - strong [ref=e189]: Transformer
+              - cell "并行计算能力强；注意力机制可解释性好；生态成熟、工具链完善" [ref=e190]
+              - cell "二次复杂度限制长序列处理；推理时KV缓存占用大内存；长程依赖捕获能力有限" [ref=e191]
+            - row "Mamba 线性复杂度，适合超长序列；推理时内存占用低；硬件友好（可高效部署） 并行性不如Transformer；多模态扩展仍在探索中；生态和工具链尚不成熟" [ref=e192]:
+              - cell "Mamba" [ref=e193]:
+                - strong [ref=e194]: Mamba
+              - cell "线性复杂度，适合超长序列；推理时内存占用低；硬件友好（可高效部署）" [ref=e195]
+              - cell "并行性不如Transformer；多模态扩展仍在探索中；生态和工具链尚不成熟" [ref=e196]
+            - row "扩散模型 生成质量高、多样性好；理论框架成熟（SDE/ODE视角）；可控性强（条件生成） 推理速度慢（需多步采样）；训练不稳定；存在模型坍缩风险" [ref=e197]:
+              - cell "扩散模型" [ref=e198]:
+                - strong [ref=e199]: 扩散模型
+              - cell "生成质量高、多样性好；理论框架成熟（SDE/ODE视角）；可控性强（条件生成）" [ref=e200]
+              - cell "推理速度慢（需多步采样）；训练不稳定；存在模型坍缩风险" [ref=e201]
+        - separator [ref=e202]
+        - heading "四、未来方向" [level=2] [ref=e203]
+        - list [ref=e204]:
+          - listitem [ref=e205]:
+            - strong [ref=e206]: 混合架构成为主流
+            - text: ：Transformer + Mamba的混合模型（如Falcon-H1）将兼顾效率与性能，预计成为下一代基础模型的标准设计
+          - listitem [ref=e207]:
+            - strong [ref=e208]: SSM的多模态扩展
+            - text: ：Mixture-of-Mamba等工作的出现，表明状态空间模型正在向视觉、音频等多模态领域全面渗透
+          - listitem [ref=e209]:
+            - strong [ref=e210]: 扩散模型的加速与稳定
+            - text: ：解决推理慢和模型坍缩是扩散模型下一步的核心挑战
+          - listitem [ref=e211]:
+            - strong [ref=e212]: 架构融合与统一
+            - text: ：未来可能看到Transformer的注意力机制、Mamba的状态空间模型和扩散模型的生成框架三者深度融合，构建全新的统一架构
+        - separator [ref=e213]
+        - heading "五、总结" [level=2] [ref=e214]
+        - paragraph [ref=e215]:
+          - text: 2024-2025年深度学习领域呈现"三足鼎立、走向融合"的格局。
+          - strong [ref=e216]: Transformer
+          - text: 通过
+        - text: "|"
+    - generic [ref=e22]:
+      - generic [ref=e23]:
+        - button "🤖 自动" [disabled] [ref=e24]
+        - button "💬 对话" [disabled] [ref=e25]
+        - button "🔍 调研" [disabled] [ref=e26]
+        - button "💡 创新" [disabled] [ref=e27]
+        - button "🧪 实验" [disabled] [ref=e28]
+      - generic [ref=e29]:
+        - textbox "输入消息... (支持 Markdown 和 LaTeX)" [disabled] [ref=e30]
+        - combobox "切换模型" [disabled] [ref=e31] [cursor=pointer]:
+          - option "DeepSeek V4 Flash" [selected]
+          - option "V4 Pro"
+          - option "思考模式"
+        - button "发送" [disabled] [ref=e32]

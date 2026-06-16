@@ -1,0 +1,67 @@
+- generic [ref=e3]:
+  - generic [ref=e4]:
+    - generic [ref=e5]:
+      - heading "对话历史" [level=2] [ref=e6]
+      - button "+ 新对话" [ref=e7] [cursor=pointer]
+    - generic [ref=e8]:
+      - generic [ref=e358] [cursor=pointer]:
+        - generic [ref=e359]:
+          - generic [ref=e360]: 00字介绍Transformer
+          - generic [ref=e361]: 4 条消息
+        - button "×" [ref=e362]
+      - generic [ref=e70] [cursor=pointer]:
+        - generic [ref=e71]:
+          - generic [ref=e72]: 200字介绍Transformer
+          - generic [ref=e73]: 4 条消息
+        - button "×" [ref=e74]
+  - generic [ref=e10]:
+    - generic [ref=e11]:
+      - generic [ref=e13]:
+        - button "💬 对话" [ref=e14] [cursor=pointer]
+        - button "📄 论文搜索" [ref=e15] [cursor=pointer]
+        - button "🧠 记忆" [ref=e16] [cursor=pointer]
+        - button "🔧 工具" [ref=e17] [cursor=pointer]
+      - generic [ref=e33]:
+        - button "📄 导出 Word" [ref=e34] [cursor=pointer]
+        - button "清空对话" [ref=e35] [cursor=pointer]
+    - generic [ref=e18]:
+      - generic [ref=e368]: 500字介绍深度学习的最新进展 要包括Transformer Mamba 扩散模型
+      - generic [ref=e369]:
+        - generic [ref=e370] [cursor=pointer]:
+          - generic [ref=e371]: 🤖 Agent 流水线
+          - generic [ref=e372]: 收起 ▲
+        - generic [ref=e373]:
+          - generic [ref=e376]:
+            - generic [ref=e377]: 🤖
+            - generic [ref=e378]: 🤖 智能路由
+            - generic [ref=e379]: ✅ 完成
+          - generic [ref=e382]:
+            - generic [ref=e383]:
+              - generic [ref=e384]: 🔍
+              - generic [ref=e385]: 🔍 文献调研
+              - generic [ref=e386]: ⏳ 进行中
+            - generic [ref=e387]:
+              - generic [ref=e388]: └─
+              - generic [ref=e389]: 🔧 🔧 调用 search_arxiv
+              - generic [ref=e390]: ✅
+            - generic [ref=e391]:
+              - generic [ref=e392]: └─
+              - generic [ref=e393]: 🔧 🔧 调用 search_arxiv
+              - generic [ref=e394]: ⏳
+      - generic [ref=e397]:
+        - paragraph [ref=e398]: 我来搜索深度学习在Transformer、Mamba和扩散模型方面的最新进展。
+        - text: "|"
+    - generic [ref=e22]:
+      - generic [ref=e23]:
+        - button "🤖 自动" [disabled] [ref=e24]
+        - button "💬 对话" [disabled] [ref=e25]
+        - button "🔍 调研" [disabled] [ref=e26]
+        - button "💡 创新" [disabled] [ref=e27]
+        - button "🧪 实验" [disabled] [ref=e28]
+      - generic [ref=e29]:
+        - textbox "输入消息... (支持 Markdown 和 LaTeX)" [disabled] [ref=e30]
+        - combobox "切换模型" [disabled] [ref=e31] [cursor=pointer]:
+          - option "DeepSeek V4 Flash" [selected]
+          - option "V4 Pro"
+          - option "思考模式"
+        - button "发送" [disabled] [ref=e32]

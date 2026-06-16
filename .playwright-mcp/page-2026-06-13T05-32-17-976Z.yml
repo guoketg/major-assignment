@@ -1,0 +1,103 @@
+- generic [ref=e3]:
+  - generic [ref=e4]:
+    - generic [ref=e5]:
+      - heading "对话历史" [level=2] [ref=e6]
+      - button "+ 新对话" [ref=e7] [cursor=pointer]
+    - generic [ref=e70] [cursor=pointer]:
+      - generic [ref=e71]:
+        - generic [ref=e72]: 200字介绍Transformer
+        - generic [ref=e73]: 2 条消息
+      - button "×" [ref=e74]
+  - generic [ref=e10]:
+    - generic [ref=e11]:
+      - generic [ref=e13]:
+        - button "💬 对话" [ref=e14] [cursor=pointer]
+        - button "📄 论文搜索" [ref=e15] [cursor=pointer]
+        - button "🧠 记忆" [ref=e16] [cursor=pointer]
+        - button "🔧 工具" [ref=e17] [cursor=pointer]
+      - generic [ref=e33]:
+        - button "📄 导出 Word" [ref=e34] [cursor=pointer]
+        - button "清空对话" [ref=e35] [cursor=pointer]
+    - generic [ref=e18]:
+      - generic [ref=e38]: 200字介绍Transformer
+      - generic [ref=e95]:
+        - generic [ref=e96] [cursor=pointer]:
+          - generic [ref=e97]: 🤖 Agent 流水线
+          - generic [ref=e98]: 收起 ▲
+        - generic [ref=e99]:
+          - generic [ref=e102]:
+            - generic [ref=e103]: 🤖
+            - generic [ref=e104]: 🤖 智能路由
+            - generic [ref=e105]: ✅ 完成
+          - generic [ref=e108]:
+            - generic [ref=e109]:
+              - generic [ref=e110]: 🔍
+              - generic [ref=e111]: 🔍 文献调研
+              - generic [ref=e112]: ⏳ 进行中
+            - generic [ref=e113]:
+              - generic [ref=e114]: └─
+              - generic [ref=e115]: 🔧 🔧 调用 search_arxiv
+              - generic [ref=e116]: ✅
+            - generic [ref=e117]:
+              - generic [ref=e118]: └─
+              - generic [ref=e119]: 🔧 🔧 调用 search_arxiv
+              - generic [ref=e120]: ⏳
+      - generic [ref=e84]:
+        - heading "Transformer 模型简介" [level=1] [ref=e85]
+        - paragraph [ref=e86]:
+          - strong [ref=e87]: Transformer
+          - text: 是 Google 在 2017 年论文
+          - emphasis [ref=e88]: "\"Attention Is All You Need\""
+          - text: 中提出的深度学习架构，彻底改变了自然语言处理和计算机视觉等领域。
+        - paragraph [ref=e89]:
+          - text: 其核心创新是
+          - strong [ref=e90]: 自注意力机制（Self-Attention）
+          - text: ，通过计算序列中每个位置与其他位置的关联权重，捕捉长距离依赖关系。结构上由
+          - strong [ref=e91]: 编码器（Encoder）
+          - text: 和
+          - strong [ref=e92]: 解码器（Decoder）
+          - text: 堆叠而成，每层包含多头注意力（Multi-Head Attention）和前馈神经网络（FFN），并引入残差连接与层归一化。
+        - paragraph [ref=e93]:
+          - text: 相比 RNN/LSTM，Transformer 支持
+          - strong [ref=e94]: 并行计算
+          - text: ，训练速度大幅提升。基于此架构发展出了 BERT、GPT、ViT 等里程碑模型，成为现代 AI 的基石。
+      - generic [ref=e123]: 500字介绍深度学习的最新进展 要包括Transformer Mamba 扩散模型
+      - generic [ref=e124]:
+        - generic [ref=e125] [cursor=pointer]:
+          - generic [ref=e126]: 🤖 Agent 流水线
+          - generic [ref=e127]: 收起 ▲
+        - generic [ref=e128]:
+          - generic [ref=e131]:
+            - generic [ref=e132]: 🤖
+            - generic [ref=e133]: 🤖 智能路由
+            - generic [ref=e134]: ✅ 完成
+          - generic [ref=e137]:
+            - generic [ref=e138]:
+              - generic [ref=e139]: 🔍
+              - generic [ref=e140]: 🔍 文献调研
+              - generic [ref=e141]: ⏳ 进行中
+            - generic [ref=e142]:
+              - generic [ref=e143]: └─
+              - generic [ref=e144]: 🔧 🔧 调用 search_arxiv
+              - generic [ref=e145]: ✅
+            - generic [ref=e146]:
+              - generic [ref=e147]: └─
+              - generic [ref=e148]: 🔧 🔧 调用 search_arxiv
+              - generic [ref=e149]: ⏳
+      - generic [ref=e152]:
+        - paragraph [ref=e153]: 我来搜索深度学习在 Transformer、Mamba 和扩散模型方面的最新进展。
+        - text: "|"
+    - generic [ref=e22]:
+      - generic [ref=e23]:
+        - button "🤖 自动" [disabled] [ref=e24]
+        - button "💬 对话" [disabled] [ref=e25]
+        - button "🔍 调研" [disabled] [ref=e26]
+        - button "💡 创新" [disabled] [ref=e27]
+        - button "🧪 实验" [disabled] [ref=e28]
+      - generic [ref=e29]:
+        - textbox "输入消息... (支持 Markdown 和 LaTeX)" [disabled] [ref=e30]
+        - combobox "切换模型" [disabled] [ref=e31] [cursor=pointer]:
+          - option "DeepSeek V4 Flash" [selected]
+          - option "V4 Pro"
+          - option "思考模式"
+        - button "发送" [disabled] [ref=e32]

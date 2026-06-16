@@ -1,0 +1,81 @@
+- generic [ref=e3]:
+  - generic [ref=e4]:
+    - generic [ref=e5]:
+      - heading "对话历史" [level=2] [ref=e6]
+      - button "+ 新对话" [ref=e7] [cursor=pointer]
+    - generic [ref=e8]:
+      - generic [ref=e54] [cursor=pointer]:
+        - generic [ref=e55]:
+          - generic [ref=e56]: 你好
+          - generic [ref=e57]: 2 条消息
+        - button "×" [ref=e58]
+      - generic [ref=e32] [cursor=pointer]:
+        - generic [ref=e33]:
+          - generic [ref=e34]: 帮我调研CLIP噪声标签学习的最新进展
+          - generic [ref=e35]: 2 条消息
+        - button "×" [ref=e36]
+      - generic [ref=e37] [cursor=pointer]:
+        - generic [ref=e38]:
+          - generic [ref=e39]: 帮我调研一下CLIP噪声标签学习的最新进展
+          - generic [ref=e40]: 4 条消息
+        - button "×" [ref=e41]
+      - generic [ref=e42] [cursor=pointer]:
+        - generic [ref=e43]:
+          - generic [ref=e44]: 帮我调研一下CLIP噪声标签学习的最新进展
+          - generic [ref=e45]: 2 条消息
+        - button "×" [ref=e46]
+      - generic [ref=e47] [cursor=pointer]:
+        - generic [ref=e48]:
+          - generic [ref=e49]: 你好
+          - generic [ref=e50]: 2 条消息
+        - button "×" [ref=e51]
+  - generic [ref=e10]:
+    - generic [ref=e11]:
+      - generic [ref=e13]:
+        - button "💬 对话" [ref=e14] [cursor=pointer]
+        - button "📄 论文搜索" [ref=e15] [cursor=pointer]
+        - button "🧠 记忆" [ref=e16] [cursor=pointer]
+      - button "清空对话" [ref=e53] [cursor=pointer]
+    - generic [ref=e17]:
+      - generic [ref=e61]: 你好
+      - paragraph [ref=e65]: 你好！很高兴见到你！😊 有什么关于深度学习、机器学习或其他技术问题想讨论的吗？无论是论文中的概念、算法实现，还是日常学习中的疑问，我都很乐意帮你解答！
+      - generic [ref=e72]: 帮我调研CLIP模型的最新进展
+      - generic [ref=e73]:
+        - generic [ref=e74] [cursor=pointer]:
+          - generic [ref=e75]: 🤖 Agent 流水线
+          - generic [ref=e76]: 收起 ▲
+        - generic [ref=e77]:
+          - generic [ref=e80]:
+            - generic [ref=e81]: 🤖
+            - generic [ref=e82]: 🤖 智能路由
+            - generic [ref=e83]: ✅ 完成
+          - generic [ref=e86]:
+            - generic [ref=e87]:
+              - generic [ref=e88]: 🔍
+              - generic [ref=e89]: 🔍 文献调研
+              - generic [ref=e90]: ⏳ 进行中
+            - generic [ref=e91]:
+              - generic [ref=e92]: └─
+              - generic [ref=e93]: 🔧 🔧 调用 search_arxiv
+              - generic [ref=e94]: ✅
+            - generic [ref=e95]:
+              - generic [ref=e96]: └─
+              - generic [ref=e97]: 🔧 🔧 调用 search_arxiv
+              - generic [ref=e98]: ⏳
+      - generic [ref=e101]:
+        - paragraph [ref=e102]: 好的！我来为你系统调研CLIP模型的最新进展。我将从多个角度搜索相关论文。
+        - text: "|"
+    - generic [ref=e21]:
+      - generic [ref=e22]:
+        - button "🤖 自动" [disabled] [ref=e23]
+        - button "💬 对话" [disabled] [ref=e24]
+        - button "🔍 调研" [disabled] [ref=e25]
+        - button "💡 创新" [disabled] [ref=e26]
+        - button "🧪 实验" [disabled] [ref=e27]
+      - generic [ref=e28]:
+        - textbox "输入消息... (支持 Markdown 和 LaTeX)" [disabled] [ref=e29]
+        - combobox "切换模型" [disabled] [ref=e30] [cursor=pointer]:
+          - option "DeepSeek V4 Flash" [selected]
+          - option "V4 Pro"
+          - option "思考模式"
+        - button "发送" [disabled] [ref=e31]

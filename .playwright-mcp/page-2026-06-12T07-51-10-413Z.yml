@@ -1,0 +1,16 @@
+- generic [ref=e3]:
+  - generic [ref=e4]:
+    - generic [ref=e5]:
+      - heading "对话历史" [level=2] [ref=e6]
+      - button "+ 新对话" [ref=e7] [cursor=pointer]
+    - paragraph [ref=e9]: 暂无会话记录
+  - generic [ref=e10]:
+    - generic [ref=e11]:
+      - generic [ref=e20]: "会话: session_84ec8601"
+      - button "清空对话" [ref=e22] [cursor=pointer]
+    - generic [ref=e12]:
+      - generic [ref=e25]: 给我讲一个简短的笑话
+      - generic [ref=e28]: AI 正在思考...
+    - generic [ref=e16]:
+      - textbox "输入消息... (支持 Markdown 和 LaTeX)" [disabled] [ref=e17]
+      - button "发送" [disabled] [ref=e18]

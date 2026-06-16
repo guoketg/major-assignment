@@ -1,0 +1,8 @@
+- generic [ref=e3]:
+  - generic [ref=e6]:
+    - heading "该网页无法正常运作" [level=1] [ref=e7]
+    - paragraph [ref=e8]:
+      - strong [ref=e9]: localhost
+      - text: 未发送任何数据。
+    - generic [ref=e10]: ERR_EMPTY_RESPONSE
+  - button "重新加载" [ref=e13] [cursor=pointer]

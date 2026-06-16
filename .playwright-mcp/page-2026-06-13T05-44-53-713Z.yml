@@ -1,0 +1,248 @@
+- generic [ref=e3]:
+  - generic [ref=e4]:
+    - generic [ref=e5]:
+      - heading "对话历史" [level=2] [ref=e6]
+      - button "+ 新对话" [ref=e7] [cursor=pointer]
+    - generic [ref=e8]:
+      - generic [ref=e33] [cursor=pointer]:
+        - generic [ref=e34]:
+          - generic [ref=e35]: 500字介绍Transformer
+          - generic [ref=e36]: 2 条消息
+        - button "×" [ref=e37]
+      - generic [ref=e38] [cursor=pointer]:
+        - generic [ref=e39]:
+          - generic [ref=e40]: 500字介绍Transformer
+          - generic [ref=e41]: 2 条消息
+        - button "×" [ref=e42]
+      - generic [ref=e43] [cursor=pointer]:
+        - generic [ref=e44]:
+          - generic [ref=e45]: 500字介绍深度学习 要包括CNN RNN Transfor...
+          - generic [ref=e46]: 2 条消息
+        - button "×" [ref=e47]
+      - generic [ref=e48] [cursor=pointer]:
+        - generic [ref=e49]:
+          - generic [ref=e50]: 500字介绍Transformer
+          - generic [ref=e51]: 2 条消息
+        - button "×" [ref=e52]
+      - generic [ref=e53] [cursor=pointer]:
+        - generic [ref=e54]:
+          - generic [ref=e55]: 500字介绍深度学习的最新进展 要包括Transformer...
+          - generic [ref=e56]: 4 条消息
+        - button "×" [ref=e57]
+      - generic [ref=e58] [cursor=pointer]:
+        - generic [ref=e59]:
+          - generic [ref=e60]: 00字介绍Transformer
+          - generic [ref=e61]: 4 条消息
+        - button "×" [ref=e62]
+      - generic [ref=e63] [cursor=pointer]:
+        - generic [ref=e64]:
+          - generic [ref=e65]: 200字介绍Transformer
+          - generic [ref=e66]: 4 条消息
+        - button "×" [ref=e67]
+  - generic [ref=e10]:
+    - generic [ref=e11]:
+      - generic [ref=e13]:
+        - button "💬 对话" [ref=e14] [cursor=pointer]
+        - button "📄 论文搜索" [ref=e15] [cursor=pointer]
+        - button "🧠 记忆" [ref=e16] [cursor=pointer]
+        - button "🔧 工具" [ref=e17] [cursor=pointer]
+      - generic [ref=e68]:
+        - button "📄 导出 Word" [ref=e69] [cursor=pointer]
+        - button "清空对话" [ref=e70] [cursor=pointer]
+    - generic [ref=e18]:
+      - generic [ref=e73]: 500字介绍深度学习的最新进展 要包括Transformer Mamba 扩散模型
+      - generic [ref=e74]:
+        - generic [ref=e75] [cursor=pointer]:
+          - generic [ref=e76]: 🤖 Agent 流水线
+          - generic [ref=e77]: 收起 ▲
+        - generic [ref=e78]:
+          - generic [ref=e81]:
+            - generic [ref=e82]: 🤖
+            - generic [ref=e83]: 🤖 智能路由
+            - generic [ref=e84]: ✅ 完成
+          - generic [ref=e87]:
+            - generic [ref=e88]:
+              - generic [ref=e89]: 🔍
+              - generic [ref=e90]: 🔍 文献调研
+              - generic [ref=e91]: ⏳ 进行中
+            - generic [ref=e92]:
+              - generic [ref=e93]: └─
+              - generic [ref=e94]: 🔧 🔧 调用 search_arxiv
+              - generic [ref=e95]: ✅
+            - generic [ref=e96]:
+              - generic [ref=e97]: └─
+              - generic [ref=e98]: 🔧 🔧 调用 search_arxiv
+              - generic [ref=e99]: ✅
+            - generic [ref=e104]:
+              - generic [ref=e105]: └─
+              - generic [ref=e106]: 🔧 🔧 调用 search_arxiv
+              - generic [ref=e107]: ✅
+            - generic [ref=e108]:
+              - generic [ref=e109]: └─
+              - generic [ref=e110]: 🔧 🔧 调用 search_arxiv
+              - generic [ref=e111]: ✅
+            - generic [ref=e112]:
+              - generic [ref=e113]: └─
+              - generic [ref=e114]: 🔧 🔧 调用 search_arxiv
+              - generic [ref=e115]: ✅
+            - generic [ref=e116]:
+              - generic [ref=e117]: └─
+              - generic [ref=e118]: 🔧 🔧 调用 search_arxiv
+              - generic [ref=e119]: ✅
+      - generic [ref=e102]:
+        - paragraph [ref=e103]: 我来搜索关于深度学习最新进展的文献，重点关注Transformer、Mamba和扩散模型这三个方向。# 深度学习最新进展调研报告：Transformer、Mamba 与扩散模型
+        - heading "领域概述" [level=2] [ref=e120]
+        - paragraph [ref=e121]:
+          - text: 2024-2025年，深度学习领域正经历一场深刻的架构范式转变。长期以来，Transformer凭借其自注意力机制统治着自然语言处理和计算机视觉领域，但其二次计算复杂度在长序列任务中日益成为瓶颈。与此同时，
+          - strong [ref=e122]: Mamba
+          - text: （基于选择性结构化状态空间模型，SSM）作为Transformer的强力挑战者异军突起，在长序列建模中展现出线性复杂度的优势。而
+          - strong [ref=e123]: 扩散模型
+          - text: 则在生成式AI领域持续突破，从图像生成扩展到视频、3D和多模态生成。这三个方向的交叉融合正在重塑深度学习的未来版图。
+        - heading "核心方法分类与分析" [level=2] [ref=e124]
+        - heading "1. Transformer 的持续演进与挑战" [level=3] [ref=e125]
+        - paragraph [ref=e126]: Transformer仍然是深度学习的基础设施，但学术界正积极解决其核心缺陷：
+        - paragraph [ref=e127]:
+          - strong [ref=e128]: 核心方法：
+        - list [ref=e129]:
+          - listitem [ref=e130]:
+            - strong [ref=e131]: 高效注意力机制
+            - text: ：线性注意力（Linear Attention）、FlashAttention等变体将计算复杂度从O(n²)降至O(n)
+          - listitem [ref=e132]:
+            - strong [ref=e133]: 稀疏注意力
+            - text: ：通过局部窗口注意力（如Swin Transformer）和全局稀疏模式降低长序列的计算开销
+          - listitem [ref=e134]:
+            - strong [ref=e135]: 混合架构
+            - text: ：将Transformer与卷积或状态空间模型结合，例如在视觉任务中保留注意力的全局建模能力同时引入局部归纳偏置
+        - paragraph [ref=e136]:
+          - strong [ref=e137]: 优点：
+        - list [ref=e138]:
+          - listitem [ref=e139]: 全局感受野，善于捕捉长距离依赖
+          - listitem [ref=e140]: 高度并行化，适合GPU训练
+          - listitem [ref=e141]: 经过大规模验证，生态成熟
+        - paragraph [ref=e142]:
+          - strong [ref=e143]: 缺点：
+        - list [ref=e144]:
+          - listitem [ref=e145]: 自注意力的O(n²)复杂度在处理超长序列（如100K+ tokens）时不可持续
+          - listitem [ref=e146]: 推理时的KV缓存消耗巨大内存
+          - listitem [ref=e147]: 对硬件友好度不如线性模型
+        - heading "2. Mamba：选择性状态空间模型的突破" [level=3] [ref=e148]
+        - paragraph [ref=e149]:
+          - text: 通过搜索到的论文
+          - strong [ref=e150]: "《Visual Mamba: A Survey and New Outlooks》"
+          - text: （Xu et al., 2024, arXiv:2404.18861），我们对Mamba在视觉领域的进展有了全面认识。
+        - paragraph [ref=e151]:
+          - strong [ref=e152]: 核心方法：
+        - list [ref=e153]:
+          - listitem [ref=e154]:
+            - strong [ref=e155]: 选择性状态空间模型（Selective SSM）
+            - text: ：Mamba的核心创新在于让状态空间模型的参数
+            - strong [ref=e156]: 依赖于输入
+            - text: ，从而解决了传统SSM在内容感知任务中的不足
+          - listitem [ref=e157]:
+            - strong [ref=e158]: 硬件感知算法
+            - text: ：采用并行扫描（Parallel Scan）算法，在GPU上实现高效的线性时间推理
+          - listitem [ref=e159]:
+            - strong [ref=e160]: 无注意力架构
+            - text: ：完全抛弃自注意力机制，仅依赖递归状态更新，实现了与序列长度成线性关系的计算复杂度
+        - paragraph [ref=e161]:
+          - strong [ref=e162]: 论文要点（Visual Mamba Survey）：
+        - list [ref=e163]:
+          - listitem [ref=e164]: 该综述系统梳理了Mamba在图像分类、目标检测、语义分割、视频理解等视觉任务中的应用
+          - listitem [ref=e165]: 指出Mamba在长序列任务（如高分辨率图像、视频帧序列）上显著优于Transformer
+          - listitem [ref=e166]: 但也指出Mamba在需要精确位置感知的任务中表现不如Transformer
+        - paragraph [ref=e167]:
+          - strong [ref=e168]: 优点：
+        - list [ref=e169]:
+          - listitem [ref=e170]: 推理速度与序列长度呈线性关系，处理100K+ tokens时优势巨大
+          - listitem [ref=e171]: 推理时无需KV缓存，内存占用极低
+          - listitem [ref=e172]: 在长程依赖任务（如基因组学、时间序列、长视频）中表现卓越
+        - paragraph [ref=e173]:
+          - strong [ref=e174]: 缺点：
+        - list [ref=e175]:
+          - listitem [ref=e176]: 缺乏自注意力机制带来的全局交互能力，在需要密集上下文建模的任务中逊于Transformer
+          - listitem [ref=e177]: 训练不如Transformer稳定，需要精细的初始化策略
+          - listitem [ref=e178]: 社区生态和预训练模型远不如Transformer丰富
+        - heading "3. 扩散模型的持续进化" [level=3] [ref=e179]
+        - paragraph [ref=e180]: 扩散模型已成为生成式AI的主流范式，2024-2025年的进展集中在以下几个方向：
+        - paragraph [ref=e181]:
+          - strong [ref=e182]: 核心方法：
+        - list [ref=e183]:
+          - listitem [ref=e184]:
+            - strong [ref=e185]: 文本到图像生成
+            - text: ：Stable Diffusion 3、DALL-E 3等采用扩散Transformer（DiT）架构，将U-Net替换为Transformer骨干网络，显著提升图像质量和文本对齐能力
+          - listitem [ref=e186]:
+            - strong [ref=e187]: 视频生成
+            - text: ：Sora（OpenAI）将扩散模型与Transformer结合，在时空patch上建模，实现分钟级高质量视频生成
+          - listitem [ref=e188]:
+            - strong [ref=e189]: 加速采样
+            - text: ：一致性模型（Consistency Models）、对抗扩散蒸馏（ADD）等技术将采样步数从1000步减少到1-4步，实现实时生成
+          - listitem [ref=e190]:
+            - strong [ref=e191]: 3D与多模态生成
+            - text: ：扩散模型扩展到文本到3D（如DreamFusion）、文本到音频、文本到运动生成
+        - paragraph [ref=e192]:
+          - strong [ref=e193]: 优点：
+        - list [ref=e194]:
+          - listitem [ref=e195]: 生成质量达到SOTA，多样性好
+          - listitem [ref=e196]: 训练稳定，损失函数简单（去噪分数匹配）
+          - listitem [ref=e197]: 可扩展性强，从图像到视频到3D统一框架
+        - paragraph [ref=e198]:
+          - strong [ref=e199]: 缺点：
+        - list [ref=e200]:
+          - listitem [ref=e201]: 采样速度慢（即使加速后仍比GAN慢）
+          - listitem [ref=e202]: 难以生成高精度细节（如文字、人脸）
+          - listitem [ref=e203]: 计算成本高，训练和推理都需要大量GPU资源
+        - heading "三者的关系与未来方向" [level=2] [ref=e204]
+        - table [ref=e205]:
+          - rowgroup [ref=e206]:
+            - row "维度 Transformer Mamba 扩散模型" [ref=e207]:
+              - columnheader "维度" [ref=e208]
+              - columnheader "Transformer" [ref=e209]
+              - columnheader "Mamba" [ref=e210]
+              - columnheader "扩散模型" [ref=e211]
+          - rowgroup [ref=e212]:
+            - row "计算复杂度 O(n²) O(n) O(n²)（训练）" [ref=e213]:
+              - cell "计算复杂度" [ref=e214]
+              - cell "O(n²)" [ref=e215]
+              - cell "O(n)" [ref=e216]
+              - cell "O(n²)（训练）" [ref=e217]
+            - row "长序列能力 差 优 中等" [ref=e218]:
+              - cell "长序列能力" [ref=e219]
+              - cell "差" [ref=e220]
+              - cell "优" [ref=e221]
+              - cell "中等" [ref=e222]
+            - row "生成质量 优（作为骨干） 待验证 优" [ref=e223]:
+              - cell "生成质量" [ref=e224]
+              - cell "优（作为骨干）" [ref=e225]
+              - cell "待验证" [ref=e226]
+              - cell "优" [ref=e227]
+            - row "推理速度 慢（长序列） 快 慢（多步采样）" [ref=e228]:
+              - cell "推理速度" [ref=e229]
+              - cell "慢（长序列）" [ref=e230]
+              - cell "快" [ref=e231]
+              - cell "慢（多步采样）" [ref=e232]
+        - paragraph [ref=e233]:
+          - strong [ref=e234]: 未来方向：
+        - list [ref=e235]:
+          - listitem [ref=e236]:
+            - paragraph [ref=e237]:
+              - strong [ref=e238]: Mamba-Transformer混合架构
+              - text: ：目前最受关注的趋势，用Mamba处理长序列压缩，用Transformer进行关键位置的精细交互，例如Jamba、Mamba-2等模型正在探索这一方向
+          - listitem [ref=e239]:
+            - paragraph [ref=e240]:
+              - strong [ref=e241]: 扩散Mamba
+              - text: ：将Mamba作为扩散模型的骨干网络
+        - text: "|"
+    - generic [ref=e22]:
+      - generic [ref=e23]:
+        - button "🤖 自动" [disabled] [ref=e24]
+        - button "💬 对话" [disabled] [ref=e25]
+        - button "🔍 调研" [disabled] [ref=e26]
+        - button "💡 创新" [disabled] [ref=e27]
+        - button "🧪 实验" [disabled] [ref=e28]
+      - generic [ref=e29]:
+        - textbox "输入消息... (支持 Markdown 和 LaTeX)" [disabled] [ref=e30]
+        - combobox "切换模型" [disabled] [ref=e31] [cursor=pointer]:
+          - option "DeepSeek V4 Flash" [selected]
+          - option "V4 Pro"
+          - option "思考模式"
+        - button "发送" [disabled] [ref=e32]

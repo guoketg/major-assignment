@@ -1,0 +1,421 @@
+- generic [ref=e3]:
+  - generic [ref=e4]:
+    - generic [ref=e5]:
+      - heading "对话历史" [level=2] [ref=e6]
+      - button "+ 新对话" [ref=e7] [cursor=pointer]
+    - generic [ref=e8]:
+      - generic [ref=e315] [cursor=pointer]:
+        - generic [ref=e316]:
+          - generic [ref=e317]: 搜索深度学习最新进展
+          - generic [ref=e318]: 2 条消息
+        - button "×" [ref=e319]
+      - generic [ref=e33] [cursor=pointer]:
+        - generic [ref=e34]:
+          - generic [ref=e35]: 搜索最近关于大语言模型的最新进展，并给出参考资料链接
+          - generic [ref=e36]: 2 条消息
+        - button "×" [ref=e37]
+      - generic [ref=e38] [cursor=pointer]:
+        - generic [ref=e39]:
+          - generic [ref=e40]: 搜索Transformer最新论文
+          - generic [ref=e41]: 2 条消息
+        - button "×" [ref=e42]
+      - generic [ref=e43] [cursor=pointer]:
+        - generic [ref=e44]:
+          - generic [ref=e45]: 搜索关于Transformer注意力机制的最新研究论文
+          - generic [ref=e46]: 2 条消息
+        - button "×" [ref=e47]
+      - generic [ref=e48] [cursor=pointer]:
+        - generic [ref=e49]:
+          - generic [ref=e50]: 100字介绍Python
+          - generic [ref=e51]: 4 条消息
+        - button "×" [ref=e52]
+      - generic [ref=e53] [cursor=pointer]:
+        - generic [ref=e54]:
+          - generic [ref=e55]: 简单介绍一下Python
+          - generic [ref=e56]: 2 条消息
+        - button "×" [ref=e57]
+      - generic [ref=e58] [cursor=pointer]:
+        - generic [ref=e59]:
+          - generic [ref=e60]: 介绍什么是GDBT
+          - generic [ref=e61]: 4 条消息
+        - button "×" [ref=e62]
+      - generic [ref=e63] [cursor=pointer]:
+        - generic [ref=e64]:
+          - generic [ref=e65]: 500字介绍深度学习
+          - generic [ref=e66]: 2 条消息
+        - button "×" [ref=e67]
+      - generic [ref=e68] [cursor=pointer]:
+        - generic [ref=e69]:
+          - generic [ref=e70]: 500字介绍机器学习，要详细
+          - generic [ref=e71]: 2 条消息
+        - button "×" [ref=e72]
+      - generic [ref=e73] [cursor=pointer]:
+        - generic [ref=e74]:
+          - generic [ref=e75]: 100字介绍机器学习
+          - generic [ref=e76]: 4 条消息
+        - button "×" [ref=e77]
+      - generic [ref=e78] [cursor=pointer]:
+        - generic [ref=e79]:
+          - generic [ref=e80]: 你好，请介绍一下Python
+          - generic [ref=e81]: 2 条消息
+        - button "×" [ref=e82]
+      - generic [ref=e83] [cursor=pointer]:
+        - generic [ref=e84]:
+          - generic [ref=e85]: 请用300字介绍XGBoost算法
+          - generic [ref=e86]: 2 条消息
+        - button "×" [ref=e87]
+      - generic [ref=e88] [cursor=pointer]:
+        - generic [ref=e89]:
+          - generic [ref=e90]: 请用500字介绍Transformer架构，尽可能详细
+          - generic [ref=e91]: 2 条消息
+        - button "×" [ref=e92]
+      - generic [ref=e93] [cursor=pointer]:
+        - generic [ref=e94]:
+          - generic [ref=e95]: 什么是机器学习加XGBoost，请详细介绍一下
+          - generic [ref=e96]: 2 条消息
+        - button "×" [ref=e97]
+      - generic [ref=e98] [cursor=pointer]:
+        - generic [ref=e99]:
+          - generic [ref=e100]: c语言程序中 unsigned int和int 他们存储的是...
+          - generic [ref=e101]: 2 条消息
+        - button "×" [ref=e102]
+      - generic [ref=e103] [cursor=pointer]:
+        - generic [ref=e104]:
+          - generic [ref=e105]: 500字介绍深度学习的最新进展 要包括Transformer...
+          - generic [ref=e106]: 2 条消息
+        - button "×" [ref=e107]
+      - generic [ref=e108] [cursor=pointer]:
+        - generic [ref=e109]:
+          - generic [ref=e110]: c语言程序中 unsigned int和int 他们存储的是...
+          - generic [ref=e111]: 2 条消息
+        - button "×" [ref=e112]
+      - generic [ref=e113] [cursor=pointer]:
+        - generic [ref=e114]:
+          - generic [ref=e115]: 500字介绍深度学习的最新进展 要包括Transformer...
+          - generic [ref=e116]: 2 条消息
+        - button "×" [ref=e117]
+      - generic [ref=e118] [cursor=pointer]:
+        - generic [ref=e119]:
+          - generic [ref=e120]: 500字介绍深度学习的最新进展 要包括Transformer...
+          - generic [ref=e121]: 2 条消息
+        - button "×" [ref=e122]
+  - generic [ref=e10]:
+    - generic [ref=e11]:
+      - generic [ref=e13]:
+        - button "💬 对话" [ref=e14] [cursor=pointer]
+        - button "📄 论文搜索" [ref=e15] [cursor=pointer]
+        - button "🧠 记忆" [ref=e16] [cursor=pointer]
+        - button "🔧 工具" [ref=e17] [cursor=pointer]
+      - generic [ref=e123]:
+        - button "📄 导出 Word" [ref=e124] [cursor=pointer]
+        - button "清空对话" [ref=e125] [cursor=pointer]
+    - generic [ref=e126]:
+      - generic [ref=e127] [cursor=pointer]:
+        - generic [ref=e128]: 🤖 Agent 流水线 · 🤖 自动
+        - generic [ref=e129]: 收起 ▲
+      - generic [ref=e130]:
+        - generic [ref=e133]:
+          - generic [ref=e134]: 🤖
+          - generic [ref=e135]: 🤖 智能路由
+          - generic [ref=e136]: ✅ 完成
+        - generic [ref=e139]:
+          - generic [ref=e140]:
+            - generic [ref=e141]: 🔍
+            - generic [ref=e142]: 🔍 文献调研
+            - generic [ref=e143]: ✅ 完成
+          - generic [ref=e144]:
+            - generic [ref=e145] [cursor=pointer]:
+              - generic [ref=e146]: └─
+              - generic [ref=e147]: 🔧 🔧 调用 search_arxiv
+              - generic [ref=e148]: ✅ 🔽
+            - generic [ref=e149]: "arXiv 搜索完成，共找到 1 篇相关论文，显示前 1 篇： --- 论文 1 --- 标题: A Survey of Multimodal Ophthalmic Diagnostics: From Task-Specific Approaches to Foundational Models 作者: Xiaoling Luo, Ruli Zheng, Qiaojian Zheng, Zibo Du, Shuo Yang et al. 日期: 2025-07-31 分类: eess.IV, cs.AI, cs.CV ID: 2508.03734 摘要: Visual impairment represents a major global health challenge, with multimodal imaging providing complementary information that is essential for accurate ophthalmic diagnosis. This comprehensive survey systematically reviews the latest advances in multimodal deep learning methods in ophthalmology up"
+          - generic [ref=e150]:
+            - generic [ref=e151] [cursor=pointer]:
+              - generic [ref=e152]: └─
+              - generic [ref=e153]: 🔧 🔧 调用 search_arxiv
+              - generic [ref=e154]: ✅ 🔽
+            - generic [ref=e162]: "arXiv 搜索完成，共找到 23 篇相关论文，显示前 10 篇： --- 论文 1 --- 标题: CIG-Bench: A Comprehensive Survey and Benchmark for AI-Driven Subsurface Imaging Understanding 作者: Yimin Dou, Xinming Wu, Hui Gao, Mingliang Liu, Tao Zhao et al. 日期: 2026-06-08 分类: physics.geo-ph ID: 2606.09094 摘要: Subsurface imaging understanding bridges observed geophysical data and quantitative geological models, supporting hydrocarbon exploration, CO2 storage site assessment, and geohazard monitoring. Over the past decade, deep learning has substantially reshaped interpretation workflows. To take stock of --- 论文 2 --- 标题: DRIFT: Drift-Resilient Invariant-Feature Transformer for DGA Detection 作者: Chaeyoung Lee, Chaeri Jung, Seonghoon Jeong 日期: 2026-05-11 分类: cs.CR, cs.LG, cs.NI ID: 2605.10436 摘要: Domain Generation Algorithms (DGAs) evolve continuously to evade botnet detection, posing a persistent challenge for dependable network defense. While deep learning-based detectors achieve strong performance under static conditions, they suffer severe degradation when facing temporal drift. Through --- 论文 3 --- 标题: Search-MIND: Training-Free Multi-Modal Medical Image Registration 作者: Boya Wang, Ruizhe Li, Chao Chen, Xin Chen 日期: 2026-04-10 分类: eess.IV, cs.CV ID: 2604.09743 摘要: Multi-modal image registration plays a critical role in precision medicine but faces challenges from non-linear intensity relationships and local optima. While deep learning models enable rapid inference, they often suffer from generalization collapse on unseen modalities. To address this, we propos --- 论文 4 --- 标题: Generating Satellite Imagery Data for Wildfire Detection through Mask-Conditioned Generative AI 作者: Valeria Martin, K. Brent Venable, Derek Morgan 日期: 2026-04-02 分类: cs.CV, cs.AI ID: 2604.02479 摘要: The scarcity of labeled satellite imagery remains a fundamental bottleneck for deep-learning (DL)-based wildfire monitoring systems. This paper investigates whether a diffusion-based foundation model for Earth Observation (EO), EarthSyn ... (内容过长，已截断)"
+          - generic [ref=e163]:
+            - generic [ref=e164] [cursor=pointer]:
+              - generic [ref=e165]: └─
+              - generic [ref=e166]: 🔧 🔧 调用 search_arxiv
+              - generic [ref=e167]: ✅ 🔽
+            - generic [ref=e168]: "arXiv 搜索完成，共找到 7 篇相关论文，显示前 7 篇： --- 论文 1 --- 标题: LEAP: Supercharging LLMs for Formal Mathematics with Agentic Frameworks 作者: Po-Nien Kung, Linfeng Song, Dawsen Hwang, Jinsung Yoon, Chun-Liang Li et al. 日期: 2026-06-02 分类: cs.AI ID: 2606.03303 摘要: Large Language Models (LLMs) exhibit strong informal mathematical reasoning but struggle to generate mechanically verifiable proofs in formal languages like Lean. We present LEAP, an agentic framework that enables general-purpose foundation models to achieve state-of-the-art performance on automated --- 论文 2 --- 标题: HybridQuestion: Human-AI Collaboration for Identifying High-Impact Research Questions 作者: Keyu Zhao, Fengli Xu, Yong Li, Tie-Yan Liu 日期: 2025-12-18 分类: cs.HC, cs.AI, cs.CL, cs.LG ID: 2602.03849 摘要: The \"AI Scientist\" paradigm is transforming scientific research by automating key stages of the research process, from idea generation to scholarly writing. This shift is expected to accelerate discovery and expand the scope of scientific inquiry. However, a key question remains unclear: can AI scie --- 论文 3 --- 标题: Large Reasoning Embedding Models: Towards Next-Generation Dense Retrieval Paradigm 作者: Jianting Tang, Dongshuai Li, Tao Wen, Fuyu Lv, Dan Ou et al. 日期: 2025-10-16 分类: cs.IR ID: 2510.14321 摘要: In modern e-commerce search systems, dense retrieval has become an indispensable component. By computing similarities between query and item (product) embeddings, it efficiently selects candidate products from large-scale repositories. With the breakthroughs in large language models (LLMs), mainstre --- 论文 4 --- 标题: The Rise of AfricaNLP: A Survey of Contributions, Contributors, Community Impact, and Bibliometric Analysis 作者: Tadesse Destaw Belay, Kedir Yassin Hussen, Sukairaj Hafiz Imam, Ibrahim Said Ahmad, Isa Inuwa-Dutse et al. 日期: 2025-09-29 分类: cs.CL ID: 2509.25477 摘要: Natural Language Processing (NLP) is undergoing constant transformation, as Large Language Models (LLMs) are driving daily breakthroughs in res ... (内容过长，已截断)"
+          - generic [ref=e169]:
+            - generic [ref=e170] [cursor=pointer]:
+              - generic [ref=e171]: └─
+              - generic [ref=e172]: 🔧 🔧 调用 search_arxiv
+              - generic [ref=e173]: ✅ 🔽
+            - generic [ref=e174]: "arXiv 搜索完成，共找到 17 篇相关论文，显示前 10 篇： --- 论文 1 --- 标题: Topical Phase Transitions in Artificial Intelligence Research: Large-Scale Evidence and an Early-Warning Signature for Emerging Topics 作者: Rasul Khanbayov, Hasan Kurban 日期: 2026-06-11 分类: cs.AI ID: 2606.12828 摘要: Do research topics in artificial intelligence grow gradually, or do they advance through abrupt, detectable jumps? Analyzing 80,814 accepted main-track papers from five premier AI conferences (ACL, CVPR, ICLR, ICML, NeurIPS) spanning 2017 to 2025, we show major AI topics advance through topical phas --- 论文 2 --- 标题: Predictive capabilities of the integrated modeling TRANSP code for tokamak plasmas 作者: A. Y. Pankin, J. Breslau, M. V. Gorelenkova, R. Budny, M. Goliyad et al. 日期: 2026-05-10 分类: physics.plasm-ph, physics.comp-ph ID: 2605.09720 摘要: This paper expands on the TRANSP description given in Computer Physics Communications 312 (2025) 109611 by describing recent progress in TRANSP's predictive functionality and emphasizing the development of the PT_SOLVER module and integration of the high-fidelity T3D/GX framework for plasma profile --- 论文 3 --- 标题: The Biosecurity Blind Spot: Systematic Dual-use Detection in Open Science Infrastructure 作者: Vasudha Sharma, Chakresh Kumar Singh, Jayesh Choudhari, Dharmit Nakrani 日期: 2026-05-10 分类: cs.DL, cs.CY, cs.LG ID: 2605.28843 摘要: AI is transforming life sciences research at unprecedented speed, accelerating discovery across protein structure prediction, genome modeling, and drug development (Jumper et al., 2021; Mak et al., 2024). Yet this rapid advancement, coupled with the open science movement, introduces significant dual --- 论文 4 --- 标题: When Pretty Isn't Useful: Investigating Why Modern Text-to-Image Models Fail as Reliable Training Data Generators 作者: Krzysztof Adamkiewicz, Brian Bernhard Moser, Stanislav Frolov, Tobias Christian Nauen, Federico Raue et al. 日期: 2026-02-23 分类: cs.CV, cs.AI ID: 2602.19946 摘要: Recent text-to-image (T2I) diffusion models pr ... (内容过长，已截断)"
+          - generic [ref=e175]:
+            - generic [ref=e176] [cursor=pointer]:
+              - generic [ref=e177]: └─
+              - generic [ref=e178]: 🔧 🔧 调用 search_arxiv
+              - generic [ref=e179]: ✅ 🔽
+            - generic [ref=e180]: "arXiv 搜索完成，共找到 1 篇相关论文，显示前 1 篇： --- 论文 1 --- 标题: Hunyuan-TurboS: Advancing Large Language Models through Mamba-Transformer Synergy and Adaptive Chain-of-Thought 作者: Tencent Hunyuan Team, Ao Liu, Botong Zhou, Can Xu, Chayse Zhou et al. 日期: 2025-05-21 分类: cs.CL ID: 2505.15431 摘要: As Large Language Models (LLMs) rapidly advance, we introduce Hunyuan-TurboS, a novel large hybrid Transformer-Mamba Mixture of Experts (MoE) model. It synergistically combines Mamba's long-sequence processing efficiency with Transformer's superior contextual understanding. Hunyuan-TurboS features a"
+          - generic [ref=e181]:
+            - generic [ref=e182] [cursor=pointer]:
+              - generic [ref=e183]: └─
+              - generic [ref=e184]: 🔧 🔧 调用 search_arxiv
+              - generic [ref=e185]: ✅ 🔽
+            - generic [ref=e186]: "arXiv 搜索完成，共找到 42 篇相关论文，显示前 10 篇： --- 论文 1 --- 标题: Exploration Structure in LLM Agents for Multi-File Change Localization 作者: Akeela Darryl Fattha, Kia Ying Chua, Lingxiao Jiang, Laura Wynter 日期: 2026-06-10 分类: cs.SE, cs.AI ID: 2606.11976 摘要: Software engineering tools increasingly rely on LLM based agents to localize files to change to resolve a software issue. Most AI agents explore repositories linearly, that is, visiting one directory or file per step. We postulate that this is a structural mismatch for changes that span several subs --- 论文 2 --- 标题: MINDGAMES: A Live Arena for Evaluating Social and Strategic Reasoning in Multi-Agent LLMs 作者: Kevin Wang, Anna Thöni, Benjamin Kempinski, Bobby Cheng, Jianzhu Yao et al. 日期: 2026-05-28 分类: cs.AI ID: 2605.29512 摘要: Large language models (LLMs) are increasingly deployed as interactive agents, yet their capacity for social and strategic reasoning over extended interaction remains poorly understood. Existing evaluations rely on static vignettes or single-game benchmarks that cannot capture the sustained, multi-fa --- 论文 3 --- 标题: STAR-PólyaMath: Multi-Agent Reasoning under Persistent Meta-Strategic Supervision 作者: Jiaao Wu, Xian Zhang, Hanzhang Liu, Sophia Zhang, Fan Yang et al. 日期: 2026-05-19 分类: cs.MA, cs.AI, cs.CL ID: 2605.19338 摘要: Frontier AI models and multi-agent systems have led to significant improvements in mathematical reasoning. However, for problems requiring extended, long-horizon reasoning, existing systems continue to suffer from fundamental reliability issues: hallucination accumulation, memory fragmentation, and --- 论文 4 --- 标题: SoK: A Systematic Bidirectional Literature Review of AI & DLT Convergence 作者: Ali Irzam Kathia, Yimika Erinle, Abylay Satybaldy, Paolo Tasca, Nikhil Vadgama et al. 日期: 2026-05-11 分类: cs.CR, cs.AI, cs.DC ID: 2605.10515 摘要: The integration of Artificial Intelligence (AI) with Distributed Ledger Technology (DLT) has become a growing research area, yet contributions tend to cl ... (内容过长，已截断)"
+        - generic [ref=e323]:
+          - generic [ref=e324]: 📋
+          - generic [ref=e325]: 📋 综合输出
+          - generic [ref=e326]: ✅ 完成
+    - generic [ref=e18]:
+      - generic [ref=e157]: 搜索深度学习最新进展
+      - generic [ref=e329]:
+        - heading "深度学习最新进展调研报告（2025-2026）" [level=1] [ref=e330]
+        - heading "一、领域简介" [level=2] [ref=e331]
+        - paragraph [ref=e332]:
+          - text: 深度学习在2025-2026年进入了一个
+          - strong [ref=e333]: 范式融合与系统化跃迁
+          - text: 的关键阶段。从搜索到的论文可见，该领域不再仅仅追求单一模型架构的突破，而是呈现出三大显著趋势：（1）
+          - strong [ref=e334]: 基础模型架构的混合化
+          - text: （如Transformer与Mamba的融合），（2）
+          - strong [ref=e335]: 从"模型能力"向"系统能力"的转向
+          - text: （多智能体协作、智能体框架），（3）
+          - strong [ref=e336]: 从"通用能力"向"领域深度渗透"的深化
+          - text: （医疗、EDA、数学证明等垂直领域）。以下从核心方法分类角度进行系统梳理。
+        - separator [ref=e337]
+        - heading "二、核心方法分类与详细分析" [level=2] [ref=e338]
+        - heading "方法一：混合架构基础模型" [level=3] [ref=e339]
+        - paragraph [ref=e340]:
+          - strong [ref=e341]: 代表论文：
+        - list [ref=e342]:
+          - listitem [ref=e343]:
+            - strong [ref=e344]: Hunyuan-TurboS
+            - text: （Tencent Hunyuan Team, 2025）——提出了Transformer-Mamba混合MoE模型，将Mamba的长序列处理效率与Transformer的上下文理解能力结合，并引入自适应思维链（Adaptive Chain-of-Thought）。
+          - listitem [ref=e345]:
+            - strong [ref=e346]: Large Reasoning Embedding Models
+            - text: （Tang et al., 2025）——将LLM的推理能力注入稠密检索的嵌入空间，形成下一代检索范式。
+        - paragraph [ref=e347]:
+          - strong [ref=e348]: 核心创新点：
+        - list [ref=e349]:
+          - listitem [ref=e350]: 不再依赖纯Transformer架构，而是将状态空间模型（SSM，如Mamba）与注意力机制混合，在保持长程依赖建模能力的同时大幅降低推理开销。
+          - listitem [ref=e351]: 将推理能力从"生成阶段"前移至"表示阶段"，让嵌入向量本身具备推理属性。
+        - paragraph [ref=e352]:
+          - strong [ref=e353]: ✅ 优点：
+        - list [ref=e354]:
+          - listitem [ref=e355]: 混合架构可针对不同任务动态分配计算资源，效率显著优于纯Transformer
+          - listitem [ref=e356]: 推理嵌入模型在搜索、推荐等工业场景中实现了检索精度的阶跃提升
+        - paragraph [ref=e357]:
+          - strong [ref=e358]: ⚠️ 局限性：
+        - list [ref=e359]:
+          - listitem [ref=e360]: 混合架构的训练稳定性仍需验证，Mamba与Transformer的协同机制缺乏理论解释
+          - listitem [ref=e361]: 推理嵌入模型在跨领域迁移时性能衰减明显，泛化能力不足
+        - separator [ref=e362]
+        - heading "方法二：多智能体系统与AI Agent框架" [level=3] [ref=e363]
+        - paragraph [ref=e364]:
+          - strong [ref=e365]: 代表论文：
+        - list [ref=e366]:
+          - listitem [ref=e367]:
+            - strong [ref=e368]: LEAP
+            - text: （Kung et al., 2026）——Agentic框架使通用基础模型在形式化数学证明（Lean语言）上达到SOTA
+          - listitem [ref=e369]:
+            - strong [ref=e370]: STAR-PólyaMath
+            - text: （Wu et al., 2026）——多智能体在元策略监督下的长程数学推理
+          - listitem [ref=e371]:
+            - strong [ref=e372]: MINDGAMES
+            - text: （Wang et al., 2026）——实时竞技场评估多智能体的社会性与策略推理
+          - listitem [ref=e373]:
+            - strong [ref=e374]: Evolving Idea Graphs
+            - text: （Dong et al., 2026）——基于图结构的可学习编辑-提交机制，用于多智能体科学创意生成
+          - listitem [ref=e375]:
+            - strong [ref=e376]: MEMTIER
+            - text: （Sidik & Rokach, 2026）——三层记忆架构解决长时运行AI Agent的记忆崩溃问题
+        - paragraph [ref=e377]:
+          - strong [ref=e378]: 核心创新点：
+        - list [ref=e379]:
+          - listitem [ref=e380]: Agent从单智能体工具调用转向多智能体协作推理，引入记忆分层、元策略监督、图结构演化等机制
+          - listitem [ref=e381]: 解决长程任务中的"幻觉累积"和"记忆碎片化"两大核心痛点
+        - paragraph [ref=e382]:
+          - strong [ref=e383]: ✅ 优点：
+        - list [ref=e384]:
+          - listitem [ref=e385]: 在数学证明、代码修改、科学发现等需要多步推理的任务上表现突出
+          - listitem [ref=e386]: 分层记忆架构使72小时连续运行的Agent工具执行成功率提升14个百分点
+        - paragraph [ref=e387]:
+          - strong [ref=e388]: ⚠️ 局限性：
+        - list [ref=e389]:
+          - listitem [ref=e390]: 多智能体协调成本高，通信效率与推理质量之间存在trade-off
+          - listitem [ref=e391]: 当前评估标准（如MINDGAMES中的竞技场）仍缺乏生态效度，难以映射真实场景
+        - separator [ref=e392]
+        - heading "方法三：扩散模型与生成式AI的边界探索" [level=3] [ref=e393]
+        - paragraph [ref=e394]:
+          - strong [ref=e395]: 代表论文：
+        - list [ref=e396]:
+          - listitem [ref=e397]:
+            - strong [ref=e398]: When Pretty Isn't Useful
+            - text: （Adamkiewicz et al., 2026）——揭示现代文生图扩散模型作为训练数据生成器时的根本性失败
+          - listitem [ref=e399]:
+            - strong [ref=e400]: When Test-Time Guidance Is Enough
+            - text: （Ghorbel et al., 2026）——在测试时通过扩散引导实现快速图像/视频编辑
+          - listitem [ref=e401]:
+            - strong [ref=e402]: UrbanDIFF
+            - text: （Chavoshi et al., 2026）——扩散模型用于城市地表温度的空间填补
+          - listitem [ref=e403]:
+            - strong [ref=e404]: EarthSynth
+            - text: （Martin et al., 2026）——基于扩散的基础模型合成卫星图像用于野火检测
+        - paragraph [ref=e405]:
+          - strong [ref=e406]: 核心创新点：
+        - list [ref=e407]:
+          - listitem [ref=e408]: 扩散模型从"生成漂亮图片"转向"生成有用数据"，但发现视觉质量与数据效用之间存在根本性矛盾
+          - listitem [ref=e409]: 测试时引导（test-time guidance）成为无需重新训练即可实现编辑控制的新范式
+        - paragraph [ref=e410]:
+          - strong [ref=e411]: ✅ 优点：
+        - list [ref=e412]:
+          - listitem [ref=e413]: 在特定领域（地理空间、医学影像）中，扩散模型可有效解决标注数据稀缺问题
+          - listitem [ref=e414]: 测试时引导方法实现了零样本编辑，大幅降低应用门槛
+        - paragraph [ref=e415]:
+          - strong [ref=e416]: ⚠️ 局限性：
+        - list [ref=e417]:
+          - listitem [ref=e418]:
+            - text: ❗
+            - strong [ref=e419]: 关键发现
+            - text: ：视觉上最优的生成图像反而最不适合作为训练数据——漂亮≠有用，这对合成数据策略提出了严峻挑战
+          - listitem [ref=e420]: 扩散模型在细粒度结构保持（如文字、人脸身份）方面仍存在系统性缺陷
+        - separator [ref=e421]
+        - heading "方法四：大语言模型（LLM）的推理扩展与评估反思" [level=3] [ref=e422]
+        - paragraph [ref=e423]:
+          - strong [ref=e424]: 代表论文：
+        - list [ref=e425]:
+          - listitem [ref=e426]:
+            - strong [ref=e427]: Reasoning Beyond Limits
+            - text: （Ferrag et al., 2025）——系统梳理LLM推理的推理时缩放、强化学习等技术
+          - listitem [ref=e428]:
+            - strong [ref=e429]: Is There "Secret Sauce" in LLM Development？
+            - text: （Mertens et al., 2026）——对809个模型进行规模定律回归，发现开发者固定效应可解释大部分性能差异
+          - listitem [ref=e430]:
+            - strong [ref=e431]: The Consensus Trap
+            - text: （Munir et al., 2026）——质疑"真实标注"的客观性，揭示标注者主观性带来的系统性偏差
+          - listitem [ref=e432]:
+            - strong [ref=e433]: HybridQuestion
+            - text: （Zhao et al., 2025）——人-AI协作识别高影响力研究问题
+        - paragraph [ref=e434]:
+          - strong [ref=e435]: 核心创新点：
+        - list [ref=e436]:
+          - listitem [ref=e437]: 推理时缩放（inference-time scaling）成为与训练时缩放同等重要的能力提升手段
+          - listitem [ref=e438]: 对"规模定律"的实证检验揭示了开发者特定知识（secret sauce）的重要性被高估，计算量才是主导因素
+          - listitem [ref=e439]: 对"ground truth"假设的批判性反思开始影响评估方法论
+        - paragraph [ref=e440]:
+          - strong [ref=e441]: ✅ 优点：
+        - list [ref=e442]:
+          - listitem [ref=e443]: 推理时缩放使小模型在特定任务上可匹敌大模型，降低了部署成本
+          - listitem [ref=e444]: 对规模定律的再分析为资源分配提供了更科学的依据
+        - paragraph [ref=e445]:
+          - strong [ref=e446]: ⚠️ 局限性：
+        - list [ref=e447]:
+          - listitem [ref=e448]: 推理能力的可解释性仍然不足，链式推理的"黑箱"性质未改变
+          - listitem [ref=e449]: 标注共识陷阱可能导致模型评估的虚假置信度，需引入更丰富的评估框架
+        - separator [ref=e450]
+        - heading "方法五：深度学习在垂直领域的深度渗透" [level=3] [ref=e451]
+        - paragraph [ref=e452]:
+          - strong [ref=e453]: 代表论文：
+        - list [ref=e454]:
+          - listitem [ref=e455]:
+            - strong [ref=e456]: A Survey of Multimodal Ophthalmic Diagnostics
+            - text: （Luo et al., 2025）——多模态眼科诊断基础模型综述
+          - listitem [ref=e457]:
+            - strong [ref=e458]: Revolution or Hype？
+            - text: （Xu et al., 2025）——评估LLM/LCM在EDA领域的真实能力边界
+          - listitem [ref=e459]:
+            - strong [ref=e460]: Search-MIND
+            - text: （Wang et al., 2026）——无需训练的多模态医学图像配准
+          - listitem [ref=e461]:
+            - strong [ref=e462]: The Biosecurity Blind Spot
+            - text: （Sharma et al., 2026）——AI在生命科学中的双重用途检测
+        - paragraph [ref=e463]:
+          - strong [ref=e464]: 核心创新点：
+        - list [ref=e465]:
+          - listitem [ref=e466]: 基础模型从"通用"向"领域专用"下沉，形成领域基础模型（Domain Foundation Models）
+          - listitem [ref=e467]: 零样本/少样本泛化能力开始在实际场景中验证，但存在"通用vs专用"的根本张力
+        - paragraph [ref=e468]:
+          - strong [ref=e469]: ✅ 优点：
+        - list [ref=e470]:
+          - listitem [ref=e471]: 在医疗、EDA、地球科学等领域展现了实际应用价值
+          - listitem [ref=e472]: 无需训练的多模态配准方法解决了传统方法对未见模态的泛化失败问题
+        - paragraph [ref=e473]:
+          - strong [ref=e474]: ⚠️ 局限性：
+        - list [ref=e475]:
+          - listitem [ref=e476]: EDA领域的实证表明：LLM在硬件设计中的实际效用被严重高估，存在"革命还是炒作"的争议
+          - listitem [ref=e477]: 生物安全双重用途检测暴露了开放科学基础设施中的监管盲区
+        - separator [ref=e478]
+        - heading "三、争议点与资料不足区域" [level=2] [ref=e479]
+        - heading "⚠️ 争议点" [level=3] [ref=e480]
+        - table [ref=e481]:
+          - rowgroup [ref=e482]:
+            - row "争议主题 正方观点 反方观点 代表论文" [ref=e483]:
+              - columnheader "争议主题" [ref=e484]
+              - columnheader "正方观点" [ref=e485]
+              - columnheader "反方观点" [ref=e486]
+              - columnheader "代表论文" [ref=e487]
+          - rowgroup [ref=e488]:
+            - row "合成数据有效性 扩散模型可生成高质量训练数据 视觉最优的图像反而不适合训练 Adamkiewicz et al. vs. Martin et al." [ref=e489]:
+              - cell "合成数据有效性" [ref=e490]
+              - cell "扩散模型可生成高质量训练数据" [ref=e491]
+              - cell "视觉最优的图像反而不适合训练" [ref=e492]
+              - cell "Adamkiewicz et al. vs. Martin et al." [ref=e493]
+            - row "LLM在EDA中的价值 将彻底改变芯片设计 实际效用被严重高估 Xu et al. 内部讨论" [ref=e494]:
+              - cell "LLM在EDA中的价值" [ref=e495]
+              - cell "将彻底改变芯片设计" [ref=e496]
+              - cell "实际效用被严重高估" [ref=e497]
+              - cell "Xu et al. 内部讨论" [ref=e498]
+            - row "规模定律主导性 计算量决定一切 开发者有\"秘方\" Mertens et al. 的实证结果" [ref=e499]:
+              - cell "规模定律主导性" [ref=e500]
+              - cell "计算量决定一切" [ref=e501]
+              - cell "开发者有\"秘方\"" [ref=e502]
+              - cell "Mertens et al. 的实证结果" [ref=e503]
+        - heading "❓ 资料不足区域" [level=3] [ref=e504]
+        - list [ref=e505]:
+          - listitem [ref=e506]: 混合架构模型（如Mamba-Transformer）在大规模多模态场景下的系统评估
+          - listitem [ref=e507]: 多智能体系统的安全性与对齐问题——目前主要关注能力评估，安全性研究极少
+          - listitem [ref=e508]: 推理嵌入模型在非英语语言环境下的表现
+          - listitem [ref=e509]: 深度学习模型的长期（>1年）持续学习与灾难性遗忘的解决方案
+        - separator [ref=e510]
+        - heading "四、未来方向" [level=2] [ref=e511]
+        - list [ref=e512]:
+          - listitem [ref=e513]:
+            - paragraph [ref=e514]:
+              - strong [ref=e515]: 架构融合的深化
+              - text: ：Transformer-Mamba混合只是开始，更多SSM与注意力机制的变体组合将出现，并可能催生新的"后Transformer"范式。
+          - listitem [ref=e516]:
+            - paragraph [ref=e517]:
+              - strong [ref=e518]: Agent系统的工程化
+              - text: ：从实验原型到企业级部署（如MEMTIER和Governance by Design所示），记忆管理、工具编排、治理架构将成为核心工程挑战。
+          - listitem [ref=e519]:
+            - paragraph [ref=e520]:
+              - strong [ref=e521]: 合成数据的质量革命
+              - text: ：扩散模型需要从"生成漂亮图像"转向"生成有用数据"，这可能催生新的生成-评估闭环框架。
+          - listitem [ref=e522]:
+            - paragraph [ref=e523]:
+              - strong [ref=e524]: 评估范式的重构
+              - text: ：对"ground truth"假设的批判（The Consensus Trap）将推动更丰富的评估方法论，包括人机协作评估和情境化评估。
+          - listitem [ref=e525]:
+            - paragraph [ref=e526]:
+              - strong [ref=e527]: 负责任AI的深化
+              - text: ：生物安全双重用途检测、标注偏见治理、长时运行Agent的可靠性保障将成为研究热点。
+          - listitem [ref=e528]:
+            - paragraph [ref=e529]:
+              - strong [ref=e530]: 科学发现的AI化
+              - text: ：数学证明（LEAP）、科学创意生成（Evolving Idea Graphs）、研究问题识别（HybridQuestion）表明，AI正在从"工具"向"合作者"转变。
+        - separator [ref=e531]
+        - heading "五、总结" [level=2] [ref=e532]
+        - paragraph [ref=e533]:
+          - text: 2025-2026年的深度学习进展呈现出**从"模型竞赛"到"系统工程"**的范式转向。混合架构、多智能体系统、推理时缩放等技术正在重塑能力边界，而合成数据有效性、评估方法论、安全性等关键问题也引发了深刻反思。这一阶段的显著特征是：
+          - strong [ref=e534]: 能力提升与质疑反思同步加速
+          - text: ——每一次突破都伴随着对其边界和风险的更深入理解。
+    - generic [ref=e22]:
+      - generic [ref=e23]:
+        - button "🤖 自动" [ref=e24] [cursor=pointer]
+        - button "💬 对话" [ref=e25] [cursor=pointer]
+        - button "🔍 调研" [ref=e26] [cursor=pointer]
+        - button "💡 创新" [ref=e27] [cursor=pointer]
+        - button "🧪 实验" [ref=e28] [cursor=pointer]
+      - generic [ref=e29]:
+        - textbox "输入消息... (支持 Markdown 和 LaTeX)" [ref=e30]
+        - combobox "切换模型" [ref=e31] [cursor=pointer]:
+          - option "DeepSeek V4 Flash" [selected]
+          - option "V4 Pro"
+          - option "思考模式"
+        - button "发送" [ref=e32] [cursor=pointer]

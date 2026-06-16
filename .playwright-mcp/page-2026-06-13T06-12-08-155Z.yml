@@ -1,0 +1,14 @@
+- iframe [ref=e86]:
+  - generic [ref=f10e2]:
+    - generic [ref=f10e3]: "Uncaught runtime errors:"
+    - button "Dismiss" [ref=f10e4] [cursor=pointer]: ×
+    - generic [ref=f10e5]:
+      - generic [ref=f10e6]:
+        - generic [ref=f10e7]: ERROR
+        - generic [ref=f10e8]: "pipelineCollapsed is not defined ReferenceError: pipelineCollapsed is not defined at App (http://localhost:3001/static/js/bundle.js:822:25) at renderWithHooks (http://localhost:3001/static/js/bundle.js:18526:22) at updateFunctionComponent (http://localhost:3001/static/js/bundle.js:22094:24) at beginWork (http://localhost:3001/static/js/bundle.js:23813:20) at HTMLUnknownElement.callCallback (http://localhost:3001/static/js/bundle.js:8782:18) at Object.invokeGuardedCallbackDev (http://localhost:3001/static/js/bundle.js:8826:20) at invokeGuardedCallback (http://localhost:3001/static/js/bundle.js:8883:35) at beginWork$1 (http://localhost:3001/static/js/bundle.js:28782:11) at performUnitOfWork (http://localhost:3001/static/js/bundle.js:28030:16) at workLoopSync (http://localhost:3001/static/js/bundle.js:27953:9)"
+      - generic [ref=f10e9]:
+        - generic [ref=f10e10]: ERROR
+        - generic [ref=f10e11]: "pipelineCollapsed is not defined ReferenceError: pipelineCollapsed is not defined at App (http://localhost:3001/static/js/bundle.js:822:25) at renderWithHooks (http://localhost:3001/static/js/bundle.js:18526:22) at updateFunctionComponent (http://localhost:3001/static/js/bundle.js:22094:24) at beginWork (http://localhost:3001/static/js/bundle.js:23813:20) at HTMLUnknownElement.callCallback (http://localhost:3001/static/js/bundle.js:8782:18) at Object.invokeGuardedCallbackDev (http://localhost:3001/static/js/bundle.js:8826:20) at invokeGuardedCallback (http://localhost:3001/static/js/bundle.js:8883:35) at beginWork$1 (http://localhost:3001/static/js/bundle.js:28782:11) at performUnitOfWork (http://localhost:3001/static/js/bundle.js:28030:16) at workLoopSync (http://localhost:3001/static/js/bundle.js:27953:9)"
+      - generic [ref=f10e12]:
+        - generic [ref=f10e13]: ERROR
+        - generic [ref=f10e14]: "pipelineCollapsed is not defined ReferenceError: pipelineCollapsed is not defined at App (http://localhost:3001/static/js/bundle.js:822:25) at renderWithHooks (http://localhost:3001/static/js/bundle.js:18526:22) at updateFunctionComponent (http://localhost:3001/static/js/bundle.js:22094:24) at beginWork (http://localhost:3001/static/js/bundle.js:23813:20) at beginWork$1 (http://localhost:3001/static/js/bundle.js:28760:18) at performUnitOfWork (http://localhost:3001/static/js/bundle.js:28030:16) at workLoopSync (http://localhost:3001/static/js/bundle.js:27953:9) at renderRootSync (http://localhost:3001/static/js/bundle.js:27926:11) at recoverFromConcurrentError (http://localhost:3001/static/js/bundle.js:27418:24) at performConcurrentWorkOnRoot (http://localhost:3001/static/js/bundle.js:27331:26)"

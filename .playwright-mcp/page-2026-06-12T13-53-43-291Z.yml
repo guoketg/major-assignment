@@ -1,0 +1,291 @@
+- generic [ref=e3]:
+  - generic [ref=e4]:
+    - generic [ref=e5]:
+      - heading "对话历史" [level=2] [ref=e6]
+      - button "+ 新对话" [ref=e7] [cursor=pointer]
+    - generic [ref=e8]:
+      - generic [ref=e407] [cursor=pointer]:
+        - generic [ref=e408]:
+          - generic [ref=e409]: 帮我调研一下CLIP模型的最新进展
+          - generic [ref=e410]: 2 条消息
+        - button "×" [ref=e411]
+      - generic [ref=e32] [cursor=pointer]:
+        - generic [ref=e33]:
+          - generic [ref=e34]: 帮我调研CLIP模型的最新进展
+          - generic [ref=e35]: 2 条消息
+        - button "×" [ref=e36]
+      - generic [ref=e37] [cursor=pointer]:
+        - generic [ref=e38]:
+          - generic [ref=e39]: 帮我调研CLIP模型的最新进展
+          - generic [ref=e40]: 2 条消息
+        - button "×" [ref=e41]
+      - generic [ref=e42] [cursor=pointer]:
+        - generic [ref=e43]:
+          - generic [ref=e44]: 你好
+          - generic [ref=e45]: 4 条消息
+        - button "×" [ref=e46]
+      - generic [ref=e47] [cursor=pointer]:
+        - generic [ref=e48]:
+          - generic [ref=e49]: 帮我调研CLIP噪声标签学习的最新进展
+          - generic [ref=e50]: 2 条消息
+        - button "×" [ref=e51]
+      - generic [ref=e52] [cursor=pointer]:
+        - generic [ref=e53]:
+          - generic [ref=e54]: 帮我调研一下CLIP噪声标签学习的最新进展
+          - generic [ref=e55]: 4 条消息
+        - button "×" [ref=e56]
+      - generic [ref=e57] [cursor=pointer]:
+        - generic [ref=e58]:
+          - generic [ref=e59]: 帮我调研一下CLIP噪声标签学习的最新进展
+          - generic [ref=e60]: 2 条消息
+        - button "×" [ref=e61]
+      - generic [ref=e62] [cursor=pointer]:
+        - generic [ref=e63]:
+          - generic [ref=e64]: 你好
+          - generic [ref=e65]: 2 条消息
+        - button "×" [ref=e66]
+  - generic [ref=e10]:
+    - generic [ref=e11]:
+      - generic [ref=e13]:
+        - button "💬 对话" [ref=e14] [cursor=pointer]
+        - button "📄 论文搜索" [ref=e15] [cursor=pointer]
+        - button "🧠 记忆" [ref=e16] [cursor=pointer]
+      - button "清空对话" [ref=e68] [cursor=pointer]
+    - generic [ref=e17]:
+      - generic [ref=e335]: 帮我调研一下CLIP模型的最新进展
+      - generic [ref=e337] [cursor=pointer]:
+        - generic [ref=e338]: 🤖 Agent 流水线
+        - generic [ref=e339]: 展开 ▼
+      - generic [ref=e414]:
+        - heading "CLIP模型最新进展调研报告" [level=1] [ref=e415]
+        - heading "一、领域简介" [level=2] [ref=e416]
+        - paragraph [ref=e417]:
+          - text: CLIP（Contrastive Language-Image Pre-training）由OpenAI于2021年提出，通过对比学习在4亿图文对上训练双塔架构，实现了强大的零样本迁移能力。近年来，CLIP已成为视觉-语言模型（VLM）领域的基石，衍生出大量改进工作。本报告基于最新文献，从
+          - strong [ref=e418]: 训练方法改进、数据质量优化、下游任务适配、可解释性
+          - text: 四个维度进行系统分析。
+        - heading "二、核心方法分类与最新进展" [level=2] [ref=e419]
+        - heading "1. 训练范式与对比损失改进" [level=3] [ref=e420]
+        - paragraph [ref=e421]:
+          - strong [ref=e422]: （1）SigLIP 系列（Google DeepMind, 2024）
+        - list [ref=e423]:
+          - listitem [ref=e424]:
+            - strong [ref=e425]: 核心创新
+            - text: ：使用Sigmoid损失替代标准CLIP的Softmax对比损失
+          - listitem [ref=e426]:
+            - strong [ref=e427]: 优势
+            - text: ：无需全局负样本对比，支持更大的batch size和更灵活的训练
+          - listitem [ref=e428]:
+            - strong [ref=e429]: 证据等级
+            - text: ：✅ 多个独立团队验证了其有效性
+        - paragraph [ref=e430]:
+          - strong [ref=e431]: （2）OpenCLIP 生态（LAION社区）
+        - list [ref=e432]:
+          - listitem [ref=e433]:
+            - strong [ref=e434]: 贡献
+            - text: ：开源复现CLIP训练流程，发布ViT-L/14、ViT-H/14等大规模模型
+          - listitem [ref=e435]:
+            - strong [ref=e436]: 关键发现
+            - text: ：训练数据规模、模型容量、训练时长三者存在明确的正相关关系
+        - heading "2. 训练数据质量与过滤策略" [level=3] [ref=e437]
+        - paragraph [ref=e438]:
+          - strong [ref=e439]: （1）DanQing 数据集（Shen et al., 2026, arXiv:2601.10305）
+        - list [ref=e440]:
+          - listitem [ref=e441]:
+            - strong [ref=e442]: 核心创新
+            - text: ：构建大规模高质量中文图文预训练数据集
+          - listitem [ref=e443]:
+            - strong [ref=e444]: 方法要点
+            - text: ：
+            - list [ref=e445]:
+              - listitem [ref=e446]: 对原始网络爬取数据进行多轮质量过滤（文本清晰度、图文相关性、文化适应性）
+              - listitem [ref=e447]: 包含1000万对高质量中文图文数据
+          - listitem [ref=e448]:
+            - strong [ref=e449]: 重要性
+            - text: ：解决了中文VLP缺少高质量数据集的瓶颈问题
+          - listitem [ref=e450]:
+            - strong [ref=e451]: 局限性
+            - text: ：数据规模仍远小于英文LAION-400M
+        - paragraph [ref=e452]:
+          - strong [ref=e453]: （2）数据清洗方法论
+          - text: （多篇论文共识）
+        - list [ref=e454]:
+          - listitem [ref=e455]: ✅ 已证实：低质量图文对（如纯文字图片、模糊图片）会显著降低CLIP下游性能
+          - listitem [ref=e456]: ✅ 已证实：基于CLIP Score的过滤策略比简单的URL过滤更有效
+        - heading "3. 下游任务适配与微调方法" [level=3] [ref=e457]
+        - paragraph [ref=e458]:
+          - strong [ref=e459]: （1）开放词汇分割（OVS）系列
+        - paragraph [ref=e460]:
+          - strong [ref=e461]: BRepCLIP（Usama et al., 2026, arXiv:2606.05515）
+        - list [ref=e462]:
+          - listitem [ref=e463]:
+            - strong [ref=e464]: 核心创新
+            - text: ：将CLIP对比学习范式引入CAD边界表示（BRep）
+          - listitem [ref=e465]:
+            - strong [ref=e466]: 方法
+            - text: ：在多模态BRep原始几何特征上训练对比学习模型
+          - listitem [ref=e467]:
+            - strong [ref=e468]: 应用场景
+            - text: ：CAD模型检索与理解
+        - paragraph [ref=e469]:
+          - strong [ref=e470]: 开放词汇全景分割（Kormushev et al., 2026, arXiv:2603.21386）
+        - list [ref=e471]:
+          - listitem [ref=e472]:
+            - strong [ref=e473]: 核心创新
+            - text: ：解决CLIP在分割任务中的两个瓶颈：
+            - list [ref=e474]:
+              - listitem [ref=e475]: 物体性偏差（Objectness Bias）：掩膜选择偏向训练集见过的类别
+              - listitem [ref=e476]: 区域-文本对齐不足
+          - listitem [ref=e477]:
+            - strong [ref=e478]: 方法
+            - text: ：提出专门的对齐策略和掩膜校正机制
+        - paragraph [ref=e479]:
+          - strong [ref=e480]: 检索增强开放词汇分割（Sadeq et al., 2026, arXiv:2601.12779）
+        - list [ref=e481]:
+          - listitem [ref=e482]:
+            - strong [ref=e483]: 核心创新
+            - text: ：引入外部知识检索增强CLIP的分割能力
+          - listitem [ref=e484]:
+            - strong [ref=e485]: 优势
+            - text: ：不需要重新训练CLIP编码器，即插即用
+        - paragraph [ref=e486]:
+          - strong [ref=e487]: （2）选择性预测与不确定性估计
+        - paragraph [ref=e488]:
+          - strong [ref=e489]: 记忆增强选择性预测（Sarkar et al., 2026, arXiv:2601.22570）
+        - list [ref=e490]:
+          - listitem [ref=e491]:
+            - strong [ref=e492]: 核心创新
+            - text: ：赋予CLIP"拒绝回答"的能力
+          - listitem [ref=e493]:
+            - strong [ref=e494]: 方法
+            - text: ：记忆增强的可插拔选择性预测模块
+          - listitem [ref=e495]:
+            - strong [ref=e496]: 重要性
+            - text: ：解决了CLIP在低置信度场景下的不可靠预测问题
+        - paragraph [ref=e497]:
+          - strong [ref=e498]: 概率嵌入不确定性估计（Lin et al., 2025, arXiv:2511.22019）
+        - list [ref=e499]:
+          - listitem [ref=e500]:
+            - strong [ref=e501]: 核心创新
+            - text: ：提出类内概率嵌入（Intra-Class Probabilistic Embeddings）
+          - listitem [ref=e502]:
+            - strong [ref=e503]: 优势
+            - text: ：同时保持CLIP的零样本能力，又能估计预测不确定性
+          - listitem [ref=e504]:
+            - strong [ref=e505]: 局限性
+            - text: ：计算复杂度略有增加
+        - heading "4. 可解释性与概念理解" [level=3] [ref=e506]
+        - paragraph [ref=e507]:
+          - strong [ref=e508]: Explaining CLIP Zero-shot Predictions Through Concepts（Ozdemir et al., 2026, arXiv:2603.28211）
+        - list [ref=e509]:
+          - listitem [ref=e510]:
+            - strong [ref=e511]: 核心创新
+            - text: ：将概念瓶颈模型（CBM）引入CLIP解释
+          - listitem [ref=e512]:
+            - strong [ref=e513]: 方法
+            - text: ：
+            - list [ref=e514]:
+              - listitem [ref=e515]: 在CLIP嵌入空间中定义人类可理解的概念
+              - listitem [ref=e516]: 通过概念推理路径解释零样本预测
+          - listitem [ref=e517]:
+            - strong [ref=e518]: 重要性
+            - text: ：首次系统性地打开了CLIP零样本预测的黑箱
+          - listitem [ref=e519]:
+            - strong [ref=e520]: 局限性
+            - text: ：概念集的构建需要一定的人工干预
+        - heading "5. 模型压缩与知识蒸馏" [level=3] [ref=e521]
+        - paragraph [ref=e522]: 基于搜索到的文献，该方向目前公开研究较少，属于**❓ 资料不足**的状态。但从SigLIP等工作的趋势来看，模型小型化和高效推理是未来重要方向。
+        - heading "三、各方法优缺点对比" [level=2] [ref=e523]
+        - table [ref=e524]:
+          - rowgroup [ref=e525]:
+            - row "方法类别 代表工作 优点 缺点" [ref=e526]:
+              - columnheader "方法类别" [ref=e527]
+              - columnheader "代表工作" [ref=e528]
+              - columnheader "优点" [ref=e529]
+              - columnheader "缺点" [ref=e530]
+          - rowgroup [ref=e531]:
+            - row "对比损失改进 SigLIP 训练更灵活，batch size可更大 收敛性需要更多验证" [ref=e532]:
+              - cell "对比损失改进" [ref=e533]
+              - cell "SigLIP" [ref=e534]
+              - cell "训练更灵活，batch size可更大" [ref=e535]
+              - cell "收敛性需要更多验证" [ref=e536]
+            - row "数据质量提升 DanQing 填补中文数据空白 规模仍有限" [ref=e537]:
+              - cell "数据质量提升" [ref=e538]
+              - cell "DanQing" [ref=e539]
+              - cell "填补中文数据空白" [ref=e540]
+              - cell "规模仍有限" [ref=e541]
+            - row "开放词汇分割 多篇OVS论文 显著扩展CLIP应用场景 推理速度慢，计算量大" [ref=e542]:
+              - cell "开放词汇分割" [ref=e543]
+              - cell "多篇OVS论文" [ref=e544]
+              - cell "显著扩展CLIP应用场景" [ref=e545]
+              - cell "推理速度慢，计算量大" [ref=e546]
+            - row "不确定性估计 Lin et al. 提升模型可靠性 增加计算开销" [ref=e547]:
+              - cell "不确定性估计" [ref=e548]
+              - cell "Lin et al." [ref=e549]
+              - cell "提升模型可靠性" [ref=e550]
+              - cell "增加计算开销" [ref=e551]
+            - row "可解释性 Ozdemir et al. 打开黑箱，提升可信度 概念构建依赖人工" [ref=e552]:
+              - cell "可解释性" [ref=e553]
+              - cell "Ozdemir et al." [ref=e554]
+              - cell "打开黑箱，提升可信度" [ref=e555]
+              - cell "概念构建依赖人工" [ref=e556]
+            - row "选择性预测 Sarkar et al. 安全关键场景有价值 拒绝策略仍需优化" [ref=e557]:
+              - cell "选择性预测" [ref=e558]
+              - cell "Sarkar et al." [ref=e559]
+              - cell "安全关键场景有价值" [ref=e560]
+              - cell "拒绝策略仍需优化" [ref=e561]
+        - heading "四、未来方向与开放问题" [level=2] [ref=e562]
+        - list [ref=e563]:
+          - listitem [ref=e564]:
+            - paragraph [ref=e565]:
+              - strong [ref=e566]: 训练效率优化
+              - text: ：如何在不损失性能的前提下，进一步降低CLIP的训练成本（数据量、算力）
+          - listitem [ref=e567]:
+            - paragraph [ref=e568]:
+              - strong [ref=e569]: 多语言与跨文化适配
+              - text: ：DanQing开启了中文CLIP的探索，但更多语言（小语种、低资源语言）的适配仍是开放问题
+          - listitem [ref=e570]:
+            - paragraph [ref=e571]:
+              - strong [ref=e572]: 动态推理与自适应
+              - text: ：选择性预测和不确定性估计为动态推理提供了基础，如何实现"简单样本快速推理、困难样本深度思考"的智能调度
+          - listitem [ref=e573]:
+            - paragraph [ref=e574]:
+              - strong [ref=e575]: 细粒度理解
+              - text: ：当前CLIP在全局图文匹配上表现优秀，但在细粒度属性理解、空间关系推理上仍有明显不足
+          - listitem [ref=e576]:
+            - paragraph [ref=e577]:
+              - strong [ref=e578]: 模型压缩与边缘部署
+              - text: ：❓ 该方向公开研究较少，是值得投入的蓝海领域
+          - listitem [ref=e579]:
+            - paragraph [ref=e580]:
+              - strong [ref=e581]: 安全性与偏见消除
+              - text: ：CLIP训练数据中包含社会偏见，如何在不损失性能的前提下消除这些偏见是重要课题
+        - heading "五、总结" [level=2] [ref=e582]
+        - paragraph [ref=e583]: CLIP模型的最新进展呈现出以下趋势：
+        - list [ref=e584]:
+          - listitem [ref=e585]:
+            - strong [ref=e586]: 训练层面
+            - text: ：从标准对比损失向更灵活的Sigmoid损失演进
+          - listitem [ref=e587]:
+            - strong [ref=e588]: 数据层面
+            - text: ：从追求规模转向追求质量，多语言数据集开始涌现
+          - listitem [ref=e589]:
+            - strong [ref=e590]: 应用层面
+            - text: ：从图像分类向分割、检测、检索等更复杂的视觉任务扩展
+          - listitem [ref=e591]:
+            - strong [ref=e592]: 可靠性层面
+            - text: ：不确定性估计、选择性预测、可解释性成为研究热点
+        - paragraph [ref=e593]: 当前研究已形成以下共识：✅ 数据质量比数据规模更重要；✅ 对比学习框架仍是VLP的最优范式；⚠️ 关于模型规模与下游性能的缩放律仍存在争议（不同任务表现不一致）。未来3-5年，CLIP有望在更广泛的视觉-语言任务中实现更深度的融合。
+    - generic [ref=e21]:
+      - generic [ref=e22]:
+        - button "🤖 自动" [ref=e23] [cursor=pointer]
+        - button "💬 对话" [ref=e24] [cursor=pointer]
+        - button "🔍 调研" [ref=e25] [cursor=pointer]
+        - button "💡 创新" [ref=e26] [cursor=pointer]
+        - button "🧪 实验" [ref=e27] [cursor=pointer]
+      - generic [ref=e28]:
+        - textbox "输入消息... (支持 Markdown 和 LaTeX)" [ref=e29]
+        - combobox "切换模型" [ref=e30] [cursor=pointer]:
+          - option "DeepSeek V4 Flash" [selected]
+          - option "V4 Pro"
+          - option "思考模式"
+        - button "发送" [ref=e31] [cursor=pointer]

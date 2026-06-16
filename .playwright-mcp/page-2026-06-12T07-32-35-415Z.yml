@@ -1,0 +1,51 @@
+- generic [ref=e3]:
+  - generic [ref=e4]:
+    - generic [ref=e5]:
+      - heading "对话历史" [level=2] [ref=e6]
+      - button "+ 新对话" [active] [ref=e7] [cursor=pointer]
+    - generic [ref=e8]:
+      - generic [ref=e19] [cursor=pointer]:
+        - generic [ref=e20]:
+          - generic [ref=e21]: 介绍deepseek
+          - generic [ref=e22]: 4 条消息
+        - button "×" [ref=e23]
+      - generic [ref=e24] [cursor=pointer]:
+        - generic [ref=e25]:
+          - generic [ref=e26]: 什么是微积分
+          - generic [ref=e27]: 2 条消息
+        - button "×" [ref=e28]
+      - generic [ref=e29] [cursor=pointer]:
+        - generic [ref=e30]:
+          - generic [ref=e31]: 测试
+          - generic [ref=e32]: 2 条消息
+        - button "×" [ref=e33]
+      - generic [ref=e34] [cursor=pointer]:
+        - generic [ref=e35]:
+          - generic [ref=e36]: 你好，请回复短一点
+          - generic [ref=e37]: 2 条消息
+        - button "×" [ref=e38]
+      - generic [ref=e39] [cursor=pointer]:
+        - generic [ref=e40]:
+          - generic [ref=e41]: 什么是CLIP的噪声标签学习
+          - generic [ref=e42]: 2 条消息
+        - button "×" [ref=e43]
+      - generic [ref=e44] [cursor=pointer]:
+        - generic [ref=e45]:
+          - generic [ref=e46]: 请用markdown格式回答，列出3个特点
+          - generic [ref=e47]: 2 条消息
+        - button "×" [ref=e48]
+      - generic [ref=e49] [cursor=pointer]:
+        - generic [ref=e50]:
+          - generic [ref=e51]: 请介绍一下你自己
+          - generic [ref=e52]: 2 条消息
+        - button "×" [ref=e53]
+  - generic [ref=e10]:
+    - generic [ref=e11]:
+      - generic [ref=e55]: "会话: session_f68be762"
+      - button "清空对话" [ref=e57] [cursor=pointer]
+    - generic [ref=e13]:
+      - generic [ref=e14]: 💬
+      - paragraph [ref=e15]: 开始和 AI 对话吧
+    - generic [ref=e16]:
+      - textbox "输入消息... (支持 Markdown 和 LaTeX)" [ref=e17]
+      - button "发送" [ref=e18] [cursor=pointer]

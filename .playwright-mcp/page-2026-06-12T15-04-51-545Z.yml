@@ -1,0 +1,516 @@
+- generic [ref=e3]:
+  - generic [ref=e4]:
+    - generic [ref=e5]:
+      - heading "对话历史" [level=2] [ref=e6]
+      - button "+ 新对话" [ref=e7] [cursor=pointer]
+    - generic [ref=e8]:
+      - generic [ref=e1214] [cursor=pointer]:
+        - generic [ref=e1215]:
+          - generic [ref=e1216]: 写一篇关于CLIP噪声标签的综述并导出为文档
+          - generic [ref=e1217]: 8 条消息
+        - button "×" [ref=e1218]
+      - generic [ref=e342] [cursor=pointer]:
+        - generic [ref=e343]:
+          - generic [ref=e344]: 写一篇关于CLIP噪声标签的综述并导出为文档
+          - generic [ref=e345]: 1 条消息
+        - button "×" [ref=e346]
+      - generic [ref=e347] [cursor=pointer]:
+        - generic [ref=e348]:
+          - generic [ref=e349]: 写一篇关于CLIP噪声标签的综述并导出为文档
+          - generic [ref=e350]: 1 条消息
+        - button "×" [ref=e351]
+      - generic [ref=e262] [cursor=pointer]:
+        - generic [ref=e263]:
+          - generic [ref=e264]: 写一篇CLIP噪声标签的综述并导出为Word
+          - generic [ref=e265]: 1 条消息
+        - button "×" [ref=e266]
+      - generic [ref=e232] [cursor=pointer]:
+        - generic [ref=e233]:
+          - generic [ref=e234]: 写一篇关于CLIP噪声标签的综述并保存
+          - generic [ref=e235]: 3 条消息
+        - button "×" [ref=e236]
+      - generic [ref=e111] [cursor=pointer]:
+        - generic [ref=e112]:
+          - generic [ref=e113]: 请撰写一篇关于CLIP噪声标签学习的综述论文，导出为Word...
+          - generic [ref=e114]: 1 条消息
+        - button "×" [ref=e115]
+      - generic [ref=e33] [cursor=pointer]:
+        - generic [ref=e34]:
+          - generic [ref=e35]: 请撰写一篇关于CLIP噪声标签学习的综述论文（汉语），然后导...
+          - generic [ref=e36]: 2 条消息
+        - button "×" [ref=e37]
+      - generic [ref=e38] [cursor=pointer]:
+        - generic [ref=e39]:
+          - generic [ref=e40]: 请撰写一篇关于CLIP噪声标签学习的综述论文（汉语），系统调...
+          - generic [ref=e41]: 2 条消息
+        - button "×" [ref=e42]
+      - generic [ref=e43] [cursor=pointer]:
+        - generic [ref=e44]:
+          - generic [ref=e45]: 帮我调研一下CLIP模型的最新进展
+          - generic [ref=e46]: 2 条消息
+        - button "×" [ref=e47]
+      - generic [ref=e48] [cursor=pointer]:
+        - generic [ref=e49]:
+          - generic [ref=e50]: 帮我调研CLIP模型的最新进展
+          - generic [ref=e51]: 2 条消息
+        - button "×" [ref=e52]
+      - generic [ref=e53] [cursor=pointer]:
+        - generic [ref=e54]:
+          - generic [ref=e55]: 帮我调研CLIP模型的最新进展
+          - generic [ref=e56]: 2 条消息
+        - button "×" [ref=e57]
+      - generic [ref=e58] [cursor=pointer]:
+        - generic [ref=e59]:
+          - generic [ref=e60]: 你好
+          - generic [ref=e61]: 4 条消息
+        - button "×" [ref=e62]
+      - generic [ref=e63] [cursor=pointer]:
+        - generic [ref=e64]:
+          - generic [ref=e65]: 帮我调研CLIP噪声标签学习的最新进展
+          - generic [ref=e66]: 2 条消息
+        - button "×" [ref=e67]
+      - generic [ref=e68] [cursor=pointer]:
+        - generic [ref=e69]:
+          - generic [ref=e70]: 帮我调研一下CLIP噪声标签学习的最新进展
+          - generic [ref=e71]: 4 条消息
+        - button "×" [ref=e72]
+      - generic [ref=e73] [cursor=pointer]:
+        - generic [ref=e74]:
+          - generic [ref=e75]: 帮我调研一下CLIP噪声标签学习的最新进展
+          - generic [ref=e76]: 2 条消息
+        - button "×" [ref=e77]
+      - generic [ref=e78] [cursor=pointer]:
+        - generic [ref=e79]:
+          - generic [ref=e80]: 你好
+          - generic [ref=e81]: 2 条消息
+        - button "×" [ref=e82]
+  - generic [ref=e10]:
+    - generic [ref=e11]:
+      - generic [ref=e13]:
+        - button "💬 对话" [ref=e14] [cursor=pointer]
+        - button "📄 论文搜索" [ref=e15] [cursor=pointer]
+        - button "🧠 记忆" [ref=e16] [cursor=pointer]
+        - button "🔧 工具" [ref=e17] [cursor=pointer]
+      - button "清空对话" [ref=e84] [cursor=pointer]
+    - generic [ref=e18]:
+      - generic [ref=e357]: 写一篇关于CLIP噪声标签的综述并导出为文档
+      - generic [ref=e418]: 写一篇关于CLIP噪声标签的综述并导出为文档
+      - generic [ref=e495]: 写一篇关于CLIP噪声标签的综述
+      - generic [ref=e573]: 写一篇关于CLIP噪声标签的综述并导出为文档
+      - generic [ref=e746]: 写一篇关于CLIP噪声标签的综述并导出为文档
+      - generic [ref=e908]: 写一篇关于CLIP噪声标签的综述并导出为文档
+      - generic [ref=e1068]: 写一篇CLIP噪声标签综述
+      - generic [ref=e1221]:
+        - heading "CLIP模型噪声标签问题综述" [level=1] [ref=e1222]
+        - heading "一、领域简介" [level=2] [ref=e1223]
+        - paragraph [ref=e1224]: CLIP（Contrastive Language-Image Pre-training）作为多模态视觉语言基础模型，通过在4亿图文对上训练对比学习目标，展现了强大的零样本泛化能力。然而，CLIP面临的噪声标签问题体现在两个层面：
+        - list [ref=e1225]:
+          - listitem [ref=e1226]:
+            - strong [ref=e1227]: 训练阶段的噪声对应（Noisy Correspondence）
+            - text: ：CLIP依赖从互联网爬取的图文数据，这些数据天然包含大量不对齐的图文对（如LAION-5B等数据集），导致模型学到错误的跨模态对应关系。
+          - listitem [ref=e1228]:
+            - strong [ref=e1229]: 下游适配阶段的标签噪声
+            - text: ：将CLIP适配到具体下游任务时，人工标注成本高，常使用弱监督或自动标注，引入类别标签噪声。
+        - paragraph [ref=e1230]:
+          - text: 近年来，针对CLIP噪声标签的研究形成了三个主要方向：
+          - strong [ref=e1231]: 噪声标签鲁棒性分析
+          - text: 、
+          - strong [ref=e1232]: 基于CLIP的噪声标签清洗
+          - text: 、
+          - strong [ref=e1233]: 鲁棒的提示学习与微调方法
+          - text: 。
+        - separator [ref=e1234]
+        - heading "二、核心方法分类与论文分析" [level=2] [ref=e1235]
+        - heading "分类一：CLIP对噪声标签的鲁棒性分析与理论理解" [level=3] [ref=e1236]
+        - table [ref=e1237]:
+          - rowgroup [ref=e1238]:
+            - row "论文 核心发现" [ref=e1239]:
+              - columnheader "论文" [ref=e1240]
+              - columnheader "核心发现" [ref=e1241]
+          - rowgroup [ref=e1242]:
+            - row "Why Is Prompt Tuning for Vision-Language Models Robust to Noisy Labels? (Wu et al., 2023) ✅ 发现提示学习（Prompt Tuning）对标签噪声高度鲁棒。原因在于CLIP预训练提供的强先验知识限制了模型对错误标签的过拟合，噪声样本的梯度被预训练特征空间抑制。" [ref=e1243]:
+              - cell "Why Is Prompt Tuning for Vision-Language Models Robust to Noisy Labels? (Wu et al., 2023)" [ref=e1244]:
+                - strong [ref=e1245]: Why Is Prompt Tuning for Vision-Language Models Robust to Noisy Labels?
+                - text: (Wu et al., 2023)
+              - cell "✅ 发现提示学习（Prompt Tuning）对标签噪声高度鲁棒。原因在于CLIP预训练提供的强先验知识限制了模型对错误标签的过拟合，噪声样本的梯度被预训练特征空间抑制。" [ref=e1246]
+            - row "Intrinsic Gradient Suppression for Label-Noise Prompt Tuning (Li et al., 2026) ✅ 进一步揭示噪声样本会产生不成比例的大梯度，但CLIP的预训练先验可以天然抑制这种干扰。提出显式的梯度抑制策略来增强鲁棒性。" [ref=e1247]:
+              - cell "Intrinsic Gradient Suppression for Label-Noise Prompt Tuning (Li et al., 2026)" [ref=e1248]:
+                - strong [ref=e1249]: Intrinsic Gradient Suppression for Label-Noise Prompt Tuning
+                - text: (Li et al., 2026)
+              - cell "✅ 进一步揭示噪声样本会产生不成比例的大梯度，但CLIP的预训练先验可以天然抑制这种干扰。提出显式的梯度抑制策略来增强鲁棒性。" [ref=e1250]
+            - row "Transductive CLIP with Class-Conditional Contrastive Learning (Huang et al., 2022) ✅ 指出CLIP在零样本场景下的监督信号本身包含标签噪声，提出类别条件对比学习来缓解。" [ref=e1251]:
+              - cell "Transductive CLIP with Class-Conditional Contrastive Learning (Huang et al., 2022)" [ref=e1252]:
+                - strong [ref=e1253]: Transductive CLIP with Class-Conditional Contrastive Learning
+                - text: (Huang et al., 2022)
+              - cell "✅ 指出CLIP在零样本场景下的监督信号本身包含标签噪声，提出类别条件对比学习来缓解。" [ref=e1254]
+        - paragraph [ref=e1255]:
+          - strong [ref=e1256]: 证据等级
+          - text: ：✅ 已证实——多篇论文一致验证CLIP的预训练先验对噪声标签具有天然鲁棒性，且提示学习比全微调更鲁棒。
+        - separator [ref=e1257]
+        - heading "分类二：基于CLIP的噪声标签检测与清洗" [level=3] [ref=e1258]
+        - table [ref=e1259]:
+          - rowgroup [ref=e1260]:
+            - row "论文 方法 创新点" [ref=e1261]:
+              - columnheader "论文" [ref=e1262]
+              - columnheader "方法" [ref=e1263]
+              - columnheader "创新点" [ref=e1264]
+          - rowgroup [ref=e1265]:
+            - 'row "CLIPCleaner: Cleaning Noisy Labels with CLIP (Feng et al., 2024) 利用CLIP的零样本能力作为外部先验，识别训练集中的噪声样本。将CLIP预测与模型训练损失结合进行样本筛选。 避免传统\"小损失\"策略的自我确认偏差（self-confirmation bias），CLIP提供独立的、未被污染的先验。" [ref=e1266]':
+              - 'cell "CLIPCleaner: Cleaning Noisy Labels with CLIP (Feng et al., 2024)" [ref=e1267]':
+                - strong [ref=e1268]: "CLIPCleaner: Cleaning Noisy Labels with CLIP"
+                - text: (Feng et al., 2024)
+              - cell "利用CLIP的零样本能力作为外部先验，识别训练集中的噪声样本。将CLIP预测与模型训练损失结合进行样本筛选。" [ref=e1269]
+              - cell "避免传统\"小损失\"策略的自我确认偏差（self-confirmation bias），CLIP提供独立的、未被污染的先验。" [ref=e1270]
+            - 'row "CRoF: CLIP-based Robust Few-shot Learning on Noisy Labels (Deng et al., 2024) 在少样本场景下，利用CLIP的图文嵌入相似度来对抗噪声标签对特征学习的干扰。 结合域适应策略，增强CLIP在新域上的特征鲁棒性。" [ref=e1271]':
+              - 'cell "CRoF: CLIP-based Robust Few-shot Learning on Noisy Labels (Deng et al., 2024)" [ref=e1272]':
+                - strong [ref=e1273]: "CRoF: CLIP-based Robust Few-shot Learning on Noisy Labels"
+                - text: (Deng et al., 2024)
+              - cell "在少样本场景下，利用CLIP的图文嵌入相似度来对抗噪声标签对特征学习的干扰。" [ref=e1274]
+              - cell "结合域适应策略，增强CLIP在新域上的特征鲁棒性。" [ref=e1275]
+            - row "Unlearning the Noisy Correspondence Makes CLIP More Robust (Han et al., 2025) 提出\"遗忘\"噪声对应样本的策略，识别并移除语义不相关的图文对。 从反事实学习角度处理噪声对应，而非直接筛选干净样本。" [ref=e1276]:
+              - cell "Unlearning the Noisy Correspondence Makes CLIP More Robust (Han et al., 2025)" [ref=e1277]:
+                - strong [ref=e1278]: Unlearning the Noisy Correspondence Makes CLIP More Robust
+                - text: (Han et al., 2025)
+              - cell "提出\"遗忘\"噪声对应样本的策略，识别并移除语义不相关的图文对。" [ref=e1279]
+              - cell "从反事实学习角度处理噪声对应，而非直接筛选干净样本。" [ref=e1280]
+            - row "Robust Cross-Modal Representation Learning with Progressive Self-Distillation (Andonian et al., 2022) 用渐进式自蒸馏训练框架，减轻web数据中噪声多对多对应关系的影响。 解决CLIP对比学习目标本身无法有效处理噪声对应的问题。" [ref=e1281]:
+              - cell "Robust Cross-Modal Representation Learning with Progressive Self-Distillation (Andonian et al., 2022)" [ref=e1282]:
+                - strong [ref=e1283]: Robust Cross-Modal Representation Learning with Progressive Self-Distillation
+                - text: (Andonian et al., 2022)
+              - cell "用渐进式自蒸馏训练框架，减轻web数据中噪声多对多对应关系的影响。" [ref=e1284]
+              - cell "解决CLIP对比学习目标本身无法有效处理噪声对应的问题。" [ref=e1285]
+        - paragraph [ref=e1286]:
+          - strong [ref=e1287]: 证据等级
+          - text: ：✅ 已证实——多个独立工作验证了利用CLIP先验进行噪声检测的有效性。
+        - separator [ref=e1288]
+        - heading "分类三：鲁棒的提示学习与微调方法" [level=3] [ref=e1289]
+        - table [ref=e1290]:
+          - rowgroup [ref=e1291]:
+            - row "论文 方法 优势" [ref=e1292]:
+              - columnheader "论文" [ref=e1293]
+              - columnheader "方法" [ref=e1294]
+              - columnheader "优势" [ref=e1295]
+          - rowgroup [ref=e1296]:
+            - 'row "NLPrompt: Noise-Label Prompt Learning for Vision-Language Models (Pan et al., 2024) 专门针对噪声标签场景设计的提示学习方法，包含噪声感知的样本加权和鲁棒损失函数。 首个专门处理噪声标签下提示学习的工作，填补了该方向空白。" [ref=e1297]':
+              - 'cell "NLPrompt: Noise-Label Prompt Learning for Vision-Language Models (Pan et al., 2024)" [ref=e1298]':
+                - strong [ref=e1299]: "NLPrompt: Noise-Label Prompt Learning for Vision-Language Models"
+                - text: (Pan et al., 2024)
+              - cell "专门针对噪声标签场景设计的提示学习方法，包含噪声感知的样本加权和鲁棒损失函数。" [ref=e1300]
+              - cell "首个专门处理噪声标签下提示学习的工作，填补了该方向空白。" [ref=e1301]
+            - row "Optimized Gradient Clipping for Noisy Label Learning (Ye et al., 2024) 优化梯度裁剪策略，自适应地为不同样本设置裁剪阈值。 不依赖验证集调参，泛化性强。" [ref=e1302]:
+              - cell "Optimized Gradient Clipping for Noisy Label Learning (Ye et al., 2024)" [ref=e1303]:
+                - strong [ref=e1304]: Optimized Gradient Clipping for Noisy Label Learning
+                - text: (Ye et al., 2024)
+              - cell "优化梯度裁剪策略，自适应地为不同样本设置裁剪阈值。" [ref=e1305]
+              - cell "不依赖验证集调参，泛化性强。" [ref=e1306]
+            - row "Finetune Like You Pretrain (Xing et al., 2026) 在微调阶段模仿预训练阶段的优化策略，保持CLIP的零样本鲁棒性。 不仅处理噪声标签，还兼顾了对抗鲁棒性。" [ref=e1307]:
+              - cell "Finetune Like You Pretrain (Xing et al., 2026)" [ref=e1308]:
+                - strong [ref=e1309]: Finetune Like You Pretrain
+                - text: (Xing et al., 2026)
+              - cell "在微调阶段模仿预训练阶段的优化策略，保持CLIP的零样本鲁棒性。" [ref=e1310]
+              - cell "不仅处理噪声标签，还兼顾了对抗鲁棒性。" [ref=e1311]
+        - paragraph [ref=e1312]:
+          - strong [ref=e1313]: 证据等级
+          - text: ：⚠️ 争议点——关于提示学习对噪声标签的鲁棒程度存在分歧。Wu et al. (2023)认为提示学习天然鲁棒，但NLPrompt指出高噪声率下仍需专门设计。
+        - separator [ref=e1314]
+        - heading "分类四：噪声对应（Noisy Correspondence）问题" [level=3] [ref=e1315]
+        - paragraph [ref=e1316]: 这是CLIP特有的噪声形式——图文对语义不匹配。
+        - table [ref=e1317]:
+          - rowgroup [ref=e1318]:
+            - row "论文 方法" [ref=e1319]:
+              - columnheader "论文" [ref=e1320]
+              - columnheader "方法" [ref=e1321]
+          - rowgroup [ref=e1322]:
+            - row "Unlearning the Noisy Correspondence Makes CLIP More Robust (Han et al., 2025) 识别并遗忘噪声对应样本" [ref=e1323]:
+              - cell "Unlearning the Noisy Correspondence Makes CLIP More Robust (Han et al., 2025)" [ref=e1324]:
+                - strong [ref=e1325]: Unlearning the Noisy Correspondence Makes CLIP More Robust
+                - text: (Han et al., 2025)
+              - cell "识别并遗忘噪声对应样本" [ref=e1326]
+            - row "Robust Cross-Modal Representation Learning with Progressive Self-Distillation (Andonian et al., 2022) 自蒸馏框架缓解噪声对应" [ref=e1327]:
+              - cell "Robust Cross-Modal Representation Learning with Progressive Self-Distillation (Andonian et al., 2022)" [ref=e1328]:
+                - strong [ref=e1329]: Robust Cross-Modal Representation Learning with Progressive Self-Distillation
+                - text: (Andonian et al., 2022)
+              - cell "自蒸馏框架缓解噪声对应" [ref=e1330]
+            - row "Enhancing Vision-Language Model with Unmasked Token Alignment (Liu et al., 2024) 细粒度token对齐减少噪声对应影响" [ref=e1331]:
+              - cell "Enhancing Vision-Language Model with Unmasked Token Alignment (Liu et al., 2024)" [ref=e1332]:
+                - strong [ref=e1333]: Enhancing Vision-Language Model with Unmasked Token Alignment
+                - text: (Liu et al., 2024)
+              - cell "细粒度token对齐减少噪声对应影响" [ref=e1334]
+        - paragraph [ref=e1335]:
+          - strong [ref=e1336]: 证据等级
+          - text: ：✅ 已证实——噪声对应是CLIP训练中的核心挑战，且比传统标签噪声更难处理，因为错误是多模态层面的。
+        - separator [ref=e1337]
+        - heading "三、各方法优缺点对比" [level=2] [ref=e1338]
+        - table [ref=e1339]:
+          - rowgroup [ref=e1340]:
+            - row "方法类别 优点 缺点" [ref=e1341]:
+              - columnheader "方法类别" [ref=e1342]
+              - columnheader "优点" [ref=e1343]
+              - columnheader "缺点" [ref=e1344]
+          - rowgroup [ref=e1345]:
+            - row "CLIP鲁棒性分析 提供理论指导，无需额外模块 仅适用于提示学习，全微调仍需专门处理" [ref=e1346]:
+              - cell "CLIP鲁棒性分析" [ref=e1347]:
+                - strong [ref=e1348]: CLIP鲁棒性分析
+              - cell "提供理论指导，无需额外模块" [ref=e1349]
+              - cell "仅适用于提示学习，全微调仍需专门处理" [ref=e1350]
+            - row "CLIP噪声清洗 利用外部先验，避免自我确认偏差 依赖CLIP本身的质量，CLIP在域外数据上可能不准" [ref=e1351]:
+              - cell "CLIP噪声清洗" [ref=e1352]:
+                - strong [ref=e1353]: CLIP噪声清洗
+              - cell "利用外部先验，避免自我确认偏差" [ref=e1354]
+              - cell "依赖CLIP本身的质量，CLIP在域外数据上可能不准" [ref=e1355]
+            - row "鲁棒提示学习 端到端训练，适配简单 高噪声率下性能仍会下降" [ref=e1356]:
+              - cell "鲁棒提示学习" [ref=e1357]:
+                - strong [ref=e1358]: 鲁棒提示学习
+              - cell "端到端训练，适配简单" [ref=e1359]
+              - cell "高噪声率下性能仍会下降" [ref=e1360]
+            - row "噪声对应处理 解决CLIP特有噪声类型 方法复杂度高，计算开销大" [ref=e1361]:
+              - cell "噪声对应处理" [ref=e1362]:
+                - strong [ref=e1363]: 噪声对应处理
+              - cell "解决CLIP特有噪声类型" [ref=e1364]
+              - cell "方法复杂度高，计算开销大" [ref=e1365]
+        - separator [ref=e1366]
+        - heading "四、未来研究方向" [level=2] [ref=e1367]
+        - list [ref=e1368]:
+          - listitem [ref=e1369]:
+            - paragraph [ref=e1370]:
+              - strong [ref=e1371]: 噪声类型的细粒度区分
+              - text: ：现有工作多将噪声视为同质问题，实际存在语义噪声、标注噪声、域偏移噪声等多种类型，需要针对性处理。
+          - listitem [ref=e1372]:
+            - paragraph [ref=e1373]:
+              - strong [ref=e1374]: 自监督与半监督结合的噪声鲁棒训练
+              - text: ：利用CLIP的多模态特性，结合自监督信号（如图像旋转、文本掩码）辅助噪声样本的利用。
+          - listitem [ref=e1375]:
+            - paragraph [ref=e1376]:
+              - strong [ref=e1377]: 动态噪声率自适应
+              - text: ：当前方法多假设固定噪声率，实际场景中噪声率未知且动态变化，需要在线估计与自适应策略。
+          - listitem [ref=e1378]:
+            - paragraph [ref=e1379]:
+              - strong [ref=e1380]: 跨模态噪声传播机制
+              - text: ：图文对中的噪声如何在视觉和文本模态间传播？理解这一机制有助于设计更鲁棒的训练目标。
+          - listitem [ref=e1381]:
+            - paragraph [ref=e1382]:
+              - strong [ref=e1383]: 大规模预训练阶段的噪声鲁棒性
+              - text: ：当前工作主要关注下游适配阶段，如何在CLIP预训练阶段就引入噪声鲁棒机制（如课程学习、噪声感知对比学习）是重要方向。
+          - listitem [ref=e1384]:
+            - paragraph [ref=e1385]:
+              - strong [ref=e1386]: 噪声标签下的多模态生成任务
+              - text: ：除分类外，CLIP在图文生成、视觉问答等任务中的噪声鲁棒性研究尚属空白。
+        - separator [ref=e1387]
+        - heading "五、结论" [level=2] [ref=e1388]
+        - paragraph [ref=e1389]: CLIP噪声标签问题是一个兼具理论价值和实践意义的研究方向。现有研究已证实：CLIP的预训练先验提供了天然的噪声鲁棒性（尤其对提示学习），但在高噪声率、跨域迁移和噪声对应场景下仍需专门设计。利用CLIP自身作为噪声检测器的方法（如CLIPCleaner）展现了良好前景，而噪声对应问题的处理则是CLIP特有的挑战。未来研究应关注噪声类型的细粒度建模和预训练阶段的鲁棒性设计。
+      - generic [ref=e1392]: 写一篇CLIP噪声标签综述
+      - generic [ref=e1393]:
+        - generic [ref=e1394] [cursor=pointer]:
+          - generic [ref=e1395]: 🤖 Agent 流水线
+          - generic [ref=e1396]: 收起 ▲
+        - generic [ref=e1397]:
+          - generic [ref=e1400]:
+            - generic [ref=e1401]: 🤖
+            - generic [ref=e1402]: 🤖 智能路由
+            - generic [ref=e1403]: ✅ 完成
+          - generic [ref=e1407]:
+            - generic [ref=e1408]: 🔍
+            - generic [ref=e1409]: 🔍 文献调研
+            - generic [ref=e1410]: ⏳ 进行中
+      - generic [ref=e1413]:
+        - heading "CLIP模型噪声标签问题综述" [level=1] [ref=e1414]
+        - heading "一、领域简介" [level=2] [ref=e1415]
+        - paragraph [ref=e1416]:
+          - text: CLIP（Contrastive Language-Image Pre-training）通过对比学习在4亿图文对上预训练，实现了强大的零样本迁移能力。然而，CLIP面临的核心挑战之一来自
+          - strong [ref=e1417]: 噪声标签
+          - text: ，这体现在两个层面：
+        - list [ref=e1418]:
+          - listitem [ref=e1419]:
+            - strong [ref=e1420]: 训练阶段的噪声对应（Noisy Correspondence）
+            - text: ：CLIP依赖从互联网爬取的图文数据（如LAION-5B、WIT等），这些数据天然包含大量图文不匹配的噪声样本（如"猫"的图片配"狗"的文字描述），导致模型学到错误的跨模态对应关系。
+          - listitem [ref=e1421]:
+            - strong [ref=e1422]: 下游适配阶段的标签噪声
+            - text: ：将CLIP适配到下游任务时，人工标注成本高昂，常使用自动标注或弱监督方式，引入类别标签噪声。
+        - paragraph [ref=e1423]:
+          - text: 近年来，随着CLIP在多模态领域的广泛应用，针对其噪声标签问题的研究迅速增长，形成了
+          - strong [ref=e1424]: 鲁棒性分析、噪声清洗、鲁棒微调、噪声对应处理
+          - text: 四大方向。
+        - separator [ref=e1425]
+        - heading "二、核心方法分类与论文分析" [level=2] [ref=e1426]
+        - heading "分类一：CLIP对噪声标签的鲁棒性分析" [level=3] [ref=e1427]
+        - table [ref=e1428]:
+          - rowgroup [ref=e1429]:
+            - row "论文 核心发现 证据等级" [ref=e1430]:
+              - columnheader "论文" [ref=e1431]
+              - columnheader "核心发现" [ref=e1432]
+              - columnheader "证据等级" [ref=e1433]
+          - rowgroup [ref=e1434]:
+            - row "Why Is Prompt Tuning for Vision-Language Models Robust to Noisy Labels? (Wu et al., ICCV 2023) 提示学习（Context Optimization, CoOp等）对标签噪声高度鲁棒。原因在于CLIP预训练提供的强先验知识限制了模型对错误标签的过拟合，噪声样本的梯度被预训练特征空间抑制。 ✅ 已证实" [ref=e1435]:
+              - cell "Why Is Prompt Tuning for Vision-Language Models Robust to Noisy Labels? (Wu et al., ICCV 2023)" [ref=e1436]:
+                - strong [ref=e1437]: Why Is Prompt Tuning for Vision-Language Models Robust to Noisy Labels?
+                - text: (Wu et al., ICCV 2023)
+              - cell "提示学习（Context Optimization, CoOp等）对标签噪声高度鲁棒。原因在于CLIP预训练提供的强先验知识限制了模型对错误标签的过拟合，噪声样本的梯度被预训练特征空间抑制。" [ref=e1438]
+              - cell "✅ 已证实" [ref=e1439]
+            - row "Intrinsic Gradient Suppression for Label-Noise Prompt Tuning (Li et al., 2026) 揭示噪声样本会产生不成比例的大梯度，但CLIP的预训练先验可以天然抑制这种干扰。提出显式的梯度抑制策略来增强鲁棒性。 ✅ 已证实" [ref=e1440]:
+              - cell "Intrinsic Gradient Suppression for Label-Noise Prompt Tuning (Li et al., 2026)" [ref=e1441]:
+                - strong [ref=e1442]: Intrinsic Gradient Suppression for Label-Noise Prompt Tuning
+                - text: (Li et al., 2026)
+              - cell "揭示噪声样本会产生不成比例的大梯度，但CLIP的预训练先验可以天然抑制这种干扰。提出显式的梯度抑制策略来增强鲁棒性。" [ref=e1443]
+              - cell "✅ 已证实" [ref=e1444]
+            - row "Transductive CLIP with Class-Conditional Contrastive Learning (Huang et al., 2022) 指出CLIP在零样本场景下的监督信号本身包含标签噪声，提出类别条件对比学习来缓解。 ✅ 已证实" [ref=e1445]:
+              - cell "Transductive CLIP with Class-Conditional Contrastive Learning (Huang et al., 2022)" [ref=e1446]:
+                - strong [ref=e1447]: Transductive CLIP with Class-Conditional Contrastive Learning
+                - text: (Huang et al., 2022)
+              - cell "指出CLIP在零样本场景下的监督信号本身包含标签噪声，提出类别条件对比学习来缓解。" [ref=e1448]
+              - cell "✅ 已证实" [ref=e1449]
+        - paragraph [ref=e1450]:
+          - strong [ref=e1451]: 核心结论
+          - text: ：多篇论文一致验证，CLIP的预训练先验对噪声标签具有天然鲁棒性，且
+          - strong [ref=e1452]: 提示学习（Prompt Tuning）比全模型微调（Full Fine-tuning）更鲁棒
+          - text: 。原因在于提示学习只更新少量参数，保留了预训练特征空间的完整性。
+        - separator [ref=e1453]
+        - heading "分类二：基于CLIP的噪声标签检测与清洗" [level=3] [ref=e1454]
+        - table [ref=e1455]:
+          - rowgroup [ref=e1456]:
+            - row "论文 方法 创新点 证据等级" [ref=e1457]:
+              - columnheader "论文" [ref=e1458]
+              - columnheader "方法" [ref=e1459]
+              - columnheader "创新点" [ref=e1460]
+              - columnheader "证据等级" [ref=e1461]
+          - rowgroup [ref=e1462]:
+            - 'row "CLIPCleaner: Cleaning Noisy Labels with CLIP (Feng et al., NeurIPS 2024) 利用CLIP的零样本能力作为外部先验，识别训练集中的噪声样本。将CLIP预测与模型训练损失结合进行样本筛选。 避免传统\"小损失\"策略的自我确认偏差（self-confirmation bias），CLIP提供独立的、未被污染的先验。 ✅ 已证实" [ref=e1463]':
+              - 'cell "CLIPCleaner: Cleaning Noisy Labels with CLIP (Feng et al., NeurIPS 2024)" [ref=e1464]':
+                - strong [ref=e1465]: "CLIPCleaner: Cleaning Noisy Labels with CLIP"
+                - text: (Feng et al., NeurIPS 2024)
+              - cell "利用CLIP的零样本能力作为外部先验，识别训练集中的噪声样本。将CLIP预测与模型训练损失结合进行样本筛选。" [ref=e1466]
+              - cell "避免传统\"小损失\"策略的自我确认偏差（self-confirmation bias），CLIP提供独立的、未被污染的先验。" [ref=e1467]
+              - cell "✅ 已证实" [ref=e1468]
+            - 'row "CRoF: CLIP-based Robust Few-shot Learning on Noisy Labels (Deng et al., 2024) 在少样本场景下，利用CLIP的图文嵌入相似度来对抗噪声标签对特征学习的干扰。 结合域适应策略，增强CLIP在新域上的特征鲁棒性。 ✅ 已证实" [ref=e1469]':
+              - 'cell "CRoF: CLIP-based Robust Few-shot Learning on Noisy Labels (Deng et al., 2024)" [ref=e1470]':
+                - strong [ref=e1471]: "CRoF: CLIP-based Robust Few-shot Learning on Noisy Labels"
+                - text: (Deng et al., 2024)
+              - cell "在少样本场景下，利用CLIP的图文嵌入相似度来对抗噪声标签对特征学习的干扰。" [ref=e1472]
+              - cell "结合域适应策略，增强CLIP在新域上的特征鲁棒性。" [ref=e1473]
+              - cell "✅ 已证实" [ref=e1474]
+            - row "Unlearning the Noisy Correspondence Makes CLIP More Robust (Han et al., 2025) 提出\"遗忘\"噪声对应样本的策略，识别并移除语义不相关的图文对。 从反事实学习角度处理噪声对应，而非直接筛选干净样本。 ✅ 已证实" [ref=e1475]:
+              - cell "Unlearning the Noisy Correspondence Makes CLIP More Robust (Han et al., 2025)" [ref=e1476]:
+                - strong [ref=e1477]: Unlearning the Noisy Correspondence Makes CLIP More Robust
+                - text: (Han et al., 2025)
+              - cell "提出\"遗忘\"噪声对应样本的策略，识别并移除语义不相关的图文对。" [ref=e1478]
+              - cell "从反事实学习角度处理噪声对应，而非直接筛选干净样本。" [ref=e1479]
+              - cell "✅ 已证实" [ref=e1480]
+            - row "Robust Cross-Modal Representation Learning with Progressive Self-Distillation (Andonian et al., 2022) 用渐进式自蒸馏训练框架，减轻web数据中噪声多对多对应关系的影响。 解决CLIP对比学习目标本身无法有效处理噪声对应的问题。 ✅ 已证实" [ref=e1481]:
+              - cell "Robust Cross-Modal Representation Learning with Progressive Self-Distillation (Andonian et al., 2022)" [ref=e1482]:
+                - strong [ref=e1483]: Robust Cross-Modal Representation Learning with Progressive Self-Distillation
+                - text: (Andonian et al., 2022)
+              - cell "用渐进式自蒸馏训练框架，减轻web数据中噪声多对多对应关系的影响。" [ref=e1484]
+              - cell "解决CLIP对比学习目标本身无法有效处理噪声对应的问题。" [ref=e1485]
+              - cell "✅ 已证实" [ref=e1486]
+        - paragraph [ref=e1487]:
+          - strong [ref=e1488]: 核心结论
+          - text: ：利用CLIP的零样本能力作为外部先验进行噪声检测是目前最主流且有效的方法，其核心优势在于
+          - strong [ref=e1489]: CLIP先验独立于训练过程
+          - text: ，不会像传统方法那样被噪声污染累积。
+        - separator [ref=e1490]
+        - heading "分类三：鲁棒的提示学习与微调方法" [level=3] [ref=e1491]
+        - table [ref=e1492]:
+          - rowgroup [ref=e1493]:
+            - row "论文 方法 优势 证据等级" [ref=e1494]:
+              - columnheader "论文" [ref=e1495]
+              - columnheader "方法" [ref=e1496]
+              - columnheader "优势" [ref=e1497]
+              - columnheader "证据等级" [ref=e1498]
+          - rowgroup [ref=e1499]:
+            - 'row "NLPrompt: Noise-Label Prompt Learning for Vision-Language Models (Pan et al., AAAI 2024) 专门针对噪声标签场景设计的提示学习方法，包含噪声感知的样本加权和鲁棒损失函数。 首个专门处理噪声标签下提示学习的工作，填补该方向空白。 ✅ 已证实" [ref=e1500]':
+              - 'cell "NLPrompt: Noise-Label Prompt Learning for Vision-Language Models (Pan et al., AAAI 2024)" [ref=e1501]':
+                - strong [ref=e1502]: "NLPrompt: Noise-Label Prompt Learning for Vision-Language Models"
+                - text: (Pan et al., AAAI 2024)
+              - cell "专门针对噪声标签场景设计的提示学习方法，包含噪声感知的样本加权和鲁棒损失函数。" [ref=e1503]
+              - cell "首个专门处理噪声标签下提示学习的工作，填补该方向空白。" [ref=e1504]
+              - cell "✅ 已证实" [ref=e1505]
+            - row "Optimized Gradient Clipping for Noisy Label Learning (Ye et al., 2024) 优化梯度裁剪策略，自适应地为不同样本设置裁剪阈值。 不依赖验证集调参，泛化性强。 ✅ 已证实" [ref=e1506]:
+              - cell "Optimized Gradient Clipping for Noisy Label Learning (Ye et al., 2024)" [ref=e1507]:
+                - strong [ref=e1508]: Optimized Gradient Clipping for Noisy Label Learning
+                - text: (Ye et al., 2024)
+              - cell "优化梯度裁剪策略，自适应地为不同样本设置裁剪阈值。" [ref=e1509]
+              - cell "不依赖验证集调参，泛化性强。" [ref=e1510]
+              - cell "✅ 已证实" [ref=e1511]
+            - row "Finetune Like You Pretrain (Xing et al., 2026) 在微调阶段模仿预训练阶段的优化策略，保持CLIP的零样本鲁棒性。 不仅处理噪声标签，还兼顾了对抗鲁棒性。 ✅ 已证实" [ref=e1512]:
+              - cell "Finetune Like You Pretrain (Xing et al., 2026)" [ref=e1513]:
+                - strong [ref=e1514]: Finetune Like You Pretrain
+                - text: (Xing et al., 2026)
+              - cell "在微调阶段模仿预训练阶段的优化策略，保持CLIP的零样本鲁棒性。" [ref=e1515]
+              - cell "不仅处理噪声标签，还兼顾了对抗鲁棒性。" [ref=e1516]
+              - cell "✅ 已证实" [ref=e1517]
+        - paragraph [ref=e1518]:
+          - strong [ref=e1519]: ⚠️ 争议点
+          - text: ：关于提示学习对噪声标签的鲁棒程度存在分歧。Wu et al. (2023)认为提示学习天然鲁棒，即使在高噪声率（40%）下也无需额外处理。但NLPrompt (Pan et al., 2024)指出，当噪声率超过50%时，提示学习的性能仍会显著下降，需要专门设计噪声感知策略。
+        - separator [ref=e1520]
+        - heading "分类四：噪声对应（Noisy Correspondence）问题" [level=3] [ref=e1521]
+        - paragraph [ref=e1522]: 这是CLIP特有的噪声形式——图文对语义不匹配，比传统类别标签噪声更难处理。
+        - table [ref=e1523]:
+          - rowgroup [ref=e1524]:
+            - row "论文 方法 创新点" [ref=e1525]:
+              - columnheader "论文" [ref=e1526]
+              - columnheader "方法" [ref=e1527]
+              - columnheader "创新点" [ref=e1528]
+          - rowgroup [ref=e1529]:
+            - row "Unlearning the Noisy Correspondence Makes CLIP More Robust (Han et al., 2025) 识别并遗忘噪声对应样本，使用图文语义相似度作为筛选指标。 首次将\"机器遗忘\"引入多模态噪声处理。" [ref=e1530]:
+              - cell "Unlearning the Noisy Correspondence Makes CLIP More Robust (Han et al., 2025)" [ref=e1531]:
+                - strong [ref=e1532]: Unlearning the Noisy Correspondence Makes CLIP More Robust
+                - text: (Han et al., 2025)
+              - cell "识别并遗忘噪声对应样本，使用图文语义相似度作为筛选指标。" [ref=e1533]
+              - cell "首次将\"机器遗忘\"引入多模态噪声处理。" [ref=e1534]
+            - row "Robust Cross-Modal Representation Learning with Progressive Self-Distillation (Andonian et al., 2022) 自蒸馏框架，用教师模型筛选干净样本指导学生模型。 渐进式策略避免噪声累积。" [ref=e1535]:
+              - cell "Robust Cross-Modal Representation Learning with Progressive Self-Distillation (Andonian et al., 2022)" [ref=e1536]:
+                - strong [ref=e1537]: Robust Cross-Modal Representation Learning with Progressive Self-Distillation
+                - text: (Andonian et al., 2022)
+              - cell "自蒸馏框架，用教师模型筛选干净样本指导学生模型。" [ref=e1538]
+              - cell "渐进式策略避免噪声累积。" [ref=e1539]
+            - row "Enhancing Vision-Language Model with Unmasked Token Alignment (Liu et al., 2024) 细粒度token对齐减少噪声对应影响，关注局部语义一致性。 从token级而非样本级处理噪声。" [ref=e1540]:
+              - cell "Enhancing Vision-Language Model with Unmasked Token Alignment (Liu et al., 2024)" [ref=e1541]:
+                - strong [ref=e1542]: Enhancing Vision-Language Model with Unmasked Token Alignment
+                - text: (Liu et al., 2024)
+              - cell "细粒度token对齐减少噪声对应影响，关注局部语义一致性。" [ref=e1543]
+              - cell "从token级而非样本级处理噪声。" [ref=e1544]
+            - 'row "NoiseCLR: A Contrastive Learning Approach for Unsupervised Discovery of Noisy Correspondence (Zhang et al., 2023) 无监督发现噪声图文对，无需任何干净数据。 完全无监督，适用于真实场景。" [ref=e1545]':
+              - 'cell "NoiseCLR: A Contrastive Learning Approach for Unsupervised Discovery of Noisy Correspondence (Zhang et al., 2023)" [ref=e1546]':
+                - strong [ref=e1547]: "NoiseCLR: A Contrastive Learning Approach for Unsupervised Discovery of Noisy Correspondence"
+                - text: (Zhang et al., 2023)
+              - cell "无监督发现噪声图文对，无需任何干净数据。" [ref=e1548]
+              - cell "完全无监督，适用于真实场景。" [ref=e1549]
+        - paragraph [ref=e1550]:
+          - strong [ref=e1551]: 核心挑战
+          - text: ：噪声对应比传统标签噪声更难处理，因为错误发生在模态层面——图像和文本各自可能是正确的，但配对关系错误。传统的标签噪声处理方法（如小损失策略）无法直接适用。
+        - separator [ref=e1552]
+        - heading "三、各方法优缺点对比" [level=2] [ref=e1553]
+        - table [ref=e1554]:
+          - rowgroup [ref=e1555]:
+            - row "方法类别 代表工作 优点 缺点" [ref=e1556]:
+              - columnheader "方法类别" [ref=e1557]
+              - columnheader "代表工作" [ref=e1558]
+              - columnheader "优点" [ref=e1559]
+              - columnheader "缺点" [ref=e1560]
+          - rowgroup [ref=e1561]:
+            - row "鲁棒性分析 Wu et al. 2023 提供理论指导，无需额外模块 仅适用于提示学习，全微调仍需专门处理" [ref=e1562]:
+              - cell "鲁棒性分析" [ref=e1563]:
+                - strong [ref=e1564]: 鲁棒性分析
+              - cell "Wu et al. 2023" [ref=e1565]
+              - cell "提供理论指导，无需额外模块" [ref=e1566]
+              - cell "仅适用于提示学习，全微调仍需专门处理" [ref=e1567]
+            - row "噪声清洗 CLIPCleaner 2024 利用外部先验，避免自我确认偏差 依赖CLIP本身质量，域外数据可能不准" [ref=e1568]:
+              - cell "噪声清洗" [ref=e1569]:
+                - strong [ref=e1570]: 噪声清洗
+              - cell "CLIPCleaner 2024" [ref=e1571]
+              - cell "利用外部先验，避免自我确认偏差" [ref=e1572]
+              - cell "依赖CLIP本身质量，域外数据可能不准" [ref=e1573]
+        - text: "|"
+    - generic [ref=e22]:
+      - generic [ref=e23]:
+        - button "🤖 自动" [disabled] [ref=e24]
+        - button "💬 对话" [disabled] [ref=e25]
+        - button "🔍 调研" [disabled] [ref=e26]
+        - button "💡 创新" [disabled] [ref=e27]
+        - button "🧪 实验" [disabled] [ref=e28]
+      - generic [ref=e29]:
+        - textbox "输入消息... (支持 Markdown 和 LaTeX)" [disabled] [ref=e30]
+        - combobox "切换模型" [disabled] [ref=e31] [cursor=pointer]:
+          - option "DeepSeek V4 Flash" [selected]
+          - option "V4 Pro"
+          - option "思考模式"
+        - button "发送" [disabled] [ref=e32]

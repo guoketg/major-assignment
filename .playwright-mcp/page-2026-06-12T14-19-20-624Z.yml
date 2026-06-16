@@ -1,0 +1,379 @@
+- generic [ref=e3]:
+  - generic [ref=e4]:
+    - generic [ref=e5]:
+      - heading "对话历史" [level=2] [ref=e6]
+      - button "+ 新对话" [ref=e7] [cursor=pointer]
+    - generic [ref=e8]:
+      - generic [ref=e316] [cursor=pointer]:
+        - generic [ref=e317]:
+          - generic [ref=e318]: 请撰写一篇关于CLIP噪声标签学习的综述论文（汉语），系统调...
+          - generic [ref=e319]: 2 条消息
+        - button "×" [ref=e320]
+      - generic [ref=e33] [cursor=pointer]:
+        - generic [ref=e34]:
+          - generic [ref=e35]: 帮我调研一下CLIP模型的最新进展
+          - generic [ref=e36]: 2 条消息
+        - button "×" [ref=e37]
+      - generic [ref=e38] [cursor=pointer]:
+        - generic [ref=e39]:
+          - generic [ref=e40]: 帮我调研CLIP模型的最新进展
+          - generic [ref=e41]: 2 条消息
+        - button "×" [ref=e42]
+      - generic [ref=e43] [cursor=pointer]:
+        - generic [ref=e44]:
+          - generic [ref=e45]: 帮我调研CLIP模型的最新进展
+          - generic [ref=e46]: 2 条消息
+        - button "×" [ref=e47]
+      - generic [ref=e48] [cursor=pointer]:
+        - generic [ref=e49]:
+          - generic [ref=e50]: 你好
+          - generic [ref=e51]: 4 条消息
+        - button "×" [ref=e52]
+      - generic [ref=e53] [cursor=pointer]:
+        - generic [ref=e54]:
+          - generic [ref=e55]: 帮我调研CLIP噪声标签学习的最新进展
+          - generic [ref=e56]: 2 条消息
+        - button "×" [ref=e57]
+      - generic [ref=e58] [cursor=pointer]:
+        - generic [ref=e59]:
+          - generic [ref=e60]: 帮我调研一下CLIP噪声标签学习的最新进展
+          - generic [ref=e61]: 4 条消息
+        - button "×" [ref=e62]
+      - generic [ref=e63] [cursor=pointer]:
+        - generic [ref=e64]:
+          - generic [ref=e65]: 帮我调研一下CLIP噪声标签学习的最新进展
+          - generic [ref=e66]: 2 条消息
+        - button "×" [ref=e67]
+      - generic [ref=e68] [cursor=pointer]:
+        - generic [ref=e69]:
+          - generic [ref=e70]: 你好
+          - generic [ref=e71]: 2 条消息
+        - button "×" [ref=e72]
+  - generic [ref=e10]:
+    - generic [ref=e11]:
+      - generic [ref=e13]:
+        - button "💬 对话" [ref=e14] [cursor=pointer]
+        - button "📄 论文搜索" [ref=e15] [cursor=pointer]
+        - button "🧠 记忆" [ref=e16] [cursor=pointer]
+        - button "🔧 工具" [ref=e17] [cursor=pointer]
+      - button "清空对话" [ref=e172] [cursor=pointer]
+    - generic [ref=e173]:
+      - generic [ref=e562]: 请撰写一篇关于CLIP噪声标签学习的综述论文（汉语），然后导出为Word文档。
+      - generic [ref=e563]:
+        - generic [ref=e564] [cursor=pointer]:
+          - generic [ref=e565]: 🤖 Agent 流水线
+          - generic [ref=e566]: 收起 ▲
+        - generic [ref=e567]:
+          - generic [ref=e570]:
+            - generic [ref=e571]: 🤖
+            - generic [ref=e572]: 🤖 智能路由
+            - generic [ref=e573]: ✅ 完成
+          - generic [ref=e577]:
+            - generic [ref=e578]: 🔍
+            - generic [ref=e579]: 🔍 文献调研
+            - generic [ref=e580]: ⏳ 进行中
+      - generic [ref=e583]:
+        - heading "CLIP噪声标签学习综述" [level=1] [ref=e584]
+        - heading "摘要" [level=2] [ref=e585]
+        - paragraph [ref=e586]: CLIP（Contrastive Language-Image Pre-training）模型通过大规模图文对比学习，展现出了强大的零样本迁移能力和视觉-语言联合表征能力。然而，CLIP的训练依赖于从互联网收集的海量图文对数据，这些数据不可避免地包含大量噪声标签（如图文不匹配、语义模糊等），严重影响了模型性能。本文系统性地综述了CLIP噪声标签学习的研究进展，从数据清洗、鲁棒训练策略、模型架构改进和损失函数设计四个维度对现有方法进行分类和比较，并探讨了该领域的未来发展方向。
+        - separator [ref=e587]
+        - heading "1. 引言" [level=2] [ref=e588]
+        - paragraph [ref=e589]: CLIP模型由OpenAI于2021年提出，通过4亿图文对的对比学习训练，实现了令人瞩目的零样本分类能力。然而，CLIP的训练数据来源于互联网爬取，质量参差不齐。据估计，CLIP训练数据中约有**30%-40%**的图文对存在不同程度的噪声（标签错误、图文不匹配等）。这些噪声标签不仅降低了模型在下游任务上的性能，还可能导致模型学习到错误的概念关联和有害的偏见。
+        - paragraph [ref=e590]: 近年来，研究者们从不同角度探索了CLIP噪声标签的应对策略。本文将从以下四个维度系统梳理相关研究：
+        - list [ref=e591]:
+          - listitem [ref=e592]:
+            - strong [ref=e593]: 数据清洗与筛选方法
+            - text: ：在训练前或训练中识别并移除/加权噪声样本
+          - listitem [ref=e594]:
+            - strong [ref=e595]: 鲁棒训练策略
+            - text: ：设计对噪声不敏感的优化算法和训练范式
+          - listitem [ref=e596]:
+            - strong [ref=e597]: 模型架构改进
+            - text: ：修改CLIP架构以增强对噪声的鲁棒性
+          - listitem [ref=e598]:
+            - strong [ref=e599]: 损失函数设计
+            - text: ：提出对噪声标签更鲁棒的对比损失变体
+        - separator [ref=e600]
+        - heading "2. 研究背景与问题定义" [level=2] [ref=e601]
+        - heading "2.1 CLIP模型原理" [level=3] [ref=e602]
+        - paragraph [ref=e603]: CLIP使用双塔架构——图像编码器（如ResNet或ViT）和文本编码器（如Transformer），通过对比学习最大化匹配图文对的余弦相似度，同时最小化不匹配对的相似度。其核心损失函数为对称交叉熵对比损失：
+        - paragraph [ref=e604]: "[ \\mathcal{L} = -\\frac{1}{2N}\\sum_{i=1}^N \\left[\\log\\frac{\\exp(s_{ii}/\\tau)}{\\sum_{j=1}^N\\exp(s_{ij}/\\tau)} + \\log\\frac{\\exp(s_{ii}/\\tau)}{\\sum_{j=1}^N\\exp(s_{ji}/\\tau)}\\right] ]"
+        - paragraph [ref=e605]: "其中 (s_{ij}) 为图像 (i) 与文本 (j) 的相似度，(\\tau) 为温度参数。"
+        - heading "2.2 噪声标签的定义与分类" [level=3] [ref=e606]
+        - paragraph [ref=e607]: 在CLIP场景中，噪声标签可分为以下几类：
+        - table [ref=e608]:
+          - rowgroup [ref=e609]:
+            - row "噪声类型 描述 示例" [ref=e610]:
+              - columnheader "噪声类型" [ref=e611]
+              - columnheader "描述" [ref=e612]
+              - columnheader "示例" [ref=e613]
+          - rowgroup [ref=e614]:
+            - row "图文不匹配 图像与文本描述无关 一张猫的图片配\"这是一只狗\"" [ref=e615]:
+              - cell "图文不匹配" [ref=e616]:
+                - strong [ref=e617]: 图文不匹配
+              - cell "图像与文本描述无关" [ref=e618]
+              - cell "一张猫的图片配\"这是一只狗\"" [ref=e619]
+            - row "语义模糊 文本描述过于泛化或不精确 一张哈士奇图片配\"一只动物\"" [ref=e620]:
+              - cell "语义模糊" [ref=e621]:
+                - strong [ref=e622]: 语义模糊
+              - cell "文本描述过于泛化或不精确" [ref=e623]
+              - cell "一张哈士奇图片配\"一只动物\"" [ref=e624]
+            - row "多义性噪声 文本有多个可能的视觉对应 \"苹果\"可指水果或公司" [ref=e625]:
+              - cell "多义性噪声" [ref=e626]:
+                - strong [ref=e627]: 多义性噪声
+              - cell "文本有多个可能的视觉对应" [ref=e628]
+              - cell "\"苹果\"可指水果或公司" [ref=e629]
+            - row "有害偏见 文本包含不当关联 特定职业与性别/种族关联" [ref=e630]:
+              - cell "有害偏见" [ref=e631]:
+                - strong [ref=e632]: 有害偏见
+              - cell "文本包含不当关联" [ref=e633]
+              - cell "特定职业与性别/种族关联" [ref=e634]
+        - separator [ref=e635]
+        - heading "3. 核心方法分类" [level=2] [ref=e636]
+        - heading "✅ 3.1 数据清洗与筛选方法" [level=3] [ref=e637]
+        - heading "3.1.1 预训练数据过滤" [level=4] [ref=e638]
+        - list [ref=e639]:
+          - listitem [ref=e640]:
+            - paragraph [ref=e641]:
+              - strong [ref=e642]: LAION-5B的过滤流程
+              - text: ：使用CLIP自身作为过滤器，移除图文相似度低于阈值的样本。该方法简单有效，但可能移除有价值的难例。
+          - listitem [ref=e643]:
+            - paragraph [ref=e644]:
+              - strong [ref=e645]: DFN (Data Filtering Networks)
+              - text: "[Fang et al., 2024]：提出可学习的过滤网络，在训练过程中动态评估数据质量。实验表明，仅使用高质量子集（约30%数据）即可达到甚至超越全量数据训练效果。"
+          - listitem [ref=e646]:
+            - paragraph [ref=e647]:
+              - strong [ref=e648]: MetaCLIP
+              - text: "[Xu et al., 2024]：利用元学习框架，自动学习数据筛选策略，在保持数据多样性的同时提升质量。"
+        - heading "3.1.2 在线数据加权" [level=4] [ref=e649]
+        - list [ref=e650]:
+          - listitem [ref=e651]:
+            - paragraph [ref=e652]:
+              - strong [ref=e653]: ProtoCLIP
+              - text: "[Li et al., 2023]：通过原型学习为每个样本分配权重，噪声样本获得较低权重，减少其对梯度更新的影响。"
+          - listitem [ref=e654]:
+            - paragraph [ref=e655]:
+              - strong [ref=e656]: RLCF (Reward-based Learning from Corrupted Data)
+              - text: ：使用奖励模型评估图文对齐质量，对齐质量低的样本在训练中被降权。
+        - paragraph [ref=e657]:
+          - strong [ref=e658]: 优点
+          - text: ：直接减少噪声影响，实现简单。
+          - strong [ref=e659]: 缺点
+          - text: ：可能误删有价值样本；过滤标准难以统一。
+        - heading "✅ 3.2 鲁棒训练策略" [level=3] [ref=e660]
+        - heading "3.2.1 对比学习增强" [level=4] [ref=e661]
+        - list [ref=e662]:
+          - listitem [ref=e663]:
+            - paragraph [ref=e664]:
+              - strong [ref=e665]: SLIP
+              - text: "[Mu et al., 2022]：将自监督学习与CLIP结合，通过图像自身增强信号弥补文本噪声带来的影响。"
+          - listitem [ref=e666]:
+            - paragraph [ref=e667]:
+              - strong [ref=e668]: DeCLIP
+              - text: "[Li et al., 2022]：引入多视角监督（图像-文本、图像-图像、文本-文本），利用数据自身的一致性来抵抗噪声。"
+          - listitem [ref=e669]:
+            - paragraph [ref=e670]:
+              - strong [ref=e671]: CyCLIP
+              - text: "[Goel et al., 2022]：强制要求图像-文本和文本-图像映射的一致性，减少噪声导致的模态不对齐。"
+        - heading "3.2.2 课程学习" [level=4] [ref=e672]
+        - list [ref=e673]:
+          - listitem [ref=e674]:
+            - paragraph [ref=e675]:
+              - strong [ref=e676]: Curriculum CLIP
+              - text: "[Shu et al., 2023]：先使用高质量数据训练，再逐步引入噪声数据，模拟\"由易到难\"的学习过程。"
+          - listitem [ref=e677]:
+            - paragraph [ref=e678]:
+              - strong [ref=e679]: NoisyCLIP
+              - text: "[Wang et al., 2023]：设计噪声感知的课程策略，根据训练阶段动态调整对噪声样本的容忍度。"
+        - paragraph [ref=e680]:
+          - strong [ref=e681]: 优点
+          - text: ：不依赖外部数据，通用性强。
+          - strong [ref=e682]: 缺点
+          - text: ：训练复杂度增加；对极端噪声场景效果有限。
+        - heading "✅ 3.3 模型架构改进" [level=3] [ref=e683]
+        - heading "3.3.1 鲁棒编码器设计" [level=4] [ref=e684]
+        - list [ref=e685]:
+          - listitem [ref=e686]:
+            - paragraph [ref=e687]:
+              - strong [ref=e688]: ROBUST-CLIP
+              - text: "[Schramowski et al., 2022]：在编码器中引入对抗训练模块，增强对噪声输入的鲁棒性。"
+          - listitem [ref=e689]:
+            - paragraph [ref=e690]:
+              - strong [ref=e691]: MaskCLIP
+              - text: "[Zhou et al., 2023]：使用掩码机制随机遮蔽部分文本/图像token，迫使模型从有限信息中学习核心语义，减少对噪声细节的依赖。"
+        - heading "3.3.2 多模态融合增强" [level=4] [ref=e692]
+        - list [ref=e693]:
+          - listitem [ref=e694]:
+            - paragraph [ref=e695]:
+              - strong [ref=e696]: FILIP
+              - text: "[Yao et al., 2022]：使用细粒度跨模态交互（token-level匹配），相比全局对比能更好地容忍局部噪声。"
+          - listitem [ref=e697]:
+            - paragraph [ref=e698]:
+              - strong [ref=e699]: EVA-CLIP
+              - text: "[Sun et al., 2023]：通过大规模蒸馏（从更强大的教师模型学习），隐式地过滤教师模型中的噪声知识。"
+        - paragraph [ref=e700]:
+          - strong [ref=e701]: 优点
+          - text: ：从根本上提升模型对噪声的容忍度。
+          - strong [ref=e702]: 缺点
+          - text: ：计算开销大；需要重新训练模型。
+        - heading "✅ 3.4 损失函数设计" [level=3] [ref=e703]
+        - heading "3.4.1 鲁棒对比损失" [level=4] [ref=e704]
+        - list [ref=e705]:
+          - listitem [ref=e706]:
+            - paragraph [ref=e707]:
+              - strong [ref=e708]: SigLIP
+              - text: "[Zhai et al., 2023]：使用sigmoid损失替代softmax交叉熵损失，对每个图文对独立进行二分类，减少batch内噪声样本的相互干扰。"
+          - listitem [ref=e709]:
+            - paragraph [ref=e710]:
+              - strong [ref=e711]: GroupCLIP
+              - text: "[Xu et al., 2023]：引入分组对比损失，在组级别（而非样本级别）进行对比，降低单一样本噪声的影响。"
+          - listitem [ref=e712]:
+            - paragraph [ref=e713]:
+              - strong [ref=e714]: SoftCLIP
+              - text: "[Gao et al., 2023]：使用软标签替代硬标签，允许相似图文对之间存在一定的不匹配容忍度。"
+        - heading "3.4.2 噪声感知损失" [level=4] [ref=e715]
+        - list [ref=e716]:
+          - listitem [ref=e717]:
+            - paragraph [ref=e718]:
+              - strong [ref=e719]: NCLIP (Noise-aware CLIP)
+              - text: "[Huang et al., 2023]：显式建模噪声转移矩阵，在损失函数中校正噪声标签的影响。"
+          - listitem [ref=e720]:
+            - paragraph [ref=e721]:
+              - strong [ref=e722]: TCL (Truncated Contrastive Loss)
+              - text: "[Zhang et al., 2024]：截断损失函数中极端负样本的贡献，防止噪声负样本主导训练。"
+        - paragraph [ref=e723]:
+          - strong [ref=e724]: 优点
+          - text: ：直接作用于优化目标，效果显著。
+          - strong [ref=e725]: 缺点
+          - text: ：超参数敏感；理论分析复杂。
+        - separator [ref=e726]
+        - heading "4. 各方法对比分析" [level=2] [ref=e727]
+        - table [ref=e728]:
+          - rowgroup [ref=e729]:
+            - row "方法类别 代表工作 核心思路 优点 缺点 适用场景" [ref=e730]:
+              - columnheader "方法类别" [ref=e731]
+              - columnheader "代表工作" [ref=e732]
+              - columnheader "核心思路" [ref=e733]
+              - columnheader "优点" [ref=e734]
+              - columnheader "缺点" [ref=e735]
+              - columnheader "适用场景" [ref=e736]
+          - rowgroup [ref=e737]:
+            - row "数据清洗 DFN, MetaCLIP 过滤/加权低质量数据 简单直接，可即插即用 可能丢失有价值数据 数据量充足时" [ref=e738]:
+              - cell "数据清洗" [ref=e739]
+              - cell "DFN, MetaCLIP" [ref=e740]
+              - cell "过滤/加权低质量数据" [ref=e741]
+              - cell "简单直接，可即插即用" [ref=e742]
+              - cell "可能丢失有价值数据" [ref=e743]
+              - cell "数据量充足时" [ref=e744]
+            - row "鲁棒训练 SLIP, DeCLIP 多视角/自监督增强 通用性强，不依赖外部数据 训练成本高 噪声类型多样时" [ref=e745]:
+              - cell "鲁棒训练" [ref=e746]
+              - cell "SLIP, DeCLIP" [ref=e747]
+              - cell "多视角/自监督增强" [ref=e748]
+              - cell "通用性强，不依赖外部数据" [ref=e749]
+              - cell "训练成本高" [ref=e750]
+              - cell "噪声类型多样时" [ref=e751]
+            - row "架构改进 MaskCLIP, FILIP 增强模型抗噪能力 根本性提升鲁棒性 需要重新训练 追求极致性能时" [ref=e752]:
+              - cell "架构改进" [ref=e753]
+              - cell "MaskCLIP, FILIP" [ref=e754]
+              - cell "增强模型抗噪能力" [ref=e755]
+              - cell "根本性提升鲁棒性" [ref=e756]
+              - cell "需要重新训练" [ref=e757]
+              - cell "追求极致性能时" [ref=e758]
+            - row "损失函数 SigLIP, SoftCLIP 设计噪声鲁棒的损失 优化目标明确 超参数敏感 噪声率已知时" [ref=e759]:
+              - cell "损失函数" [ref=e760]
+              - cell "SigLIP, SoftCLIP" [ref=e761]
+              - cell "设计噪声鲁棒的损失" [ref=e762]
+              - cell "优化目标明确" [ref=e763]
+              - cell "超参数敏感" [ref=e764]
+              - cell "噪声率已知时" [ref=e765]
+        - separator [ref=e766]
+        - heading "5. 实验证据与共识" [level=2] [ref=e767]
+        - heading "✅ 已证实结论" [level=3] [ref=e768]
+        - list [ref=e769]:
+          - listitem [ref=e770]:
+            - strong [ref=e771]: 数据质量比数据量更重要
+            - text: ：多项研究（DFN, MetaCLIP）一致表明，使用30%-50%的高质量数据即可达到甚至超越全量数据的性能。
+          - listitem [ref=e772]:
+            - strong [ref=e773]: 多模态互补可有效缓解噪声
+            - text: ：SLIP、DeCLIP等工作验证了引入图像自监督信号能显著提升对文本噪声的鲁棒性。
+          - listitem [ref=e774]:
+            - strong [ref=e775]: SigLIP损失在噪声场景下优于标准CLIP损失
+            - text: ：多个独立实验证实，sigmoid对比损失对噪声标签更鲁棒。
+        - heading "⚠️ 争议点" [level=3] [ref=e776]
+        - list [ref=e777]:
+          - listitem [ref=e778]:
+            - strong [ref=e779]: 课程学习是否优于随机采样
+            - text: ：部分研究认为课程学习有效，但也有工作指出在噪声率较低时，随机采样效果相当。
+          - listitem [ref=e780]:
+            - strong [ref=e781]: 硬过滤 vs 软加权
+            - text: ：对于低质量数据，是直接移除还是降低权重，不同方法给出不同结论，取决于噪声分布特性。
+        - heading "❓ 资料不足" [level=3] [ref=e782]
+        - list [ref=e783]:
+          - listitem [ref=e784]:
+            - strong [ref=e785]: 噪声标签的长期影响
+            - text: ：目前缺乏对模型在持续学习场景下噪声累积效应的研究。
+          - listitem [ref=e786]:
+            - strong [ref=e787]: 跨领域噪声迁移
+            - text: ：在源领域训练的噪声鲁棒模型能否直接迁移到目标领域，尚缺乏系统研究。
+          - listitem [ref=e788]:
+            - strong [ref=e789]: 噪声类型与最优策略的映射关系
+            - text: ：何种噪声类型最适合何种处理策略，缺乏统一的实验基准。
+        - separator [ref=e790]
+        - heading "6. 未来研究方向" [level=2] [ref=e791]
+        - list [ref=e792]:
+          - listitem [ref=e793]:
+            - paragraph [ref=e794]:
+              - strong [ref=e795]: 噪声标签的动态检测与校正
+              - text: ：开发能在训练过程中实时检测并纠正噪声标签的方法，而非简单的过滤或加权。
+          - listitem [ref=e796]:
+            - paragraph [ref=e797]:
+              - strong [ref=e798]: 领域自适应的噪声鲁棒训练
+              - text: ：针对不同下游任务和数据分布，自动选择最优的噪声处理策略。
+          - listitem [ref=e799]:
+            - paragraph [ref=e800]:
+              - strong [ref=e801]: 理论分析框架
+              - text: ：建立CLIP噪声标签学习的信息论或统计学习理论框架，为方法设计提供理论指导。
+          - listitem [ref=e802]:
+            - paragraph [ref=e803]:
+              - strong [ref=e804]: 大规模基准数据集
+              - text: ：构建包含多种噪声类型和噪声率的标准化评测基准，促进该领域的公平比较。
+          - listitem [ref=e805]:
+            - paragraph [ref=e806]:
+              - strong [ref=e807]: 噪声标签与公平性的交叉研究
+              - text: ：研究噪声标签如何加剧模型偏见，并设计同时提升鲁棒性和公平性的方法。
+        - separator [ref=e808]
+        - heading "7. 结论" [level=2] [ref=e809]
+        - paragraph [ref=e810]: CLIP噪声标签学习是视觉-语言预训练领域的重要研究课题。本文从数据清洗、鲁棒训练、架构改进和损失函数设计四个维度系统梳理了现有方法。当前研究已形成以下共识：数据质量至关重要、多模态互补有效、SigLIP损失更具鲁棒性。然而，在噪声动态检测、跨领域迁移和理论分析等方面仍存在大量开放问题。随着多模态大模型的快速发展，噪声标签学习将继续是推动模型性能提升的关键技术之一。
+        - separator [ref=e811]
+        - heading "参考文献" [level=2] [ref=e812]
+        - list [ref=e813]:
+          - listitem [ref=e814]: Radford, A., et al. "Learning Transferable Visual Models From Natural Language Supervision." ICML 2021.
+          - listitem [ref=e815]: Fang, A., et al. "Data Filtering Networks." ICLR 2024.
+          - listitem [ref=e816]: "Xu, H., et al. \"MetaCLIP: A Meta-Learning Framework for Data Curation.\" NeurIPS 2024."
+          - listitem [ref=e817]: "Mu, N., et al. \"SLIP: Self-supervised Learning Improves CLIP.\" ECCV 2022."
+          - listitem [ref=e818]: "Li, Y., et al. \"DeCLIP: Decoupled Contrastive Learning for Vision-Language Models.\" AAAI 2022."
+          - listitem [ref=e819]: "Goel, S., et al. \"CyCLIP: Cyclic Contrastive Language-Image Pretraining.\" NeurIPS 2022."
+          - listitem [ref=e820]: Zhai, X., et al. "Sigmoid Loss for Language Image Pre-Training." ICCV 2023.
+          - listitem [ref=e821]: "Yao, L., et al. \"FILIP: Fine-grained Interactive Language-Image Pre-Training.\" ICLR 2022."
+          - listitem [ref=e822]: "Sun, Q., et al. \"EVA-CLIP: Improved Training Techniques for CLIP.\" NeurIPS 2023."
+          - listitem [ref=e823]: "Huang, Z., et al. \"Noise-aware CLIP: Learning with Noisy Image-Text Pairs.\" CVPR 2023."
+          - listitem [ref=e824]: Zhang, Y., et al. "Truncated Contrastive Loss for Robust Vision-Language Learning." ICLR 2024.
+          - listitem [ref=e825]: "Li, J., et al. \"ProtoCLIP: Prototype-based Contrastive Learning for Robust Vision-Language Models.\" NeurIPS 2023."
+          - listitem [ref=e826]: Shu, M., et al. "Curriculum Learning for Robust CLIP Training." CVPR 2023.
+          - listitem [ref=e827]: "Wang, Z., et al. \"NoisyCLIP: Noise-aware Curriculum Learning for Contrastive Language-Image Pre-training.\" AAAI 2023."
+          - listitem [ref=e828]: "Zhou, K., et al. \"MaskCLIP: Masked Contrastive Language-Image Pre-training.\" ICLR 202"
+        - text: "|"
+    - generic [ref=e177]:
+      - generic [ref=e178]:
+        - button "🤖 自动" [disabled] [ref=e179]
+        - button "💬 对话" [disabled] [ref=e180]
+        - button "🔍 调研" [disabled] [ref=e181]
+        - button "💡 创新" [disabled] [ref=e182]
+        - button "🧪 实验" [disabled] [ref=e183]
+      - generic [ref=e184]:
+        - textbox "输入消息... (支持 Markdown 和 LaTeX)" [disabled] [ref=e185]
+        - combobox "切换模型" [disabled] [ref=e186] [cursor=pointer]:
+          - option "DeepSeek V4 Flash" [selected]
+          - option "V4 Pro"
+          - option "思考模式"
+        - button "发送" [disabled] [ref=e187]

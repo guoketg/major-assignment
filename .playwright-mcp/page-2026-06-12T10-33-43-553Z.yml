@@ -1,0 +1,21 @@
+- generic [ref=e3]:
+  - generic [ref=e4]:
+    - generic [ref=e5]:
+      - heading "对话历史" [level=2] [ref=e6]
+      - button "+ 新对话" [ref=e7] [cursor=pointer]
+    - paragraph [ref=e9]: 暂无会话记录
+  - generic [ref=e10]:
+    - generic [ref=e11]:
+      - generic [ref=e13]:
+        - button "💬 对话" [active] [ref=e14] [cursor=pointer]
+        - button "📄 论文搜索" [ref=e15] [cursor=pointer]
+      - combobox [ref=e215] [cursor=pointer]:
+        - option "DeepSeek V4 Flash - 快速响应" [selected]
+        - option "V4 Pro - 更强能力"
+        - option "思考模式 - 深度推理（reasoner）"
+    - generic [ref=e217]:
+      - generic [ref=e218]: 💬
+      - paragraph [ref=e219]: 选择或创建一个新对话开始
+    - generic [ref=e220]:
+      - textbox "输入消息... (支持 Markdown 和 LaTeX)" [ref=e221]
+      - button "发送" [ref=e222] [cursor=pointer]

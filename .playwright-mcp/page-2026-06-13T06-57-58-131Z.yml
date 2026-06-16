@@ -1,0 +1,353 @@
+- generic [ref=e3]:
+  - generic [ref=e4]:
+    - generic [ref=e5]:
+      - heading "对话历史" [level=2] [ref=e6]
+      - button "+ 新对话" [ref=e7] [cursor=pointer]
+    - generic [ref=e8]:
+      - generic [ref=e156] [cursor=pointer]:
+        - generic [ref=e157]:
+          - generic [ref=e158]: 100字介绍Python
+          - generic [ref=e159]: 4 条消息
+        - button "×" [ref=e160]
+      - generic [ref=e33] [cursor=pointer]:
+        - generic [ref=e34]:
+          - generic [ref=e35]: 简单介绍一下Python
+          - generic [ref=e36]: 2 条消息
+        - button "×" [ref=e37]
+      - generic [ref=e38] [cursor=pointer]:
+        - generic [ref=e39]:
+          - generic [ref=e40]: 介绍什么是GDBT
+          - generic [ref=e41]: 4 条消息
+        - button "×" [ref=e42]
+      - generic [ref=e43] [cursor=pointer]:
+        - generic [ref=e44]:
+          - generic [ref=e45]: 500字介绍深度学习
+          - generic [ref=e46]: 2 条消息
+        - button "×" [ref=e47]
+      - generic [ref=e48] [cursor=pointer]:
+        - generic [ref=e49]:
+          - generic [ref=e50]: 500字介绍机器学习，要详细
+          - generic [ref=e51]: 2 条消息
+        - button "×" [ref=e52]
+      - generic [ref=e53] [cursor=pointer]:
+        - generic [ref=e54]:
+          - generic [ref=e55]: 100字介绍机器学习
+          - generic [ref=e56]: 4 条消息
+        - button "×" [ref=e57]
+      - generic [ref=e58] [cursor=pointer]:
+        - generic [ref=e59]:
+          - generic [ref=e60]: 你好，请介绍一下Python
+          - generic [ref=e61]: 2 条消息
+        - button "×" [ref=e62]
+      - generic [ref=e63] [cursor=pointer]:
+        - generic [ref=e64]:
+          - generic [ref=e65]: 请用300字介绍XGBoost算法
+          - generic [ref=e66]: 2 条消息
+        - button "×" [ref=e67]
+      - generic [ref=e68] [cursor=pointer]:
+        - generic [ref=e69]:
+          - generic [ref=e70]: 请用500字介绍Transformer架构，尽可能详细
+          - generic [ref=e71]: 2 条消息
+        - button "×" [ref=e72]
+      - generic [ref=e73] [cursor=pointer]:
+        - generic [ref=e74]:
+          - generic [ref=e75]: 什么是机器学习加XGBoost，请详细介绍一下
+          - generic [ref=e76]: 2 条消息
+        - button "×" [ref=e77]
+      - generic [ref=e78] [cursor=pointer]:
+        - generic [ref=e79]:
+          - generic [ref=e80]: c语言程序中 unsigned int和int 他们存储的是...
+          - generic [ref=e81]: 2 条消息
+        - button "×" [ref=e82]
+      - generic [ref=e83] [cursor=pointer]:
+        - generic [ref=e84]:
+          - generic [ref=e85]: 500字介绍深度学习的最新进展 要包括Transformer...
+          - generic [ref=e86]: 2 条消息
+        - button "×" [ref=e87]
+      - generic [ref=e88] [cursor=pointer]:
+        - generic [ref=e89]:
+          - generic [ref=e90]: c语言程序中 unsigned int和int 他们存储的是...
+          - generic [ref=e91]: 2 条消息
+        - button "×" [ref=e92]
+      - generic [ref=e93] [cursor=pointer]:
+        - generic [ref=e94]:
+          - generic [ref=e95]: 500字介绍深度学习的最新进展 要包括Transformer...
+          - generic [ref=e96]: 2 条消息
+        - button "×" [ref=e97]
+      - generic [ref=e98] [cursor=pointer]:
+        - generic [ref=e99]:
+          - generic [ref=e100]: 500字介绍深度学习的最新进展 要包括Transformer...
+          - generic [ref=e101]: 2 条消息
+        - button "×" [ref=e102]
+      - generic [ref=e103] [cursor=pointer]:
+        - generic [ref=e104]:
+          - generic [ref=e105]: 500字介绍深度学习的最新进展 要包括Transformer...
+          - generic [ref=e106]: 2 条消息
+        - button "×" [ref=e107]
+      - generic [ref=e108] [cursor=pointer]:
+        - generic [ref=e109]:
+          - generic [ref=e110]: 500字介绍深度学习的最新进展 要包括Transformer...
+          - generic [ref=e111]: 2 条消息
+        - button "×" [ref=e112]
+      - generic [ref=e113] [cursor=pointer]:
+        - generic [ref=e114]:
+          - generic [ref=e115]: 500字介绍深度学习的最新进展 要包括Transformer...
+          - generic [ref=e116]: 2 条消息
+        - button "×" [ref=e117]
+      - generic [ref=e118] [cursor=pointer]:
+        - generic [ref=e119]:
+          - generic [ref=e120]: 500字介绍Transformer
+          - generic [ref=e121]: 2 条消息
+        - button "×" [ref=e122]
+      - generic [ref=e123] [cursor=pointer]:
+        - generic [ref=e124]:
+          - generic [ref=e125]: 500字介绍Transformer
+          - generic [ref=e126]: 2 条消息
+        - button "×" [ref=e127]
+      - generic [ref=e128] [cursor=pointer]:
+        - generic [ref=e129]:
+          - generic [ref=e130]: 500字介绍深度学习 要包括CNN RNN Transfor...
+          - generic [ref=e131]: 2 条消息
+        - button "×" [ref=e132]
+      - generic [ref=e133] [cursor=pointer]:
+        - generic [ref=e134]:
+          - generic [ref=e135]: 500字介绍Transformer
+          - generic [ref=e136]: 2 条消息
+        - button "×" [ref=e137]
+      - generic [ref=e138] [cursor=pointer]:
+        - generic [ref=e139]:
+          - generic [ref=e140]: 500字介绍深度学习的最新进展 要包括Transformer...
+          - generic [ref=e141]: 4 条消息
+        - button "×" [ref=e142]
+      - generic [ref=e143] [cursor=pointer]:
+        - generic [ref=e144]:
+          - generic [ref=e145]: 00字介绍Transformer
+          - generic [ref=e146]: 4 条消息
+        - button "×" [ref=e147]
+      - generic [ref=e148] [cursor=pointer]:
+        - generic [ref=e149]:
+          - generic [ref=e150]: 200字介绍Transformer
+          - generic [ref=e151]: 4 条消息
+        - button "×" [ref=e152]
+  - generic [ref=e10]:
+    - generic [ref=e11]:
+      - generic [ref=e13]:
+        - button "💬 对话" [ref=e14] [cursor=pointer]
+        - button "📄 论文搜索" [ref=e15] [cursor=pointer]
+        - button "🧠 记忆" [ref=e16] [cursor=pointer]
+        - button "🔧 工具" [ref=e17] [cursor=pointer]
+      - generic [ref=e153]:
+        - button "📄 导出 Word" [ref=e154] [cursor=pointer]
+        - button "清空对话" [ref=e155] [cursor=pointer]
+    - generic [ref=e197]:
+      - generic [ref=e198] [cursor=pointer]:
+        - generic [ref=e199]: 🤖 Agent 流水线
+        - generic [ref=e200]: 收起 ▲
+      - generic [ref=e201]:
+        - generic [ref=e204]:
+          - generic [ref=e205]: 🤖
+          - generic [ref=e206]: 🤖 智能路由
+          - generic [ref=e207]: ✅ 完成
+        - generic [ref=e211]:
+          - generic [ref=e212]: 💬
+          - generic [ref=e213]: 💬 对话助手
+          - generic [ref=e214]: ✅ 完成
+        - generic [ref=e276]:
+          - generic [ref=e277]: 📋
+          - generic [ref=e278]: 📋 综合输出
+          - generic [ref=e279]: ✅ 完成
+    - generic [ref=e18]:
+      - generic [ref=e188]: 100字介绍Python
+      - paragraph [ref=e192]:
+        - text: Python 是一种
+        - strong [ref=e193]: 高级、解释型、通用编程语言
+        - text: ，由 Guido van Rossum 于 1991 年创建。它以
+        - strong [ref=e194]: 简洁优雅的语法
+        - text: 著称，强调代码可读性（使用缩进划分代码块）。Python 支持多种编程范式（面向对象、函数式等），拥有丰富的
+        - strong [ref=e195]: 标准库
+        - text: 和庞大的第三方生态（如 NumPy、PyTorch、Django），广泛应用于
+        - strong [ref=e196]: Web 开发、数据分析、人工智能、自动化脚本
+        - text: 等领域，是入门友好且功能强大的语言。
+      - generic [ref=e217]: 继续详细介绍Python的面向对象特性
+      - generic [ref=e282]:
+        - paragraph [ref=e283]:
+          - text: 好的！下面详细介绍一下 Python 的
+          - strong [ref=e284]: 面向对象编程（OOP）
+          - text: 特性。
+        - separator [ref=e285]
+        - heading "1. 类与对象" [level=2] [ref=e286]
+        - paragraph [ref=e287]:
+          - text: Python 使用
+          - code [ref=e288]: class
+          - text: 关键字定义类，支持创建多个实例对象：
+        - code [ref=e290]: "class Dog: # 类属性（所有实例共享） species = \"Canis familiaris\" # 构造方法（实例初始化） def __init__(self, name, age): self.name = name # 实例属性 self.age = age # 实例方法 def bark(self): return f\"{self.name} says woof!\" # 创建对象 my_dog = Dog(\"Buddy\", 3) print(my_dog.bark()) # Buddy says woof!"
+        - separator [ref=e291]
+        - heading "2. 封装（Encapsulation）" [level=2] [ref=e292]
+        - paragraph [ref=e293]:
+          - text: Python 通过
+          - strong [ref=e294]: 命名约定
+          - text: 实现访问控制，没有真正的
+          - code [ref=e295]: private
+          - text: 关键字：
+        - table [ref=e296]:
+          - rowgroup [ref=e297]:
+            - row "命名方式 含义 示例" [ref=e298]:
+              - columnheader "命名方式" [ref=e299]
+              - columnheader "含义" [ref=e300]
+              - columnheader "示例" [ref=e301]
+          - rowgroup [ref=e302]:
+            - row "name 公开属性 self.name" [ref=e303]:
+              - cell "name" [ref=e304]:
+                - code [ref=e305]: name
+              - cell "公开属性" [ref=e306]
+              - cell "self.name" [ref=e307]:
+                - code [ref=e308]: self.name
+            - row "_name 受保护的（约定，仍可访问） self._age" [ref=e309]:
+              - cell "_name" [ref=e310]:
+                - code [ref=e311]: _name
+              - cell "受保护的（约定，仍可访问）" [ref=e312]
+              - cell "self._age" [ref=e313]:
+                - code [ref=e314]: self._age
+            - row "__name 名称改写（Name Mangling） self.__salary" [ref=e315]:
+              - cell "__name" [ref=e316]:
+                - code [ref=e317]: __name
+              - cell "名称改写（Name Mangling）" [ref=e318]
+              - cell "self.__salary" [ref=e319]:
+                - code [ref=e320]: self.__salary
+        - code [ref=e322]: "class BankAccount: def __init__(self, owner, balance): self.owner = owner # 公开 self._balance = balance # 受保护（约定） self.__pin = \"1234\" # 私有（名称改写为 _BankAccount__pin） def get_balance(self): # 公开的 getter 方法 return self._balance"
+        - blockquote [ref=e323]:
+          - paragraph [ref=e324]:
+            - text: 注意：
+            - code [ref=e325]: __pin
+            - text: 实际上被改名为
+            - code [ref=e326]: _BankAccount__pin
+            - text: ，仍可通过
+            - code [ref=e327]: obj._BankAccount__pin
+            - text: 访问，但强烈不建议。
+        - separator [ref=e328]
+        - heading "3. 继承（Inheritance）" [level=2] [ref=e329]
+        - paragraph [ref=e330]:
+          - text: Python 支持
+          - strong [ref=e331]: 单继承
+          - text: 和
+          - strong [ref=e332]: 多继承
+          - text: ：
+        - code [ref=e334]: "# 父类 class Animal: def __init__(self, name): self.name = name def speak(self): return \"...\" # 子类继承 class Cat(Animal): def speak(self): # 方法重写（Override） return f\"{self.name} says meow!\" class Dog(Animal): def speak(self): return f\"{self.name} says woof!\" # 多继承 class FlyingDog(Dog, Bird): # 同时继承两个类 pass"
+        - paragraph [ref=e335]:
+          - strong [ref=e336]: 方法解析顺序（MRO）
+          - text: ：Python 使用 C3 线性化算法，可通过
+          - code [ref=e337]: ClassName.__mro__
+          - text: 查看。
+        - separator [ref=e338]
+        - heading "4. 多态（Polymorphism）" [level=2] [ref=e339]
+        - paragraph [ref=e340]:
+          - text: Python 是
+          - strong [ref=e341]: 动态类型
+          - text: 语言，多态天然支持——只要对象有对应方法即可：
+        - code [ref=e343]: "def make_sound(animal): print(animal.speak()) # 不关心具体类型，只关心是否有 speak() 方法 make_sound(Cat(\"Kitty\")) # Kitty says meow! make_sound(Dog(\"Rex\")) # Rex says woof! make_sound(Animal(\"?\")) # ..."
+        - paragraph [ref=e344]:
+          - text: 这被称为
+          - strong [ref=e345]: 鸭子类型
+          - text: （Duck Typing）——"如果它走路像鸭子、叫起来像鸭子，那它就是鸭子"。
+        - separator [ref=e346]
+        - heading "5. 特殊方法（Magic Methods / Dunder Methods）" [level=2] [ref=e347]
+        - paragraph [ref=e348]: Python 通过双下划线方法实现运算符重载和内置行为定制：
+        - code [ref=e350]: "class Vector: def __init__(self, x, y): self.x = x self.y = y def __add__(self, other): # 支持 + return Vector(self.x + other.x, self.y + other.y) def __repr__(self): # 调试用字符串表示 return f\"Vector({self.x}, {self.y})\" def __len__(self): # 支持 len() return int((self.x**2 + self.y**2)**0.5) v1 = Vector(3, 4) v2 = Vector(1, 2) print(v1 + v2) # Vector(4, 6) print(len(v1)) # 5"
+        - paragraph [ref=e351]: 常见特殊方法：
+        - list [ref=e352]:
+          - listitem [ref=e353]:
+            - code [ref=e354]: __init__
+            - text: ：构造函数
+          - listitem [ref=e355]:
+            - code [ref=e356]: __str__
+            - text: ：
+            - code [ref=e357]: str()
+            - text: 和
+            - code [ref=e358]: print()
+            - text: 调用
+          - listitem [ref=e359]:
+            - code [ref=e360]: __repr__
+            - text: ：调试表示
+          - listitem [ref=e361]:
+            - code [ref=e362]: __len__
+            - text: ：
+            - code [ref=e363]: len()
+            - text: 调用
+          - listitem [ref=e364]:
+            - code [ref=e365]: __getitem__
+            - text: ：索引访问
+            - code [ref=e366]: obj[key]
+          - listitem [ref=e367]:
+            - code [ref=e368]: __call__
+            - text: ：让对象可调用
+            - code [ref=e369]: obj()
+        - separator [ref=e370]
+        - heading "6. 类方法与静态方法" [level=2] [ref=e371]
+        - code [ref=e373]: "class MyClass: class_var = 0 @classmethod def class_method(cls): # 第一个参数是类本身 cls.class_var += 1 return f\"Class var: {cls.class_var}\" @staticmethod def static_method(x, y): # 不需要 self 或 cls return x + y # 就像普通函数"
+        - list [ref=e374]:
+          - listitem [ref=e375]:
+            - strong [ref=e376]: 类方法
+            - text: ：可访问/修改类属性，常用于工厂模式
+          - listitem [ref=e377]:
+            - strong [ref=e378]: 静态方法
+            - text: ：逻辑上属于类，但不依赖类或实例状态
+        - separator [ref=e379]
+        - heading "7. 属性装饰器（Property）" [level=2] [ref=e380]
+        - paragraph [ref=e381]:
+          - text: 用
+          - code [ref=e382]: "@property"
+          - text: 实现优雅的 getter/setter：
+        - code [ref=e384]: "class Temperature: def __init__(self, celsius): self._celsius = celsius @property def celsius(self): # getter return self._celsius @celsius.setter def celsius(self, value): # setter（带验证） if value < -273.15: raise ValueError(\"温度不能低于绝对零度\") self._celsius = value @property def fahrenheit(self): # 只读计算属性 return self._celsius * 9/5 + 32 t = Temperature(25) print(t.fahrenheit) # 77.0 t.celsius = 30 # 使用 setter"
+        - separator [ref=e385]
+        - heading "8. 抽象类（Abstract Base Classes）" [level=2] [ref=e386]
+        - paragraph [ref=e387]:
+          - text: 使用
+          - code [ref=e388]: abc
+          - text: 模块定义接口：
+        - code [ref=e390]: "from abc import ABC, abstractmethod class Shape(ABC): @abstractmethod def area(self): # 子类必须实现 pass @abstractmethod def perimeter(self): # 子类必须实现 pass class Circle(Shape): def __init__(self, r): self.r = r def area(self): return 3.14 * self.r ** 2 def perimeter(self): return 2 * 3.14 * self.r # shape = Shape() # TypeError! 不能实例化抽象类"
+        - separator [ref=e391]
+        - heading "总结对比" [level=2] [ref=e392]
+        - table [ref=e393]:
+          - rowgroup [ref=e394]:
+            - row "特性 Python 实现特点" [ref=e395]:
+              - columnheader "特性" [ref=e396]
+              - columnheader "Python 实现特点" [ref=e397]
+          - rowgroup [ref=e398]:
+            - row "封装 命名约定（无真正 private）" [ref=e399]:
+              - cell "封装" [ref=e400]:
+                - strong [ref=e401]: 封装
+              - cell "命名约定（无真正 private）" [ref=e402]
+            - row "继承 单继承 + 多继承，C3 MRO" [ref=e403]:
+              - cell "继承" [ref=e404]:
+                - strong [ref=e405]: 继承
+              - cell "单继承 + 多继承，C3 MRO" [ref=e406]
+            - row "多态 鸭子类型，动态分发" [ref=e407]:
+              - cell "多态" [ref=e408]:
+                - strong [ref=e409]: 多态
+              - cell "鸭子类型，动态分发" [ref=e410]
+            - row "重载 通过特殊方法（__add__ 等）" [ref=e411]:
+              - cell "重载" [ref=e412]:
+                - strong [ref=e413]: 重载
+              - cell "通过特殊方法（__add__ 等）" [ref=e414]:
+                - text: 通过特殊方法（
+                - code [ref=e415]: __add__
+                - text: 等）
+            - row "接口 抽象基类（ABC）或 Protocol" [ref=e416]:
+              - cell "接口" [ref=e417]:
+                - strong [ref=e418]: 接口
+              - cell "抽象基类（ABC）或 Protocol" [ref=e419]
+        - paragraph [ref=e420]: Python 的 OOP 设计哲学是**"简洁实用"**——没有 C++/Java 那么严格的访问控制，但提供了足够的灵活性来构建清晰、可维护的面向对象代码。
+    - generic [ref=e22]:
+      - generic [ref=e23]:
+        - button "🤖 自动" [ref=e24] [cursor=pointer]
+        - button "💬 对话" [ref=e25] [cursor=pointer]
+        - button "🔍 调研" [ref=e26] [cursor=pointer]
+        - button "💡 创新" [ref=e27] [cursor=pointer]
+        - button "🧪 实验" [ref=e28] [cursor=pointer]
+      - generic [ref=e29]:
+        - textbox "输入消息... (支持 Markdown 和 LaTeX)" [ref=e30]
+        - combobox "切换模型" [ref=e31] [cursor=pointer]:
+          - option "DeepSeek V4 Flash" [selected]
+          - option "V4 Pro"
+          - option "思考模式"
+        - button "发送" [ref=e32] [cursor=pointer]

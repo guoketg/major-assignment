@@ -1,0 +1,95 @@
+- generic [ref=e3]:
+  - generic [ref=e4]:
+    - generic [ref=e5]:
+      - heading "对话历史" [level=2] [ref=e6]
+      - button "+ 新对话" [ref=e7] [cursor=pointer]
+    - generic [ref=e8]:
+      - generic [ref=e19] [cursor=pointer]:
+        - generic [ref=e20]:
+          - generic [ref=e21]: 介绍deepseek
+          - generic [ref=e22]: 2 条消息
+        - button "×" [ref=e23]
+      - generic [ref=e24] [cursor=pointer]:
+        - generic [ref=e25]:
+          - generic [ref=e26]: 什么是微积分
+          - generic [ref=e27]: 2 条消息
+        - button "×" [ref=e28]
+      - generic [ref=e29] [cursor=pointer]:
+        - generic [ref=e30]:
+          - generic [ref=e31]: 测试
+          - generic [ref=e32]: 2 条消息
+        - button "×" [ref=e33]
+      - generic [ref=e34] [cursor=pointer]:
+        - generic [ref=e35]:
+          - generic [ref=e36]: 你好，请回复短一点
+          - generic [ref=e37]: 2 条消息
+        - button "×" [ref=e38]
+      - generic [ref=e39] [cursor=pointer]:
+        - generic [ref=e40]:
+          - generic [ref=e41]: 什么是CLIP的噪声标签学习
+          - generic [ref=e42]: 2 条消息
+        - button "×" [ref=e43]
+      - generic [ref=e44] [cursor=pointer]:
+        - generic [ref=e45]:
+          - generic [ref=e46]: 请用markdown格式回答，列出3个特点
+          - generic [ref=e47]: 2 条消息
+        - button "×" [ref=e48]
+      - generic [ref=e49] [cursor=pointer]:
+        - generic [ref=e50]:
+          - generic [ref=e51]: 请介绍一下你自己
+          - generic [ref=e52]: 2 条消息
+        - button "×" [ref=e53]
+  - generic [ref=e10]:
+    - generic [ref=e11]:
+      - generic [ref=e55]: "会话: session_4f40bca4"
+      - button "清空对话" [ref=e57] [cursor=pointer]
+    - generic [ref=e12]:
+      - generic [ref=e60]: 介绍deepseek
+      - generic [ref=e63]:
+        - paragraph [ref=e64]: 你好！很高兴为你介绍DeepSeek！
+        - heading "关于DeepSeek" [level=2] [ref=e65]
+        - paragraph [ref=e66]:
+          - text: DeepSeek是由
+          - strong [ref=e67]: 深度求索公司
+          - text: 创造的AI助手，是一个纯文本模型，专注于理解和生成自然语言。我目前是
+          - strong [ref=e68]: DeepSeek最新版本模型
+          - text: ，拥有以下特点：
+        - heading "✨ 核心能力" [level=3] [ref=e69]
+        - list [ref=e70]:
+          - listitem [ref=e71]:
+            - strong [ref=e72]: 超长上下文
+            - text: ：支持1M token的上下文窗口，可以一次性处理像《三体》三部曲这样体量的长篇内容
+          - listitem [ref=e73]:
+            - strong [ref=e74]: 文件处理
+            - text: ：支持上传图像、txt、pdf、ppt、word、excel等文件，并从中提取文字信息进行处理
+          - listitem [ref=e75]:
+            - strong [ref=e76]: 联网搜索
+            - text: ：支持联网搜索功能（需手动开启）
+          - listitem [ref=e77]:
+            - strong [ref=e78]: 链接阅读
+            - text: ：可以直接阅读和分析网页链接内容
+        - heading "🎯 使用方式" [level=3] [ref=e79]
+        - list [ref=e80]:
+          - listitem [ref=e81]:
+            - strong [ref=e82]: 完全免费
+            - text: ：目前Web端和App端都是免费使用
+          - listitem [ref=e83]:
+            - strong [ref=e84]: 多平台支持
+            - text: ：提供Web版和移动App（可在官方应用商店下载）
+          - listitem [ref=e85]:
+            - strong [ref=e86]: 语音输入
+            - text: ：App端支持语音输入功能
+        - heading "📅 知识范围" [level=3] [ref=e87]
+        - paragraph [ref=e88]:
+          - text: 我的知识截止于
+          - strong [ref=e89]: 2025年5月
+          - text: ，可以为你提供最新的信息和帮助。
+        - heading "🚫 限制" [level=3] [ref=e90]
+        - list [ref=e91]:
+          - listitem [ref=e92]: 不支持多模态识别（如图像识别），但可以读取上传文件中的文字
+          - listitem [ref=e93]: 虽然不能直接“看”图片，但可以分析图片中的文字信息
+        - separator [ref=e94]
+        - paragraph [ref=e95]: 有什么具体想了解的功能，或者想让我帮你做什么吗？无论是学习、工作还是日常问题，我都很乐意帮忙！😊
+    - generic [ref=e16]:
+      - textbox "输入消息... (支持 Markdown 和 LaTeX)" [ref=e17]
+      - button "发送" [ref=e18] [cursor=pointer]

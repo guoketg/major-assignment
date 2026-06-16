@@ -1,0 +1,176 @@
+- generic [ref=e3]:
+  - generic [ref=e4]:
+    - generic [ref=e5]:
+      - heading "对话历史" [level=2] [ref=e6]
+      - button "+ 新对话" [ref=e7] [cursor=pointer]
+    - paragraph [ref=e9]: 暂无会话记录
+  - generic [ref=e10]:
+    - generic [ref=e13]:
+      - button "💬 对话" [ref=e14] [cursor=pointer]
+      - button "📄 论文搜索" [ref=e15] [cursor=pointer]
+    - generic [ref=e25]:
+      - generic [ref=e26]:
+        - textbox "搜索 arXiv 论文，如：cat:cs.LG+AND+ti:transformer" [ref=e27]: all:deep+learning
+        - button "搜索" [ref=e28] [cursor=pointer]
+      - generic [ref=e29]:
+        - generic [ref=e34]:
+          - 'link "Learn to Accumulate Evidence from All Training Samples: Theory and Practice" [ref=e36] [cursor=pointer]':
+            - /url: http://arxiv.org/abs/2306.11113v2
+          - generic [ref=e38]: 👥 Deep Pandey; Qi Yu
+          - generic [ref=e39]:
+            - generic [ref=e40]: 📅 2023-06-19
+            - generic [ref=e41]: 🏷️ cs.LG, cs.AI, cs.CV
+          - generic [ref=e42]: Evidential deep learning, built upon belief theory and subjective logic, offers a principled and computationally efficient way to turn a deterministic neural network uncertainty-aware. The resultant evidential models can quantify fine-grained uncertainty using the learned evidence. To ensure theoret...
+        - generic [ref=e43]:
+          - link "The Modern Mathematics of Deep Learning" [ref=e45] [cursor=pointer]:
+            - /url: http://arxiv.org/abs/2105.04026v2
+          - generic [ref=e47]: 👥 Julius Berner; Philipp Grohs; Gitta Kutyniok; Philipp Petersen
+          - generic [ref=e48]:
+            - generic [ref=e49]: 📅 2021-05-09
+            - generic [ref=e50]: 🏷️ cs.LG, stat.ML
+          - generic [ref=e51]: "We describe the new field of mathematical analysis of deep learning. This field emerged around a list of research questions that were not answered within the classical framework of learning theory. These questions concern: the outstanding generalization power of overparametrized neural networks, the..."
+        - generic [ref=e52]:
+          - link "Deep Learning and Computational Physics (Lecture Notes)" [ref=e54] [cursor=pointer]:
+            - /url: http://arxiv.org/abs/2301.00942v1
+          - generic [ref=e56]: 👥 Deep Ray; Orazio Pinti; Assad A. Oberai
+          - generic [ref=e57]:
+            - generic [ref=e58]: 📅 2023-01-03
+            - generic [ref=e59]: 🏷️ cs.LG, math-ph
+          - generic [ref=e60]: These notes were compiled as lecture notes for a course developed and taught at the University of the Southern California. They should be accessible to a typical engineering graduate student with a strong background in Applied Mathematics. The main objective of these notes is to introduce a studen...
+        - generic [ref=e61]:
+          - link "Monodense Deep Neural Model for Determining Item Price Elasticity" [ref=e63] [cursor=pointer]:
+            - /url: http://arxiv.org/abs/2603.29261v1
+          - generic [ref=e65]: 👥 Lakshya Garg; Sai Yaswanth; Deep Narayan Mishra; Karthik Kumaran; Anupriya Sharma...
+          - generic [ref=e66]:
+            - generic [ref=e67]: 📅 2026-03-31
+            - generic [ref=e68]: 🏷️ cs.LG, cs.AI
+          - generic [ref=e69]: Item Price Elasticity is used to quantify the responsiveness of consumer demand to changes in item prices, enabling businesses to create pricing strategies and optimize revenue management. Sectors such as store retail, e-commerce, and consumer goods rely on elasticity information derived from histor...
+        - generic [ref=e70]:
+          - link "A multitask deep learning model for real-time deployment in embedded systems" [ref=e72] [cursor=pointer]:
+            - /url: http://arxiv.org/abs/1711.00146v1
+          - generic [ref=e74]: 👥 Miquel Martí; Atsuto Maki
+          - generic [ref=e75]:
+            - generic [ref=e76]: 📅 2017-10-31
+            - generic [ref=e77]: 🏷️ cs.CV, cs.LG
+          - generic [ref=e78]: We propose an approach to Multitask Learning (MTL) to make deep learning models faster and lighter for applications in which multiple tasks need to be solved simultaneously, which is particularly useful in embedded, real-time systems. We develop a multitask model for both Object Detection and Semant...
+        - generic [ref=e79]:
+          - link "Deep learning observables in computational fluid dynamics" [ref=e81] [cursor=pointer]:
+            - /url: http://arxiv.org/abs/1903.03040v2
+          - generic [ref=e83]: 👥 Kjetil O. Lye; Siddhartha Mishra; Deep Ray
+          - generic [ref=e84]:
+            - generic [ref=e85]: 📅 2019-03-07
+            - generic [ref=e86]: 🏷️ physics.comp-ph, cs.LG, math.NA, physics.flu-dyn, stat.ML
+          - generic [ref=e87]: Many large scale problems in computational fluid dynamics such as uncertainty quantification, Bayesian inversion, data assimilation and PDE constrained optimization are considered very challenging computationally as they require a large number of expensive (forward) numerical solutions of the corres...
+        - generic [ref=e88]:
+          - 'link "DILIE: Deep Internal Learning for Image Enhancement" [ref=e90] [cursor=pointer]':
+            - /url: http://arxiv.org/abs/2012.06469v1
+          - generic [ref=e92]: 👥 Indra Deep Mastan; Shanmuganathan Raman
+          - generic [ref=e93]:
+            - generic [ref=e94]: 📅 2020-12-11
+            - generic [ref=e95]: 🏷️ cs.CV
+          - generic [ref=e96]: "We consider the generic deep image enhancement problem where an input image is transformed into a perceptually better-looking image. Recent methods for image enhancement consider the problem by performing style transfer and image restoration. The methods mostly fall into two categories: training dat..."
+        - generic [ref=e97]:
+          - 'link "Generalized Regularized Evidential Deep Learning Models: Theory and Comprehensive Evaluation" [ref=e99] [cursor=pointer]':
+            - /url: http://arxiv.org/abs/2512.23753v1
+          - generic [ref=e101]: 👥 Deep Shankar Pandey; Hyomin Choi; Qi Yu
+          - generic [ref=e102]:
+            - generic [ref=e103]: 📅 2025-12-27
+            - generic [ref=e104]: 🏷️ cs.LG, cs.AI
+          - generic [ref=e105]: Evidential deep learning (EDL) models, based on Subjective Logic, introduce a principled and computationally efficient way to make deterministic neural networks uncertainty-aware. The resulting evidential models can quantify fine-grained uncertainty using learned evidence. However, the Subjective-Lo...
+        - generic [ref=e106]:
+          - link "Activation Analysis of a Byte-Based Deep Neural Network for Malware Classification" [ref=e108] [cursor=pointer]:
+            - /url: http://arxiv.org/abs/1903.04717v2
+          - generic [ref=e110]: 👥 Scott E. Coull; Christopher Gardner
+          - generic [ref=e111]:
+            - generic [ref=e112]: 📅 2019-03-12
+            - generic [ref=e113]: 🏷️ cs.LG, cs.CR, stat.ML
+          - generic [ref=e114]: Feature engineering is one of the most costly aspects of developing effective machine learning models, and that cost is even greater in specialized problem domains, like malware classification, where expert skills are necessary to identify useful features. Recent work, however, has shown that deep l...
+        - generic [ref=e115]:
+          - link "Predicting Thrombectomy Recanalization from CT Imaging Using Deep Learning Models" [ref=e117] [cursor=pointer]:
+            - /url: http://arxiv.org/abs/2302.04143v2
+          - generic [ref=e119]: 👥 Haoyue Zhang; Jennifer S. Polson; Eric J. Yang; Kambiz Nael; William Speier...
+          - generic [ref=e120]:
+            - generic [ref=e121]: 📅 2023-02-08
+            - generic [ref=e122]: 🏷️ eess.IV, cs.CV
+          - generic [ref=e123]: For acute ischemic stroke (AIS) patients with large vessel occlusions, clinicians must decide if the benefit of mechanical thrombectomy (MTB) outweighs the risks and potential complications following an invasive procedure. Pre-treatment computed tomography (CT) and angiography (CTA) are widely used ...
+        - generic [ref=e124]:
+          - 'link "DeepCFL: Deep Contextual Features Learning from a Single Image" [ref=e126] [cursor=pointer]':
+            - /url: http://arxiv.org/abs/2011.03712v1
+          - generic [ref=e128]: 👥 Indra Deep Mastan; Shanmuganathan Raman
+          - generic [ref=e129]:
+            - generic [ref=e130]: 📅 2020-11-07
+            - generic [ref=e131]: 🏷️ cs.CV
+          - generic [ref=e132]: Recently, there is a vast interest in developing image feature learning methods that are independent of the training data, such as deep image prior, InGAN, SinGAN, and DCIL. These methods are unsupervised and are used to perform low-level vision tasks such as image restoration, image editing, and im...
+        - generic [ref=e133]:
+          - 'link "PePR: Performance Per Resource Unit as a Metric to Promote Small-Scale Deep Learning in Medical Image Analysis" [ref=e135] [cursor=pointer]':
+            - /url: http://arxiv.org/abs/2403.12562v2
+          - generic [ref=e137]: 👥 Raghavendra Selvan; Bob Pepin; Christian Igel; Gabrielle Samuel; Erik B Dam
+          - generic [ref=e138]:
+            - generic [ref=e139]: 📅 2024-03-19
+            - generic [ref=e140]: 🏷️ cs.LG, cs.AI, stat.ML
+          - generic [ref=e141]: The recent advances in deep learning (DL) have been accelerated by access to large-scale data and compute. These large-scale resources have been used to train progressively larger models which are resource intensive in terms of compute, data, energy, and carbon emissions. These costs are becoming a ...
+        - generic [ref=e142]:
+          - link "Solution of Physics-based Bayesian Inverse Problems with Deep Generative Priors" [ref=e144] [cursor=pointer]:
+            - /url: http://arxiv.org/abs/2107.02926v2
+          - generic [ref=e146]: 👥 Dhruv V Patel; Deep Ray; Assad A Oberai
+          - generic [ref=e147]:
+            - generic [ref=e148]: 📅 2021-07-06
+            - generic [ref=e149]: 🏷️ stat.ML, cs.LG
+          - generic [ref=e150]: Inverse problems are ubiquitous in nature, arising in almost all areas of science and engineering ranging from geophysics and climate science to astrophysics and biomechanics. One of the central challenges in solving inverse problems is tackling their ill-posed nature. Bayesian inference provides a ...
+        - generic [ref=e151]:
+          - link "Hybrid deep learning-based strategy for the hepatocellular carcinoma cancer grade classification of H&E stained liver histopathology images" [ref=e153] [cursor=pointer]:
+            - /url: http://arxiv.org/abs/2412.03084v2
+          - generic [ref=e155]: 👥 Ajinkya Deshpande; Deep Gupta; Ankit Bhurane; Nisha Meshram; Sneha Singh...
+          - generic [ref=e156]:
+            - generic [ref=e157]: 📅 2024-12-04
+            - generic [ref=e158]: 🏷️ eess.IV, cs.CV, cs.LG, q-bio.QM
+          - generic [ref=e159]: Hepatocellular carcinoma (HCC) is a common type of liver cancer whose early-stage diagnosis is a common challenge, mainly due to the manual assessment of hematoxylin and eosin-stained whole slide images, which is a time-consuming process and may lead to variability in decision-making. For accurate d...
+        - generic [ref=e160]:
+          - 'link "DCIL: Deep Contextual Internal Learning for Image Restoration and Image Retargeting" [ref=e162] [cursor=pointer]':
+            - /url: http://arxiv.org/abs/1912.04229v1
+          - generic [ref=e164]: 👥 Indra Deep Mastan; Shanmuganathan Raman
+          - generic [ref=e165]:
+            - generic [ref=e166]: 📅 2019-12-09
+            - generic [ref=e167]: 🏷️ eess.IV, cs.CV
+          - generic [ref=e168]: Recently, there is a vast interest in developing methods which are independent of the training samples such as deep image prior, zero-shot learning, and internal learning. The methods above are based on the common goal of maximizing image features learning from a single image despite inherent techni...
+        - generic [ref=e169]:
+          - 'link "Memorization in Deep Neural Networks: Does the Loss Function matter?" [ref=e171] [cursor=pointer]':
+            - /url: http://arxiv.org/abs/2107.09957v2
+          - generic [ref=e173]: 👥 Deep Patel; P. S. Sastry
+          - generic [ref=e174]:
+            - generic [ref=e175]: 📅 2021-07-21
+            - generic [ref=e176]: 🏷️ cs.LG, cs.CV, stat.ML
+          - generic [ref=e177]: Deep Neural Networks, often owing to the overparameterization, are shown to be capable of exactly memorizing even randomly labelled data. Empirical studies have also shown that none of the standard regularization techniques mitigate such overfitting. We investigate whether the choice of the loss fun...
+        - generic [ref=e178]:
+          - link "On the approximation of rough functions with deep neural networks" [ref=e180] [cursor=pointer]:
+            - /url: http://arxiv.org/abs/1912.06732v2
+          - generic [ref=e182]: 👥 Tim De Ryck; Siddhartha Mishra; Deep Ray
+          - generic [ref=e183]:
+            - generic [ref=e184]: 📅 2019-12-13
+            - generic [ref=e185]: 🏷️ math.NA, cs.LG, stat.ML
+          - generic [ref=e186]: Deep neural networks and the ENO procedure are both efficient frameworks for approximating rough functions. We prove that at any order, the ENO interpolation procedure can be cast as a deep ReLU neural network. This surprising fact enables the transfer of several desirable properties of the ENO proc...
+        - generic [ref=e187]:
+          - 'link "On ADMM in Deep Learning: Convergence and Saturation-Avoidance" [ref=e189] [cursor=pointer]':
+            - /url: http://arxiv.org/abs/1902.02060v3
+          - generic [ref=e191]: 👥 Jinshan Zeng; Shao-Bo Lin; Yuan Yao; Ding-Xuan Zhou
+          - generic [ref=e192]:
+            - generic [ref=e193]: 📅 2019-02-06
+            - generic [ref=e194]: 🏷️ cs.LG, math.OC, stat.ML
+          - generic [ref=e195]: "In this paper, we develop an alternating direction method of multipliers (ADMM) for deep neural networks training with sigmoid-type activation functions (called \\textit{sigmoid-ADMM pair}), mainly motivated by the gradient-free nature of ADMM in avoiding the saturation of sigmoid-type activations an..."
+        - generic [ref=e196]:
+          - 'link "Why & When Deep Learning Works: Looking Inside Deep Learnings" [ref=e198] [cursor=pointer]':
+            - /url: http://arxiv.org/abs/1705.03921v1
+          - generic [ref=e200]: 👥 Ronny Ronen
+          - generic [ref=e201]:
+            - generic [ref=e202]: 📅 2017-05-10
+            - generic [ref=e203]: 🏷️ cs.LG
+          - generic [ref=e204]: The Intel Collaborative Research Institute for Computational Intelligence (ICRI-CI) has been heavily supporting Machine Learning and Deep Learning research from its foundation in 2012. We have asked six leading ICRI-CI Deep Learning researchers to address the challenge of "Why & When Deep Learning w...
+        - generic [ref=e205]:
+          - link "Chord Label Personalization through Deep Learning of Integrated Harmonic Interval-based Representations" [ref=e207] [cursor=pointer]:
+            - /url: http://arxiv.org/abs/1706.09552v1
+          - generic [ref=e209]: 👥 H. V. Koops; W. B. de Haas; J. Bransen; A. Volk
+          - generic [ref=e210]:
+            - generic [ref=e211]: 📅 2017-06-29
+            - generic [ref=e212]: 🏷️ cs.SD, cs.MM, cs.NE
+          - generic [ref=e213]: The increasing accuracy of automatic chord estimation systems, the availability of vast amounts of heterogeneous reference annotations, and insights from annotator subjectivity research make chord label personalization increasingly important. Nevertheless, automatic chord estimation systems are hist...
+        - generic [ref=e214]: 共 530930 篇结果

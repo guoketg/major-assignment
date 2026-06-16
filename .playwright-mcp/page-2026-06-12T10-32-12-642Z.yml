@@ -1,0 +1,15 @@
+- generic [ref=e3]:
+  - generic [ref=e4]:
+    - generic [ref=e5]:
+      - heading "对话历史" [level=2] [ref=e6]
+      - button "+ 新对话" [ref=e7] [cursor=pointer]
+    - paragraph [ref=e9]: 暂无会话记录
+  - generic [ref=e10]:
+    - generic [ref=e13]:
+      - button "💬 对话" [ref=e14] [cursor=pointer]
+      - button "📄 论文搜索" [ref=e15] [cursor=pointer]
+    - generic [ref=e25]:
+      - generic [ref=e26]:
+        - textbox "搜索 arXiv 论文，如：cat:cs.LG+AND+ti:transformer" [ref=e27]: cat:cs.AI+AND+ti:transformer
+        - button "搜索中..." [disabled] [ref=e34]
+      - generic [ref=e35]: 正在搜索 arXiv，等待 3 秒限流...

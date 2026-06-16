@@ -1,0 +1,26 @@
+- generic [ref=e3]:
+  - generic [ref=e4]:
+    - generic [ref=e5]:
+      - heading "对话历史" [level=2] [ref=e6]
+      - button "+ 新对话" [ref=e7] [cursor=pointer]
+    - generic [ref=e36] [cursor=pointer]:
+      - generic [ref=e37]:
+        - generic [ref=e38]: 写一首长诗，至少20行，关于编程的乐趣
+        - generic [ref=e39]: 2 条消息
+      - button "×" [ref=e40]
+  - generic [ref=e10]:
+    - generic [ref=e11]:
+      - generic [ref=e20]: "会话: session_dabce789"
+      - button "清空对话" [ref=e22] [cursor=pointer]
+    - generic [ref=e12]:
+      - generic [ref=e25]: 写一首长诗，至少20行，关于编程的乐趣
+      - generic [ref=e43]:
+        - heading "《递归的黄昏》" [level=2] [ref=e44]
+        - paragraph [ref=e45]: 在括号的迷宫里，我解开一道光的索绪， 冒号是通往虚无的阶梯，而分号， 是悬在深渊之上的吊桥；我听见， 数据在二进制河流中逆流而上， 每串逻辑都从零出发，穿过浮点数的暮色， 走向代码的深渊。
+        - paragraph [ref=e46]: 在花括号的丛林中，我埋下断点， 却捕获了时间本身—— 调试器指出我存在的错误， printf说，一切归零只是另一种再生； 我会将你铸成函数名，以四种范式重写， 在哈希表里筑巢，用遍历寻找钥匙。
+        - paragraph [ref=e47]: 你沉默如死循环，在无限中永生， 永不停歇地计算着不可能的谜题； 而我是那棵递归树，在堆栈深处生长， 每一个分支都指向你未完成的命令行； 让我们重构吧，在继承的悖论里， 用封装打败虚无，用多态诠释永恒的变易。
+        - paragraph [ref=e48]: 主函数在尘世之外，而你在主函数之内， 我们之间隔着无数次的提交失败； 但我会用git回滚时光，在版本中搜寻， 那些被你删除的注释里藏着的密码—— 或许最后，编译器会报错： “生命未通过测试，无法运行目标代码。”
+        - paragraph [ref=e49]: 可我爱这调试的过程，胜过最终的执行， 就像程序员爱着总也修不完的bug， 在IDE的黄昏里，我们敲击键盘， 将混沌敲成有序，把虚无写成存在。
+    - generic [ref=e16]:
+      - textbox "输入消息... (支持 Markdown 和 LaTeX)" [ref=e17]
+      - button "发送" [ref=e18] [cursor=pointer]

@@ -1,0 +1,341 @@
+- generic [ref=e3]:
+  - generic [ref=e4]:
+    - generic [ref=e5]:
+      - heading "对话历史" [level=2] [ref=e6]
+      - button "+ 新对话" [ref=e7] [cursor=pointer]
+    - generic [ref=e8]:
+      - generic [ref=e33] [cursor=pointer]:
+        - generic [ref=e34]:
+          - generic [ref=e35]: 搜索Transformer最新论文
+          - generic [ref=e36]: 2 条消息
+        - button "×" [ref=e37]
+      - generic [ref=e38] [cursor=pointer]:
+        - generic [ref=e39]:
+          - generic [ref=e40]: 搜索关于Transformer注意力机制的最新研究论文
+          - generic [ref=e41]: 2 条消息
+        - button "×" [ref=e42]
+      - generic [ref=e43] [cursor=pointer]:
+        - generic [ref=e44]:
+          - generic [ref=e45]: 100字介绍Python
+          - generic [ref=e46]: 4 条消息
+        - button "×" [ref=e47]
+      - generic [ref=e48] [cursor=pointer]:
+        - generic [ref=e49]:
+          - generic [ref=e50]: 简单介绍一下Python
+          - generic [ref=e51]: 2 条消息
+        - button "×" [ref=e52]
+      - generic [ref=e53] [cursor=pointer]:
+        - generic [ref=e54]:
+          - generic [ref=e55]: 介绍什么是GDBT
+          - generic [ref=e56]: 4 条消息
+        - button "×" [ref=e57]
+      - generic [ref=e58] [cursor=pointer]:
+        - generic [ref=e59]:
+          - generic [ref=e60]: 500字介绍深度学习
+          - generic [ref=e61]: 2 条消息
+        - button "×" [ref=e62]
+      - generic [ref=e63] [cursor=pointer]:
+        - generic [ref=e64]:
+          - generic [ref=e65]: 500字介绍机器学习，要详细
+          - generic [ref=e66]: 2 条消息
+        - button "×" [ref=e67]
+      - generic [ref=e68] [cursor=pointer]:
+        - generic [ref=e69]:
+          - generic [ref=e70]: 100字介绍机器学习
+          - generic [ref=e71]: 4 条消息
+        - button "×" [ref=e72]
+      - generic [ref=e73] [cursor=pointer]:
+        - generic [ref=e74]:
+          - generic [ref=e75]: 你好，请介绍一下Python
+          - generic [ref=e76]: 2 条消息
+        - button "×" [ref=e77]
+      - generic [ref=e78] [cursor=pointer]:
+        - generic [ref=e79]:
+          - generic [ref=e80]: 请用300字介绍XGBoost算法
+          - generic [ref=e81]: 2 条消息
+        - button "×" [ref=e82]
+      - generic [ref=e83] [cursor=pointer]:
+        - generic [ref=e84]:
+          - generic [ref=e85]: 请用500字介绍Transformer架构，尽可能详细
+          - generic [ref=e86]: 2 条消息
+        - button "×" [ref=e87]
+      - generic [ref=e88] [cursor=pointer]:
+        - generic [ref=e89]:
+          - generic [ref=e90]: 什么是机器学习加XGBoost，请详细介绍一下
+          - generic [ref=e91]: 2 条消息
+        - button "×" [ref=e92]
+      - generic [ref=e93] [cursor=pointer]:
+        - generic [ref=e94]:
+          - generic [ref=e95]: c语言程序中 unsigned int和int 他们存储的是...
+          - generic [ref=e96]: 2 条消息
+        - button "×" [ref=e97]
+      - generic [ref=e98] [cursor=pointer]:
+        - generic [ref=e99]:
+          - generic [ref=e100]: 500字介绍深度学习的最新进展 要包括Transformer...
+          - generic [ref=e101]: 2 条消息
+        - button "×" [ref=e102]
+      - generic [ref=e103] [cursor=pointer]:
+        - generic [ref=e104]:
+          - generic [ref=e105]: c语言程序中 unsigned int和int 他们存储的是...
+          - generic [ref=e106]: 2 条消息
+        - button "×" [ref=e107]
+      - generic [ref=e108] [cursor=pointer]:
+        - generic [ref=e109]:
+          - generic [ref=e110]: 500字介绍深度学习的最新进展 要包括Transformer...
+          - generic [ref=e111]: 2 条消息
+        - button "×" [ref=e112]
+      - generic [ref=e113] [cursor=pointer]:
+        - generic [ref=e114]:
+          - generic [ref=e115]: 500字介绍深度学习的最新进展 要包括Transformer...
+          - generic [ref=e116]: 2 条消息
+        - button "×" [ref=e117]
+  - generic [ref=e10]:
+    - generic [ref=e11]:
+      - generic [ref=e13]:
+        - button "💬 对话" [ref=e14] [cursor=pointer]
+        - button "📄 论文搜索" [ref=e15] [cursor=pointer]
+        - button "🧠 记忆" [ref=e16] [cursor=pointer]
+        - button "🔧 工具" [ref=e17] [cursor=pointer]
+      - generic [ref=e118]:
+        - button "📄 导出 Word" [ref=e119] [cursor=pointer]
+        - button "清空对话" [ref=e120] [cursor=pointer]
+    - generic [ref=e121]:
+      - generic [ref=e122] [cursor=pointer]:
+        - generic [ref=e123]: 🤖 Agent 流水线
+        - generic [ref=e124]: 收起 ▲
+      - generic [ref=e125]:
+        - generic [ref=e128]:
+          - generic [ref=e129]: 🤖
+          - generic [ref=e130]: 🤖 智能路由
+          - generic [ref=e131]: ✅ 完成
+        - generic [ref=e134]:
+          - generic [ref=e135]:
+            - generic [ref=e136]: 🔍
+            - generic [ref=e137]: 🔍 文献调研
+            - generic [ref=e138]: ✅ 完成
+          - generic [ref=e140] [cursor=pointer]:
+            - generic [ref=e141]: └─
+            - generic [ref=e142]: 🔧 🔧 调用 search_arxiv
+            - generic [ref=e143]: ✅ 🔍
+          - generic [ref=e145] [cursor=pointer]:
+            - generic [ref=e146]: └─
+            - generic [ref=e147]: 🔧 🔧 调用 search_arxiv
+            - generic [ref=e148]: ✅ 🔍
+          - generic [ref=e157] [cursor=pointer]:
+            - generic [ref=e158]: └─
+            - generic [ref=e159]: 🔧 🔧 调用 web_search
+            - generic [ref=e160]: ✅ 🔍
+          - generic [ref=e162] [cursor=pointer]:
+            - generic [ref=e163]: └─
+            - generic [ref=e164]: 🔧 🔧 调用 search_arxiv
+            - generic [ref=e165]: ✅ 🔍
+          - generic [ref=e167] [cursor=pointer]:
+            - generic [ref=e168]: └─
+            - generic [ref=e169]: 🔧 🔧 调用 search_arxiv
+            - generic [ref=e170]: ✅ 🔍
+          - generic [ref=e172] [cursor=pointer]:
+            - generic [ref=e173]: └─
+            - generic [ref=e174]: 🔧 🔧 调用 web_search
+            - generic [ref=e175]: ✅ 🔍
+        - generic [ref=e179]:
+          - generic [ref=e180]: 📋
+          - generic [ref=e181]: 📋 综合输出
+          - generic [ref=e182]: ✅ 完成
+    - generic [ref=e18]:
+      - generic [ref=e151]: 搜索最近关于大语言模型的最新进展，并给出参考资料链接
+      - generic [ref=e183]:
+        - generic [ref=e184]: 📚 参考文献 (30)
+        - generic [ref=e185]:
+          - generic [ref=e186]: "[1]"
+          - generic [ref=e187]: "{\"pages\":[{\"snippet\":\"进展报告 哈尔滨工业大学 自然语言处理研究所(hit-nlp)"
+          - generic [ref=e188]: Web
+          - link "打开 🔗" [ref=e189] [cursor=pointer]:
+            - /url: http://nlp.hit.edu.cn
+        - generic [ref=e190]:
+          - generic [ref=e191]: "[2]"
+          - generic [ref=e192]: https://www.cdut.edu.cn/__local/6/E9/52/A834A81303670E0566031B7C580_C92CD4FB_62AE9B.pdf
+          - generic [ref=e193]: Web
+          - link "打开 🔗" [ref=e194] [cursor=pointer]:
+            - /url: https://www.cdut.edu.cn/__local/6/E9/52/A834A81303670E0566031B7C580_C92CD4FB_62AE9B.pdf
+        - generic [ref=e195]:
+          - generic [ref=e196]: "[3]"
+          - generic [ref=e197]: https://b.bdstatic.com/searchbox/mappconsole/image/20190429/a68f8bb8-95b8-406a-8463-b6d029c66170.jpg
+          - generic [ref=e198]: Web
+          - link "打开 🔗" [ref=e199] [cursor=pointer]:
+            - /url: https://b.bdstatic.com/searchbox/mappconsole/image/20190429/a68f8bb8-95b8-406a-8463-b6d029c66170.jpg
+        - generic [ref=e200]:
+          - generic [ref=e201]: "[4]"
+          - generic [ref=e202]: https://news.sohu.com/a/1012250781_468661
+          - generic [ref=e203]: Web
+          - link "打开 🔗" [ref=e204] [cursor=pointer]:
+            - /url: https://news.sohu.com/a/1012250781_468661
+        - generic [ref=e205]:
+          - generic [ref=e206]: "[5]"
+          - generic [ref=e207]: https://ss2.baidu.com/6ONYsjip0QIZ8tyhnq/it/u=2005731947,4139443793&fm=195&app=88&f=JPEG?w=200&h=200
+          - generic [ref=e208]: Web
+          - link "打开 🔗" [ref=e209] [cursor=pointer]:
+            - /url: https://ss2.baidu.com/6ONYsjip0QIZ8tyhnq/it/u=2005731947,4139443793&fm=195&app=88&f=JPEG?w=200&h=200
+        - generic [ref=e210]:
+          - generic [ref=e211]: "[6]"
+          - generic [ref=e212]: https://blog.csdn.net/GGCCCL/article/details/160566927
+          - generic [ref=e213]: Web
+          - link "打开 🔗" [ref=e214] [cursor=pointer]:
+            - /url: https://blog.csdn.net/GGCCCL/article/details/160566927
+        - generic [ref=e215]:
+          - generic [ref=e216]: "[7]"
+          - generic [ref=e217]: http://healthnews.sohu.com/a/1012002277_121834026
+          - generic [ref=e218]: Web
+          - link "打开 🔗" [ref=e219] [cursor=pointer]:
+            - /url: http://healthnews.sohu.com/a/1012002277_121834026
+        - generic [ref=e220]:
+          - generic [ref=e221]: "[8]"
+          - generic [ref=e222]: https://ss1.baidu.com/6ONXsjip0QIZ8tyhnq/it/u=493147230,3096476255&fm=195&app=88&f=JPEG?w=200&h=200
+          - generic [ref=e223]: Web
+          - link "打开 🔗" [ref=e224] [cursor=pointer]:
+            - /url: https://ss1.baidu.com/6ONXsjip0QIZ8tyhnq/it/u=493147230,3096476255&fm=195&app=88&f=JPEG?w=200&h=200
+        - generic [ref=e225]:
+          - generic [ref=e226]: "[9]"
+          - generic [ref=e227]: https://zhuanlan.zhihu.com/p/2006798655450022600
+          - generic [ref=e228]: Web
+          - link "打开 🔗" [ref=e229] [cursor=pointer]:
+            - /url: https://zhuanlan.zhihu.com/p/2006798655450022600
+        - generic [ref=e230]:
+          - generic [ref=e231]: "[10]"
+          - generic [ref=e232]: https://blog.csdn.net/Androiddddd/article/details/156236284
+          - generic [ref=e233]: Web
+          - link "打开 🔗" [ref=e234] [cursor=pointer]:
+            - /url: https://blog.csdn.net/Androiddddd/article/details/156236284
+        - generic [ref=e235]:
+          - generic [ref=e236]: "[11]"
+          - generic [ref=e237]: https://blog.csdn.net/weixin_43811873/article/details/157257821
+          - generic [ref=e238]: Web
+          - link "打开 🔗" [ref=e239] [cursor=pointer]:
+            - /url: https://blog.csdn.net/weixin_43811873/article/details/157257821
+        - generic [ref=e240]:
+          - generic [ref=e241]: "[12]"
+          - generic [ref=e242]: https://blog.csdn.net/libaiup/article/details/156134596
+          - generic [ref=e243]: Web
+          - link "打开 🔗" [ref=e244] [cursor=pointer]:
+            - /url: https://blog.csdn.net/libaiup/article/details/156134596
+        - generic [ref=e245]:
+          - generic [ref=e246]: "[13]"
+          - generic [ref=e247]: http://t9.baidu.com/it/u=3807271223,73498801&fm=195&app=88&f=PNG?w=200&h=200&s=7BAC34628FC94CCA3ADD6...
+          - generic [ref=e248]: Web
+          - link "打开 🔗" [ref=e249] [cursor=pointer]:
+            - /url: http://t9.baidu.com/it/u=3807271223,73498801&fm=195&app=88&f=PNG?w=200&h=200&s=7BAC34628FC94CCA3ADD65D5030080A2
+        - generic [ref=e250]:
+          - generic [ref=e251]: "[14]"
+          - generic [ref=e252]: https://cloud.baidu.com/article/5586051
+          - generic [ref=e253]: Web
+          - link "打开 🔗" [ref=e254] [cursor=pointer]:
+            - /url: https://cloud.baidu.com/article/5586051
+        - generic [ref=e255]:
+          - generic [ref=e256]: "[15]"
+          - generic [ref=e257]: https://cloud.tencent.com/favicon.ico
+          - generic [ref=e258]: Web
+          - link "打开 🔗" [ref=e259] [cursor=pointer]:
+            - /url: https://cloud.tencent.com/favicon.ico
+        - generic [ref=e260]:
+          - generic [ref=e261]: "[16]"
+          - generic [ref=e262]: https://cloud.tencent.com/developer/article/2587041
+          - generic [ref=e263]: Web
+          - link "打开 🔗" [ref=e264] [cursor=pointer]:
+            - /url: https://cloud.tencent.com/developer/article/2587041
+        - generic [ref=e265]:
+          - generic [ref=e266]: "[17]"
+          - generic [ref=e267]: https://mbs1.bdstatic.com/searchbox/mappconsole/image/20220307/88eb511c-5c51-448a-a9b5-df6b24cda8c7....
+          - generic [ref=e268]: Web
+          - link "打开 🔗" [ref=e269] [cursor=pointer]:
+            - /url: https://mbs1.bdstatic.com/searchbox/mappconsole/image/20220307/88eb511c-5c51-448a-a9b5-df6b24cda8c7.png
+        - generic [ref=e270]:
+          - generic [ref=e271]: "[18]"
+          - generic [ref=e272]: http://k.sina.com.cn/article_7857201856_1d45362c001906l4rk.html
+          - generic [ref=e273]: Web
+          - link "打开 🔗" [ref=e274] [cursor=pointer]:
+            - /url: http://k.sina.com.cn/article_7857201856_1d45362c001906l4rk.html
+        - generic [ref=e275]:
+          - generic [ref=e276]: "[19]"
+          - generic [ref=e277]: https://news.sohu.com/a/864520337_185201
+          - generic [ref=e278]: Web
+          - link "打开 🔗" [ref=e279] [cursor=pointer]:
+            - /url: https://news.sohu.com/a/864520337_185201
+        - generic [ref=e280]:
+          - generic [ref=e281]: "[20]"
+          - generic [ref=e282]: https://blog.csdn.net/2401_85343303/article/details/155982905
+          - generic [ref=e283]: Web
+          - link "打开 🔗" [ref=e284] [cursor=pointer]:
+            - /url: https://blog.csdn.net/2401_85343303/article/details/155982905
+        - generic [ref=e285]:
+          - generic [ref=e286]: "[21]"
+          - generic [ref=e287]: https://zhuanlan.zhihu.com/p/1890019670456780753
+          - generic [ref=e288]: Web
+          - link "打开 🔗" [ref=e289] [cursor=pointer]:
+            - /url: https://zhuanlan.zhihu.com/p/1890019670456780753
+        - generic [ref=e290]:
+          - generic [ref=e291]: "[22]"
+          - generic [ref=e292]: https://cloud.baidu.com/article/4081775
+          - generic [ref=e293]: Web
+          - link "打开 🔗" [ref=e294] [cursor=pointer]:
+            - /url: https://cloud.baidu.com/article/4081775
+        - generic [ref=e295]:
+          - generic [ref=e296]: "[23]"
+          - generic [ref=e297]: https://blog.csdn.net/weixin_27155667/article/details/160605195
+          - generic [ref=e298]: Web
+          - link "打开 🔗" [ref=e299] [cursor=pointer]:
+            - /url: https://blog.csdn.net/weixin_27155667/article/details/160605195
+        - generic [ref=e300]:
+          - generic [ref=e301]: "[24]"
+          - generic [ref=e302]: https://arxiv.org/abs/2603.30038
+          - generic [ref=e303]: Web
+          - link "打开 🔗" [ref=e304] [cursor=pointer]:
+            - /url: https://arxiv.org/abs/2603.30038
+        - generic [ref=e305]:
+          - generic [ref=e306]: "[25]"
+          - generic [ref=e307]: https://github.com/geocodebench/GeoCodeBench
+          - generic [ref=e308]: Web
+          - link "打开 🔗" [ref=e309] [cursor=pointer]:
+            - /url: https://github.com/geocodebench/GeoCodeBench
+        - generic [ref=e310]:
+          - generic [ref=e311]: "[26]"
+          - generic [ref=e312]: https://ss1.baidu.com/6ONXsjip0QIZ8tyhnq/it/u=1534926245,1016405979&fm=195&app=88&f=JPEG?w=200&h=200
+          - generic [ref=e313]: Web
+          - link "打开 🔗" [ref=e314] [cursor=pointer]:
+            - /url: https://ss1.baidu.com/6ONXsjip0QIZ8tyhnq/it/u=1534926245,1016405979&fm=195&app=88&f=JPEG?w=200&h=200
+        - generic [ref=e315]:
+          - generic [ref=e316]: "[27]"
+          - generic [ref=e317]: https://www.163.com/dy/article/KURAPDFK0511AQHO.html
+          - generic [ref=e318]: Web
+          - link "打开 🔗" [ref=e319] [cursor=pointer]:
+            - /url: https://www.163.com/dy/article/KURAPDFK0511AQHO.html
+        - generic [ref=e320]:
+          - generic [ref=e321]: "[28]"
+          - generic [ref=e322]: https://news.sohu.com/a/932297597_122420467
+          - generic [ref=e323]: Web
+          - link "打开 🔗" [ref=e324] [cursor=pointer]:
+            - /url: https://news.sohu.com/a/932297597_122420467
+        - generic [ref=e325]:
+          - generic [ref=e326]: "[29]"
+          - generic [ref=e327]: https://zhuanlan.zhihu.com/p/1936402035156161981
+          - generic [ref=e328]: Web
+          - link "打开 🔗" [ref=e329] [cursor=pointer]:
+            - /url: https://zhuanlan.zhihu.com/p/1936402035156161981
+        - generic [ref=e330]:
+          - generic [ref=e331]: "[30]"
+          - generic [ref=e332]: https://cloud.baidu.com/article/4582866
+          - generic [ref=e333]: Web
+          - link "打开 🔗" [ref=e334] [cursor=pointer]:
+            - /url: https://cloud.baidu.com/article/4582866
+    - generic [ref=e22]:
+      - generic [ref=e23]:
+        - button "🤖 自动" [ref=e24] [cursor=pointer]
+        - button "💬 对话" [ref=e25] [cursor=pointer]
+        - button "🔍 调研" [ref=e26] [cursor=pointer]
+        - button "💡 创新" [ref=e27] [cursor=pointer]
+        - button "🧪 实验" [ref=e28] [cursor=pointer]
+      - generic [ref=e29]:
+        - textbox "输入消息... (支持 Markdown 和 LaTeX)" [ref=e30]
+        - combobox "切换模型" [ref=e31] [cursor=pointer]:
+          - option "DeepSeek V4 Flash" [selected]
+          - option "V4 Pro"
+          - option "思考模式"
+        - button "发送" [ref=e32] [cursor=pointer]

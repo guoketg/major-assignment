@@ -1,0 +1,155 @@
+- generic [ref=e3]:
+  - generic [ref=e4]:
+    - generic [ref=e5]:
+      - heading "对话历史" [level=2] [ref=e6]
+      - button "+ 新对话" [ref=e7] [cursor=pointer]
+    - generic [ref=e8]:
+      - generic [ref=e514] [cursor=pointer]:
+        - generic [ref=e515]:
+          - generic [ref=e516]: 介绍CNN的特性
+          - generic [ref=e517]: 2 条消息
+        - button "×" [ref=e518]
+      - generic [ref=e71] [cursor=pointer]:
+        - generic [ref=e72]:
+          - generic [ref=e73]: 你好
+          - generic [ref=e74]: 4 条消息
+        - button "×" [ref=e75]
+      - generic [ref=e33] [cursor=pointer]:
+        - generic [ref=e34]:
+          - generic [ref=e35]: 什么是机器学习
+          - generic [ref=e36]: 3 条消息
+        - button "×" [ref=e37]
+      - generic [ref=e38] [cursor=pointer]:
+        - generic [ref=e39]:
+          - generic [ref=e40]: 你好 简单回复一下
+          - generic [ref=e41]: 3 条消息
+        - button "×" [ref=e42]
+      - generic [ref=e43] [cursor=pointer]:
+        - generic [ref=e44]:
+          - generic [ref=e45]: hi
+          - generic [ref=e46]: 3 条消息
+        - button "×" [ref=e47]
+      - generic [ref=e48] [cursor=pointer]:
+        - generic [ref=e49]:
+          - generic [ref=e50]: hi
+          - generic [ref=e51]: 3 条消息
+        - button "×" [ref=e52]
+      - generic [ref=e53] [cursor=pointer]:
+        - generic [ref=e54]:
+          - generic [ref=e55]: KNN算法
+          - generic [ref=e56]: 2 条消息
+        - button "×" [ref=e57]
+      - generic [ref=e58] [cursor=pointer]:
+        - generic [ref=e59]:
+          - generic [ref=e60]: 什么是KNN算法
+          - generic [ref=e61]: 2 条消息
+        - button "×" [ref=e62]
+      - generic [ref=e63] [cursor=pointer]:
+        - generic [ref=e64]:
+          - generic [ref=e65]: 什么是机器学习
+          - generic [ref=e66]: 2 条消息
+        - button "×" [ref=e67]
+  - generic [ref=e10]:
+    - generic [ref=e11]:
+      - generic [ref=e13]:
+        - button "💬 对话" [ref=e14] [cursor=pointer]
+        - button "📄 论文搜索" [ref=e15] [cursor=pointer]
+        - button "🧠 记忆" [ref=e16] [cursor=pointer]
+        - button "🔧 工具" [ref=e17] [cursor=pointer]
+      - generic [ref=e68]:
+        - button "📄 导出 Word" [ref=e69] [cursor=pointer]
+        - button "清空对话" [ref=e70] [cursor=pointer]
+    - generic [ref=e18]:
+      - generic [ref=e524]: 什么是机器学习加XGBoost 介绍CNN的特性
+      - generic [ref=e525]:
+        - generic [ref=e526] [cursor=pointer]:
+          - generic [ref=e527]: 🤖 Agent 流水线
+          - generic [ref=e528]: 收起 ▲
+        - generic [ref=e529]:
+          - generic [ref=e532]:
+            - generic [ref=e533]: 🤖
+            - generic [ref=e534]: 🤖 智能路由
+            - generic [ref=e535]: ✅ 完成
+          - generic [ref=e539]:
+            - generic [ref=e540]: 💬
+            - generic [ref=e541]: 💬 对话助手
+            - generic [ref=e542]: ⏳ 进行中
+      - generic [ref=e545]:
+        - heading "机器学习与 XGBoost 介绍" [level=2] [ref=e546]
+        - heading "🤖 什么是机器学习？" [level=3] [ref=e547]
+        - paragraph [ref=e548]:
+          - strong [ref=e549]: 机器学习（Machine Learning, ML）
+          - text: 是人工智能的一个分支，核心思想是让计算机
+          - strong [ref=e550]: 从数据中自动学习规律和模式
+          - text: ，而不需要人为显式编写规则。常见的分类包括：
+        - table [ref=e551]:
+          - rowgroup [ref=e552]:
+            - row "类型 说明 例子" [ref=e553]:
+              - columnheader "类型" [ref=e554]
+              - columnheader "说明" [ref=e555]
+              - columnheader "例子" [ref=e556]
+          - rowgroup [ref=e557]:
+            - row "监督学习 有标签数据 分类、回归" [ref=e558]:
+              - cell "监督学习" [ref=e559]:
+                - strong [ref=e560]: 监督学习
+              - cell "有标签数据" [ref=e561]
+              - cell "分类、回归" [ref=e562]
+            - row "无监督学习 无标签数据 聚类、降维" [ref=e563]:
+              - cell "无监督学习" [ref=e564]:
+                - strong [ref=e565]: 无监督学习
+              - cell "无标签数据" [ref=e566]
+              - cell "聚类、降维" [ref=e567]
+            - row "强化学习 通过奖惩学习 游戏AI、机器人" [ref=e568]:
+              - cell "强化学习" [ref=e569]:
+                - strong [ref=e570]: 强化学习
+              - cell "通过奖惩学习" [ref=e571]
+              - cell "游戏AI、机器人" [ref=e572]
+        - separator [ref=e573]
+        - heading "⚡ 什么是 XGBoost？" [level=3] [ref=e574]
+        - paragraph [ref=e575]:
+          - strong [ref=e576]: XGBoost（eXtreme Gradient Boosting）
+          - text: 是一种基于
+          - strong [ref=e577]: 梯度提升决策树（GBDT）
+          - text: 的集成学习算法，由陈天奇于2014年提出，在 Kaggle 竞赛和工业界中非常流行。
+        - heading "核心思想：" [level=4] [ref=e578]
+        - list [ref=e579]:
+          - listitem [ref=e580]:
+            - text: 通过
+            - strong [ref=e581]: 逐步添加决策树
+            - text: 来修正前一轮的预测误差
+          - listitem [ref=e582]:
+            - text: 每棵新树拟合
+            - strong [ref=e583]: 残差（负梯度方向）
+          - listitem [ref=e584]: 最终预测 = 所有树的预测结果之和
+        - heading "主要特性：" [level=4] [ref=e585]
+        - list [ref=e586]:
+          - listitem [ref=e587]:
+            - strong [ref=e588]: 高效
+            - text: — 支持并行化、缓存优化、稀疏数据优化
+          - listitem [ref=e589]:
+            - strong [ref=e590]: 正则化
+            - text: — 引入 L1/L2 正则化，防止过拟合
+          - listitem [ref=e591]:
+            - strong [ref=e592]: 缺失值自动处理
+            - text: — 学习最优的缺失值分裂方向
+          - listitem [ref=e593]:
+            - strong [ref=e594]: 内置交叉验证
+            - text: — 训练过程中自动评估
+        - heading "数学表达：" [level=4] [ref=e595]
+        - generic [ref=e596]:
+          - math
+        - text: "|"
+    - generic [ref=e22]:
+      - generic [ref=e23]:
+        - button "🤖 自动" [disabled] [ref=e24]
+        - button "💬 对话" [disabled] [ref=e25]
+        - button "🔍 调研" [disabled] [ref=e26]
+        - button "💡 创新" [disabled] [ref=e27]
+        - button "🧪 实验" [disabled] [ref=e28]
+      - generic [ref=e29]:
+        - textbox "输入消息... (支持 Markdown 和 LaTeX)" [disabled] [ref=e30]
+        - combobox "切换模型" [disabled] [ref=e31] [cursor=pointer]:
+          - option "DeepSeek V4 Flash" [selected]
+          - option "V4 Pro"
+          - option "思考模式"
+        - button "发送" [disabled] [ref=e32]

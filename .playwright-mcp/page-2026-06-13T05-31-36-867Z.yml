@@ -1,0 +1,65 @@
+- generic [ref=e3]:
+  - generic [ref=e4]:
+    - generic [ref=e5]:
+      - heading "对话历史" [level=2] [ref=e6]
+      - button "+ 新对话" [ref=e7] [cursor=pointer]
+    - paragraph [ref=e9]: 暂无会话记录
+  - generic [ref=e10]:
+    - generic [ref=e11]:
+      - generic [ref=e13]:
+        - button "💬 对话" [ref=e14] [cursor=pointer]
+        - button "📄 论文搜索" [ref=e15] [cursor=pointer]
+        - button "🧠 记忆" [ref=e16] [cursor=pointer]
+        - button "🔧 工具" [ref=e17] [cursor=pointer]
+      - generic [ref=e33]:
+        - button "📄 导出 Word" [ref=e34] [cursor=pointer]
+        - button "清空对话" [ref=e35] [cursor=pointer]
+    - generic [ref=e18]:
+      - generic [ref=e38]: 200字介绍Transformer
+      - generic [ref=e39]:
+        - generic [ref=e40] [cursor=pointer]:
+          - generic [ref=e41]: 🤖 Agent 流水线
+          - generic [ref=e42]: 收起 ▲
+        - generic [ref=e43]:
+          - generic [ref=e46]:
+            - generic [ref=e47]: 🤖
+            - generic [ref=e48]: 🤖 智能路由
+            - generic [ref=e49]: ✅ 完成
+          - generic [ref=e53]:
+            - generic [ref=e54]: 💬
+            - generic [ref=e55]: 💬 对话助手
+            - generic [ref=e56]: ⏳ 进行中
+      - generic [ref=e59]:
+        - heading "Transformer 模型简介" [level=1] [ref=e60]
+        - paragraph [ref=e61]:
+          - strong [ref=e62]: Transformer
+          - text: 是 Google 在 2017 年论文
+          - emphasis [ref=e63]: "\"Attention Is All You Need\""
+          - text: 中提出的深度学习架构，彻底改变了自然语言处理和计算机视觉等领域。
+        - paragraph [ref=e64]:
+          - text: 其核心创新是
+          - strong [ref=e65]: 自注意力机制（Self-Attention）
+          - text: ，通过计算序列中每个位置与其他位置的关联权重，捕捉长距离依赖关系。结构上由
+          - strong [ref=e66]: 编码器（Encoder）
+          - text: 和
+          - strong [ref=e67]: 解码器（Decoder）
+          - text: 堆叠而成，每层包含多头注意力（Multi-Head Attention）和前馈神经网络（FFN），并引入残差连接与层归一化。
+        - paragraph [ref=e68]:
+          - text: 相比 RNN/LSTM，Transformer 支持
+          - strong [ref=e69]: 并行计算
+          - text: ，训练速度大幅提升。基于此架构发展出了 BERT、GPT、ViT 等里程碑模型，成为现代 AI 的基石。
+        - text: "|"
+    - generic [ref=e22]:
+      - generic [ref=e23]:
+        - button "🤖 自动" [disabled] [ref=e24]
+        - button "💬 对话" [disabled] [ref=e25]
+        - button "🔍 调研" [disabled] [ref=e26]
+        - button "💡 创新" [disabled] [ref=e27]
+        - button "🧪 实验" [disabled] [ref=e28]
+      - generic [ref=e29]:
+        - textbox "输入消息... (支持 Markdown 和 LaTeX)" [disabled] [ref=e30]
+        - combobox "切换模型" [disabled] [ref=e31] [cursor=pointer]:
+          - option "DeepSeek V4 Flash" [selected]
+          - option "V4 Pro"
+          - option "思考模式"
+        - button "发送" [disabled] [ref=e32]

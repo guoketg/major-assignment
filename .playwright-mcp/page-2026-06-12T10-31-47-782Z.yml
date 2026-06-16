@@ -1,0 +1,18 @@
+- generic [ref=e3]:
+  - generic [ref=e4]:
+    - generic [ref=e5]:
+      - heading "对话历史" [level=2] [ref=e6]
+      - button "+ 新对话" [ref=e7] [cursor=pointer]
+    - paragraph [ref=e9]: 暂无会话记录
+  - generic [ref=e10]:
+    - generic [ref=e13]:
+      - button "💬 对话" [ref=e14] [cursor=pointer]
+      - button "📄 论文搜索" [active] [ref=e15] [cursor=pointer]
+    - generic [ref=e25]:
+      - generic [ref=e26]:
+        - textbox "搜索 arXiv 论文，如：cat:cs.LG+AND+ti:transformer" [ref=e27]
+        - button "搜索" [ref=e28] [cursor=pointer]
+      - generic [ref=e30]:
+        - generic [ref=e31]: 📄
+        - paragraph [ref=e32]: 输入搜索词查询 arXiv 论文
+        - paragraph [ref=e33]: 示例：all:machine+learning | ti:transformer | cat:cs.LG+AND+au:"John Doe"

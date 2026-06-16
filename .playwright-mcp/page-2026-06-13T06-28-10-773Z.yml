@@ -1,0 +1,256 @@
+- generic [ref=e3]:
+  - generic [ref=e4]:
+    - generic [ref=e5]:
+      - heading "对话历史" [level=2] [ref=e6]
+      - button "+ 新对话" [ref=e7] [cursor=pointer]
+    - generic [ref=e8]:
+      - generic [ref=e33] [cursor=pointer]:
+        - generic [ref=e34]:
+          - generic [ref=e35]: 什么是机器学习加XGBoost，请详细介绍一下
+          - generic [ref=e36]: 2 条消息
+        - button "×" [ref=e37]
+      - generic [ref=e38] [cursor=pointer]:
+        - generic [ref=e39]:
+          - generic [ref=e40]: c语言程序中 unsigned int和int 他们存储的是...
+          - generic [ref=e41]: 2 条消息
+        - button "×" [ref=e42]
+      - generic [ref=e43] [cursor=pointer]:
+        - generic [ref=e44]:
+          - generic [ref=e45]: 500字介绍深度学习的最新进展 要包括Transformer...
+          - generic [ref=e46]: 2 条消息
+        - button "×" [ref=e47]
+      - generic [ref=e48] [cursor=pointer]:
+        - generic [ref=e49]:
+          - generic [ref=e50]: c语言程序中 unsigned int和int 他们存储的是...
+          - generic [ref=e51]: 2 条消息
+        - button "×" [ref=e52]
+      - generic [ref=e53] [cursor=pointer]:
+        - generic [ref=e54]:
+          - generic [ref=e55]: 500字介绍深度学习的最新进展 要包括Transformer...
+          - generic [ref=e56]: 2 条消息
+        - button "×" [ref=e57]
+      - generic [ref=e58] [cursor=pointer]:
+        - generic [ref=e59]:
+          - generic [ref=e60]: 500字介绍深度学习的最新进展 要包括Transformer...
+          - generic [ref=e61]: 2 条消息
+        - button "×" [ref=e62]
+      - generic [ref=e63] [cursor=pointer]:
+        - generic [ref=e64]:
+          - generic [ref=e65]: 500字介绍深度学习的最新进展 要包括Transformer...
+          - generic [ref=e66]: 2 条消息
+        - button "×" [ref=e67]
+      - generic [ref=e68] [cursor=pointer]:
+        - generic [ref=e69]:
+          - generic [ref=e70]: 500字介绍深度学习的最新进展 要包括Transformer...
+          - generic [ref=e71]: 2 条消息
+        - button "×" [ref=e72]
+      - generic [ref=e73] [cursor=pointer]:
+        - generic [ref=e74]:
+          - generic [ref=e75]: 500字介绍深度学习的最新进展 要包括Transformer...
+          - generic [ref=e76]: 2 条消息
+        - button "×" [ref=e77]
+      - generic [ref=e78] [cursor=pointer]:
+        - generic [ref=e79]:
+          - generic [ref=e80]: 500字介绍Transformer
+          - generic [ref=e81]: 2 条消息
+        - button "×" [ref=e82]
+      - generic [ref=e83] [cursor=pointer]:
+        - generic [ref=e84]:
+          - generic [ref=e85]: 500字介绍Transformer
+          - generic [ref=e86]: 2 条消息
+        - button "×" [ref=e87]
+      - generic [ref=e88] [cursor=pointer]:
+        - generic [ref=e89]:
+          - generic [ref=e90]: 500字介绍深度学习 要包括CNN RNN Transfor...
+          - generic [ref=e91]: 2 条消息
+        - button "×" [ref=e92]
+      - generic [ref=e93] [cursor=pointer]:
+        - generic [ref=e94]:
+          - generic [ref=e95]: 500字介绍Transformer
+          - generic [ref=e96]: 2 条消息
+        - button "×" [ref=e97]
+      - generic [ref=e98] [cursor=pointer]:
+        - generic [ref=e99]:
+          - generic [ref=e100]: 500字介绍深度学习的最新进展 要包括Transformer...
+          - generic [ref=e101]: 4 条消息
+        - button "×" [ref=e102]
+      - generic [ref=e103] [cursor=pointer]:
+        - generic [ref=e104]:
+          - generic [ref=e105]: 00字介绍Transformer
+          - generic [ref=e106]: 4 条消息
+        - button "×" [ref=e107]
+      - generic [ref=e108] [cursor=pointer]:
+        - generic [ref=e109]:
+          - generic [ref=e110]: 200字介绍Transformer
+          - generic [ref=e111]: 4 条消息
+        - button "×" [ref=e112]
+  - generic [ref=e10]:
+    - generic [ref=e11]:
+      - generic [ref=e13]:
+        - button "💬 对话" [ref=e14] [cursor=pointer]
+        - button "📄 论文搜索" [ref=e15] [cursor=pointer]
+        - button "🧠 记忆" [ref=e16] [cursor=pointer]
+        - button "🔧 工具" [ref=e17] [cursor=pointer]
+      - generic [ref=e113]:
+        - button "📄 导出 Word" [ref=e114] [cursor=pointer]
+        - button "清空对话" [ref=e115] [cursor=pointer]
+    - generic [ref=e116]:
+      - generic [ref=e117] [cursor=pointer]:
+        - generic [ref=e118]: 🤖 Agent 流水线
+        - generic [ref=e119]: 收起 ▲
+      - generic [ref=e120]:
+        - generic [ref=e123]:
+          - generic [ref=e124]: 🤖
+          - generic [ref=e125]: 🤖 智能路由
+          - generic [ref=e126]: ✅ 完成
+        - generic [ref=e130]:
+          - generic [ref=e131]: 💬
+          - generic [ref=e132]: 💬 对话助手
+          - generic [ref=e133]: ⏳ 进行中
+    - generic [ref=e18]:
+      - generic [ref=e136]: 请用500字介绍Transformer架构，尽可能详细
+      - generic [ref=e139]:
+        - heading "Transformer 架构详解" [level=1] [ref=e140]
+        - heading "概述" [level=2] [ref=e141]
+        - paragraph [ref=e142]:
+          - text: Transformer 是由 Vaswani 等人在 2017 年发表的论文
+          - strong [ref=e143]: 《Attention Is All You Need》
+          - text: 中提出的深度学习架构。它彻底摒弃了传统的循环神经网络（RNN）和卷积神经网络（CNN），
+          - strong [ref=e144]: 完全基于注意力机制
+          - text: 来建模序列数据，成为后续 BERT、GPT、T5、ViT 等模型的基石。
+        - separator [ref=e145]
+        - heading "核心组件" [level=2] [ref=e146]
+        - heading "1. 自注意力机制（Self-Attention）" [level=3] [ref=e147]
+        - paragraph [ref=e148]:
+          - text: 自注意力是 Transformer 的核心。对于输入序列中的每个 token，它通过计算该 token 与其他所有 token 的
+          - strong [ref=e149]: 注意力权重
+          - text: 来捕获全局依赖关系。
+        - paragraph [ref=e150]: 具体流程为：
+        - list [ref=e151]:
+          - listitem [ref=e152]:
+            - text: 输入
+            - generic [ref=e153]:
+              - math [ref=e155]:
+                - generic [ref=e158]: X
+              - generic [ref=e160]: X
+            - text: 通过三个不同的线性变换得到
+            - strong [ref=e161]: Query (Q)
+            - text: 、
+            - strong [ref=e162]: Key (K)
+            - text: 、
+            - strong [ref=e163]: Value (V)
+            - text: 。
+          - listitem [ref=e164]:
+            - text: 计算注意力分数：
+            - generic [ref=e165]:
+              - math [ref=e167]:
+                - generic [ref=e169]:
+                  - generic [ref=e170]: Attention
+                  - generic [ref=e171]: (
+                  - generic [ref=e172]: Q
+                  - generic [ref=e173]: ","
+                  - generic [ref=e174]: K
+                  - generic [ref=e175]: ","
+                  - generic [ref=e176]: V
+                  - generic [ref=e177]: )
+                  - generic [ref=e178]: =
+                  - generic [ref=e179]: softmax
+                  - generic [ref=e180]:
+                    - generic [ref=e181]: (
+                    - generic [ref=e182]:
+                      - generic [ref=e183]:
+                        - generic [ref=e184]: Q
+                        - generic [ref=e185]:
+                          - generic [ref=e186]: K
+                          - generic [ref=e187]: T
+                      - generic [ref=e189]:
+                        - generic [ref=e190]: d
+                        - generic [ref=e191]: k
+                    - generic [ref=e192]: )
+                  - generic [ref=e193]: V
+              - generic [ref=e194]:
+                - generic [ref=e195]:
+                  - generic [ref=e196]: Attention
+                  - text: (Q, K, V) =
+                - generic [ref=e197]:
+                  - generic [ref=e198]: softmax
+                  - generic [ref=e199]:
+                    - generic [ref=e200]: (
+                    - generic [ref=e205]:
+                      - generic [ref=e211]:
+                        - generic [ref=e213]:
+                          - text: d
+                          - generic [ref=e218]: k
+                        - img [ref=e223]
+                      - generic [ref=e230]:
+                        - text: Q
+                        - generic [ref=e231]:
+                          - text: K
+                          - generic [ref=e236]: T
+                    - generic [ref=e240]: )
+                  - text: V
+          - listitem [ref=e241]:
+            - text: 除以
+            - generic [ref=e242]:
+              - math [ref=e244]:
+                - generic [ref=e248]:
+                  - generic [ref=e249]: d
+                  - generic [ref=e250]: k
+              - generic [ref=e256]:
+                - generic [ref=e258]:
+                  - text: d
+                  - generic [ref=e263]: k
+                - img [ref=e268]
+            - text: （缩放因子）防止梯度消失。
+        - heading "2. 多头注意力（Multi-Head Attention）" [level=3] [ref=e273]
+        - paragraph [ref=e274]:
+          - text: 将 Q、K、V 拆分为
+          - generic [ref=e275]:
+            - math [ref=e277]:
+              - generic [ref=e280]: h
+            - generic [ref=e282]: h
+          - text: 个不同的子空间（头），每个头独立计算自注意力，然后将结果拼接并线性投影。这使得模型能够从
+          - strong [ref=e283]: 不同表示子空间
+          - text: 中关注信息。
+        - heading "3. 位置编码（Positional Encoding）" [level=3] [ref=e284]
+        - paragraph [ref=e285]:
+          - text: 由于 Transformer 没有循环结构，无法感知 token 的顺序。因此通过添加
+          - strong [ref=e286]: 正弦/余弦函数生成的位置编码
+          - text: （或可学习的嵌入）来注入位置信息。
+        - heading "4. 前馈神经网络（FFN）" [level=3] [ref=e287]
+        - paragraph [ref=e288]:
+          - text: 每个 Transformer 块包含两层全连接网络（通常中间维度较大，如
+          - generic [ref=e289]:
+            - math [ref=e291]:
+              - generic [ref=e293]:
+                - generic [ref=e294]: "4"
+                - generic [ref=e295]:
+                  - generic [ref=e296]: d
+                  - generic [ref=e297]:
+                    - generic [ref=e298]: m
+                    - generic [ref=e299]: o
+                    - generic [ref=e300]: d
+                    - generic [ref=e301]: e
+                    - generic [ref=e302]: l
+            - generic [ref=e304]:
+              - text: "4"
+              - generic [ref=e305]:
+                - text: d
+                - generic [ref=e311]: model
+          - text: ），中间使用 ReLU 或 GELU 激活函数，为模型增加非线性表达能力。
+        - heading "5. 残差连接与" [level=3] [ref=e315]
+        - text: "|"
+    - generic [ref=e22]:
+      - generic [ref=e23]:
+        - button "🤖 自动" [disabled] [ref=e24]
+        - button "💬 对话" [disabled] [ref=e25]
+        - button "🔍 调研" [disabled] [ref=e26]
+        - button "💡 创新" [disabled] [ref=e27]
+        - button "🧪 实验" [disabled] [ref=e28]
+      - generic [ref=e29]:
+        - textbox "输入消息... (支持 Markdown 和 LaTeX)" [disabled] [ref=e30]
+        - combobox "切换模型" [disabled] [ref=e31] [cursor=pointer]:
+          - option "DeepSeek V4 Flash" [selected]
+          - option "V4 Pro"
+          - option "思考模式"
+        - button "发送" [disabled] [ref=e32]

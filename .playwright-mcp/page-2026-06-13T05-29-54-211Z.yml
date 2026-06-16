@@ -1,0 +1,172 @@
+- generic [ref=e3]:
+  - generic [ref=e4]:
+    - generic [ref=e5]:
+      - heading "对话历史" [level=2] [ref=e6]
+      - button "+ 新对话" [ref=e7] [cursor=pointer]
+    - generic [ref=e8]:
+      - generic [ref=e33] [cursor=pointer]:
+        - generic [ref=e34]:
+          - generic [ref=e35]: 介绍组成原理中busA busB ALUASrc ALUBS...
+          - generic [ref=e36]: 2 条消息
+        - button "×" [ref=e37]
+      - generic [ref=e38] [cursor=pointer]:
+        - generic [ref=e39]:
+          - generic [ref=e40]: 介绍你讲解一下期末考试有关于这个的考题：CISC RISC
+          - generic [ref=e41]: 2 条消息
+        - button "×" [ref=e42]
+      - generic [ref=e43] [cursor=pointer]:
+        - generic [ref=e44]:
+          - generic [ref=e45]: 请详细介绍Transformer模型 至少1000字 包括架...
+          - generic [ref=e46]: 2 条消息
+        - button "×" [ref=e47]
+      - generic [ref=e48] [cursor=pointer]:
+        - generic [ref=e49]:
+          - generic [ref=e50]: 介绍组成原理的微程序控制器和硬布线控制器
+          - generic [ref=e51]: 4 条消息
+        - button "×" [ref=e52]
+      - generic [ref=e53] [cursor=pointer]:
+        - generic [ref=e54]:
+          - generic [ref=e55]: 介绍TrustCLIP是什么 和噪声学习有什么关系
+          - generic [ref=e56]: 2 条消息
+        - button "×" [ref=e57]
+      - generic [ref=e58] [cursor=pointer]:
+        - generic [ref=e59]:
+          - generic [ref=e60]: Transformer是什么
+          - generic [ref=e61]: 2 条消息
+        - button "×" [ref=e62]
+      - generic [ref=e63] [cursor=pointer]:
+        - generic [ref=e64]:
+          - generic [ref=e65]: 什么是机器学习加XGBoost
+          - generic [ref=e66]: 2 条消息
+        - button "×" [ref=e67]
+      - generic [ref=e68] [cursor=pointer]:
+        - generic [ref=e69]:
+          - generic [ref=e70]: 什么是机器学习加XGBoost 介绍CNN的特性
+          - generic [ref=e71]: 4 条消息
+        - button "×" [ref=e72]
+      - generic [ref=e73] [cursor=pointer]:
+        - generic [ref=e74]:
+          - generic [ref=e75]: 介绍CNN的特性
+          - generic [ref=e76]: 2 条消息
+        - button "×" [ref=e77]
+      - generic [ref=e78] [cursor=pointer]:
+        - generic [ref=e79]:
+          - generic [ref=e80]: 什么是机器学习加XGBoost
+          - generic [ref=e81]: 2 条消息
+        - button "×" [ref=e82]
+      - generic [ref=e83] [cursor=pointer]:
+        - generic [ref=e84]:
+          - generic [ref=e85]: 什么是机器学习加XGBoost 介绍CNN的特性
+          - generic [ref=e86]: 2 条消息
+        - button "×" [ref=e87]
+      - generic [ref=e88] [cursor=pointer]:
+        - generic [ref=e89]:
+          - generic [ref=e90]: 介绍CNN的特性
+          - generic [ref=e91]: 2 条消息
+        - button "×" [ref=e92]
+      - generic [ref=e93] [cursor=pointer]:
+        - generic [ref=e94]:
+          - generic [ref=e95]: 你好
+          - generic [ref=e96]: 4 条消息
+        - button "×" [ref=e97]
+  - generic [ref=e10]:
+    - generic [ref=e11]:
+      - generic [ref=e13]:
+        - button "💬 对话" [ref=e14] [cursor=pointer]
+        - button "📄 论文搜索" [ref=e15] [cursor=pointer]
+        - button "🧠 记忆" [ref=e16] [cursor=pointer]
+        - button "🔧 工具" [ref=e17] [cursor=pointer]
+      - generic [ref=e98]:
+        - button "📄 导出 Word" [ref=e99] [cursor=pointer]
+        - button "清空对话" [ref=e100] [cursor=pointer]
+    - generic [ref=e18]:
+      - generic [ref=e103]: 请详细比较CNN RNN Transformer GAN 扩散模型 包括架构 原理 优缺点 应用场景 每个至少500字
+      - generic [ref=e104]:
+        - generic [ref=e105] [cursor=pointer]:
+          - generic [ref=e106]: 🤖 Agent 流水线
+          - generic [ref=e107]: 收起 ▲
+        - generic [ref=e108]:
+          - generic [ref=e111]:
+            - generic [ref=e112]: 🤖
+            - generic [ref=e113]: 🤖 智能路由
+            - generic [ref=e114]: ✅ 完成
+          - generic [ref=e118]:
+            - generic [ref=e119]: 📋
+            - generic [ref=e120]: 📋 任务规划
+            - generic [ref=e121]: ✅ 完成
+          - generic [ref=e127]:
+            - generic [ref=e128]:
+              - generic [ref=e129]: 🔍
+              - generic [ref=e130]: 🔍 文献调研
+              - generic [ref=e131]: ⏳ 进行中
+            - generic [ref=e132]:
+              - generic [ref=e133]: └─
+              - generic [ref=e134]: 🔧 🔧 调用 search_arxiv
+              - generic [ref=e135]: ✅
+            - generic [ref=e136]:
+              - generic [ref=e137]: └─
+              - generic [ref=e138]: 🔧 🔧 调用 search_arxiv
+              - generic [ref=e139]: ✅
+            - generic [ref=e160]:
+              - generic [ref=e161]: └─
+              - generic [ref=e162]: 🔧 🔧 调用 search_arxiv
+              - generic [ref=e163]: ✅
+            - generic [ref=e164]:
+              - generic [ref=e165]: └─
+              - generic [ref=e166]: 🔧 🔧 调用 search_arxiv
+              - generic [ref=e167]: ✅
+            - generic [ref=e168]:
+              - generic [ref=e169]: └─
+              - generic [ref=e170]: 🔧 🔧 调用 search_arxiv
+              - generic [ref=e171]: ✅
+            - generic [ref=e172]:
+              - generic [ref=e173]: └─
+              - generic [ref=e174]: 🔧 🔧 调用 search_arxiv
+              - generic [ref=e175]: ✅
+            - generic [ref=e176]:
+              - generic [ref=e177]: └─
+              - generic [ref=e178]: 🔧 🔧 调用 search_arxiv
+              - generic [ref=e179]: ✅
+            - generic [ref=e180]:
+              - generic [ref=e181]: └─
+              - generic [ref=e182]: 🔧 🔧 调用 search_arxiv
+              - generic [ref=e183]: ✅
+            - generic [ref=e184]:
+              - generic [ref=e185]: └─
+              - generic [ref=e186]: 🔧 🔧 调用 search_arxiv
+              - generic [ref=e187]: ✅
+          - generic [ref=e140]:
+            - generic [ref=e141]: 📋 任务进度 (1/6)
+            - generic [ref=e142]:
+              - generic [ref=e143]: ✅
+              - generic [ref=e144]: 1. [research] 研究CNN的架构（卷积层、池化层、全连接层）、工作原理（局部连接、权重共享）、主要优点（平移不变性、参数高效）和缺点（感
+            - generic [ref=e145]:
+              - generic [ref=e146]: ⏳
+              - generic [ref=e147]: 2. [research] 研究RNN的循环架构、时间步展开、梯度消失/爆炸问题、LSTM/GRU变体改进、优缺点（序列建模能力强但训练困难、长依赖
+            - generic [ref=e148]:
+              - generic [ref=e149]: ⏺️
+              - generic [ref=e150]: 3. [research] 研究Transformer的编码器-解码器架构、自注意力机制、多头注意力、位置编码、优缺点（并行计算、长距离依赖强但计算
+            - generic [ref=e151]:
+              - generic [ref=e152]: ⏺️
+              - generic [ref=e153]: 4. [research] 研究GAN的对抗训练框架、生成器与判别器博弈、训练不稳定性（模式崩溃、梯度消失）、优缺点（生成质量高但训练困难、缺乏多样
+            - generic [ref=e154]:
+              - generic [ref=e155]: ⏺️
+              - generic [ref=e156]: 5. [research] 研究扩散模型的前向扩散过程、反向去噪过程、马尔可夫链、变分下界、优缺点（生成质量高、训练稳定但采样速度慢、计算成本高）、
+            - generic [ref=e157]:
+              - generic [ref=e158]: ⏺️
+              - generic [ref=e159]: 6. [synthesize] 汇总前5个子任务的结果，从架构本质、核心机制、训练方式、计算复杂度、适用数据类型、生成质量、训练稳定性、推理速度等维度进
+      - generic [ref=e124]: AI 正在思考...
+    - generic [ref=e22]:
+      - generic [ref=e23]:
+        - button "🤖 自动" [disabled] [ref=e24]
+        - button "💬 对话" [disabled] [ref=e25]
+        - button "🔍 调研" [disabled] [ref=e26]
+        - button "💡 创新" [disabled] [ref=e27]
+        - button "🧪 实验" [disabled] [ref=e28]
+      - generic [ref=e29]:
+        - textbox "输入消息... (支持 Markdown 和 LaTeX)" [disabled] [ref=e30]
+        - combobox "切换模型" [disabled] [ref=e31] [cursor=pointer]:
+          - option "DeepSeek V4 Flash" [selected]
+          - option "V4 Pro"
+          - option "思考模式"
+        - button "发送" [disabled] [ref=e32]

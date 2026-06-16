@@ -1,0 +1,476 @@
+- generic [ref=e3]:
+  - generic [ref=e4]:
+    - generic [ref=e5]:
+      - heading "对话历史" [level=2] [ref=e6]
+      - button "+ 新对话" [ref=e7] [cursor=pointer]
+    - generic [ref=e8]:
+      - generic [ref=e9] [cursor=pointer]:
+        - generic [ref=e10]:
+          - generic [ref=e11]: 你好
+          - generic [ref=e12]: 3 条消息
+        - button "×" [ref=e13]
+      - generic [ref=e14] [cursor=pointer]:
+        - generic [ref=e15]:
+          - generic [ref=e16]: 写一篇CLIP发展的短综述
+          - generic [ref=e17]: 2 条消息
+        - button "×" [ref=e18]
+      - generic [ref=e19] [cursor=pointer]:
+        - generic [ref=e20]:
+          - generic [ref=e21]: 写一篇CLIP发展的短综述
+          - generic [ref=e22]: 3 条消息
+        - button "×" [ref=e23]
+      - generic [ref=e24] [cursor=pointer]:
+        - generic [ref=e25]:
+          - generic [ref=e26]: 你好
+          - generic [ref=e27]: 2 条消息
+        - button "×" [ref=e28]
+      - generic [ref=e29] [cursor=pointer]:
+        - generic [ref=e30]:
+          - generic [ref=e31]: 写一篇多模态大模型抗幻觉的短综述
+          - generic [ref=e32]: 1 条消息
+        - button "×" [ref=e33]
+      - generic [ref=e34] [cursor=pointer]:
+        - generic [ref=e35]:
+          - generic [ref=e36]: 你好
+          - generic [ref=e37]: 2 条消息
+        - button "×" [ref=e38]
+      - generic [ref=e39] [cursor=pointer]:
+        - generic [ref=e40]:
+          - generic [ref=e41]: 写一篇CLIP噪声标签学习短综述
+          - generic [ref=e42]: 2 条消息
+        - button "×" [ref=e43]
+      - generic [ref=e44] [cursor=pointer]:
+        - generic [ref=e45]:
+          - generic [ref=e46]: 写一篇CLIP噪声标签学习短综述
+          - generic [ref=e47]: 2 条消息
+        - button "×" [ref=e48]
+      - generic [ref=e49] [cursor=pointer]:
+        - generic [ref=e50]:
+          - generic [ref=e51]: 写一篇CLIP噪声标签综述
+          - generic [ref=e52]: 2 条消息
+        - button "×" [ref=e53]
+      - generic [ref=e54] [cursor=pointer]:
+        - generic [ref=e55]:
+          - generic [ref=e56]: 写一篇CLIP噪声标签综述
+          - generic [ref=e57]: 2 条消息
+        - button "×" [ref=e58]
+      - generic [ref=e59] [cursor=pointer]:
+        - generic [ref=e60]:
+          - generic [ref=e61]: 综述"CLIP噪声标签"
+          - generic [ref=e62]: 2 条消息
+        - button "×" [ref=e63]
+      - generic [ref=e64] [cursor=pointer]:
+        - generic [ref=e65]:
+          - generic [ref=e66]: 帮我调研CLIP模型的最新进展
+          - generic [ref=e67]: 2 条消息
+        - button "×" [ref=e68]
+      - generic [ref=e69] [cursor=pointer]:
+        - generic [ref=e70]:
+          - generic [ref=e71]: 写一篇CLIP噪声标签综述
+          - generic [ref=e72]: 2 条消息
+        - button "×" [ref=e73]
+      - generic [ref=e74] [cursor=pointer]:
+        - generic [ref=e75]:
+          - generic [ref=e76]: 你好
+          - generic [ref=e77]: 2 条消息
+        - button "×" [ref=e78]
+      - generic [ref=e79] [cursor=pointer]:
+        - generic [ref=e80]:
+          - generic [ref=e81]: 写一篇CLIP噪声标签综述
+          - generic [ref=e82]: 1 条消息
+        - button "×" [ref=e83]
+      - generic [ref=e84] [cursor=pointer]:
+        - generic [ref=e85]:
+          - generic [ref=e86]: 你好
+          - generic [ref=e87]: 2 条消息
+        - button "×" [ref=e88]
+      - generic [ref=e89] [cursor=pointer]:
+        - generic [ref=e90]:
+          - generic [ref=e91]: 写一篇CLIP噪声标签综述
+          - generic [ref=e92]: 1 条消息
+        - button "×" [ref=e93]
+      - generic [ref=e94] [cursor=pointer]:
+        - generic [ref=e95]:
+          - generic [ref=e96]: 写一篇CLIP噪声标签综述
+          - generic [ref=e97]: 1 条消息
+        - button "×" [ref=e98]
+      - generic [ref=e99] [cursor=pointer]:
+        - generic [ref=e100]:
+          - generic [ref=e101]: hello
+          - generic [ref=e102]: 2 条消息
+        - button "×" [ref=e103]
+      - generic [ref=e104] [cursor=pointer]:
+        - generic [ref=e105]:
+          - generic [ref=e106]: 写一篇CLIP噪声标签综述
+          - generic [ref=e107]: 1 条消息
+        - button "×" [ref=e108]
+      - generic [ref=e109] [cursor=pointer]:
+        - generic [ref=e110]:
+          - generic [ref=e111]: 写一篇CLIP噪声标签综述
+          - generic [ref=e112]: 5 条消息
+        - button "×" [ref=e113]
+      - generic [ref=e114] [cursor=pointer]:
+        - generic [ref=e115]:
+          - generic [ref=e116]: 写一篇CLIP噪声标签综述
+          - generic [ref=e117]: 1 条消息
+        - button "×" [ref=e118]
+      - generic [ref=e119] [cursor=pointer]:
+        - generic [ref=e120]:
+          - generic [ref=e121]: 写一篇CLIP噪声标签综述
+          - generic [ref=e122]: 1 条消息
+        - button "×" [ref=e123]
+      - generic [ref=e124] [cursor=pointer]:
+        - generic [ref=e125]:
+          - generic [ref=e126]: 写一篇关于CLIP噪声标签的综述并导出为文档
+          - generic [ref=e127]: 5 条消息
+        - button "×" [ref=e128]
+      - generic [ref=e129] [cursor=pointer]:
+        - generic [ref=e130]:
+          - generic [ref=e131]: 写一篇CLIP噪声标签综述
+          - generic [ref=e132]: 5 条消息
+        - button "×" [ref=e133]
+      - generic [ref=e134] [cursor=pointer]:
+        - generic [ref=e135]:
+          - generic [ref=e136]: 写一篇CLIP噪声标签综述
+          - generic [ref=e137]: 1 条消息
+        - button "×" [ref=e138]
+      - generic [ref=e139] [cursor=pointer]:
+        - generic [ref=e140]:
+          - generic [ref=e141]: 写一篇CLIP噪声标签综述
+          - generic [ref=e142]: 1 条消息
+        - button "×" [ref=e143]
+      - generic [ref=e144] [cursor=pointer]:
+        - generic [ref=e145]:
+          - generic [ref=e146]: 写一篇CLIP噪声标签综述
+          - generic [ref=e147]: 2 条消息
+        - button "×" [ref=e148]
+      - generic [ref=e149] [cursor=pointer]:
+        - generic [ref=e150]:
+          - generic [ref=e151]: 写一篇关于CLIP噪声标签的综述
+          - generic [ref=e152]: 1 条消息
+        - button "×" [ref=e153]
+      - generic [ref=e154] [cursor=pointer]:
+        - generic [ref=e155]:
+          - generic [ref=e156]: 写一篇关于CLIP噪声标签学习的综述并导出为文档
+          - generic [ref=e157]: 1 条消息
+        - button "×" [ref=e158]
+      - generic [ref=e159] [cursor=pointer]:
+        - generic [ref=e160]:
+          - generic [ref=e161]: 综述CLIP噪声标签并导出文档
+          - generic [ref=e162]: 3 条消息
+        - button "×" [ref=e163]
+      - generic [ref=e164] [cursor=pointer]:
+        - generic [ref=e165]:
+          - generic [ref=e166]: 写一篇关于CLIP噪声标签的综述并导出为文档
+          - generic [ref=e167]: 14 条消息
+        - button "×" [ref=e168]
+      - generic [ref=e169] [cursor=pointer]:
+        - generic [ref=e170]:
+          - generic [ref=e171]: 写一篇关于CLIP噪声标签的综述并导出为文档
+          - generic [ref=e172]: 1 条消息
+        - button "×" [ref=e173]
+      - generic [ref=e174] [cursor=pointer]:
+        - generic [ref=e175]:
+          - generic [ref=e176]: 写一篇关于CLIP噪声标签的综述并导出为文档
+          - generic [ref=e177]: 1 条消息
+        - button "×" [ref=e178]
+      - generic [ref=e179] [cursor=pointer]:
+        - generic [ref=e180]:
+          - generic [ref=e181]: 写一篇CLIP噪声标签的综述并导出为Word
+          - generic [ref=e182]: 1 条消息
+        - button "×" [ref=e183]
+      - generic [ref=e184] [cursor=pointer]:
+        - generic [ref=e185]:
+          - generic [ref=e186]: 写一篇关于CLIP噪声标签的综述并保存
+          - generic [ref=e187]: 3 条消息
+        - button "×" [ref=e188]
+      - generic [ref=e189] [cursor=pointer]:
+        - generic [ref=e190]:
+          - generic [ref=e191]: 请撰写一篇关于CLIP噪声标签学习的综述论文，导出为Word...
+          - generic [ref=e192]: 1 条消息
+        - button "×" [ref=e193]
+      - generic [ref=e194] [cursor=pointer]:
+        - generic [ref=e195]:
+          - generic [ref=e196]: 请撰写一篇关于CLIP噪声标签学习的综述论文（汉语），然后导...
+          - generic [ref=e197]: 2 条消息
+        - button "×" [ref=e198]
+      - generic [ref=e199] [cursor=pointer]:
+        - generic [ref=e200]:
+          - generic [ref=e201]: 请撰写一篇关于CLIP噪声标签学习的综述论文（汉语），系统调...
+          - generic [ref=e202]: 2 条消息
+        - button "×" [ref=e203]
+      - generic [ref=e204] [cursor=pointer]:
+        - generic [ref=e205]:
+          - generic [ref=e206]: 帮我调研一下CLIP模型的最新进展
+          - generic [ref=e207]: 2 条消息
+        - button "×" [ref=e208]
+      - generic [ref=e209] [cursor=pointer]:
+        - generic [ref=e210]:
+          - generic [ref=e211]: 帮我调研CLIP模型的最新进展
+          - generic [ref=e212]: 2 条消息
+        - button "×" [ref=e213]
+      - generic [ref=e214] [cursor=pointer]:
+        - generic [ref=e215]:
+          - generic [ref=e216]: 帮我调研CLIP模型的最新进展
+          - generic [ref=e217]: 2 条消息
+        - button "×" [ref=e218]
+      - generic [ref=e219] [cursor=pointer]:
+        - generic [ref=e220]:
+          - generic [ref=e221]: 你好
+          - generic [ref=e222]: 4 条消息
+        - button "×" [ref=e223]
+      - generic [ref=e224] [cursor=pointer]:
+        - generic [ref=e225]:
+          - generic [ref=e226]: 帮我调研CLIP噪声标签学习的最新进展
+          - generic [ref=e227]: 2 条消息
+        - button "×" [ref=e228]
+      - generic [ref=e229] [cursor=pointer]:
+        - generic [ref=e230]:
+          - generic [ref=e231]: 帮我调研一下CLIP噪声标签学习的最新进展
+          - generic [ref=e232]: 4 条消息
+        - button "×" [ref=e233]
+      - generic [ref=e234] [cursor=pointer]:
+        - generic [ref=e235]:
+          - generic [ref=e236]: 帮我调研一下CLIP噪声标签学习的最新进展
+          - generic [ref=e237]: 2 条消息
+        - button "×" [ref=e238]
+      - generic [ref=e239] [cursor=pointer]:
+        - generic [ref=e240]:
+          - generic [ref=e241]: 你好
+          - generic [ref=e242]: 2 条消息
+        - button "×" [ref=e243]
+  - generic [ref=e244]:
+    - generic [ref=e245]:
+      - generic [ref=e247]:
+        - button "💬 对话" [ref=e248] [cursor=pointer]
+        - button "📄 论文搜索" [ref=e249] [cursor=pointer]
+        - button "🧠 记忆" [ref=e250] [cursor=pointer]
+        - button "🔧 工具" [ref=e251] [cursor=pointer]
+      - generic [ref=e267]:
+        - button "📄 导出 Word" [ref=e268] [cursor=pointer]
+        - button "清空对话" [ref=e269] [cursor=pointer]
+    - generic [ref=e252]:
+      - generic [ref=e272]: 你好
+      - generic [ref=e275]: 写一篇CLIP噪声标签的短综述
+      - generic [ref=e278]:
+        - paragraph [ref=e279]: 好的，作为科研综述写作专家，我将综合各位专家的分析，去除重复内容，组织成一篇结构清晰、内容详实的综述报告。
+        - separator [ref=e280]
+        - heading "CLIP 模型噪声标签问题研究综述" [level=2] [ref=e281]
+        - heading "1. 引言" [level=3] [ref=e282]
+        - paragraph [ref=e283]:
+          - text: CLIP（Contrastive Language-Image Pre-Training）作为大规模视觉-语言基础模型，通过在海量（图像，文本）对上执行对比学习，习得了一个通用的图像-文本联合嵌入空间，展现出强大的零样本泛化与迁移能力。然而，CLIP 在实际应用中面临一个核心挑战——
+          - strong [ref=e284]: 噪声标签（Noisy Labels）
+          - text: 。这一问题在两个层面尤为突出：
+        - list [ref=e285]:
+          - listitem [ref=e286]:
+            - strong [ref=e287]: 预训练阶段
+            - text: ：CLIP 训练依赖从互联网爬取的图文对数据（如 WIT、LAION-400M 等），这些数据天然包含大量噪声。文本描述可能与图像内容不相关、不完整或包含误导性信息。Carlini & Terzis (2021) 在
+            - emphasis [ref=e288]: “Poisoning and Backdooring Contrastive Learning”
+            - text: 中指出，这种未经严格清洗的训练方式使得 CLIP 对后门攻击和投毒攻击特别脆弱，仅污染 0.01% 的训练数据即可显著影响模型行为。
+          - listitem [ref=e289]:
+            - strong [ref=e290]: 下游微调阶段
+            - text: ：当 CLIP 被适配到特定下游任务时，高质量人工标注成本高昂，常依赖自动标注、弱监督或伪标签方法，这进一步引入了标签噪声。Wang et al. (2024) 在
+            - emphasis [ref=e291]: “Pre-Trained Vision-Language Models as Partial Annotators”
+            - text: 中系统研究了将 CLIP 作为部分标注器的可行性，发现直接使用其预测作为标签会产生不可忽视的噪声。
+        - paragraph [ref=e292]: 因此，研究 CLIP 对噪声标签的鲁棒性机制，并开发有效的噪声应对方法，对于推动 CLIP 从实验室走向实际应用具有至关重要的理论价值和实践意义。
+        - heading "2. 核心发现：提示学习对噪声标签的内禀鲁棒性" [level=3] [ref=e293]
+        - paragraph [ref=e294]:
+          - strong [ref=e295]: Wu et al. (2023)
+          - text: 在论文
+          - emphasis [ref=e296]: “Why Is Prompt Tuning for Vision-Language Models Robust to Noisy Labels?”
+          - text: （arXiv:2307.11978）中做出了一个开创性发现：
+          - strong [ref=e297]: CLIP 的提示学习（Prompt Tuning）对标签噪声具有高度内禀鲁棒性
+          - text: 。该论文通过系统实验揭示：
+        - list [ref=e298]:
+          - listitem [ref=e299]:
+            - strong [ref=e300]: 惊人表现
+            - text: ：在 CIFAR-10/100、ImageNet 等基准数据集上，当标签噪声率高达 40%–80% 时，CoOp（Context Optimization）等提示学习方法仍能保持接近无噪声情况下的分类性能。
+          - listitem [ref=e301]:
+            - strong [ref=e302]: 对比实验
+            - text: ：全微调（Full Fine-tuning）方法在相同噪声率下性能急剧下降，而提示学习几乎不受影响。例如在 60% 对称噪声下，全微调准确率从 85% 跌至 40%，而提示学习仅从 85% 跌至 78%。
+        - paragraph [ref=e303]:
+          - strong [ref=e304]: 鲁棒性来源的理论分析
+          - text: ：
+        - list [ref=e305]:
+          - listitem [ref=e306]:
+            - strong [ref=e307]: 预训练先验的保持
+            - text: ：提示学习仅调整少量文本侧的连续 prompt embeddings（通常为 16 个 token，约 1.2 万参数），几乎不改变 CLIP 预训练的视觉-语言对齐空间。因此，预训练阶段从海量数据中学到的丰富知识得以完整保留，不会被噪声样本的误导信号覆盖。
+          - listitem [ref=e308]:
+            - strong [ref=e309]: 梯度特性差异
+            - text: ：噪声样本产生的梯度方向与干净样本不一致，但由于可训练参数极少（仅为全微调的 0.01%），噪声梯度对整体优化的扰动被限制在极小的参数子空间内。此外，噪声样本的梯度范数通常更大，但在 prompt 学习的低维参数空间中难以对模型产生实质性影响。
+          - listitem [ref=e310]:
+            - strong [ref=e311]: 隐式正则化
+            - text: ：提示学习本质上是一种隐式正则化——固定预训练权重相当于施加了极强的参数约束，防止模型在噪声数据上过拟合。
+        - paragraph [ref=e312]:
+          - text: 这一发现具有重要的实践意义：
+          - strong [ref=e313]: 在大多数实际场景中，直接使用 CLIP 的提示学习即可获得对噪声标签的天然免疫力，无需额外设计复杂的噪声处理模块。
+        - heading "3. 核心方法分类与详细分析" [level=3] [ref=e314]
+        - paragraph [ref=e315]: 尽管提示学习具有天然鲁棒性，但在高噪声率、域偏移、小样本等复杂场景下，仍需专门的噪声处理策略。当前主流方法可分为以下几类：
+        - heading "3.1 基于样本选择与标签清洗的方法" [level=4] [ref=e316]
+        - list [ref=e317]:
+          - listitem [ref=e318]:
+            - paragraph [ref=e319]:
+              - strong [ref=e320]: CLIPCleaner (Feng et al., 2024)
+              - text: —
+              - emphasis [ref=e321]: "“CLIPCleaner: Cleaning Noisy Labels with CLIP”"
+              - text: （arXiv:2408.10012）
+            - list [ref=e322]:
+              - listitem [ref=e323]:
+                - strong [ref=e324]: 核心思路
+                - text: ：利用 CLIP 的零样本能力作为“教师模型”，对噪声数据集进行标签清洗，而非依赖下游训练过程中的模型自身预测。
+              - listitem [ref=e325]:
+                - strong [ref=e326]: 方法
+                - text: ：计算 CLIP 的图文匹配分数作为置信度指标，设置双阈值策略：高置信度样本（分数 > τ_high）直接保留原始标签；低置信度样本（分数 < τ_low）使用 CLIP 的零样本预测结果替换原始标签；中等置信度样本进行加权处理。
+              - listitem [ref=e327]:
+                - strong [ref=e328]: 创新点
+                - text: ：避免了传统“小损失”（small-loss）策略的“自我确认偏差”（self-confirmation bias），利用的是预训练知识而非正在训练的模型的预测，从根本上规避了这一风险。
+              - listitem [ref=e329]:
+                - strong [ref=e330]: 效果
+                - text: ：在 CIFAR-10N、CIFAR-100N、Red Mini-ImageNet 等噪声数据集上，显著优于传统 LNL 方法，特别是在高噪声率（>60%）场景下优势明显。
+          - listitem [ref=e331]:
+            - paragraph [ref=e332]:
+              - strong [ref=e333]: CRoF (Deng et al., 2024)
+              - text: —
+              - emphasis [ref=e334]: "“CRoF: CLIP-based Robust Few-shot Learning on Noisy Labels”"
+              - text: （arXiv:2412.12793）
+            - list [ref=e335]:
+              - listitem [ref=e336]:
+                - strong [ref=e337]: 核心思路
+                - text: ：针对小样本场景（每类仅 1-16 个样本）下的噪声标签问题，提出 CLIP 特征增强与噪声鲁棒训练结合的方法。
+              - listitem [ref=e338]:
+                - strong [ref=e339]: 方法
+                - text: ：利用 CLIP 的视觉编码器提取鲁棒特征表示，设计特征级的一致性正则化（Feature-level Consistency Regularization），迫使模型在干净和噪声样本上产生相似的特征分布。同时，结合样本重加权策略，根据 CLIP 的零样本预测与给定标签的一致性动态调整每个样本的损失权重。
+              - listitem [ref=e340]:
+                - strong [ref=e341]: 创新点
+                - text: ：传统 FSL 方法在小样本+噪声标签场景下几乎崩溃（因为样本太少无法区分噪声），CRoF 通过引入 CLIP 的强先验知识有效缓解了这一问题。
+        - heading "3.2 基于提示学习优化的方法" [level=4] [ref=e342]
+        - list [ref=e343]:
+          - listitem [ref=e344]:
+            - paragraph [ref=e345]:
+              - strong [ref=e346]: NLPrompt (Pan et al., 2024)
+              - text: —
+              - emphasis [ref=e347]: "“NLPrompt: Noise-Label Prompt Learning for Vision-Language Models”"
+              - text: （arXiv:2412.01256）
+            - list [ref=e348]:
+              - listitem [ref=e349]:
+                - strong [ref=e350]: 核心思路
+                - text: ：直接针对噪声标签场景优化提示学习过程，而非先清洗再训练的两阶段方法。
+              - listitem [ref=e351]:
+                - strong [ref=e352]: 方法
+                - text: ：包含一个噪声标签检测模块，利用 CLIP 的零样本预测与给定标签的交叉熵作为噪声检测指标。同时，设计了一种噪声鲁棒的对比损失（Adaptive Contrastive Loss），对可疑样本的梯度进行自适应裁剪——当样本的零样本预测与标签不一致时，降低其对比损失中的权重。
+              - listitem [ref=e353]:
+                - strong [ref=e354]: 创新点
+                - text: ：将噪声标签处理与提示学习端到端结合，无需额外的训练阶段或外部模型。
+              - listitem [ref=e355]:
+                - strong [ref=e356]: 效果
+                - text: ：在多个噪声数据集上，NLPrompt 不仅优于标准提示学习，还优于先清洗后训练的两阶段方法，特别是在噪声率超过 50% 的场景下。
+          - listitem [ref=e357]:
+            - paragraph [ref=e358]:
+              - strong [ref=e359]: Intrinsic Gradient Suppression (Li et al., 2026)
+              - text: —
+              - emphasis [ref=e360]: “Intrinsic Gradient Suppression for Label-Noise Prompt Tuning in Vision-Language Models”
+              - text: （arXiv:2605.00591）
+            - list [ref=e361]:
+              - listitem [ref=e362]:
+                - strong [ref=e363]: 核心思路
+                - text: ：从梯度分析的角度解决噪声标签问题，基于一个关键观察——噪声样本在提示学习中会产生异常大的梯度。
+              - listitem [ref=e364]:
+                - strong [ref=e365]: 方法
+                - text: ：提出“内在梯度抑制”（IGS）机制，对每个样本的梯度进行实时监控，当梯度范数超过动态阈值时，对该样本的梯度进行自适应缩放。同时，设计了一种基于梯度分布的噪声检测器，利用 CLIP 预训练特征空间中干净样本和噪声样本梯度分布的差异性（干净样本梯度更集中、更小）。
+              - listitem [ref=e366]:
+                - strong [ref=e367]: 关键发现
+                - text: ：通过理论分析证明，CLIP 预训练提供的良好特征空间使得干净样本和噪声样本的梯度分布具有可分离性——这是 IGS 方法有效性的理论基础。
+              - listitem [ref=e368]:
+                - strong [ref=e369]: 效果
+                - text: ：在 CIFAR-10/100 的对称噪声、非对称噪声和细粒度噪声场景下，IGS 均显著优于 NLPrompt 和其他基线方法。
+        - heading "3.3 基于半监督与伪标签的方法" [level=4] [ref=e370]
+        - list [ref=e371]:
+          - listitem [ref=e372]:
+            - strong [ref=e373]: Wang et al. (2026)
+            - text: —
+            - emphasis [ref=e374]: “Fine-tuning Pre-trained Vision-Language Models in a Human-Annotation-Free Manner”
+            - text: （arXiv:2602.04337）
+            - list [ref=e375]:
+              - listitem [ref=e376]:
+                - strong [ref=e377]: 核心思路
+                - text: ：提出一种完全无人工标注的 CLIP 微调方案。
+              - listitem [ref=e378]:
+                - strong [ref=e379]: 方法
+                - text: ：使用 CLIP 零样本预测作为初始伪标签，并设计“可靠置信度过滤”机制。该机制不仅考虑预测置信度，还考虑预测稳定性（多次随机扰动后的预测一致性），以缓解传统伪标签方法中“高置信度不等于正确”的问题。
+              - listitem [ref=e380]:
+                - strong [ref=e381]: 创新点
+                - text: ：通过引入预测稳定性指标，有效提升了伪标签的质量，使得模型能够在无人工标注的场景下进行有效的微调。
+        - heading "4. 各方法优缺点对比" [level=3] [ref=e382]
+        - table [ref=e383]:
+          - rowgroup [ref=e384]:
+            - row "方法类别 代表工作 优点 缺点 适用场景" [ref=e385]:
+              - columnheader "方法类别" [ref=e386]
+              - columnheader "代表工作" [ref=e387]
+              - columnheader "优点" [ref=e388]
+              - columnheader "缺点" [ref=e389]
+              - columnheader "适用场景" [ref=e390]
+          - rowgroup [ref=e391]:
+            - row "直接使用提示学习 Wu et al. (2023) 无需额外设计；零额外计算开销；对中等噪声高度鲁棒 高噪声率（>80%）下性能下降；仅适用于提示学习范式 大多数实际场景，噪声率<60%" [ref=e392]:
+              - cell "直接使用提示学习" [ref=e393]:
+                - strong [ref=e394]: 直接使用提示学习
+              - cell "Wu et al. (2023)" [ref=e395]
+              - cell "无需额外设计；零额外计算开销；对中等噪声高度鲁棒" [ref=e396]
+              - cell "高噪声率（>80%）下性能下降；仅适用于提示学习范式" [ref=e397]
+              - cell "大多数实际场景，噪声率<60%" [ref=e398]
+            - row "样本选择/标签清洗 CLIPCleaner (2024), CRoF (2024) 利用 CLIP 强先验；可解释性强；避免自我确认偏差；CRoF 专治小样本场景 依赖 CLIP 零样本性能；对域偏移敏感；需额外清洗步骤；CRoF 方法复杂度较高 域内噪声，噪声率可高可低；小样本场景" [ref=e399]:
+              - cell "样本选择/标签清洗" [ref=e400]:
+                - strong [ref=e401]: 样本选择/标签清洗
+              - cell "CLIPCleaner (2024), CRoF (2024)" [ref=e402]
+              - cell "利用 CLIP 强先验；可解释性强；避免自我确认偏差；CRoF 专治小样本场景" [ref=e403]
+              - cell "依赖 CLIP 零样本性能；对域偏移敏感；需额外清洗步骤；CRoF 方法复杂度较高" [ref=e404]
+              - cell "域内噪声，噪声率可高可低；小样本场景" [ref=e405]
+            - row "提示学习优化 NLPrompt (2024), IGS (2026) 端到端学习；参数高效；理论分析深入；IGS 梯度抑制效果好 仅适用于提示学习范式；需额外梯度计算；IGS 实现复杂 需要提示学习的场景，噪声率<80%" [ref=e406]:
+              - cell "提示学习优化" [ref=e407]:
+                - strong [ref=e408]: 提示学习优化
+              - cell "NLPrompt (2024), IGS (2026)" [ref=e409]
+              - cell "端到端学习；参数高效；理论分析深入；IGS 梯度抑制效果好" [ref=e410]
+              - cell "仅适用于提示学习范式；需额外梯度计算；IGS 实现复杂" [ref=e411]
+              - cell "需要提示学习的场景，噪声率<80%" [ref=e412]
+            - row "半监督/伪标签 Wang et al. (2026) 完全无人工标注；可处理大量未标注数据；预测稳定性指标创新 初始伪标签质量依赖 CLIP 零样本性能；计算成本较高 零样本性能好的场景，大规模数据" [ref=e413]:
+              - cell "半监督/伪标签" [ref=e414]:
+                - strong [ref=e415]: 半监督/伪标签
+              - cell "Wang et al. (2026)" [ref=e416]
+              - cell "完全无人工标注；可处理大量未标注数据；预测稳定性指标创新" [ref=e417]
+              - cell "初始伪标签质量依赖 CLIP 零样本性能；计算成本较高" [ref=e418]
+              - cell "零样本性能好的场景，大规模数据" [ref=e419]
+        - heading "5. 未来方向" [level=3] [ref=e420]
+        - list [ref=e421]:
+          - listitem [ref=e422]:
+            - strong [ref=e423]: 统一理论框架
+            - text: ：目前对 CLIP 噪声标签鲁棒性的理解仍停留在经验层面，缺少统一理论来解释不同噪声类型（如对称噪声、非对称噪声、开集噪声）与 CLIP 特征空间的关系，以及提示学习鲁棒性的数学本质。
+          - listitem [ref=e424]:
+            - strong [ref=e425]: 动态噪声与在线学习
+            - text: ：现有方法多假设噪声率固定且噪声分布静态，实际应用中噪声分布可能随时间变化（如在线学习场景）。如何设计自适应检测和适应动态噪声的方法是未来研究的重要方向。
+          - listitem [ref=e426]:
+            - strong [ref=e427]: 多模态噪声
+            - text: ：CLIP 的文本侧和图像侧可能同时存在噪声（图文不对齐），现有方法主要关注标签噪声。如何同时处理文本描述中的噪声、图像中的视觉噪声以及图文匹配错误，是一个极具挑战性的课题。
+          - listitem [ref=e428]:
+            - strong [ref=e429]: 预训练阶段的噪声利用
+            - text: ：CLIP 本身在预训练时就使用了大量噪声数据。如何设计预训练阶段就能抵抗噪声的对比学习目标函数，使预训练模型本身对噪声更具免疫力，是一个具有深远影响的方向。
+          - listitem [ref=e430]:
+            - strong [ref=e431]: 可解释性与安全性
+            - text: ：在医疗、金融等高风险场景中，需要模型能够明确识别哪些样本的标签可能被噪声污染，并提供可解释的判断依据。这要求模型不仅要具备噪声鲁棒性，还要具备良好的可解释性和安全性。
+        - heading "6. 总结" [level=3] [ref=e432]
+        - paragraph [ref=e433]:
+          - text: CLIP 的噪声标签问题是视觉-语言模型落地实际应用的关键挑战。当前研究表明，
+          - strong [ref=e434]: 提示学习对标签噪声具有天然的鲁棒性
+          - text: ，这为实际部署提供了便利且高效的基线方案。然而，对于高噪声率、域偏移、小样本等复杂场景，仍需专门的噪声处理策略。当前主流方法包括利用 CLIP 强先验进行样本选择与标签清洗、在提示学习框架内进行噪声感知优化、以及结合半监督与伪标签方法等。未来的研究需要从统一理论框架、动态噪声适应、多模态噪声处理、预训练阶段噪声利用以及可解释安全性等多个维度深入探索，以充分发挥 CLIP 在真实世界中的潜力。
+    - generic [ref=e256]:
+      - generic [ref=e257]:
+        - button "🤖 自动" [ref=e258] [cursor=pointer]
+        - button "💬 对话" [ref=e259] [cursor=pointer]
+        - button "🔍 调研" [ref=e260] [cursor=pointer]
+        - button "💡 创新" [ref=e261] [cursor=pointer]
+        - button "🧪 实验" [ref=e262] [cursor=pointer]
+      - generic [ref=e263]:
+        - textbox "输入消息... (支持 Markdown 和 LaTeX)" [ref=e264]
+        - combobox "切换模型" [ref=e265] [cursor=pointer]:
+          - option "DeepSeek V4 Flash" [selected]
+          - option "V4 Pro"
+          - option "思考模式"
+        - button "发送" [ref=e266] [cursor=pointer]

@@ -1,0 +1,73 @@
+- generic [ref=e3]:
+  - generic [ref=e4]:
+    - generic [ref=e5]:
+      - heading "对话历史" [level=2] [ref=e6]
+      - button "+ 新对话" [ref=e7] [cursor=pointer]
+    - generic [ref=e8]:
+      - generic [ref=e9] [cursor=pointer]:
+        - generic [ref=e10]:
+          - generic [ref=e11]: 帮我调研一下CLIP模型的最新进展
+          - generic [ref=e12]: 2 条消息
+        - button "×" [ref=e13]
+      - generic [ref=e14] [cursor=pointer]:
+        - generic [ref=e15]:
+          - generic [ref=e16]: 帮我调研一下CLIP模型的最新进展
+          - generic [ref=e17]: 2 条消息
+        - button "×" [ref=e18]
+      - generic [ref=e19] [cursor=pointer]:
+        - generic [ref=e20]:
+          - generic [ref=e21]: 你好
+          - generic [ref=e22]: 2 条消息
+        - button "×" [ref=e23]
+      - generic [ref=e24] [cursor=pointer]:
+        - generic [ref=e25]:
+          - generic [ref=e26]: 帮我调研一下CLIP噪声标签学习的最新进展
+          - generic [ref=e27]: 1 条消息
+        - button "×" [ref=e28]
+      - generic [ref=e29] [cursor=pointer]:
+        - generic [ref=e30]:
+          - generic [ref=e31]: 帮我调研一下CLIP噪声标签学习的最新进展
+          - generic [ref=e32]: 2 条消息
+        - button "×" [ref=e33]
+      - generic [ref=e34] [cursor=pointer]:
+        - generic [ref=e35]:
+          - generic [ref=e36]: 用一句话说什么是机器学习
+          - generic [ref=e37]: 2 条消息
+        - button "×" [ref=e38]
+      - generic [ref=e39] [cursor=pointer]:
+        - generic [ref=e40]:
+          - generic [ref=e41]: 用一句话说什么是机器学习
+          - generic [ref=e42]: 2 条消息
+        - button "×" [ref=e43]
+      - generic [ref=e44] [cursor=pointer]:
+        - generic [ref=e45]:
+          - generic [ref=e46]: 用一句话说什么是机器学习
+          - generic [ref=e47]: 4 条消息
+        - button "×" [ref=e48]
+      - generic [ref=e49] [cursor=pointer]:
+        - generic [ref=e50]:
+          - generic [ref=e51]: 用一句话说什么是机器学习
+          - generic [ref=e52]: 2 条消息
+        - button "×" [ref=e53]
+  - generic [ref=e54]:
+    - generic [ref=e57]:
+      - button "💬 对话" [ref=e58] [cursor=pointer]
+      - button "📄 论文搜索" [ref=e59] [cursor=pointer]
+      - button "🧠 记忆" [ref=e60] [cursor=pointer]
+    - generic [ref=e62]:
+      - generic [ref=e63]: 💬
+      - paragraph [ref=e64]: 选择或创建一个新对话开始
+    - generic [ref=e65]:
+      - generic [ref=e66]:
+        - button "🤖 自动" [ref=e67] [cursor=pointer]
+        - button "💬 对话" [ref=e68] [cursor=pointer]
+        - button "🔍 调研" [ref=e69] [cursor=pointer]
+        - button "💡 创新" [ref=e70] [cursor=pointer]
+        - button "🧪 实验" [ref=e71] [cursor=pointer]
+      - generic [ref=e72]:
+        - textbox "输入消息... (支持 Markdown 和 LaTeX)" [ref=e73]
+        - combobox "切换模型" [ref=e74] [cursor=pointer]:
+          - option "DeepSeek V4 Flash" [selected]
+          - option "V4 Pro"
+          - option "思考模式"
+        - button "发送" [ref=e75] [cursor=pointer]

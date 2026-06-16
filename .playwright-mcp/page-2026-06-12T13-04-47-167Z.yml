@@ -1,0 +1,69 @@
+- generic [ref=e3]:
+  - generic [ref=e4]:
+    - generic [ref=e5]:
+      - heading "对话历史" [level=2] [ref=e6]
+      - button "+ 新对话" [ref=e7] [cursor=pointer]
+    - generic [ref=e8]:
+      - generic [ref=e32] [cursor=pointer]:
+        - generic [ref=e33]:
+          - generic [ref=e34]: 帮我调研一下CLIP噪声标签学习的最新进展
+          - generic [ref=e35]: 4 条消息
+        - button "×" [ref=e36]
+      - generic [ref=e37] [cursor=pointer]:
+        - generic [ref=e38]:
+          - generic [ref=e39]: 帮我调研一下CLIP噪声标签学习的最新进展
+          - generic [ref=e40]: 2 条消息
+        - button "×" [ref=e41]
+      - generic [ref=e42] [cursor=pointer]:
+        - generic [ref=e43]:
+          - generic [ref=e44]: 你好
+          - generic [ref=e45]: 2 条消息
+        - button "×" [ref=e46]
+  - generic [ref=e10]:
+    - generic [ref=e11]:
+      - generic [ref=e13]:
+        - button "💬 对话" [ref=e14] [cursor=pointer]
+        - button "📄 论文搜索" [ref=e15] [cursor=pointer]
+        - button "🧠 记忆" [ref=e16] [cursor=pointer]
+      - button "清空对话" [ref=e48] [cursor=pointer]
+    - generic [ref=e17]:
+      - generic [ref=e51]: 帮我调研CLIP噪声标签学习的最新进展
+      - generic [ref=e52]:
+        - generic [ref=e53] [cursor=pointer]:
+          - generic [ref=e54]: 🤖 Agent 流水线
+          - generic [ref=e55]: 收起 ▲
+        - generic [ref=e56]:
+          - generic [ref=e59]:
+            - generic [ref=e60]: 🤖
+            - generic [ref=e61]: 🤖 智能路由
+            - generic [ref=e62]: ✅ 完成
+          - generic [ref=e65]:
+            - generic [ref=e66]:
+              - generic [ref=e67]: 🔍
+              - generic [ref=e68]: 🔍 文献调研
+              - generic [ref=e69]: ⏳ 进行中
+            - generic [ref=e70]:
+              - generic [ref=e71]: └─
+              - generic [ref=e72]: 🔧 🔧 调用 search_arxiv
+              - generic [ref=e73]: ✅
+            - generic [ref=e74]:
+              - generic [ref=e75]: └─
+              - generic [ref=e76]: 🔧 🔧 调用 search_arxiv
+              - generic [ref=e77]: ⏳
+      - generic [ref=e80]:
+        - paragraph [ref=e81]: 好的，我来调研CLIP噪声标签学习的最新进展。我会从多个角度进行搜索。
+        - text: "|"
+    - generic [ref=e21]:
+      - generic [ref=e22]:
+        - button "🤖 自动" [disabled] [ref=e23]
+        - button "💬 对话" [disabled] [ref=e24]
+        - button "🔍 调研" [disabled] [ref=e25]
+        - button "💡 创新" [disabled] [ref=e26]
+        - button "🧪 实验" [disabled] [ref=e27]
+      - generic [ref=e28]:
+        - textbox "输入消息... (支持 Markdown 和 LaTeX)" [disabled] [ref=e29]
+        - combobox "切换模型" [disabled] [ref=e30] [cursor=pointer]:
+          - option "DeepSeek V4 Flash" [selected]
+          - option "V4 Pro"
+          - option "思考模式"
+        - button "发送" [disabled] [ref=e31]
