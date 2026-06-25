@@ -286,44 +286,64 @@ class TraceManager:
 
     # ── 查询 ──
 
+    @staticmethod
+    def _list_trace_files_newest_first() -> List[str]:
+        """列出所有 trace 文件，按日期从新到旧排序（全局，非仅今日）"""
+        if not os.path.isdir(TRACES_DIR):
+            return []
+        files = []
+        for fname in os.listdir(TRACES_DIR):
+            if fname.startswith("trace_") and fname.endswith(".jsonl"):
+                files.append(os.path.join(TRACES_DIR, fname))
+        # 文件名 trace_YYYYMMDD.jsonl，按日期降序（最新的在前）
+        files.sort(key=lambda p: os.path.basename(p), reverse=True)
+        return files
+
     def get_traces_by_session(self, session_id: str, limit: int = 50) -> List[dict]:
-        """按 session_id 查询追踪记录（最近 N 条）"""
+        """按 session_id 查询追踪记录（全局搜索，返回最近 N 条）"""
         results = []
         try:
-            date_str = datetime.now().strftime("%Y%m%d")
-            trace_file = os.path.join(TRACES_DIR, f"trace_{date_str}.jsonl")
-            if not os.path.exists(trace_file):
-                return results
-            with open(trace_file, "r", encoding="utf-8") as f:
-                for line in f:
-                    try:
-                        span = json.loads(line.strip())
-                        if span.get("session_id") == session_id:
-                            results.append(span)
-                    except json.JSONDecodeError:
-                        continue
+            for trace_file in self._list_trace_files_newest_first():
+                if len(results) >= limit:
+                    break
+                try:
+                    with open(trace_file, "r", encoding="utf-8") as f:
+                        for line in f:
+                            try:
+                                span = json.loads(line.strip())
+                                if span.get("session_id") == session_id:
+                                    results.append(span)
+                            except json.JSONDecodeError:
+                                continue
+                except IOError:
+                    continue
         except IOError:
             pass
         return results[-limit:]
 
     def get_recent_traces(self, limit: int = 100) -> List[dict]:
-        """获取最近的追踪记录"""
+        """获取最近的追踪记录（全局，跨所有日期文件，最新在前）"""
         results = []
         try:
-            date_str = datetime.now().strftime("%Y%m%d")
-            trace_file = os.path.join(TRACES_DIR, f"trace_{date_str}.jsonl")
-            if not os.path.exists(trace_file):
-                return results
-            with open(trace_file, "r", encoding="utf-8") as f:
-                lines = f.readlines()
-            for line in lines[-limit:]:
+            for trace_file in self._list_trace_files_newest_first():
+                if len(results) >= limit:
+                    break
                 try:
-                    results.append(json.loads(line.strip()))
-                except json.JSONDecodeError:
+                    with open(trace_file, "r", encoding="utf-8") as f:
+                        lines = f.readlines()
+                    # 从每份文件中取最新的条目（文件内按写入顺序，越后面越新）
+                    remaining = limit - len(results)
+                    # 当前文件的最新条目优先放入（已按从新到旧批次追加，跨文件天然从新到旧）
+                    for line in reversed(lines[-remaining:]):
+                        try:
+                            results.append(json.loads(line.strip()))
+                        except json.JSONDecodeError:
+                            continue
+                except IOError:
                     continue
         except IOError:
             pass
-        return results
+        return results[:limit]
 
 
 # ─── 2. Metrics Collector ─────────────────────────────────────

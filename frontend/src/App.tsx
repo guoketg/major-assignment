@@ -262,14 +262,26 @@ function App() {
   const [perAgentTokens, setPerAgentTokens] = useState<Record<string, PerAgentTokenData>>({});
   const [showTokenPanel, setShowTokenPanel] = useState(false);
   const [totalUsageEver, setTotalUsageEver] = useState<{prompt_tokens: number; completion_tokens: number; total_tokens: number; total_cost: number; session_count: number} | null>(null);
+  const [dailyUsageList, setDailyUsageList] = useState<Array<{date: string; prompt_tokens: number; completion_tokens: number; total_tokens: number; total_cost: number; session_count: number}>>([]);
+  const [selectedDate, setSelectedDate] = useState<string>('');  // 选中的日期，空=今天
   const [toast, setToast] = useState<{show: boolean; message: string; type: 'info' | 'warn'}>({show: false, message: '', type: 'info'});
   const subTaskPlanRef = useRef<any[]>([]);
 
-  // 加载全局累计用量
+  // 加载全局累计用量和每日用量
   const loadTotalUsage = async () => {
     try {
       const resp = await fetch(`${API_URL}/usage/total`);
       if (resp.ok) setTotalUsageEver(await resp.json());
+    } catch(e) {}
+    try {
+      const resp = await fetch(`${API_URL}/usage/daily`);
+      if (resp.ok) {
+        const list = await resp.json();
+        setDailyUsageList(list);
+        if (list.length > 0 && !selectedDate) {
+          setSelectedDate(list[0].date);  // 默认选中今天
+        }
+      }
     } catch(e) {}
   };  // 同步访问，绕过 React 异步状态更新延迟
 
@@ -1512,7 +1524,7 @@ function App() {
             </div>
 
             {/* 技能详情 / 编辑面板 */}
-            {skillDetail && (
+            {(skillDetail || skillEditMode === 'create') && (
               <div style={{...styles.usageSection, marginTop: 20}}>
                 <div style={{display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 16}}>
                   <div style={styles.usageSectionTitle}>
@@ -1545,7 +1557,7 @@ function App() {
                       >取消</button>
                     )}
                     <button
-                      onClick={() => setSkillDetail(null)}
+                      onClick={() => { setSkillDetail(null); setSkillEditMode('view'); }}
                       style={{padding: '6px 14px', borderRadius: 6, border: '1px solid #ddd', backgroundColor: '#fff', color: '#666', cursor: 'pointer', fontSize: 12}}
                     >✕ 关闭</button>
                   </div>
@@ -1644,19 +1656,50 @@ function App() {
         )}
 
         {/* ====== Token 用量专用页面 ====== */}
-        {mode === 'usage' && (
+        {mode === 'usage' && (() => {
+          // 获取选中日期的用量数据
+          const selectedDayData = selectedDate
+            ? dailyUsageList.find(d => d.date === selectedDate) || null
+            : null;
+          const todayStr = new Date().toISOString().slice(0, 10);
+          const isToday = selectedDate === todayStr || selectedDate === '' || !selectedDate;
+          const displayDate = selectedDate || todayStr;
+
+          // 当前会话实时数据（若有活跃会话，也展示）
+          const hasSessionData = tokenUsage && tokenUsage.total_tokens > 0;
+
+          return (
           <div style={styles.usagePage}>
             <div style={styles.usageHero}>
               <div style={styles.usageHeroLeft}>
                 <h2 style={styles.usageTitle}>📊 Token 用量仪表盘</h2>
                 <p style={styles.usageSubtitle}>
-                  当前会话: {currentSessionId ? currentSessionId.slice(0, 20) + '...' : '未选择'}
-                  {messages.length > 0 && <span> · {messages.filter(m => m.role === 'user').length} 轮对话</span>}
+                  📅 按天统计 Token 用量 · 当前查看: {displayDate}
+                  {isToday && <span style={{color: '#22c55e', fontWeight: 600}}> (今天)</span>}
+                  {dailyUsageList.length > 0 && <span> · 共 {dailyUsageList.length} 天记录</span>}
                 </p>
               </div>
-              <div style={styles.usageHeroRight}>
+              <div style={{display: 'flex', alignItems: 'center', gap: 12} as React.CSSProperties}>
+                {/* 日期选择器 */}
+                <select
+                  value={selectedDate || todayStr}
+                  onChange={e => setSelectedDate(e.target.value)}
+                  style={{padding: '8px 14px', borderRadius: 8, border: '1px solid #ddd', backgroundColor: '#fff', cursor: 'pointer', fontSize: 13, color: '#333', minWidth: 140}}
+                >
+                  {dailyUsageList.length === 0 && (
+                    <option value={todayStr}>{todayStr} (暂无数据)</option>
+                  )}
+                  {dailyUsageList.map(d => (
+                    <option key={d.date} value={d.date}>
+                      {d.date}{d.date === todayStr ? ' (今天)' : ''} — ¥{d.total_cost.toFixed(4)}
+                    </option>
+                  ))}
+                  {dailyUsageList.length > 0 && !dailyUsageList.find(d => d.date === todayStr) && (
+                    <option value={todayStr}>{todayStr} (今天 — 暂无用量)</option>
+                  )}
+                </select>
                 <button
-                  onClick={() => setMode('chat')}
+                  onClick={() => { setMode('chat'); loadTotalUsage(); }}
                   style={{padding: '8px 18px', borderRadius: 8, border: '1px solid #ddd', backgroundColor: '#fff', cursor: 'pointer', fontSize: 13}}
                 >
                   ← 返回对话
@@ -1664,11 +1707,132 @@ function App() {
               </div>
             </div>
 
+            {/* === 选中日期用量（大卡片） === */}
+            <div style={{marginBottom: 24}}>
+              <div style={{...styles.usageSectionTitle, fontSize: 16, color: '#1a1a2e', borderBottom: '2px solid #3b82f6', paddingBottom: 10, marginBottom: 16}}>
+                📋 {isToday ? '今日' : displayDate} Token 用量
+                {hasSessionData && isToday && (
+                  <span style={{fontSize: 12, color: '#888', fontWeight: 400, marginLeft: 8}}>
+                    (含当前会话实时数据)
+                  </span>
+                )}
+              </div>
+              {selectedDayData ? (
+                <div style={styles.usageBigCards}>
+                  <div style={{...styles.usageBigCard, borderTopColor: '#3b82f6'}}>
+                    <div style={styles.usageBigCardIcon}>🔤</div>
+                    <div style={styles.usageBigCardLabel}>输入 Token</div>
+                    <div style={{...styles.usageBigCardValue, color: '#3b82f6'}}>
+                      {selectedDayData.prompt_tokens?.toLocaleString() || 0}
+                    </div>
+                    <div style={styles.usageBigCardCost}>¥{((selectedDayData.prompt_tokens || 0) * 1.0 / 1_000_000).toFixed(4)}</div>
+                  </div>
+                  <div style={{...styles.usageBigCard, borderTopColor: '#22c55e'}}>
+                    <div style={styles.usageBigCardIcon}>📤</div>
+                    <div style={styles.usageBigCardLabel}>输出 Token</div>
+                    <div style={{...styles.usageBigCardValue, color: '#22c55e'}}>
+                      {selectedDayData.completion_tokens?.toLocaleString() || 0}
+                    </div>
+                    <div style={styles.usageBigCardCost}>¥{((selectedDayData.completion_tokens || 0) * 2.0 / 1_000_000).toFixed(4)}</div>
+                  </div>
+                  <div style={{...styles.usageBigCard, borderTopColor: '#ef4444'}}>
+                    <div style={styles.usageBigCardIcon}>💵</div>
+                    <div style={styles.usageBigCardLabel}>当天费用</div>
+                    <div style={{...styles.usageBigCardValue, color: '#ef4444'}}>
+                      ¥{(selectedDayData.total_cost || 0).toFixed(4)}
+                    </div>
+                    <div style={styles.usageBigCardCost}>
+                      {selectedDayData.total_tokens?.toLocaleString() || 0} Token
+                    </div>
+                  </div>
+                  <div style={{...styles.usageBigCard, borderTopColor: '#f59e0b'}}>
+                    <div style={styles.usageBigCardIcon}>📊</div>
+                    <div style={styles.usageBigCardLabel}>当天会话数</div>
+                    <div style={{...styles.usageBigCardValue, color: '#f59e0b'}}>
+                      {selectedDayData.session_count || 0}
+                    </div>
+                    <div style={styles.usageBigCardCost}>
+                      次对话完成
+                    </div>
+                  </div>
+                </div>
+              ) : (
+                <div style={styles.usageEmpty}>
+                  <div style={{fontSize: 48, marginBottom: 12}}>📅</div>
+                  <h3 style={{color: '#666', marginBottom: 8}}>{displayDate} 暂无用量数据</h3>
+                  <p style={{color: '#999', fontSize: 14}}>
+                    {isToday ? '今天还没有对话完成，发送消息后数据会在这里显示' : '该日期没有对话记录'}
+                  </p>
+                </div>
+              )}
+            </div>
+
+            {/* === 每日用量历史表格 === */}
+            {dailyUsageList.length > 0 && (
+              <div style={styles.usageSection}>
+                <div style={styles.usageSectionTitle}>📅 每日用量历史</div>
+                <div style={{overflowX: 'auto' as const}}>
+                  <table style={{width: '100%', borderCollapse: 'collapse', fontSize: 13}}>
+                    <thead>
+                      <tr style={{borderBottom: '2px solid #e0e0e0', textAlign: 'left'}}>
+                        <th style={{padding: '10px 12px', color: '#888', fontWeight: 600}}>日期</th>
+                        <th style={{padding: '10px 12px', color: '#888', fontWeight: 600, textAlign: 'right'}}>输入 Token</th>
+                        <th style={{padding: '10px 12px', color: '#888', fontWeight: 600, textAlign: 'right'}}>输出 Token</th>
+                        <th style={{padding: '10px 12px', color: '#888', fontWeight: 600, textAlign: 'right'}}>总 Token</th>
+                        <th style={{padding: '10px 12px', color: '#888', fontWeight: 600, textAlign: 'right'}}>费用</th>
+                        <th style={{padding: '10px 12px', color: '#888', fontWeight: 600, textAlign: 'right'}}>会话数</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      {dailyUsageList.map(d => {
+                        const isSelected = d.date === selectedDate;
+                        const isTodayRow = d.date === todayStr;
+                        return (
+                          <tr
+                            key={d.date}
+                            onClick={() => setSelectedDate(d.date)}
+                            style={{
+                              borderBottom: '1px solid #f0f0f0',
+                              cursor: 'pointer',
+                              backgroundColor: isSelected ? '#eef2ff' : isTodayRow ? '#fffbeb' : 'transparent',
+                              transition: 'background-color 0.15s',
+                            }}
+                            onMouseEnter={e => { if (!isSelected) (e.currentTarget as HTMLElement).style.backgroundColor = '#f8f9fa'; }}
+                            onMouseLeave={e => { if (!isSelected) (e.currentTarget as HTMLElement).style.backgroundColor = isTodayRow ? '#fffbeb' : 'transparent'; }}
+                          >
+                            <td style={{padding: '10px 12px', fontWeight: isSelected ? 700 : isTodayRow ? 600 : 400}}>
+                              {d.date}
+                              {isTodayRow && <span style={{color: '#f59e0b', fontSize: 11, marginLeft: 4}}>⭐</span>}
+                            </td>
+                            <td style={{padding: '10px 12px', textAlign: 'right', color: '#6366f1'}}>
+                              {d.prompt_tokens?.toLocaleString() || 0}
+                            </td>
+                            <td style={{padding: '10px 12px', textAlign: 'right', color: '#22c55e'}}>
+                              {d.completion_tokens?.toLocaleString() || 0}
+                            </td>
+                            <td style={{padding: '10px 12px', textAlign: 'right', fontWeight: 600}}>
+                              {d.total_tokens?.toLocaleString() || 0}
+                            </td>
+                            <td style={{padding: '10px 12px', textAlign: 'right', fontWeight: 700, color: '#ef4444'}}>
+                              ¥{d.total_cost?.toFixed(4) || '0.0000'}
+                            </td>
+                            <td style={{padding: '10px 12px', textAlign: 'right', color: '#888'}}>
+                              {d.session_count || 0}
+                            </td>
+                          </tr>
+                        );
+                      })}
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            )}
+
             {/* === 全局累计用量（大卡片） === */}
             {totalUsageEver && totalUsageEver.total_tokens > 0 && (
               <div style={{marginBottom: 24}}>
-                <div style={{...styles.usageSectionTitle, fontSize: 16, color: '#1a1a2e', borderBottom: '2px solid #3b82f6', paddingBottom: 10, marginBottom: 16}}>
-                  🌐 全局累计用量（所有会话）
+                <div style={{...styles.usageSectionTitle, fontSize: 16, color: '#1a1a2e', borderBottom: '2px solid #6366f1', paddingBottom: 10, marginBottom: 16}}>
+                  🌐 全局累计用量
                 </div>
                 <div style={styles.usageBigCards}>
                   <div style={{...styles.usageBigCard, borderTopColor: '#6366f1'}}>
@@ -1711,196 +1875,79 @@ function App() {
               </div>
             )}
 
-            {/* === 当前会话用量 === */}
-            {!tokenUsage || tokenUsage.total_tokens === 0 ? (
-              <div style={styles.usageEmpty}>
-                <div style={{fontSize: 64, marginBottom: 20}}>📊</div>
-                <h3 style={{color: '#666', marginBottom: 8}}>暂无用量数据</h3>
-                <p style={{color: '#999', fontSize: 14}}>发送消息后，Token 用量会在这里实时显示</p>
-                <button
-                  onClick={() => setMode('chat')}
-                  style={{marginTop: 20, padding: '10px 28px', borderRadius: 20, border: 'none', backgroundColor: '#3b82f6', color: '#fff', cursor: 'pointer', fontSize: 14, fontWeight: 500}}
-                >
-                  💬 去发送消息
-                </button>
-              </div>
-            ) : (
+            {/* === 当前会话实时用量（仅今天且有活跃会话时显示） === */}
+            {hasSessionData && isToday && (
               <>
                 <div style={{...styles.usageSectionTitle, fontSize: 16, color: '#1a1a2e', marginBottom: 16}}>
-                  📋 当前会话用量
+                  ⚡ 当前会话实时用量
                 </div>
-                {/* 核心大数字卡片 */}
                 <div style={styles.usageBigCards}>
                   <div style={{...styles.usageBigCard, borderTopColor: '#3b82f6'}}>
                     <div style={styles.usageBigCardIcon}>🔤</div>
-                    <div style={styles.usageBigCardLabel}>输入 Token</div>
+                    <div style={styles.usageBigCardLabel}>当前输入</div>
                     <div style={{...styles.usageBigCardValue, color: '#3b82f6'}}>
                       {tokenUsage.prompt_tokens?.toLocaleString() || 0}
                     </div>
-                    <div style={styles.usageBigCardCost}>
-                      成本 ¥{((tokenUsage.prompt_tokens || 0) * 1.0 / 1_000_000).toFixed(6)}
-                    </div>
-                    <div style={styles.usageBigCardRate}>¥1.00 / 百万 Token</div>
+                    <div style={styles.usageBigCardCost}>¥{((tokenUsage.prompt_tokens || 0) * 1.0 / 1_000_000).toFixed(6)}</div>
                   </div>
                   <div style={{...styles.usageBigCard, borderTopColor: '#22c55e'}}>
                     <div style={styles.usageBigCardIcon}>📤</div>
-                    <div style={styles.usageBigCardLabel}>输出 Token</div>
+                    <div style={styles.usageBigCardLabel}>当前输出</div>
                     <div style={{...styles.usageBigCardValue, color: '#22c55e'}}>
                       {tokenUsage.completion_tokens?.toLocaleString() || 0}
                     </div>
-                    <div style={styles.usageBigCardCost}>
-                      成本 ¥{((tokenUsage.completion_tokens || 0) * 2.0 / 1_000_000).toFixed(6)}
-                    </div>
-                    <div style={styles.usageBigCardRate}>¥2.00 / 百万 Token</div>
+                    <div style={styles.usageBigCardCost}>¥{((tokenUsage.completion_tokens || 0) * 2.0 / 1_000_000).toFixed(6)}</div>
                   </div>
                   <div style={{...styles.usageBigCard, borderTopColor: '#f59e0b'}}>
                     <div style={styles.usageBigCardIcon}>💵</div>
-                    <div style={styles.usageBigCardLabel}>总费用</div>
+                    <div style={styles.usageBigCardLabel}>当前费用</div>
                     <div style={{...styles.usageBigCardValue, color: '#f59e0b'}}>
                       ¥{totalCost.toFixed(4)}
                     </div>
                     <div style={styles.usageBigCardCost}>
-                      共 {tokenUsage.total_tokens?.toLocaleString() || 0} Token
-                    </div>
-                    <div style={styles.usageBigCardRate}>
-                      {tokenUsage.total_tokens > 0
-                        ? `均价 ¥${(totalCost / tokenUsage.total_tokens * 1_000_000).toFixed(4)} / 百万`
-                        : '—'}
+                      {tokenUsage.total_tokens?.toLocaleString() || 0} Token
                     </div>
                   </div>
                   <div style={{...styles.usageBigCard, borderTopColor: '#ef4444'}}>
                     <div style={styles.usageBigCardIcon}>📊</div>
-                    <div style={styles.usageBigCardLabel}>预算使用</div>
+                    <div style={styles.usageBigCardLabel}>会话进度</div>
                     <div style={{...styles.usageBigCardValue, color: tokenUsage.total_tokens > MAX_TOKENS_PER_SESSION * 0.8 ? '#ef4444' : '#8b5cf6'}}>
                       {((tokenUsage.total_tokens / MAX_TOKENS_PER_SESSION) * 100).toFixed(1)}%
                     </div>
                     <div style={styles.usageBigCardCost}>
                       {tokenUsage.total_tokens.toLocaleString()} / {MAX_TOKENS_PER_SESSION.toLocaleString()}
                     </div>
-                    <div style={styles.usageBigCardRate}>
-                      {tokenUsage.total_tokens > MAX_TOKENS_PER_SESSION * 0.8 ? '⚠️ 接近上限' : tokenUsage.total_tokens > MAX_TOKENS_PER_SESSION * 0.5 ? '⚠️ 过半' : '✅ 正常'}
-                    </div>
-                  </div>
-                </div>
-
-                {/* 预算进度条 */}
-                <div style={styles.usageSection}>
-                  <div style={styles.usageSectionTitle}>📈 预算使用进度</div>
-                  <div style={styles.usageProgressBar}>
-                    <div style={{
-                      ...styles.usageProgressFill,
-                      width: `${Math.min((tokenUsage.total_tokens / MAX_TOKENS_PER_SESSION) * 100, 100)}%`,
-                      background: tokenUsage.total_tokens > MAX_TOKENS_PER_SESSION * 0.8
-                        ? 'linear-gradient(90deg, #f59e0b, #ef4444)'
-                        : tokenUsage.total_tokens > MAX_TOKENS_PER_SESSION * 0.5
-                        ? 'linear-gradient(90deg, #22c55e, #f59e0b)'
-                        : 'linear-gradient(90deg, #4ade80, #22c55e)'
-                    }} />
-                  </div>
-                  <div style={styles.usageProgressLabels}>
-                    <span>0</span>
-                    <span>{MAX_TOKENS_PER_SESSION.toLocaleString()}</span>
-                  </div>
-                </div>
-
-                {/* 费用拆解 */}
-                <div style={styles.usageSection}>
-                  <div style={styles.usageSectionTitle}>💰 费用明细</div>
-                  <div style={styles.usageFeeTable}>
-                    <div style={styles.usageFeeRow}>
-                      <span style={styles.usageFeeCol}>项目</span>
-                      <span style={styles.usageFeeCol}>数量</span>
-                      <span style={styles.usageFeeCol}>单价 (每百万)</span>
-                      <span style={styles.usageFeeCol}>小计</span>
-                    </div>
-                    <div style={styles.usageFeeDivider} />
-                    <div style={styles.usageFeeRow}>
-                      <span style={{...styles.usageFeeColVal}}>🔤 输入</span>
-                      <span style={styles.usageFeeColVal}>{tokenUsage.prompt_tokens?.toLocaleString() || 0}</span>
-                      <span style={styles.usageFeeColVal}>¥1.00</span>
-                      <span style={{...styles.usageFeeColVal, fontWeight: 600}}>¥{((tokenUsage.prompt_tokens || 0) * 1.0 / 1_000_000).toFixed(6)}</span>
-                    </div>
-                    <div style={styles.usageFeeRow}>
-                      <span style={{...styles.usageFeeColVal}}>📤 输出</span>
-                      <span style={styles.usageFeeColVal}>{tokenUsage.completion_tokens?.toLocaleString() || 0}</span>
-                      <span style={styles.usageFeeColVal}>¥2.00</span>
-                      <span style={{...styles.usageFeeColVal, fontWeight: 600}}>¥{((tokenUsage.completion_tokens || 0) * 2.0 / 1_000_000).toFixed(6)}</span>
-                    </div>
-                    <div style={styles.usageFeeDivider} />
-                    <div style={{...styles.usageFeeRow, fontWeight: 700, color: '#333'}}>
-                      <span style={styles.usageFeeColVal}>💵 总计</span>
-                      <span style={styles.usageFeeColVal}>{tokenUsage.total_tokens?.toLocaleString() || 0}</span>
-                      <span style={styles.usageFeeColVal}>—</span>
-                      <span style={{...styles.usageFeeColVal, fontWeight: 700, color: '#e74c3c'}}>¥{totalCost.toFixed(6)}</span>
-                    </div>
-                  </div>
-                </div>
-
-                {/* 各 Agent 用量 */}
-                {Object.keys(perAgentTokens).length > 0 && (
-                  <div style={styles.usageSection}>
-                    <div style={styles.usageSectionTitle}>🤖 各 Agent Token 用量</div>
-                    {Object.entries(perAgentTokens)
-                      .sort(([,a], [,b]) => b.total_tokens - a.total_tokens)
-                      .map(([agent, data]) => {
-                        const pct = tokenUsage.total_tokens > 0
-                          ? ((data.total_tokens / tokenUsage.total_tokens) * 100).toFixed(1)
-                          : '0';
-                        return (
-                          <div key={agent} style={styles.usageAgentCard}>
-                            <div style={styles.usageAgentHeader}>
-                              <span style={styles.usageAgentName}>
-                                <span style={{marginRight: 6}}>{AGENT_ICONS[agent] || '🤖'}</span>
-                                {AGENT_LABELS[agent] || agent}
-                              </span>
-                              <span style={styles.usageAgentStats}>
-                                <strong>{data.total_tokens.toLocaleString()}</strong> Token · ¥{data.cost.toFixed(6)} · {pct}%
-                              </span>
-                            </div>
-                            <div style={styles.usageAgentBar}>
-                              <div style={{
-                                ...styles.usageAgentBarFill,
-                                width: `${Math.min(parseFloat(pct), 100)}%`,
-                                backgroundColor: AGENT_COLORS[agent] || '#999'
-                              }} />
-                            </div>
-                            <div style={styles.usageAgentDetail}>
-                              <span>输入: {data.prompt_tokens.toLocaleString()} (¥{((data.prompt_tokens || 0) * 1.0 / 1_000_000).toFixed(6)})</span>
-                              <span>输出: {data.completion_tokens.toLocaleString()} (¥{((data.completion_tokens || 0) * 2.0 / 1_000_000).toFixed(6)})</span>
-                            </div>
-                          </div>
-                        );
-                      })}
-                  </div>
-                )}
-
-                {/* 定价参考 */}
-                <div style={styles.usageSection}>
-                  <div style={styles.usageSectionTitle}>🏷️ DeepSeek API 定价参考</div>
-                  <div style={styles.usagePricingGrid}>
-                    {Object.entries(DEEPSEEK_PRICING).map(([model, p]) => (
-                      <div key={model} style={styles.usagePricingCard}>
-                        <div style={styles.usagePricingModel}>{p.label}</div>
-                        <div style={styles.usagePricingRow}>
-                          <span>输入</span>
-                          <strong>¥{p.input} / 百万 Token</strong>
-                        </div>
-                        <div style={styles.usagePricingRow}>
-                          <span>输出</span>
-                          <strong>¥{p.output} / 百万 Token</strong>
-                        </div>
-                      </div>
-                    ))}
-                    <div style={styles.usagePricingNote}>
-                      💡 当前使用模型: <strong>DeepSeek V3</strong>（deepseek-chat）
-                      {selectedModel === '思考模式' && ' → 切换到思考模式将使用 DeepSeek R1 定价'}
-                    </div>
                   </div>
                 </div>
               </>
             )}
+
+            {/* 定价参考 */}
+            <div style={styles.usageSection}>
+              <div style={styles.usageSectionTitle}>🏷️ DeepSeek API 定价参考</div>
+              <div style={styles.usagePricingGrid}>
+                {Object.entries(DEEPSEEK_PRICING).map(([model, p]) => (
+                  <div key={model} style={styles.usagePricingCard}>
+                    <div style={styles.usagePricingModel}>{p.label}</div>
+                    <div style={styles.usagePricingRow}>
+                      <span>输入</span>
+                      <strong>¥{p.input} / 百万 Token</strong>
+                    </div>
+                    <div style={styles.usagePricingRow}>
+                      <span>输出</span>
+                      <strong>¥{p.output} / 百万 Token</strong>
+                    </div>
+                  </div>
+                ))}
+                <div style={styles.usagePricingNote}>
+                  💡 当前使用模型: <strong>DeepSeek V3</strong>（deepseek-chat）
+                  {selectedModel === '思考模式' && ' → 切换到思考模式将使用 DeepSeek R1 定价'}
+                </div>
+              </div>
+            </div>
           </div>
-        )}
+          );
+        })()}
 
         {/* 输入区域（仅聊天模式） */}
         {mode === 'chat' && (

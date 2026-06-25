@@ -243,7 +243,7 @@ async def chat_stream(request: ChatRequest):
     selected_model = MODEL_MAP.get(request.model, "") or os.getenv("DEEPSEEK_MODEL", "deepseek-chat")
 
     async def generate():
-        nonlocal selected_model
+        nonlocal selected_model, user_message
         try:
             # === 预算限制检查：轮次上限 ===
             history_list_check = _get_history(session_id)
@@ -802,6 +802,20 @@ async def get_total_usage_api():
     """获取全局累计 Token 用量"""
     from backend.agent.total_usage import get_total_usage
     return get_total_usage()
+
+
+@app.get("/usage/daily")
+async def get_daily_usage_api():
+    """获取每日 Token 用量列表（按日期倒序）"""
+    from backend.agent.total_usage import get_daily_usage
+    return get_daily_usage()
+
+
+@app.get("/usage/date/{date}")
+async def get_usage_by_date_api(date: str):
+    """获取指定日期的 Token 用量 (YYYY-MM-DD)"""
+    from backend.agent.total_usage import get_usage_for_date
+    return get_usage_for_date(date)
 
 
 # ====== 技能管理 API ======
