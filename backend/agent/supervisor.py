@@ -75,7 +75,9 @@ def supervisor_node(state: AgentState) -> Dict[str, Any]:
     session_id = state.get("session_id", "")
     memory = state.get("memory", {})
 
-    _log.info(f"[supervisor] current={current}, session_id={session_id[:16] if session_id else 'EMPTY'}, cache_keys={list(_SUBTASK_CACHE.keys())[:3]}")
+    # 日志脱敏：只记录session_id前8位
+    safe_sid = session_id[:8] + '...' if len(session_id) > 8 else session_id
+    _log.info(f"[supervisor] current={current}, session_id={safe_sid}, cache_keys={list(_SUBTASK_CACHE.keys())[:3]}")
 
     # 从缓存或 state 中读取子任务计划
     cached = _SUBTASK_CACHE.get(session_id, {})
@@ -140,7 +142,7 @@ def supervisor_node(state: AgentState) -> Dict[str, Any]:
     if not messages:
         return {"current_agent": "end", "output_text": "没有消息需要处理。"}
 
-    last_msg = messages[-1]["content"]
+    last_msg = (messages[-1]["content"] or "")[:500]  # 安全截断
     memory = state.get("memory", {})
 
     # 构建提示
@@ -159,8 +161,22 @@ def supervisor_node(state: AgentState) -> Dict[str, Any]:
         llm = get_llm(state.get("model", "deepseek-chat"))
         response = llm.invoke([
             {"role": "system", "content": prompt},
-            {"role": "user", "content": f"用户消息: {last_msg}\n\n请判断意图并返回 JSON。"},
+            {"role": "user", "content": f"用户消息: {last_msg[:300]}\n\n请判断意图并返回 JSON。"},
         ])
+
+        # 提取 Token 用量
+        from backend.agent.llm import extract_token_usage, accumulate_token_usage
+        current_tokens = state.get("token_usage", {})
+        new_tokens = extract_token_usage(response)
+        updated_tokens = accumulate_token_usage(current_tokens, new_tokens)
+        model_name = state.get("model", "deepseek-chat")
+        from backend.agent.llm import calculate_cost
+        current_cost = state.get("total_cost", 0.0)
+        new_cost = calculate_cost(
+            model_name,
+            new_tokens.get("prompt_tokens", 0) if new_tokens else 0,
+            new_tokens.get("completion_tokens", 0) if new_tokens else 0,
+        )
 
         content = response.content.strip()
         # 提取 JSON（LLM 可能用 ```json 包裹）
@@ -198,6 +214,8 @@ def supervisor_node(state: AgentState) -> Dict[str, Any]:
             "current_agent": agent_id,
             "sub_task_queue": sub_tasks if complex_task else [],
             "output_text": "",
+            "token_usage": updated_tokens,
+            "total_cost": current_cost + new_cost,
         }
 
         # 更新记忆中的研究主题
@@ -205,10 +223,12 @@ def supervisor_node(state: AgentState) -> Dict[str, Any]:
             memory["research_topic"] = last_msg[:100]
             update["memory"] = memory
 
+        _log.info(f"[supervisor] routed to {agent_id}, tokens={updated_tokens.get('total_tokens', 0)}, cost=¥{current_cost + new_cost:.6f}")
         return update
 
     except (json.JSONDecodeError, Exception) as e:
         # 解析失败时默认走 chat
+        _log.warning(f"[supervisor] intent parse failed, fallback to chat: {e}")
         return {
             "current_agent": "chat",
             "sub_task_queue": [],

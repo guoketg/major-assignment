@@ -50,6 +50,17 @@ class AgentState(TypedDict):
     reasoning_content: str
     """当前 Agent 的推理过程（思考模式专用）"""
 
+    # === 技能增强 ===
+    skill: str
+    """当前激活的技能: "none" | "docs" | "pdf" """
+
+    # === Token 成本追踪 ===
+    token_usage: Dict[str, int]
+    """Token 使用统计: {"prompt_tokens": 0, "completion_tokens": 0, "total_tokens": 0}"""
+
+    total_cost: float
+    """本次会话累计成本（元），基于 DeepSeek 定价: 输入¥1/百万token, 输出¥2/百万token"""
+
 
 def create_initial_state(
     session_id: str,
@@ -71,7 +82,10 @@ def create_initial_state(
             "baseline_model": "",
             "current_focus": "",
         },
+        "skill": "none",
         "output_text": "",
         "output_artifacts": {},
         "reasoning_content": "",
+        "token_usage": {"prompt_tokens": 0, "completion_tokens": 0, "total_tokens": 0},
+        "total_cost": 0.0,
     }

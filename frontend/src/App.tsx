@@ -12,6 +12,21 @@ interface Message {
   reasoning_content?: string | null;
 }
 
+// Token 追踪类型
+interface PerAgentTokenData {
+  prompt_tokens: number;
+  completion_tokens: number;
+  total_tokens: number;
+  cost: number;
+}
+
+const MAX_TOKENS_PER_SESSION = 200000;
+
+const DEEPSEEK_PRICING: Record<string, {input: number; output: number; label: string}> = {
+  'deepseek-chat': { input: 1.0, output: 2.0, label: 'DeepSeek V3' },
+  'deepseek-reasoner': { input: 4.0, output: 16.0, label: 'DeepSeek R1' },
+};
+
 interface SSEData {
   content: string;
   reasoning_content?: string;
@@ -170,6 +185,18 @@ const AGENT_COLORS: { [key: string]: string } = {
   synthesizer: '#06b6d4',
 };
 
+// Agent 中文标签映射（用于 Token 面板）
+const AGENT_LABELS: Record<string, string> = {
+  supervisor: '智能路由',
+  chat_agent: '对话助手',
+  research_agent: '文献调研',
+  innovator_agent: '创新构思',
+  experiment_agent: '实验分析',
+  planner_agent: '任务规划',
+  reporter: '报告生成',
+  synthesizer: '综合输出',
+};
+
 // 前端 Agent 选择选项
 const AGENT_OPTIONS = [
   { id: 'auto', label: '🤖 自动', desc: 'Supervisor 自动路由' },
@@ -178,6 +205,9 @@ const AGENT_OPTIONS = [
   { id: 'innovate', label: '💡 创新', desc: '构思创新方案' },
   { id: 'experiment', label: '🧪 实验', desc: '实验设计与分析' },
 ];
+
+// 技能增强选项（动态加载）
+interface SkillOption { id: string; label: string; desc: string; builtin?: boolean; has_prompt?: boolean; }
 
 function App() {
   const [sessions, setSessions] = useState<Session[]>([]);
@@ -195,19 +225,53 @@ function App() {
   // Agent 手动选择（"auto" 表示由 Supervisor 自动路由）
   const [selectedAgent, setSelectedAgent] = useState('auto');
 
+  // 技能增强选择
+  const [selectedSkill, setSelectedSkill] = useState('none');
+  const [skillOptions, setSkillOptions] = useState<SkillOption[]>([]);
+  // 技能管理页面状态
+  const [skillDetail, setSkillDetail] = useState<{id:string;label:string;desc:string;system_prompt_append:string;builtin:boolean} | null>(null);
+  const [skillEditMode, setSkillEditMode] = useState<'view' | 'edit' | 'create'>('view');
+  const [skillEditForm, setSkillEditForm] = useState({id:'', label:'', desc:'', system_prompt_append:''});
+
+  // 加载技能列表
+  const loadSkills = async () => {
+    try {
+      const resp = await fetch(`${API_URL}/skills`);
+      const data = await resp.json();
+      setSkillOptions(data.skills || []);
+    } catch (e) { /* ignore */ }
+  };
+  useEffect(() => { loadSkills(); }, []);
+
   // 页面模式
-  const [mode, setMode] = useState<'chat' | 'arxiv' | 'memory' | 'tools'>('chat');
+  const [mode, setMode] = useState<'chat' | 'arxiv' | 'memory' | 'tools' | 'usage' | 'skills'>('chat');
 
   // Agent 可视化状态
   const [agentPipeline, setAgentPipeline] = useState<AgentTrace[]>([]);
   const [toolCalls, setToolCalls] = useState<ToolCallTrace[]>([]);
   const [showAgentPipeline, setShowAgentPipeline] = useState(false);
-  const [pipelineCollapsed, setPipelineCollapsed] = useState(false);
+  const [pipelineCollapsed, setPipelineCollapsed] = useState(true);
   const [expandedTools, setExpandedTools] = useState<Set<string>>(new Set()); // 展开了输出结果的工具 ID
   const autoExpandedRef = useRef(false); // 首轮自动展开工具输出
   // 子任务规划与进度
   const [subTaskPlan, setSubTaskPlan] = useState<any[]>([]);
-  const subTaskPlanRef = useRef<any[]>([]);  // 同步访问，绕过 React 异步状态更新延迟
+  // Token 成本显示
+  const [tokenUsage, setTokenUsage] = useState<{prompt_tokens: number; completion_tokens: number; total_tokens: number} | null>(null);
+  const [totalCost, setTotalCost] = useState<number>(0);
+  const [showTokenWarning, setShowTokenWarning] = useState(false);
+  const [perAgentTokens, setPerAgentTokens] = useState<Record<string, PerAgentTokenData>>({});
+  const [showTokenPanel, setShowTokenPanel] = useState(false);
+  const [totalUsageEver, setTotalUsageEver] = useState<{prompt_tokens: number; completion_tokens: number; total_tokens: number; total_cost: number; session_count: number} | null>(null);
+  const [toast, setToast] = useState<{show: boolean; message: string; type: 'info' | 'warn'}>({show: false, message: '', type: 'info'});
+  const subTaskPlanRef = useRef<any[]>([]);
+
+  // 加载全局累计用量
+  const loadTotalUsage = async () => {
+    try {
+      const resp = await fetch(`${API_URL}/usage/total`);
+      if (resp.ok) setTotalUsageEver(await resp.json());
+    } catch(e) {}
+  };  // 同步访问，绕过 React 异步状态更新延迟
 
   // 记忆状态
   const [memoryData, setMemoryData] = useState<{memory?: any; stats?: {papers: number; innovations: number; experiments: number}} | null>(null);
@@ -249,6 +313,18 @@ function App() {
 
       // 从 meta 中恢复流水线数据（持久化到文件）
       const meta = data.meta || {};
+      // 恢复 Token 用量数据
+      if (meta.token_usage && meta.token_usage.total_tokens) {
+        setTokenUsage(meta.token_usage);
+        setTotalCost(meta.total_cost || 0);
+        setPerAgentTokens(meta.per_agent_tokens || {});
+        setShowTokenWarning((meta.token_usage.total_tokens || 0) > MAX_TOKENS_PER_SESSION * 0.75);
+      } else {
+        setTokenUsage(null);
+        setTotalCost(0);
+        setPerAgentTokens({});
+        setShowTokenWarning(false);
+      }
       if (meta.agent_pipeline && meta.agent_pipeline.length > 0) {
         setAgentPipeline(meta.agent_pipeline);
         setToolCalls(meta.tool_calls || []);
@@ -279,12 +355,29 @@ function App() {
 
   // 创建新会话，返回 sessionId
   const createNewSession = async (): Promise<string | undefined> => {
+    // 如果当前会话为空，不创建新会话，避免浪费资源
+    if (currentSessionId && messages.length === 0) {
+      setToast({ show: true, message: '当前已在最新对话', type: 'info' });
+      setTimeout(() => setToast({ show: false, message: '', type: 'info' }), 2000);
+      return undefined;
+    }
     try {
       const response = await fetch(`${API_URL}/sessions`, { method: 'POST' });
       const data = await response.json();
       setMessages([]);
       setCurrentSessionId(data.session_id);
       setStreamingContent('');
+      // 重置 Agent 流水线状态
+      setAgentPipeline([]);
+      setToolCalls([]);
+      setSubTaskPlan([]);
+      setShowAgentPipeline(false);
+      setPipelineCollapsed(true);
+      setTokenUsage(null);
+      setTotalCost(0);
+      setPerAgentTokens({});
+      setShowTokenWarning(false);
+      setExpandedTools(new Set());
       await loadSessions();
       return data.session_id;
     } catch (error) {
@@ -370,6 +463,11 @@ function App() {
     setStreamingContent('');
     setStreamingReasoning('');
     setReasoningDone(false);
+    setTokenUsage(null);
+    setTotalCost(0);
+    setShowTokenWarning(false);
+    setPerAgentTokens({});
+    setShowTokenPanel(false);
     userScrolledUp.current = false;
 
     // 重置 Agent 可视化状态
@@ -378,13 +476,13 @@ function App() {
     setSubTaskPlan([]);
     setExpandedTools(new Set());
     setShowAgentPipeline(true);
-    // pipelines expanded by default
+    setPipelineCollapsed(false); // 发送消息时自动展开流水线
 
     try {
       const response = await fetch(`${API_URL}/chat/stream`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ session_id: sessionId, message: input, model: selectedModel, agent: selectedAgent }),
+        body: JSON.stringify({ session_id: sessionId, message: input, model: selectedModel, agent: selectedAgent, skill: selectedSkill }),
       });
 
       const reader = response.body?.getReader();
@@ -458,6 +556,24 @@ function App() {
                   continue;
                 }
 
+                if (data.type === 'skill') {
+                  // 技能激活事件 — 更新当前激活的技能标签
+                  continue;
+                }
+
+                if (data.type === 'token_update') {
+                  // 实时 Token 用量更新
+                  if (data.token_usage) {
+                    setTokenUsage(data.token_usage);
+                  }
+                  if (data.total_cost !== undefined) {
+                    setTotalCost(data.total_cost);
+                  }
+                  const total = data.token_usage?.total_tokens || 0;
+                  setShowTokenWarning(total > MAX_TOKENS_PER_SESSION * 0.75);
+                  continue;
+                }
+
                 if (data.type === 'plan') {
                   // 子任务规划事件（来自 Planner Agent）
                   if (data.sub_tasks) {
@@ -520,12 +636,29 @@ function App() {
                     setMessages(data.history);
                     await loadSessions();
                   }
+                  // Token 成本显示
+                  if (data.token_usage) {
+                    setTokenUsage(data.token_usage);
+                    if (data.total_cost !== undefined) {
+                      setTotalCost(data.total_cost);
+                    }
+                    if (data.per_agent_tokens) {
+                      setPerAgentTokens(data.per_agent_tokens);
+                    }
+                    if (data.total_usage_ever) {
+                      setTotalUsageEver(data.total_usage_ever);
+                    }
+                    // Token 预警（超过15万Token时提醒）
+                    const totalTokens = data.token_usage?.total_tokens || 0;
+                    setShowTokenWarning(totalTokens > 150000);
+                  }
                   // 保留 agent 工作流可见但折叠 — 不要让它消失
                   setShowAgentPipeline(true);
-                  // keep expanded after done
+                  setPipelineCollapsed(true); // 完成后自动收起流水线
                   // 清除流式内容，避免与 done 中的历史消息重复
                   setStreamingContent('');
                   setSelectedAgent('auto');
+                  setSelectedSkill('none');
                   // 流水线在消息区外部：滚动到顶部展示流水线，用户可自行下滚查看回复
                   requestAnimationFrame(() => {
                     const el = messageAreaRef.current;
@@ -622,6 +755,9 @@ function App() {
     if (mode === 'memory') {
       loadMemory();
     }
+    if (mode === 'usage') {
+      loadTotalUsage();
+    }
   }, [mode, currentSessionId]);
 
   // ====== arXiv 论文搜索 ======
@@ -648,7 +784,8 @@ function App() {
 
   return (
     <div style={styles.container}>
-      {/* 侧边栏 */}
+      {/* 侧边栏 —— 仅在 AI Chat 界面显示 */}
+      {mode === 'chat' && (
       <div style={styles.sidebar}>
         <div style={styles.sidebarHeader}>
           <h2 style={styles.sidebarTitle}>对话历史</h2>
@@ -684,9 +821,30 @@ function App() {
           )}
         </div>
       </div>
+      )}
 
       {/* 主内容区 */}
       <div style={styles.main}>
+        {/* Toast 提示 */}
+        {toast.show && (
+          <div style={{
+            position: 'fixed',
+            top: 20,
+            left: '50%',
+            transform: 'translateX(-50%)',
+            padding: '10px 24px',
+            borderRadius: 20,
+            backgroundColor: toast.type === 'warn' ? '#fef3c7' : '#e8f4fd',
+            color: toast.type === 'warn' ? '#92400e' : '#1e40af',
+            fontSize: 14,
+            fontWeight: 500,
+            zIndex: 1000,
+            boxShadow: '0 4px 12px rgba(0,0,0,0.1)',
+            animation: 'fadeIn 0.3s ease',
+          }}>
+            {toast.message}
+          </div>
+        )}
         {/* 顶部栏 - tabs + 模型选择 */}
         <div style={styles.header}>
           <div style={styles.headerLeft}>
@@ -728,6 +886,24 @@ function App() {
               >
                 🔧 工具
               </button>
+              <button
+                onClick={() => setMode('skills')}
+                style={{
+                  ...styles.tabBtn,
+                  ...(mode === 'skills' ? styles.tabBtnActive : {}),
+                }}
+              >
+                🎯 技能
+              </button>
+              <button
+                onClick={() => setMode('usage')}
+                style={{
+                  ...styles.tabBtn,
+                  ...(mode === 'usage' ? styles.tabBtnActive : {}),
+                }}
+              >
+                📊 Token用量
+              </button>
             </div>
           </div>
           <div style={styles.headerRight}>
@@ -762,9 +938,19 @@ function App() {
               <div style={styles.agentPipelineHeader} onClick={() => setPipelineCollapsed(!pipelineCollapsed)}>
                 <span style={{fontWeight: 500, fontSize: 13, color: '#555'}}>
                   🤖 Agent 流水线 · {AGENT_OPTIONS.find(a => a.id === selectedAgent)?.label || selectedAgent}
+                  {selectedSkill !== 'none' && (
+                    <span style={{marginLeft: 6, padding: '1px 8px', backgroundColor: '#e8f4fd', borderRadius: 10, fontSize: 11, color: '#3b82f6'}}>
+                      {skillOptions.find(s => s.id === selectedSkill)?.label}
+                    </span>
+                  )}
                 </span>
-                <span style={{fontSize: 11, color: '#999'}}>
-                  {pipelineCollapsed ? '展开 ▼' : '收起 ▲'}
+                <span style={{display: 'flex', alignItems: 'center', gap: 10, fontSize: 11, color: '#999'}}>
+                  {tokenUsage && tokenUsage.total_tokens > 0 && (
+                    <span style={{color: showTokenWarning ? '#e67e22' : '#888'}}>
+                      ⚡ {tokenUsage.total_tokens.toLocaleString()} · ¥{totalCost.toFixed(4)}
+                    </span>
+                  )}
+                  <span>{pipelineCollapsed ? '展开 ▼' : '收起 ▲'}</span>
                 </span>
               </div>
               {!pipelineCollapsed && (
@@ -1256,6 +1442,466 @@ function App() {
           </div>
         )}
 
+        {/* ====== 技能管理页面 ====== */}
+        {mode === 'skills' && (
+          <div style={styles.usagePage}>
+            <div style={styles.usageHero}>
+              <div style={styles.usageHeroLeft}>
+                <h2 style={styles.usageTitle}>🎯 技能管理</h2>
+                <p style={styles.usageSubtitle}>管理 Agent 输出增强技能，自定义专属的回复风格</p>
+              </div>
+              <div style={styles.usageHeroRight}>
+                <button
+                  onClick={() => {
+                    setSkillEditMode('create');
+                    setSkillEditForm({id:'', label:'', desc:'', system_prompt_append:''});
+                    setSkillDetail(null);
+                  }}
+                  style={{padding: '8px 18px', borderRadius: 8, border: 'none', backgroundColor: '#3b82f6', color: '#fff', cursor: 'pointer', fontSize: 13, fontWeight: 500}}
+                >
+                  ＋ 新建技能
+                </button>
+              </div>
+            </div>
+
+            {/* 技能列表 */}
+            <div style={{display: 'flex', flexDirection: 'column', gap: 12}}>
+              {skillOptions.map(skill => (
+                <div
+                  key={skill.id}
+                  onClick={async () => {
+                    try {
+                      const resp = await fetch(`${API_URL}/skills/${skill.id}`);
+                      if (resp.ok) {
+                        const detail = await resp.json();
+                        setSkillDetail(detail);
+                        setSkillEditMode('view');
+                        setSkillEditForm({id: detail.id, label: detail.label, desc: detail.desc, system_prompt_append: detail.system_prompt_append});
+                      }
+                    } catch(e) {}
+                  }}
+                  style={{
+                    ...styles.usageSection,
+                    cursor: 'pointer',
+                    padding: '16px 20px',
+                    display: 'flex',
+                    alignItems: 'center',
+                    gap: 14,
+                    borderLeft: skill.id === selectedSkill ? '3px solid #3b82f6' : '3px solid transparent',
+                  }}
+                >
+                  <span style={{fontSize: 24}}>{skill.label?.slice(0, 2) || '🎯'}</span>
+                  <div style={{flex: 1}}>
+                    <div style={{fontSize: 14, fontWeight: 600, color: '#333'}}>
+                      {skill.label}
+                      {skill.builtin && <span style={{marginLeft: 6, fontSize: 10, padding: '1px 6px', borderRadius: 4, backgroundColor: '#e8f4fd', color: '#3b82f6'}}>内置</span>}
+                      {!skill.builtin && <span style={{marginLeft: 6, fontSize: 10, padding: '1px 6px', borderRadius: 4, backgroundColor: '#fef3c7', color: '#92400e'}}>自定义</span>}
+                      {skill.id === selectedSkill && <span style={{marginLeft: 6, fontSize: 10, padding: '1px 6px', borderRadius: 4, backgroundColor: '#dcfce7', color: '#16a34a'}}>当前使用</span>}
+                    </div>
+                    <div style={{fontSize: 12, color: '#888', marginTop: 2}}>{skill.desc || skill.id}</div>
+                  </div>
+                  <span style={{fontSize: 20, color: '#ccc'}}>›</span>
+                </div>
+              ))}
+              {skillOptions.length === 0 && (
+                <div style={styles.usageEmpty}>
+                  <div style={{fontSize: 48, marginBottom: 12}}>🎯</div>
+                  <p style={{color: '#999'}}>正在加载技能列表...</p>
+                </div>
+              )}
+            </div>
+
+            {/* 技能详情 / 编辑面板 */}
+            {skillDetail && (
+              <div style={{...styles.usageSection, marginTop: 20}}>
+                <div style={{display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 16}}>
+                  <div style={styles.usageSectionTitle}>
+                    {skillEditMode === 'create' ? '➕ 新建技能' : skillEditMode === 'edit' ? '✏️ 编辑技能' : '📋 技能详情'}
+                  </div>
+                  <div style={{display: 'flex', gap: 8}}>
+                    {skillEditMode === 'view' && !skillDetail.builtin && (
+                      <>
+                        <button
+                          onClick={() => { setSkillEditMode('edit'); setSkillEditForm({id: skillDetail.id, label: skillDetail.label, desc: skillDetail.desc, system_prompt_append: skillDetail.system_prompt_append}); }}
+                          style={{padding: '6px 14px', borderRadius: 6, border: '1px solid #3b82f6', backgroundColor: '#fff', color: '#3b82f6', cursor: 'pointer', fontSize: 12}}
+                        >✏️ 编辑</button>
+                        <button
+                          onClick={async () => {
+                            if (!window.confirm(`确定删除技能 "${skillDetail.label}"？`)) return;
+                            try {
+                              const resp = await fetch(`${API_URL}/skills/${skillDetail.id}`, { method: 'DELETE' });
+                              if (resp.ok) { setSkillDetail(null); await loadSkills(); }
+                              else { const err = await resp.json(); alert(err.detail); }
+                            } catch(e) { alert('删除失败'); }
+                          }}
+                          style={{padding: '6px 14px', borderRadius: 6, border: '1px solid #e74c3c', backgroundColor: '#fff', color: '#e74c3c', cursor: 'pointer', fontSize: 12}}
+                        >🗑️ 删除</button>
+                      </>
+                    )}
+                    {skillEditMode !== 'view' && (
+                      <button
+                        onClick={() => { setSkillEditMode('view'); }}
+                        style={{padding: '6px 14px', borderRadius: 6, border: '1px solid #ddd', backgroundColor: '#fff', color: '#666', cursor: 'pointer', fontSize: 12}}
+                      >取消</button>
+                    )}
+                    <button
+                      onClick={() => setSkillDetail(null)}
+                      style={{padding: '6px 14px', borderRadius: 6, border: '1px solid #ddd', backgroundColor: '#fff', color: '#666', cursor: 'pointer', fontSize: 12}}
+                    >✕ 关闭</button>
+                  </div>
+                </div>
+
+                {(skillEditMode === 'edit' || skillEditMode === 'create') ? (
+                  /* 编辑模式 */
+                  <div style={{display: 'flex', flexDirection: 'column', gap: 12}}>
+                    {skillEditMode === 'create' && (
+                      <div>
+                        <label style={{fontSize: 12, color: '#888', display: 'block', marginBottom: 4}}>技能 ID (英文小写+数字)</label>
+                        <input value={skillEditForm.id} onChange={e => setSkillEditForm({...skillEditForm, id: e.target.value})}
+                          style={{width: '100%', padding: '8px 12px', border: '1px solid #ddd', borderRadius: 6, fontSize: 13}} placeholder="如: my_skill" />
+                      </div>
+                    )}
+                    <div>
+                      <label style={{fontSize: 12, color: '#888', display: 'block', marginBottom: 4}}>显示名称</label>
+                      <input value={skillEditForm.label} onChange={e => setSkillEditForm({...skillEditForm, label: e.target.value})}
+                        style={{width: '100%', padding: '8px 12px', border: '1px solid #ddd', borderRadius: 6, fontSize: 13}} placeholder="如: 📝 写作助手" />
+                    </div>
+                    <div>
+                      <label style={{fontSize: 12, color: '#888', display: 'block', marginBottom: 4}}>简短描述</label>
+                      <input value={skillEditForm.desc} onChange={e => setSkillEditForm({...skillEditForm, desc: e.target.value})}
+                        style={{width: '100%', padding: '8px 12px', border: '1px solid #ddd', borderRadius: 6, fontSize: 13}} placeholder="一句话描述该技能的作用" />
+                    </div>
+                    <div>
+                      <label style={{fontSize: 12, color: '#888', display: 'block', marginBottom: 4}}>系统提示词 (System Prompt)</label>
+                      <textarea value={skillEditForm.system_prompt_append} onChange={e => setSkillEditForm({...skillEditForm, system_prompt_append: e.target.value})}
+                        style={{width: '100%', padding: '10px 12px', border: '1px solid #ddd', borderRadius: 6, fontSize: 13, minHeight: 200, resize: 'vertical', fontFamily: 'Consolas, monospace'}}
+                        placeholder="输入要附加到 Agent 系统提示词中的指令..." />
+                    </div>
+                    <button
+                      onClick={async () => {
+                        const {id, label, desc, system_prompt_append} = skillEditForm;
+                        if (!label.trim()) { alert('请输入显示名称'); return; }
+                        try {
+                          let resp;
+                          if (skillEditMode === 'create') {
+                            if (!id.trim()) { alert('请输入技能 ID'); return; }
+                            resp = await fetch(`${API_URL}/skills`, {
+                              method: 'POST', headers: {'Content-Type': 'application/json'},
+                              body: JSON.stringify({id: id.trim(), label: label.trim(), desc: desc.trim(), system_prompt_append}),
+                            });
+                          } else {
+                            resp = await fetch(`${API_URL}/skills/${skillDetail!.id}`, {
+                              method: 'PUT', headers: {'Content-Type': 'application/json'},
+                              body: JSON.stringify({label: label.trim(), desc: desc.trim(), system_prompt_append}),
+                            });
+                          }
+                          if (resp.ok) {
+                            await loadSkills();
+                            const updated = await resp.json();
+                            setSkillDetail({...updated, builtin: false, system_prompt_append});
+                            setSkillEditMode('view');
+                          } else {
+                            const err = await resp.json();
+                            alert(err.detail || '保存失败');
+                          }
+                        } catch(e) { alert('保存失败'); }
+                      }}
+                      style={{padding: '10px 20px', borderRadius: 8, border: 'none', backgroundColor: '#22c55e', color: '#fff', cursor: 'pointer', fontSize: 14, fontWeight: 500, alignSelf: 'flex-start'}}
+                    >
+                      ✅ 保存技能
+                    </button>
+                  </div>
+                ) : (
+                  /* 查看模式 */
+                  <div>
+                    <div style={{marginBottom: 12}}>
+                      <span style={{fontSize: 16, fontWeight: 600, color: '#333'}}>{skillDetail.label}</span>
+                      <span style={{marginLeft: 8, fontSize: 11, color: '#999'}}>ID: {skillDetail.id}</span>
+                      {skillDetail.builtin && <span style={{marginLeft: 8, fontSize: 11, padding: '2px 8px', borderRadius: 4, backgroundColor: '#e8f4fd', color: '#3b82f6'}}>内置</span>}
+                    </div>
+                    <p style={{fontSize: 13, color: '#666', marginBottom: 16}}>{skillDetail.desc || '无描述'}</p>
+                    <div style={{fontSize: 12, color: '#888', marginBottom: 6, fontWeight: 600}}>系统提示词:</div>
+                    <pre style={{
+                      padding: 14, backgroundColor: '#f8f9fa', borderRadius: 8, fontSize: 12,
+                      color: '#555', whiteSpace: 'pre-wrap', maxHeight: 300, overflowY: 'auto',
+                      border: '1px solid #eee', lineHeight: 1.5,
+                    }}>
+                      {skillDetail.system_prompt_append || '(无附加提示词)'}
+                    </pre>
+                    {!skillDetail.builtin && (
+                      <button
+                        onClick={() => setSelectedSkill(skillDetail.id)}
+                        style={{marginTop: 14, padding: '8px 18px', borderRadius: 8, border: 'none', backgroundColor: '#3b82f6', color: '#fff', cursor: 'pointer', fontSize: 13, fontWeight: 500}}
+                      >
+                        🎯 使用此技能
+                      </button>
+                    )}
+                  </div>
+                )}
+              </div>
+            )}
+          </div>
+        )}
+
+        {/* ====== Token 用量专用页面 ====== */}
+        {mode === 'usage' && (
+          <div style={styles.usagePage}>
+            <div style={styles.usageHero}>
+              <div style={styles.usageHeroLeft}>
+                <h2 style={styles.usageTitle}>📊 Token 用量仪表盘</h2>
+                <p style={styles.usageSubtitle}>
+                  当前会话: {currentSessionId ? currentSessionId.slice(0, 20) + '...' : '未选择'}
+                  {messages.length > 0 && <span> · {messages.filter(m => m.role === 'user').length} 轮对话</span>}
+                </p>
+              </div>
+              <div style={styles.usageHeroRight}>
+                <button
+                  onClick={() => setMode('chat')}
+                  style={{padding: '8px 18px', borderRadius: 8, border: '1px solid #ddd', backgroundColor: '#fff', cursor: 'pointer', fontSize: 13}}
+                >
+                  ← 返回对话
+                </button>
+              </div>
+            </div>
+
+            {/* === 全局累计用量（大卡片） === */}
+            {totalUsageEver && totalUsageEver.total_tokens > 0 && (
+              <div style={{marginBottom: 24}}>
+                <div style={{...styles.usageSectionTitle, fontSize: 16, color: '#1a1a2e', borderBottom: '2px solid #3b82f6', paddingBottom: 10, marginBottom: 16}}>
+                  🌐 全局累计用量（所有会话）
+                </div>
+                <div style={styles.usageBigCards}>
+                  <div style={{...styles.usageBigCard, borderTopColor: '#6366f1'}}>
+                    <div style={styles.usageBigCardIcon}>🔤</div>
+                    <div style={styles.usageBigCardLabel}>累计输入</div>
+                    <div style={{...styles.usageBigCardValue, color: '#6366f1'}}>
+                      {totalUsageEver.prompt_tokens?.toLocaleString() || 0}
+                    </div>
+                    <div style={styles.usageBigCardCost}>¥{((totalUsageEver.prompt_tokens || 0) * 1.0 / 1_000_000).toFixed(4)}</div>
+                  </div>
+                  <div style={{...styles.usageBigCard, borderTopColor: '#22c55e'}}>
+                    <div style={styles.usageBigCardIcon}>📤</div>
+                    <div style={styles.usageBigCardLabel}>累计输出</div>
+                    <div style={{...styles.usageBigCardValue, color: '#22c55e'}}>
+                      {totalUsageEver.completion_tokens?.toLocaleString() || 0}
+                    </div>
+                    <div style={styles.usageBigCardCost}>¥{((totalUsageEver.completion_tokens || 0) * 2.0 / 1_000_000).toFixed(4)}</div>
+                  </div>
+                  <div style={{...styles.usageBigCard, borderTopColor: '#ef4444'}}>
+                    <div style={styles.usageBigCardIcon}>💵</div>
+                    <div style={styles.usageBigCardLabel}>累计费用</div>
+                    <div style={{...styles.usageBigCardValue, color: '#ef4444'}}>
+                      ¥{(totalUsageEver.total_cost || 0).toFixed(4)}
+                    </div>
+                    <div style={styles.usageBigCardCost}>
+                      {totalUsageEver.total_tokens?.toLocaleString() || 0} Token
+                    </div>
+                  </div>
+                  <div style={{...styles.usageBigCard, borderTopColor: '#f59e0b'}}>
+                    <div style={styles.usageBigCardIcon}>📊</div>
+                    <div style={styles.usageBigCardLabel}>累计会话</div>
+                    <div style={{...styles.usageBigCardValue, color: '#f59e0b'}}>
+                      {totalUsageEver.session_count || 0}
+                    </div>
+                    <div style={styles.usageBigCardCost}>
+                      次对话完成
+                    </div>
+                  </div>
+                </div>
+              </div>
+            )}
+
+            {/* === 当前会话用量 === */}
+            {!tokenUsage || tokenUsage.total_tokens === 0 ? (
+              <div style={styles.usageEmpty}>
+                <div style={{fontSize: 64, marginBottom: 20}}>📊</div>
+                <h3 style={{color: '#666', marginBottom: 8}}>暂无用量数据</h3>
+                <p style={{color: '#999', fontSize: 14}}>发送消息后，Token 用量会在这里实时显示</p>
+                <button
+                  onClick={() => setMode('chat')}
+                  style={{marginTop: 20, padding: '10px 28px', borderRadius: 20, border: 'none', backgroundColor: '#3b82f6', color: '#fff', cursor: 'pointer', fontSize: 14, fontWeight: 500}}
+                >
+                  💬 去发送消息
+                </button>
+              </div>
+            ) : (
+              <>
+                <div style={{...styles.usageSectionTitle, fontSize: 16, color: '#1a1a2e', marginBottom: 16}}>
+                  📋 当前会话用量
+                </div>
+                {/* 核心大数字卡片 */}
+                <div style={styles.usageBigCards}>
+                  <div style={{...styles.usageBigCard, borderTopColor: '#3b82f6'}}>
+                    <div style={styles.usageBigCardIcon}>🔤</div>
+                    <div style={styles.usageBigCardLabel}>输入 Token</div>
+                    <div style={{...styles.usageBigCardValue, color: '#3b82f6'}}>
+                      {tokenUsage.prompt_tokens?.toLocaleString() || 0}
+                    </div>
+                    <div style={styles.usageBigCardCost}>
+                      成本 ¥{((tokenUsage.prompt_tokens || 0) * 1.0 / 1_000_000).toFixed(6)}
+                    </div>
+                    <div style={styles.usageBigCardRate}>¥1.00 / 百万 Token</div>
+                  </div>
+                  <div style={{...styles.usageBigCard, borderTopColor: '#22c55e'}}>
+                    <div style={styles.usageBigCardIcon}>📤</div>
+                    <div style={styles.usageBigCardLabel}>输出 Token</div>
+                    <div style={{...styles.usageBigCardValue, color: '#22c55e'}}>
+                      {tokenUsage.completion_tokens?.toLocaleString() || 0}
+                    </div>
+                    <div style={styles.usageBigCardCost}>
+                      成本 ¥{((tokenUsage.completion_tokens || 0) * 2.0 / 1_000_000).toFixed(6)}
+                    </div>
+                    <div style={styles.usageBigCardRate}>¥2.00 / 百万 Token</div>
+                  </div>
+                  <div style={{...styles.usageBigCard, borderTopColor: '#f59e0b'}}>
+                    <div style={styles.usageBigCardIcon}>💵</div>
+                    <div style={styles.usageBigCardLabel}>总费用</div>
+                    <div style={{...styles.usageBigCardValue, color: '#f59e0b'}}>
+                      ¥{totalCost.toFixed(4)}
+                    </div>
+                    <div style={styles.usageBigCardCost}>
+                      共 {tokenUsage.total_tokens?.toLocaleString() || 0} Token
+                    </div>
+                    <div style={styles.usageBigCardRate}>
+                      {tokenUsage.total_tokens > 0
+                        ? `均价 ¥${(totalCost / tokenUsage.total_tokens * 1_000_000).toFixed(4)} / 百万`
+                        : '—'}
+                    </div>
+                  </div>
+                  <div style={{...styles.usageBigCard, borderTopColor: '#ef4444'}}>
+                    <div style={styles.usageBigCardIcon}>📊</div>
+                    <div style={styles.usageBigCardLabel}>预算使用</div>
+                    <div style={{...styles.usageBigCardValue, color: tokenUsage.total_tokens > MAX_TOKENS_PER_SESSION * 0.8 ? '#ef4444' : '#8b5cf6'}}>
+                      {((tokenUsage.total_tokens / MAX_TOKENS_PER_SESSION) * 100).toFixed(1)}%
+                    </div>
+                    <div style={styles.usageBigCardCost}>
+                      {tokenUsage.total_tokens.toLocaleString()} / {MAX_TOKENS_PER_SESSION.toLocaleString()}
+                    </div>
+                    <div style={styles.usageBigCardRate}>
+                      {tokenUsage.total_tokens > MAX_TOKENS_PER_SESSION * 0.8 ? '⚠️ 接近上限' : tokenUsage.total_tokens > MAX_TOKENS_PER_SESSION * 0.5 ? '⚠️ 过半' : '✅ 正常'}
+                    </div>
+                  </div>
+                </div>
+
+                {/* 预算进度条 */}
+                <div style={styles.usageSection}>
+                  <div style={styles.usageSectionTitle}>📈 预算使用进度</div>
+                  <div style={styles.usageProgressBar}>
+                    <div style={{
+                      ...styles.usageProgressFill,
+                      width: `${Math.min((tokenUsage.total_tokens / MAX_TOKENS_PER_SESSION) * 100, 100)}%`,
+                      background: tokenUsage.total_tokens > MAX_TOKENS_PER_SESSION * 0.8
+                        ? 'linear-gradient(90deg, #f59e0b, #ef4444)'
+                        : tokenUsage.total_tokens > MAX_TOKENS_PER_SESSION * 0.5
+                        ? 'linear-gradient(90deg, #22c55e, #f59e0b)'
+                        : 'linear-gradient(90deg, #4ade80, #22c55e)'
+                    }} />
+                  </div>
+                  <div style={styles.usageProgressLabels}>
+                    <span>0</span>
+                    <span>{MAX_TOKENS_PER_SESSION.toLocaleString()}</span>
+                  </div>
+                </div>
+
+                {/* 费用拆解 */}
+                <div style={styles.usageSection}>
+                  <div style={styles.usageSectionTitle}>💰 费用明细</div>
+                  <div style={styles.usageFeeTable}>
+                    <div style={styles.usageFeeRow}>
+                      <span style={styles.usageFeeCol}>项目</span>
+                      <span style={styles.usageFeeCol}>数量</span>
+                      <span style={styles.usageFeeCol}>单价 (每百万)</span>
+                      <span style={styles.usageFeeCol}>小计</span>
+                    </div>
+                    <div style={styles.usageFeeDivider} />
+                    <div style={styles.usageFeeRow}>
+                      <span style={{...styles.usageFeeColVal}}>🔤 输入</span>
+                      <span style={styles.usageFeeColVal}>{tokenUsage.prompt_tokens?.toLocaleString() || 0}</span>
+                      <span style={styles.usageFeeColVal}>¥1.00</span>
+                      <span style={{...styles.usageFeeColVal, fontWeight: 600}}>¥{((tokenUsage.prompt_tokens || 0) * 1.0 / 1_000_000).toFixed(6)}</span>
+                    </div>
+                    <div style={styles.usageFeeRow}>
+                      <span style={{...styles.usageFeeColVal}}>📤 输出</span>
+                      <span style={styles.usageFeeColVal}>{tokenUsage.completion_tokens?.toLocaleString() || 0}</span>
+                      <span style={styles.usageFeeColVal}>¥2.00</span>
+                      <span style={{...styles.usageFeeColVal, fontWeight: 600}}>¥{((tokenUsage.completion_tokens || 0) * 2.0 / 1_000_000).toFixed(6)}</span>
+                    </div>
+                    <div style={styles.usageFeeDivider} />
+                    <div style={{...styles.usageFeeRow, fontWeight: 700, color: '#333'}}>
+                      <span style={styles.usageFeeColVal}>💵 总计</span>
+                      <span style={styles.usageFeeColVal}>{tokenUsage.total_tokens?.toLocaleString() || 0}</span>
+                      <span style={styles.usageFeeColVal}>—</span>
+                      <span style={{...styles.usageFeeColVal, fontWeight: 700, color: '#e74c3c'}}>¥{totalCost.toFixed(6)}</span>
+                    </div>
+                  </div>
+                </div>
+
+                {/* 各 Agent 用量 */}
+                {Object.keys(perAgentTokens).length > 0 && (
+                  <div style={styles.usageSection}>
+                    <div style={styles.usageSectionTitle}>🤖 各 Agent Token 用量</div>
+                    {Object.entries(perAgentTokens)
+                      .sort(([,a], [,b]) => b.total_tokens - a.total_tokens)
+                      .map(([agent, data]) => {
+                        const pct = tokenUsage.total_tokens > 0
+                          ? ((data.total_tokens / tokenUsage.total_tokens) * 100).toFixed(1)
+                          : '0';
+                        return (
+                          <div key={agent} style={styles.usageAgentCard}>
+                            <div style={styles.usageAgentHeader}>
+                              <span style={styles.usageAgentName}>
+                                <span style={{marginRight: 6}}>{AGENT_ICONS[agent] || '🤖'}</span>
+                                {AGENT_LABELS[agent] || agent}
+                              </span>
+                              <span style={styles.usageAgentStats}>
+                                <strong>{data.total_tokens.toLocaleString()}</strong> Token · ¥{data.cost.toFixed(6)} · {pct}%
+                              </span>
+                            </div>
+                            <div style={styles.usageAgentBar}>
+                              <div style={{
+                                ...styles.usageAgentBarFill,
+                                width: `${Math.min(parseFloat(pct), 100)}%`,
+                                backgroundColor: AGENT_COLORS[agent] || '#999'
+                              }} />
+                            </div>
+                            <div style={styles.usageAgentDetail}>
+                              <span>输入: {data.prompt_tokens.toLocaleString()} (¥{((data.prompt_tokens || 0) * 1.0 / 1_000_000).toFixed(6)})</span>
+                              <span>输出: {data.completion_tokens.toLocaleString()} (¥{((data.completion_tokens || 0) * 2.0 / 1_000_000).toFixed(6)})</span>
+                            </div>
+                          </div>
+                        );
+                      })}
+                  </div>
+                )}
+
+                {/* 定价参考 */}
+                <div style={styles.usageSection}>
+                  <div style={styles.usageSectionTitle}>🏷️ DeepSeek API 定价参考</div>
+                  <div style={styles.usagePricingGrid}>
+                    {Object.entries(DEEPSEEK_PRICING).map(([model, p]) => (
+                      <div key={model} style={styles.usagePricingCard}>
+                        <div style={styles.usagePricingModel}>{p.label}</div>
+                        <div style={styles.usagePricingRow}>
+                          <span>输入</span>
+                          <strong>¥{p.input} / 百万 Token</strong>
+                        </div>
+                        <div style={styles.usagePricingRow}>
+                          <span>输出</span>
+                          <strong>¥{p.output} / 百万 Token</strong>
+                        </div>
+                      </div>
+                    ))}
+                    <div style={styles.usagePricingNote}>
+                      💡 当前使用模型: <strong>DeepSeek V3</strong>（deepseek-chat）
+                      {selectedModel === '思考模式' && ' → 切换到思考模式将使用 DeepSeek R1 定价'}
+                    </div>
+                  </div>
+                </div>
+              </>
+            )}
+          </div>
+        )}
+
         {/* 输入区域（仅聊天模式） */}
         {mode === 'chat' && (
           <div style={styles.inputArea}>
@@ -1275,6 +1921,26 @@ function App() {
                   title={ao.desc}
                 >
                   {ao.label}
+                </button>
+              ))}
+            </div>
+            {/* 技能选择栏 */}
+            <div style={styles.skillSelector}>
+              <span style={{fontSize: 11, color: '#999', marginRight: 6}}>技能:</span>
+              {skillOptions.map(so => (
+                <button
+                  key={so.id}
+                  onClick={() => setSelectedSkill(so.id)}
+                  disabled={loading}
+                  style={{
+                    ...styles.skillChip,
+                    ...(selectedSkill === so.id ? styles.skillChipActive : {}),
+                    opacity: loading ? 0.6 : 1,
+                    cursor: loading ? 'not-allowed' : 'pointer',
+                  }}
+                  title={so.desc}
+                >
+                  {so.label}
                 </button>
               ))}
             </div>
@@ -1326,6 +1992,10 @@ function App() {
         @keyframes pulse {
           0%, 100% { opacity: 0.4; }
           50% { opacity: 1; }
+        }
+        @keyframes fadeIn {
+          from { opacity: 0; transform: translateX(-50%) translateY(-10px); }
+          to { opacity: 1; transform: translateX(-50%) translateY(0); }
         }
         .katex { font-size: 1.1em; }
         code {
@@ -1692,6 +2362,31 @@ const styles: { [key: string]: React.CSSProperties } = {
     color: '#3b82f6',
     fontWeight: 500,
   } as React.CSSProperties,
+  // 技能选择器样式
+  skillSelector: {
+    display: 'flex',
+    gap: 4,
+    marginBottom: 10,
+    flexWrap: 'wrap' as const,
+    alignItems: 'center' as const,
+  } as React.CSSProperties,
+  skillChip: {
+    padding: '3px 10px',
+    fontSize: 11,
+    border: '1px solid #e0e0e0',
+    borderRadius: 16,
+    backgroundColor: '#fafafa',
+    color: '#888',
+    cursor: 'pointer',
+    transition: 'all 0.15s',
+    whiteSpace: 'nowrap' as const,
+  } as React.CSSProperties,
+  skillChipActive: {
+    backgroundColor: '#fef3c7',
+    borderColor: '#f59e0b',
+    color: '#92400e',
+    fontWeight: 500,
+  } as React.CSSProperties,
   inputRow: {
     display: 'flex',
     gap: 10,
@@ -1813,6 +2508,481 @@ const styles: { [key: string]: React.CSSProperties } = {
   } as React.CSSProperties,
   toolCallStatus: {
     fontSize: 12,
+  } as React.CSSProperties,
+
+  // === Token 独立面板样式 ===
+  tokenPanel: {
+    marginBottom: 12,
+    backgroundColor: '#fff',
+    border: '1px solid #e0e0e0',
+    borderRadius: 12,
+    overflow: 'hidden',
+    boxShadow: '0 2px 8px rgba(0,0,0,0.06)',
+    flexShrink: 0,
+  } as React.CSSProperties,
+  tokenPanelHeader: {
+    display: 'flex',
+    alignItems: 'center',
+    gap: 12,
+    padding: '10px 16px',
+    backgroundColor: '#fafbfc',
+    borderBottom: '1px solid #f0f0f0',
+  } as React.CSSProperties,
+  tokenPanelTitle: {
+    fontSize: 14,
+    fontWeight: 600,
+    color: '#333',
+  } as React.CSSProperties,
+  tokenPanelSubtitle: {
+    flex: 1,
+    fontSize: 12,
+    color: '#888',
+  } as React.CSSProperties,
+  tokenPanelBar: {
+    height: 6,
+    backgroundColor: '#e8e8e8',
+    margin: 0,
+  } as React.CSSProperties,
+  tokenPanelBarFill: {
+    height: '100%',
+    transition: 'width 0.6s ease',
+  } as React.CSSProperties,
+  tokenPanelRow: {
+    display: 'flex',
+    alignItems: 'stretch',
+    padding: '14px 16px',
+  } as React.CSSProperties,
+  tokenPanelCol: {
+    flex: 1,
+    display: 'flex',
+    flexDirection: 'column' as const,
+    alignItems: 'center' as const,
+    gap: 4,
+    padding: '0 8px',
+  } as React.CSSProperties,
+  tokenPanelColIcon: {
+    fontSize: 20,
+  } as React.CSSProperties,
+  tokenPanelColLabel: {
+    fontSize: 11,
+    color: '#888',
+  } as React.CSSProperties,
+  tokenPanelColValue: {
+    fontSize: 18,
+    fontWeight: 700,
+    color: '#333',
+  } as React.CSSProperties,
+  tokenPanelColCost: {
+    fontSize: 11,
+    color: '#999',
+  } as React.CSSProperties,
+  tokenPanelDivider: {
+    width: 1,
+    backgroundColor: '#eee',
+  } as React.CSSProperties,
+  tokenPanelDetail: {
+    padding: '10px 16px',
+    borderTop: '1px solid #f0f0f0',
+    backgroundColor: '#fafcfd',
+  } as React.CSSProperties,
+  tokenPanelDetailTitle: {
+    fontSize: 12,
+    fontWeight: 600,
+    color: '#555',
+    marginBottom: 8,
+  } as React.CSSProperties,
+  tokenPanelAgentRow: {
+    display: 'flex',
+    alignItems: 'center',
+    gap: 8,
+    padding: '3px 0',
+    fontSize: 12,
+  } as React.CSSProperties,
+  tokenPanelAgentIcon: {
+    fontSize: 14,
+    width: 20,
+  } as React.CSSProperties,
+  tokenPanelAgentName: {
+    width: 80,
+    fontSize: 12,
+    color: '#555',
+    flexShrink: 0,
+  } as React.CSSProperties,
+  tokenPanelAgentBar: {
+    flex: 1,
+    height: 5,
+    backgroundColor: '#eee',
+    borderRadius: 3,
+    overflow: 'hidden',
+  } as React.CSSProperties,
+  tokenPanelAgentBarFill: {
+    height: '100%',
+    borderRadius: 3,
+    transition: 'width 0.3s ease',
+  } as React.CSSProperties,
+  tokenPanelAgentTokens: {
+    width: 50,
+    textAlign: 'right' as const,
+    fontSize: 11,
+    color: '#666',
+    fontWeight: 500,
+  } as React.CSSProperties,
+  tokenPanelAgentCost: {
+    width: 55,
+    textAlign: 'right' as const,
+    fontSize: 11,
+    color: '#999',
+  } as React.CSSProperties,
+  tokenPanelPricing: {
+    display: 'flex',
+    gap: 8,
+    alignItems: 'center',
+    padding: '8px 16px',
+    borderTop: '1px solid #f0f0f0',
+    backgroundColor: '#fafafa',
+    flexWrap: 'wrap' as const,
+  } as React.CSSProperties,
+  tokenPanelPricingBadge: {
+    padding: '2px 8px',
+    backgroundColor: '#fff',
+    border: '1px solid #eee',
+    borderRadius: 4,
+    fontSize: 10,
+    color: '#999',
+  } as React.CSSProperties,
+
+  // === 用量专用页面样式 ===
+  usagePage: {
+    flex: 1,
+    overflowY: 'auto' as const,
+    padding: 24,
+    backgroundColor: '#f5f6f8',
+  } as React.CSSProperties,
+  usageHero: {
+    display: 'flex',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    marginBottom: 24,
+  } as React.CSSProperties,
+  usageHeroLeft: {} as React.CSSProperties,
+  usageTitle: {
+    margin: 0,
+    fontSize: 22,
+    color: '#1a1a2e',
+    fontWeight: 700,
+  } as React.CSSProperties,
+  usageSubtitle: {
+    margin: '6px 0 0 0',
+    fontSize: 13,
+    color: '#888',
+  } as React.CSSProperties,
+  usageEmpty: {
+    display: 'flex',
+    flexDirection: 'column' as const,
+    alignItems: 'center' as const,
+    justifyContent: 'center' as const,
+    padding: 80,
+    backgroundColor: '#fff',
+    borderRadius: 16,
+    border: '2px dashed #e0e0e0',
+  } as React.CSSProperties,
+  usageBigCards: {
+    display: 'grid',
+    gridTemplateColumns: 'repeat(4, 1fr)',
+    gap: 16,
+    marginBottom: 24,
+  } as React.CSSProperties,
+  usageBigCard: {
+    backgroundColor: '#fff',
+    borderRadius: 14,
+    padding: 20,
+    textAlign: 'center' as const,
+    borderTop: '3px solid #ccc',
+    boxShadow: '0 2px 8px rgba(0,0,0,0.04)',
+  } as React.CSSProperties,
+  usageBigCardIcon: {
+    fontSize: 28,
+    marginBottom: 6,
+  } as React.CSSProperties,
+  usageBigCardLabel: {
+    fontSize: 12,
+    color: '#888',
+    marginBottom: 8,
+  } as React.CSSProperties,
+  usageBigCardValue: {
+    fontSize: 28,
+    fontWeight: 800,
+    marginBottom: 6,
+  } as React.CSSProperties,
+  usageBigCardCost: {
+    fontSize: 12,
+    color: '#666',
+    marginBottom: 4,
+  } as React.CSSProperties,
+  usageBigCardRate: {
+    fontSize: 11,
+    color: '#aaa',
+  } as React.CSSProperties,
+  usageSection: {
+    backgroundColor: '#fff',
+    borderRadius: 14,
+    padding: 20,
+    marginBottom: 20,
+    boxShadow: '0 1px 4px rgba(0,0,0,0.04)',
+  } as React.CSSProperties,
+  usageSectionTitle: {
+    fontSize: 15,
+    fontWeight: 600,
+    color: '#333',
+    marginBottom: 16,
+    paddingBottom: 8,
+    borderBottom: '1px solid #f0f0f0',
+  } as React.CSSProperties,
+  usageProgressBar: {
+    height: 16,
+    backgroundColor: '#e8e8e8',
+    borderRadius: 8,
+    overflow: 'hidden',
+    marginBottom: 6,
+  } as React.CSSProperties,
+  usageProgressFill: {
+    height: '100%',
+    borderRadius: 8,
+    transition: 'width 0.8s ease',
+  } as React.CSSProperties,
+  usageProgressLabels: {
+    display: 'flex',
+    justifyContent: 'space-between',
+    fontSize: 11,
+    color: '#aaa',
+  } as React.CSSProperties,
+  usageFeeTable: {
+    display: 'flex',
+    flexDirection: 'column' as const,
+    gap: 0,
+  } as React.CSSProperties,
+  usageFeeRow: {
+    display: 'grid',
+    gridTemplateColumns: '1fr 1fr 1fr 1fr',
+    padding: '10px 0',
+    fontSize: 13,
+    color: '#555',
+    alignItems: 'center' as const,
+  } as React.CSSProperties,
+  usageFeeCol: {
+    fontWeight: 600,
+    color: '#888',
+    fontSize: 12,
+  } as React.CSSProperties,
+  usageFeeColVal: {
+    fontSize: 13,
+    color: '#555',
+  } as React.CSSProperties,
+  usageFeeDivider: {
+    height: 1,
+    backgroundColor: '#f0f0f0',
+  } as React.CSSProperties,
+  usageAgentCard: {
+    padding: '14px 0',
+    borderBottom: '1px solid #f5f5f5',
+  } as React.CSSProperties,
+  usageAgentHeader: {
+    display: 'flex',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    marginBottom: 8,
+  } as React.CSSProperties,
+  usageAgentName: {
+    fontSize: 13,
+    fontWeight: 500,
+    color: '#444',
+  } as React.CSSProperties,
+  usageAgentStats: {
+    fontSize: 12,
+    color: '#888',
+  } as React.CSSProperties,
+  usageAgentBar: {
+    height: 8,
+    backgroundColor: '#f0f0f0',
+    borderRadius: 4,
+    overflow: 'hidden',
+    marginBottom: 6,
+  } as React.CSSProperties,
+  usageAgentBarFill: {
+    height: '100%',
+    borderRadius: 4,
+    transition: 'width 0.5s ease',
+  } as React.CSSProperties,
+  usageAgentDetail: {
+    display: 'flex',
+    gap: 20,
+    fontSize: 11,
+    color: '#aaa',
+  } as React.CSSProperties,
+  usagePricingGrid: {
+    display: 'flex',
+    flexDirection: 'column' as const,
+    gap: 10,
+  } as React.CSSProperties,
+  usagePricingCard: {
+    display: 'flex',
+    alignItems: 'center',
+    gap: 20,
+    padding: '12px 16px',
+    backgroundColor: '#f8f9fa',
+    borderRadius: 10,
+  } as React.CSSProperties,
+  usagePricingModel: {
+    fontSize: 14,
+    fontWeight: 600,
+    color: '#333',
+    minWidth: 120,
+  } as React.CSSProperties,
+  usagePricingRow: {
+    display: 'flex',
+    gap: 8,
+    fontSize: 12,
+    color: '#666',
+  } as React.CSSProperties,
+  usagePricingNote: {
+    fontSize: 12,
+    color: '#888',
+    padding: '4px 0',
+  } as React.CSSProperties,
+
+  // === 旧 Token 仪表盘样式（保留兼容） ===
+  tokenDashboard: {
+    position: 'relative' as const,
+    display: 'inline-flex',
+  } as React.CSSProperties,
+  tokenCompactBar: {
+    display: 'flex',
+    alignItems: 'center',
+    gap: 6,
+    padding: '3px 8px',
+    backgroundColor: '#f0f4f8',
+    borderRadius: 8,
+    cursor: 'pointer',
+    fontSize: 11,
+    transition: 'background-color 0.15s',
+  } as React.CSSProperties,
+  tokenProgressTrack: {
+    width: 48,
+    height: 5,
+    backgroundColor: '#e0e0e0',
+    borderRadius: 3,
+    overflow: 'hidden',
+    flexShrink: 0,
+  } as React.CSSProperties,
+  tokenProgressFill: {
+    height: '100%',
+    borderRadius: 3,
+    transition: 'width 0.5s ease, background-color 0.3s',
+  } as React.CSSProperties,
+  tokenCompactText: {
+    color: '#666',
+    whiteSpace: 'nowrap' as const,
+  } as React.CSSProperties,
+  tokenExpandIcon: {
+    fontSize: 9,
+    color: '#aaa',
+    marginLeft: 2,
+  } as React.CSSProperties,
+  tokenDetailPanel: {
+    position: 'absolute' as const,
+    top: '100%',
+    right: 0,
+    marginTop: 6,
+    width: 380,
+    maxHeight: 460,
+    overflowY: 'auto' as const,
+    backgroundColor: '#fff',
+    border: '1px solid #e0e0e0',
+    borderRadius: 10,
+    boxShadow: '0 4px 16px rgba(0,0,0,0.12)',
+    zIndex: 100,
+    padding: 14,
+  } as React.CSSProperties,
+  tokenDetailSection: {
+    marginBottom: 12,
+  } as React.CSSProperties,
+  tokenDetailTitle: {
+    fontSize: 12,
+    fontWeight: 600,
+    color: '#333',
+    marginBottom: 8,
+    paddingBottom: 4,
+    borderBottom: '1px solid #f0f0f0',
+  } as React.CSSProperties,
+  tokenDetailRow: {
+    display: 'flex',
+    alignItems: 'center',
+    gap: 8,
+    padding: '3px 0',
+    fontSize: 12,
+    color: '#555',
+  } as React.CSSProperties,
+  tokenDetailLabel: {
+    minWidth: 100,
+    color: '#555',
+  } as React.CSSProperties,
+  tokenDetailValue: {
+    minWidth: 55,
+    textAlign: 'right' as const,
+    color: '#333',
+    fontWeight: 500,
+  } as React.CSSProperties,
+  tokenDetailCost: {
+    minWidth: 65,
+    textAlign: 'right' as const,
+    color: '#888',
+    fontSize: 11,
+  } as React.CSSProperties,
+  tokenAgentBar: {
+    width: 50,
+    height: 4,
+    backgroundColor: '#f0f0f0',
+    borderRadius: 2,
+    overflow: 'hidden',
+  } as React.CSSProperties,
+  tokenAgentFill: {
+    height: '100%',
+    borderRadius: 2,
+    transition: 'width 0.3s ease',
+  } as React.CSSProperties,
+  tokenGaugeContainer: {
+    marginTop: 4,
+    marginBottom: 8,
+  } as React.CSSProperties,
+  tokenGaugeLabel: {
+    fontSize: 11,
+    color: '#888',
+    marginBottom: 4,
+  } as React.CSSProperties,
+  tokenGaugeTrack: {
+    height: 10,
+    backgroundColor: '#e8e8e8',
+    borderRadius: 5,
+    overflow: 'hidden',
+  } as React.CSSProperties,
+  tokenGaugeFill: {
+    height: '100%',
+    borderRadius: 5,
+    transition: 'width 0.6s ease',
+  } as React.CSSProperties,
+  tokenPricingNote: {
+    display: 'flex',
+    gap: 6,
+    flexWrap: 'wrap' as const,
+    paddingTop: 8,
+    borderTop: '1px solid #f0f0f0',
+  } as React.CSSProperties,
+  tokenPricingBadge: {
+    padding: '2px 8px',
+    backgroundColor: '#f8f9fa',
+    borderRadius: 4,
+    fontSize: 10,
+    color: '#999',
   } as React.CSSProperties,
 };
 

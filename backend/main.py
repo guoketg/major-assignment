@@ -12,22 +12,33 @@ import glob
 import logging
 from datetime import datetime
 from functools import lru_cache
+from typing import Optional
 
 from dotenv import load_dotenv
 from fastapi import FastAPI, HTTPException, Query
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import StreamingResponse, FileResponse
-from pydantic import BaseModel
+from pydantic import BaseModel, Field
 from openai import OpenAI
 import httpx
 import xmltodict
 from backend.agent.graph import AgentGraph
+from backend.agent.guardrails import get_guardrail
+from backend.agent.llmops import get_llmops
 
 load_dotenv()
 
 # 日志配置
 logging.basicConfig(level=logging.INFO, format='%(asctime)s [%(levelname)s] %(message)s')
 logger = logging.getLogger(__name__)
+
+
+def sanitize_log(text: str, max_len: int = 60) -> str:
+    """日志脱敏：截断过长内容，替换换行符"""
+    if not text:
+        return ""
+    s = text.replace('\n', ' ').replace('\r', ' ').strip()
+    return s[:max_len] + '...' if len(s) > max_len else s
 
 # ====== 对话持久化存储 ======
 
@@ -149,9 +160,11 @@ async def startup():
 
 
 # CORS配置
+# CORS配置 — 限制为已知前端地址
+CORS_ORIGINS = os.getenv("CORS_ORIGINS", "http://localhost:3000,http://localhost:3001,http://127.0.0.1:3000")
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],
+    allow_origins=CORS_ORIGINS.split(","),
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
@@ -167,6 +180,11 @@ client = OpenAI(
 
 # 会话存储 (生产环境应使用数据库)
 conversations: dict[str, list | dict] = {}
+
+# 会话预算限制
+MAX_SESSIONS = 200  # 最大内存会话数
+MAX_TOKENS_PER_SESSION = 200000  # 每会话最大 Token 数（约 ¥0.3）
+MAX_TURNS_PER_SESSION = 100     # 每会话最大轮次
 
 # 模型映射（前端显示名 -> API 模型名）
 MODEL_MAP = {
@@ -188,10 +206,11 @@ def get_agent_graph() -> AgentGraph:
 
 
 class ChatRequest(BaseModel):
-    session_id: str
-    message: str
+    session_id: str = Field(..., min_length=1, max_length=64)
+    message: str = Field(..., min_length=1, max_length=10000, description="用户消息，1-10000字符")
     model: str = ""  # 可选，前端选择的模型名
-    agent: str = "auto"  # 可选，"auto" | "chat" | "research" | "innovate" | "experiment"
+    agent: str = Field(default="auto", pattern=r"^(auto|chat|research|innovate|experiment)$")  # 可选
+    skill: str = Field(default="none", max_length=32)  # 技能增强模式（支持自定义技能）
 
 
 class ChatResponse(BaseModel):
@@ -226,6 +245,37 @@ async def chat_stream(request: ChatRequest):
     async def generate():
         nonlocal selected_model
         try:
+            # === 预算限制检查：轮次上限 ===
+            history_list_check = _get_history(session_id)
+            user_turns = sum(1 for m in history_list_check if isinstance(m, dict) and m.get("role") == "user")
+            if user_turns > MAX_TURNS_PER_SESSION:
+                yield f"data: {json.dumps({'type': 'error', 'error': f'对话已达最大轮次限制（{MAX_TURNS_PER_SESSION}轮），请创建新会话', 'done': True})}\n\n"
+                return
+
+            # === 安全护栏：输入检查 ===
+            guardrail = get_guardrail()
+            input_check = guardrail.check_input(user_message, session_id)
+            if not input_check.passed:
+                blocked_msg = f"[安全护栏] {input_check.message}"
+                logger.warning(f"[GUARDRAIL_BLOCK] session={sanitize_log(session_id)}, reason={input_check.reason.name}, msg={input_check.message[:80]}")
+                # 记录拦截到会话历史
+                history_list.append({
+                    "role": "assistant",
+                    "content": blocked_msg,
+                    "timestamp": datetime.now().isoformat(),
+                    "guardrail_blocked": True,
+                })
+                conversations[session_id] = history_list
+                _save_conversation(session_id)
+                yield f"data: {json.dumps({'type': 'error', 'error': blocked_msg, 'done': True, 'guardrail_blocked': True})}\n\n"
+                return
+            # 输入通过护栏后，如果内容被脱敏则使用脱敏后的内容
+            if input_check.sanitized_content:
+                user_message = input_check.sanitized_content
+                # 更新历史记录中最后一条用户消息
+                history_list[-1]["content"] = user_message
+                history_list[-1]["sanitized"] = True
+
             # === 使用 LangGraph 多 Agent 引擎 ===
             agent_graph = get_agent_graph()
 
@@ -235,6 +285,7 @@ async def chat_stream(request: ChatRequest):
                     messages=_get_history(session_id),
                     model=selected_model,
                     agent=request.agent,
+                    skill=request.skill,
                 ):
                     # 直接转发 AgentGraph 的事件到 SSE
                     yield f"data: {json.dumps(event)}\n\n"
@@ -246,19 +297,30 @@ async def chat_stream(request: ChatRequest):
                         if history and len(history) > 0:
                             last = history[-1]
                             if last.get("role") == "assistant" and not last.get("content"):
-                                logger.error(f"[CRITICAL] Assistant content empty in done event! session={session_id}, history_len={len(history)}")
+                                logger.error(f"[CRITICAL] Assistant content empty in done event! session={sanitize_log(session_id)}, history_len={len(history)}")
                             else:
-                                logger.info(f"[SAVE] session={session_id}, history_len={len(history)}, last_role={last.get('role','?')}, last_content_len={len(last.get('content',''))}")
+                                logger.info(f"[SAVE] session={sanitize_log(session_id)}, history_len={len(history)}, last_role={last.get('role','?')}, last_content_len={len(last.get('content',''))}")
                         else:
-                            logger.warning(f"[SAVE] Empty history for session={session_id}")
+                            logger.warning(f"[SAVE] Empty history for session={sanitize_log(session_id)}")
                         conversations[session_id] = history
                         _save_conversation(session_id)
                         # 保存流水线 meta 数据到单独文件
-                        _save_pipeline_meta(session_id, {
+                        meta = {
                             "agent_pipeline": event.get("agent_pipeline", []),
                             "tool_calls": event.get("tool_calls", []),
                             "sub_task_plan": event.get("sub_task_plan", []),
-                        })
+                            "token_usage": event.get("token_usage", {}),
+                            "total_cost": event.get("total_cost", 0.0),
+                            "per_agent_tokens": event.get("per_agent_tokens", {}),
+                        }
+                        _save_pipeline_meta(session_id, meta)
+
+                        # Token 预算警告
+                        token_usage = event.get("token_usage", {})
+                        total_tokens = token_usage.get("total_tokens", 0) if isinstance(token_usage, dict) else 0
+                        if total_tokens > MAX_TOKENS_PER_SESSION * 0.8:
+                            warning = f"⚠️ 本次会话已使用约 {total_tokens} Token（上限 {MAX_TOKENS_PER_SESSION}），请注意控制对话长度"
+                            yield f"data: {json.dumps({'type': 'warning', 'content': warning})}\n\n"
 
         except asyncio.TimeoutError:
             yield f"data: {json.dumps({'type': 'error', 'error': '执行超时（600秒），请简化您的请求或稍后重试', 'done': True})}\n\n"
@@ -287,6 +349,12 @@ async def chat_non_stream(request: ChatRequest):
     })
     conversations[session_id] = history_list
     _save_conversation(session_id)
+
+    # === 安全护栏：输入检查 ===
+    guardrail = get_guardrail()
+    input_check = guardrail.check_input(user_message, session_id)
+    if not input_check.passed:
+        raise HTTPException(status_code=400, detail=f"[安全护栏] {input_check.message}")
 
     try:
         # 调用DeepSeek API
@@ -373,8 +441,24 @@ async def list_sessions():
 
 @app.post("/sessions")
 async def create_session():
-    """创建新会话"""
-    new_session_id = f"session_{uuid.uuid4().hex[:8]}"
+    """创建新会话（含会话数量上限检查）"""
+    # 检查会话数量上限
+    if len(conversations) >= MAX_SESSIONS:
+        # 删除最早使用的会话
+        oldest_sid = None
+        oldest_ts = None
+        for sid in list(conversations.keys()):
+            history = _get_history(sid)
+            if history and isinstance(history[-1], dict):
+                ts = history[-1].get("timestamp", "")
+                if oldest_ts is None or ts < oldest_ts:
+                    oldest_ts = ts
+                    oldest_sid = sid
+        if oldest_sid:
+            del conversations[oldest_sid]
+            _delete_conversation_file(oldest_sid)
+
+    new_session_id = f"session_{uuid.uuid4().hex}"
     conversations[new_session_id] = []
     _save_conversation(new_session_id)
     return {"session_id": new_session_id}
@@ -393,6 +477,102 @@ async def delete_history(session_id: str):
 async def health_check():
     """健康检查"""
     return {"status": "ok", "time": datetime.now().isoformat()}
+
+
+# ====== LLMOps 可观测性 API ======
+
+
+@app.get("/llmops/health")
+async def llmops_health():
+    """LLMOps 健康状态检查"""
+    llmops = get_llmops()
+    snap = llmops.metrics.snapshot()
+    return {
+        "status": "ok",
+        "time": datetime.now().isoformat(),
+        "cache_size": llmops.cache.size,
+        "total_calls": snap.total_calls,
+        "error_rate": round(snap.error_calls / max(snap.total_calls, 1), 4),
+        "latency_p95_ms": snap.latency_p95_ms,
+        "rate_limiter_tokens": round(llmops.rate_limiter.available_tokens, 1),
+    }
+
+
+@app.get("/llmops/metrics")
+async def llmops_metrics():
+    """获取 LLMOps 性能指标快照（延迟、成功率、Token 吞吐量等）"""
+    llmops = get_llmops()
+    return llmops.metrics.snapshot().to_dict()
+
+
+@app.get("/llmops/traces")
+async def llmops_traces(limit: int = Query(100, ge=1, le=500)):
+    """获取最近 LLM 调用追踪记录"""
+    llmops = get_llmops()
+    traces = llmops.tracer.get_recent_traces(limit=limit)
+    # 同时附加按 agent 的聚合统计
+    per_agent = llmops.metrics.get_per_agent_snapshot(traces)
+    return {"total": len(traces), "traces": traces, "per_agent": per_agent}
+
+
+@app.get("/llmops/traces/{session_id}")
+async def llmops_session_traces(session_id: str, limit: int = Query(50, ge=1, le=200)):
+    """按会话 ID 查询 LLM 调用追踪记录"""
+    llmops = get_llmops()
+    traces = llmops.tracer.get_traces_by_session(session_id, limit=limit)
+    return {"session_id": session_id, "total": len(traces), "traces": traces}
+
+
+@app.get("/llmops/alerts")
+async def llmops_alerts(
+    limit: int = Query(50, ge=1, le=200),
+    acknowledged: Optional[bool] = Query(None),
+):
+    """获取 LLMOps 告警列表"""
+    llmops = get_llmops()
+    alerts = llmops.alerts.get_alerts(limit=limit, acknowledged=acknowledged)
+    return {"total": len(alerts), "alerts": alerts}
+
+
+@app.post("/llmops/alerts/{alert_id}/acknowledge")
+async def llmops_acknowledge_alert(alert_id: str):
+    """确认（标记已读）指定告警"""
+    llmops = get_llmops()
+    success = llmops.alerts.acknowledge(alert_id)
+    if not success:
+        raise HTTPException(status_code=404, detail="告警不存在")
+    return {"message": "已确认", "alert_id": alert_id}
+
+
+@app.get("/llmops/cache")
+async def llmops_cache_stats():
+    """获取 LLM 响应缓存统计"""
+    llmops = get_llmops()
+    return {
+        **llmops.cache.stats,
+        "hit_rate": round(
+            llmops.metrics.snapshot().cache_hits / max(
+                llmops.metrics.snapshot().cache_hits + llmops.metrics.snapshot().cache_misses, 1
+            ), 4
+        ),
+    }
+
+
+@app.post("/llmops/cache/clear")
+async def llmops_cache_clear():
+    """清空 LLM 响应缓存"""
+    llmops = get_llmops()
+    llmops.cache.clear()
+    return {"message": "缓存已清空"}
+
+
+@app.post("/llmops/metrics/persist")
+async def llmops_metrics_persist():
+    """手动持久化当日指标汇总"""
+    llmops = get_llmops()
+    llmops.tracer.flush()
+    llmops.metrics.persist_daily_summary()
+    return {"message": "指标已持久化", "snapshot": llmops.metrics.snapshot().to_dict()}
 
 
 # ====== Word 文档导出 ======
@@ -485,6 +665,14 @@ async def export_session_docx(session_id: str):
 @app.get("/download/reports/{filename}")
 async def download_report(filename: str):
     """下载生成的 Word 报告文档"""
+    # 安全校验：禁止路径遍历、null字符、非docx文件
+    if "\x00" in filename or ".." in filename or "/" in filename or "\\" in filename:
+        raise HTTPException(status_code=400, detail="非法文件名")
+    if not filename.endswith('.docx'):
+        raise HTTPException(status_code=400, detail="仅支持 .docx 文件")
+    if len(filename) > 200:
+        raise HTTPException(status_code=400, detail="文件名过长")
+
     from backend.tools.docx_tool import REPORTS_DIR
     filepath = os.path.join(REPORTS_DIR, filename)
     real_path = os.path.realpath(filepath)
@@ -605,6 +793,78 @@ async def arxiv_search(
         raise HTTPException(status_code=504, detail="arXiv请求超时，请稍后重试")
     except Exception as e:
         raise HTTPException(status_code=500, detail=f"arXiv搜索失败: {str(e)}")
+
+
+# ====== 全局 Token 用量 ======
+
+@app.get("/usage/total")
+async def get_total_usage_api():
+    """获取全局累计 Token 用量"""
+    from backend.agent.total_usage import get_total_usage
+    return get_total_usage()
+
+
+# ====== 技能管理 API ======
+
+class SkillCreateRequest(BaseModel):
+    id: str = Field(..., min_length=1, max_length=32, pattern=r"^[a-z0-9_]+$")
+    label: str = Field(..., min_length=1, max_length=32)
+    desc: str = Field(default="", max_length=200)
+    system_prompt_append: str = Field(default="", max_length=5000)
+
+
+class SkillUpdateRequest(BaseModel):
+    label: str = Field(..., min_length=1, max_length=32)
+    desc: str = Field(default="", max_length=200)
+    system_prompt_append: str = Field(default="", max_length=5000)
+
+
+@app.get("/skills")
+async def list_skills():
+    """获取所有可用技能列表"""
+    from backend.agent.skills_store import get_all_skills
+    return {"skills": get_all_skills()}
+
+
+@app.get("/skills/{skill_id}")
+async def get_skill(skill_id: str):
+    """获取某个技能的详细信息（含 prompt）"""
+    from backend.agent.skills_store import get_skill_detail
+    detail = get_skill_detail(skill_id)
+    if detail is None:
+        raise HTTPException(status_code=404, detail="技能不存在")
+    return detail
+
+
+@app.post("/skills")
+async def create_skill(req: SkillCreateRequest):
+    """创建自定义技能"""
+    from backend.agent.skills_store import create_skill as cs
+    try:
+        return cs(req.id, req.label, req.desc, req.system_prompt_append)
+    except ValueError as e:
+        raise HTTPException(status_code=409, detail=str(e))
+
+
+@app.put("/skills/{skill_id}")
+async def update_skill(skill_id: str, req: SkillUpdateRequest):
+    """更新自定义技能"""
+    from backend.agent.skills_store import update_skill as us
+    try:
+        return us(skill_id, req.label, req.desc, req.system_prompt_append)
+    except ValueError as e:
+        raise HTTPException(status_code=400, detail=str(e))
+
+
+@app.delete("/skills/{skill_id}")
+async def delete_skill(skill_id: str):
+    """删除自定义技能"""
+    from backend.agent.skills_store import delete_skill as ds
+    try:
+        ds(skill_id)
+        return {"message": "已删除"}
+    except ValueError as e:
+        raise HTTPException(status_code=400, detail=str(e))
 
 
 if __name__ == "__main__":

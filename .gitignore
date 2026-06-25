@@ -49,3 +49,5 @@ logs/
 *.log
 
 *.png
+
+.playwright-mcp

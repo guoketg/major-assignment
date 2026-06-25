@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>项目整体流程示意图</title>
+  <script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
+  <style>
+    :root {
+      --bg: #f8fafc;
+      --card-bg: #ffffff;
+      --text: #1e293b;
+      --border: #e2e8f0;
+      --shadow: 0 4px 24px rgba(0,0,0,0.08);
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      min-height: 100vh;
+      padding: 40px 20px;
+    }
+    .container {
+      max-width: 1400px;
+      margin: 0 auto;
+    }
+    h1 {
+      text-align: center;
+      font-size: 28px;
+      font-weight: 700;
+      margin-bottom: 8px;
+      background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .subtitle {
+      text-align: center;
+      color: #64748b;
+      margin-bottom: 32px;
+      font-size: 14px;
+    }
+    .card {
+      background: var(--card-bg);
+      border-radius: 16px;
+      box-shadow: var(--shadow);
+      border: 1px solid var(--border);
+      padding: 32px;
+      margin-bottom: 32px;
+      overflow-x: auto;
+    }
+    .card-title {
+      font-size: 18px;
+      font-weight: 600;
+      margin-bottom: 20px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .card-title::before {
+      content: '';
+      display: inline-block;
+      width: 4px;
+      height: 20px;
+      background: linear-gradient(180deg, #3b82f6, #8b5cf6);
+      border-radius: 2px;
+    }
+    .mermaid {
+      display: flex;
+      justify-content: center;
+    }
+    .legend {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      margin-top: 16px;
+      padding-top: 16px;
+      border-top: 1px solid var(--border);
+    }
+    .legend-item {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 13px;
+      color: #64748b;
+    }
+    .legend-dot {
+      width: 12px;
+      height: 12px;
+      border-radius: 3px;
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+  <h1>多 Agent 协作科研分析系统</h1>
+  <p class="subtitle">基于 LangGraph 的端到端科研自动化流程</p>
+
+  <!-- ==================== 总览流程图 ==================== -->
+  <div class="card">
+    <div class="card-title">总览：端到端数据流</div>
+    <div class="mermaid">
+flowchart TB
+    subgraph FRONTEND["🖥️ 前端（React 18 + TypeScript）"]
+        A["👤 用户输入<br/>选择 Agent · 模型 · 技能"] --> B["POST /chat/stream<br/><i>SSE text/event-stream</i>"]
+    end
+
+    subgraph BACKEND["⚡ FastAPI 后端（backend/main.py）"]
+        B --> C["接收请求 & 校验 session"]
+        C --> D["加载对话历史<br/>追加 user 消息"]
+        D --> E["创建 AgentGraph 实例<br/>运行 run_stream()"]
+        E -.->|600s 超时保护| F["Token 预算预警"]
+        F -.-> E
+    end
+
+    subgraph AGENT_ENGINE["🧠 LangGraph Agent 引擎（backend/agent/）"]
+        E --> G["① 加载工作记忆<br/>（MemoryManager）"]
+        G --> H["② 注入技能提示词<br/>（skills / skills_store）"]
+        H --> I["③ 构建 AgentState"]
+        I -->|agent 覆盖？| J{"手动选择 Agent？"}
+        J -->|是| K["跳过 Supervisor<br/>直接路由到目标 Agent"]
+        J -->|否| L["Supervisor 智能路由<br/>（supervisor.py）"]
+        K --> M["Agent 节点执行"]
+        L --> M
+    end
+
+    subgraph AGENTS["🤖 专业 Agent 团队"]
+        M --> N["💬 ChatAgent<br/>对话答疑"]
+        M --> O["📚 ResearchAgent<br/>文献调研 · ReAct 循环"]
+        M --> P["💡 InnovatorAgent<br/>创新构思"]
+        M --> Q["🔬 ExperimentAgent<br/>实验分析"]
+        M --> R["📋 PlannerAgent<br/>任务规划"]
+        M --> S["✍️ Synthesizer<br/>综合输出"]
+    end
+
+    subgraph TOOLS["🔧 工具层（backend/tools/）"]
+        O --> T1["arxiv_tool<br/><i>arXiv 论文搜索</i>"]
+        O --> T2["web_search_tool<br/><i>DashScope MCP 搜索</i>"]
+        S --> T3["docx_tool<br/><i>Word 文档生成</i>"]
+    end
+
+    subgraph OUTPUT["📤 SSE 流式响应"]
+        N --> U["① SSE: 'agent' 事件<br/><i>Agent 名称 & 开始</i>"]
+        P --> U
+        Q --> U
+        R --> U
+        S --> U
+        N --> V["② SSE: 'content' 事件<br/><i>LLM 实时 token</i>"]
+        P --> V
+        Q --> V
+        R --> V
+        S --> V
+        N --> W["③ SSE: 'token' 事件<br/><i>Token 用量统计</i>"]
+        P --> W
+        Q --> W
+        R --> W
+        S --> W
+        S --> X["④ SSE: 'done' 事件<br/><i>完成 & report 下载链接</i>"]
+    end
+
+    U & V & W & X --> Y["🌐 SSE 流推送至前端"]
+    Y --> Z["📱 前端实时渲染<br/>Markdown · 进度条 · 报告下载"]
+
+    style FRONTEND fill:#eff6ff,stroke:#3b82f6
+    style BACKEND fill:#fefce8,stroke:#eab308
+    style AGENT_ENGINE fill:#f5f3ff,stroke:#8b5cf6
+    style AGENTS fill:#ecfdf5,stroke:#10b981
+    style TOOLS fill:#fff7ed,stroke:#f97316
+    style OUTPUT fill:#fdf2f8,stroke:#ec4899
+    </div>
+  </div>
+
+  <!-- ==================== Agent 内部执行流程 ==================== -->
+  <div class="card">
+    <div class="card-title">Agent 节点内部执行流程（ReAct 循环示例）</div>
+    <div class="mermaid">
+flowchart LR
+    A["📥 输入 AgentState"] --> B["🔄 ReAct 循环开始"]
+    B --> C["💭 LLM 推理思考<br/><i>DeepSeek Chat API</i>"]
+    C -->|需要工具| D["🔧 调用工具<br/><i>arXiv / 联网搜索</i>"]
+    C -->|无需工具| G["📝 生成最终回答"]
+    D --> E["📊 解析工具结果"]
+    E --> F["💭 将结果注入下一轮思考"]
+    F --> C
+    G --> H["📤 输出到下一个节点<br/><i>或返回综合结果</i>"]
+
+    style A fill:#eff6ff,stroke:#3b82f6
+    style G fill:#f0fdf4,stroke:#22c55e
+    style H fill:#fdf2f8,stroke:#ec4899
+    </div>
+  </div>
+
+  <!-- ==================== Memory & Skills 系统 ==================== -->
+  <div class="card">
+    <div class="card-title">记忆系统 & 技能系统</div>
+    <div class="mermaid">
+flowchart TB
+    subgraph MEMORY["🧠 三层记忆系统（backend/memory/manager.py）"]
+        M1["短期记忆<br/><i>当前会话消息列表</i>"] 
+        M2["工作记忆<br/><i>任务上下文 · 中间结果</i>"]
+        M3["长期记忆<br/><i>会话持久化 JSON</i>"]
+    end
+
+    subgraph SKILLS["🎯 技能系统（skills.py + skills_store.py）"]
+        S1["内置技能<br/><i>docs · pdf 文档处理</i>"]
+        S2["自定义技能<br/><i>用户 CRUD 存储</i>"]
+    end
+
+    M1 & M2 & M3 --> AG["AgentGraph 构建时注入"]
+    S1 & S2 --> SP["生成技能提示词"]
+    AG & SP --> STATE["AgentState<br/><i>session_id · model · messages · memory · skill</i>"]
+
+    style MEMORY fill:#f5f3ff,stroke:#8b5cf6
+    style SKILLS fill:#ecfdf5,stroke:#10b981
+    </div>
+  </div>
+
+  <!-- ==================== 图例 ==================== -->
+  <div class="legend">
+    <div class="legend-item"><span class="legend-dot" style="background:#3b82f6;"></span> 前端 React</div>
+    <div class="legend-item"><span class="legend-dot" style="background:#eab308;"></span> FastAPI 后端</div>
+    <div class="legend-item"><span class="legend-dot" style="background:#8b5cf6;"></span> LangGraph 引擎</div>
+    <div class="legend-item"><span class="legend-dot" style="background:#10b981;"></span> Agent 团队</div>
+    <div class="legend-item"><span class="legend-dot" style="background:#f97316;"></span> 工具层</div>
+    <div class="legend-item"><span class="legend-dot" style="background:#ec4899;"></span> SSE 输出</div>
+  </div>
+
+  <!-- ==================== 单独 Mermaid 源码（方便复制） ==================== -->
+  <div class="card">
+    <div class="card-title">📋 完整 Mermaid 源码</div>
+    <pre style="background:#1e293b;color:#e2e8f0;padding:20px;border-radius:8px;overflow-x:auto;font-size:13px;line-height:1.6;" id="mermaid-source">
+flowchart TB
+    subgraph FRONTEND["🖥️ 前端 React 18"]
+        A["👤 用户输入<br/>选择 Agent · 模型 · 技能"] --> B["POST /chat/stream<br/>SSE text/event-stream"]
+    end
+
+    subgraph BACKEND["⚡ FastAPI 后端"]
+        B --> C["接收请求 & 校验 session"]
+        C --> D["加载对话历史 & 追加消息"]
+        D --> E["创建 AgentGraph.run_stream()"]
+        E -.->|600s 超时| F["Token 预算预警"]
+    end
+
+    subgraph AGENT_ENGINE["🧠 LangGraph Agent 引擎"]
+        E --> G["① 加载工作记忆"]
+        G --> H["② 注入技能提示词"]
+        H --> I["③ 构建 AgentState"]
+        I --> J{"手动选择 Agent?"}
+        J -->|是| K["跳过 Supervisor"]
+        J -->|否| L["Supervisor 智能路由"]
+        K & L --> M["Agent 节点执行"]
+    end
+
+    subgraph AGENTS["🤖 专业 Agent 团队"]
+        M --> N["💬 ChatAgent 对话答疑"]
+        M --> O["📚 ResearchAgent 文献调研"]
+        M --> P["💡 InnovatorAgent 创新构思"]
+        M --> Q["🔬 ExperimentAgent 实验分析"]
+        M --> R["📋 PlannerAgent 任务规划"]
+        M --> S["✍️ Synthesizer 综合输出"]
+    end
+
+    subgraph TOOLS["🔧 工具层"]
+        O --> T1["arxiv_tool 论文搜索"]
+        O --> T2["web_search_tool 联网搜索"]
+        S --> T3["docx_tool 文档生成"]
+    end
+
+    subgraph OUTPUT["📤 SSE 流式输出"]
+        N & P & Q & R & S --> U["agent 事件 · content 事件 · token 事件"]
+        S --> V["done 事件 · 报告下载"]
+        U & V --> W["🌐 SSE 推送至前端"]
+        W --> Z["📱 前端实时渲染"]
+    end
+
+    style FRONTEND fill:#eff6ff,stroke:#3b82f6
+    style BACKEND fill:#fefce8,stroke:#eab308
+    style AGENT_ENGINE fill:#f5f3ff,stroke:#8b5cf6
+    style AGENTS fill:#ecfdf5,stroke:#10b981
+    style TOOLS fill:#fff7ed,stroke:#f97316
+    style OUTPUT fill:#fdf2f8,stroke:#ec4899</pre>
+  </div>
+</div>
+
+<script>
+  mermaid.initialize({
+    startOnLoad: true,
+    theme: 'default',
+    securityLevel: 'loose',
+    flowchart: { useMaxWidth: true, htmlLabels: true, curve: 'basis' },
+    themeVariables: {
+      primaryColor: '#eff6ff',
+      primaryBorderColor: '#3b82f6',
+      lineColor: '#94a3b8',
+      fontSize: '14px',
+    }
+  });
+</script>
+</body>
+</html>
